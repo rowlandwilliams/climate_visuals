@@ -1,0 +1,55 @@
+body {
+    font-family: 'Georgia', serif;
+    background-color: lightgray;
+    
+}
+
+#header {
+    text-align: center;
+}
+
+.h1 {
+    text-align: center;
+    border: black 2px;
+}
+
+
+/* div.tooltip {
+    position: absolute;
+    text-align: center;
+    width: 60px;
+    height: 28px;
+    padding: 2px;
+    font: 12px sans-serif;
+    background: lightsteelblue;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+  }  */
+
+/* ul {
+    float: left;
+    text-align: center;
+    
+} */ 
+
+/* li {
+    padding: 5px;
+}
+
+
+
+/* div .graphContainer {
+    width: 50%
+} */
+
+/* .graphContainer {
+    width: 100%;
+    margin: 0 auto;
+} */
+
+/* svg {
+    max-width: 700px;
+    margin: auto;
+    display: block;
+  } */

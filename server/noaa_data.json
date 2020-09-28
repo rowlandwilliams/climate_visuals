@@ -1,0 +1,9222 @@
+{
+   "2016": [
+      {
+         "Month": 1,
+         "Day": 1,
+         "PPM": 401.86,
+         "MD": "January1"
+      },
+      {
+         "Month": 1,
+         "Day": 2,
+         "PPM": 401.85,
+         "MD": "January2"
+      },
+      {
+         "Month": 1,
+         "Day": 4,
+         "PPM": 402.24,
+         "MD": "January4"
+      },
+      {
+         "Month": 1,
+         "Day": 5,
+         "PPM": 401.88,
+         "MD": "January5"
+      },
+      {
+         "Month": 1,
+         "Day": 7,
+         "PPM": 401.94,
+         "MD": "January7"
+      },
+      {
+         "Month": 1,
+         "Day": 8,
+         "PPM": 402.42,
+         "MD": "January8"
+      },
+      {
+         "Month": 1,
+         "Day": 9,
+         "PPM": 402.27,
+         "MD": "January9"
+      },
+      {
+         "Month": 1,
+         "Day": 10,
+         "PPM": 402,
+         "MD": "January10"
+      },
+      {
+         "Month": 1,
+         "Day": 11,
+         "PPM": 401.87,
+         "MD": "January11"
+      },
+      {
+         "Month": 1,
+         "Day": 12,
+         "PPM": 402.02,
+         "MD": "January12"
+      },
+      {
+         "Month": 1,
+         "Day": 14,
+         "PPM": 403.82,
+         "MD": "January14"
+      },
+      {
+         "Month": 1,
+         "Day": 16,
+         "PPM": 402.69,
+         "MD": "January16"
+      },
+      {
+         "Month": 1,
+         "Day": 17,
+         "PPM": 402.71,
+         "MD": "January17"
+      },
+      {
+         "Month": 1,
+         "Day": 18,
+         "PPM": 402.48,
+         "MD": "January18"
+      },
+      {
+         "Month": 1,
+         "Day": 19,
+         "PPM": 402.35,
+         "MD": "January19"
+      },
+      {
+         "Month": 1,
+         "Day": 20,
+         "PPM": 402.25,
+         "MD": "January20"
+      },
+      {
+         "Month": 1,
+         "Day": 21,
+         "PPM": 402.89,
+         "MD": "January21"
+      },
+      {
+         "Month": 1,
+         "Day": 22,
+         "PPM": 403.07,
+         "MD": "January22"
+      },
+      {
+         "Month": 1,
+         "Day": 23,
+         "PPM": 402.53,
+         "MD": "January23"
+      },
+      {
+         "Month": 1,
+         "Day": 25,
+         "PPM": 403.1,
+         "MD": "January25"
+      },
+      {
+         "Month": 1,
+         "Day": 26,
+         "PPM": 403.74,
+         "MD": "January26"
+      },
+      {
+         "Month": 1,
+         "Day": 27,
+         "PPM": 403.66,
+         "MD": "January27"
+      },
+      {
+         "Month": 1,
+         "Day": 28,
+         "PPM": 402.64,
+         "MD": "January28"
+      },
+      {
+         "Month": 1,
+         "Day": 29,
+         "PPM": 402.28,
+         "MD": "January29"
+      },
+      {
+         "Month": 1,
+         "Day": 30,
+         "PPM": 402.45,
+         "MD": "January30"
+      },
+      {
+         "Month": 1,
+         "Day": 31,
+         "PPM": 402.48,
+         "MD": "January31"
+      },
+      {
+         "Month": 2,
+         "Day": 3,
+         "PPM": 403.02,
+         "MD": "February3"
+      },
+      {
+         "Month": 2,
+         "Day": 4,
+         "PPM": 405.71,
+         "MD": "February4"
+      },
+      {
+         "Month": 2,
+         "Day": 5,
+         "PPM": 405.64,
+         "MD": "February5"
+      },
+      {
+         "Month": 2,
+         "Day": 6,
+         "PPM": 406.03,
+         "MD": "February6"
+      },
+      {
+         "Month": 2,
+         "Day": 8,
+         "PPM": 406.32,
+         "MD": "February8"
+      },
+      {
+         "Month": 2,
+         "Day": 9,
+         "PPM": 404.45,
+         "MD": "February9"
+      },
+      {
+         "Month": 2,
+         "Day": 11,
+         "PPM": 402.51,
+         "MD": "February11"
+      },
+      {
+         "Month": 2,
+         "Day": 12,
+         "PPM": 402.82,
+         "MD": "February12"
+      },
+      {
+         "Month": 2,
+         "Day": 13,
+         "PPM": 402.93,
+         "MD": "February13"
+      },
+      {
+         "Month": 2,
+         "Day": 14,
+         "PPM": 403.66,
+         "MD": "February14"
+      },
+      {
+         "Month": 2,
+         "Day": 15,
+         "PPM": 403.66,
+         "MD": "February15"
+      },
+      {
+         "Month": 2,
+         "Day": 16,
+         "PPM": 403.4,
+         "MD": "February16"
+      },
+      {
+         "Month": 2,
+         "Day": 17,
+         "PPM": 403.06,
+         "MD": "February17"
+      },
+      {
+         "Month": 2,
+         "Day": 18,
+         "PPM": 403.79,
+         "MD": "February18"
+      },
+      {
+         "Month": 2,
+         "Day": 19,
+         "PPM": 403.96,
+         "MD": "February19"
+      },
+      {
+         "Month": 2,
+         "Day": 20,
+         "PPM": 404.16,
+         "MD": "February20"
+      },
+      {
+         "Month": 2,
+         "Day": 21,
+         "PPM": 405.18,
+         "MD": "February21"
+      },
+      {
+         "Month": 2,
+         "Day": 22,
+         "PPM": 405.4,
+         "MD": "February22"
+      },
+      {
+         "Month": 2,
+         "Day": 23,
+         "PPM": 404.94,
+         "MD": "February23"
+      },
+      {
+         "Month": 2,
+         "Day": 24,
+         "PPM": 404.25,
+         "MD": "February24"
+      },
+      {
+         "Month": 2,
+         "Day": 25,
+         "PPM": 403.69,
+         "MD": "February25"
+      },
+      {
+         "Month": 2,
+         "Day": 26,
+         "PPM": 403.62,
+         "MD": "February26"
+      },
+      {
+         "Month": 2,
+         "Day": 27,
+         "PPM": 403.81,
+         "MD": "February27"
+      },
+      {
+         "Month": 2,
+         "Day": 28,
+         "PPM": 403.4,
+         "MD": "February28"
+      },
+      {
+         "Month": 2,
+         "Day": 29,
+         "PPM": 403.5,
+         "MD": "February29"
+      },
+      {
+         "Month": 3,
+         "Day": 1,
+         "PPM": 403.57,
+         "MD": "March1"
+      },
+      {
+         "Month": 3,
+         "Day": 2,
+         "PPM": 406.51,
+         "MD": "March2"
+      },
+      {
+         "Month": 3,
+         "Day": 3,
+         "PPM": 404.26,
+         "MD": "March3"
+      },
+      {
+         "Month": 3,
+         "Day": 4,
+         "PPM": 403.83,
+         "MD": "March4"
+      },
+      {
+         "Month": 3,
+         "Day": 5,
+         "PPM": 403.34,
+         "MD": "March5"
+      },
+      {
+         "Month": 3,
+         "Day": 7,
+         "PPM": 403.51,
+         "MD": "March7"
+      },
+      {
+         "Month": 3,
+         "Day": 8,
+         "PPM": 403.47,
+         "MD": "March8"
+      },
+      {
+         "Month": 3,
+         "Day": 9,
+         "PPM": 403.54,
+         "MD": "March9"
+      },
+      {
+         "Month": 3,
+         "Day": 10,
+         "PPM": 404.12,
+         "MD": "March10"
+      },
+      {
+         "Month": 3,
+         "Day": 11,
+         "PPM": 404.64,
+         "MD": "March11"
+      },
+      {
+         "Month": 3,
+         "Day": 12,
+         "PPM": 404.7,
+         "MD": "March12"
+      },
+      {
+         "Month": 3,
+         "Day": 13,
+         "PPM": 404.66,
+         "MD": "March13"
+      },
+      {
+         "Month": 3,
+         "Day": 14,
+         "PPM": 404.52,
+         "MD": "March14"
+      },
+      {
+         "Month": 3,
+         "Day": 15,
+         "PPM": 403.89,
+         "MD": "March15"
+      },
+      {
+         "Month": 3,
+         "Day": 16,
+         "PPM": 403.97,
+         "MD": "March16"
+      },
+      {
+         "Month": 3,
+         "Day": 17,
+         "PPM": 404.23,
+         "MD": "March17"
+      },
+      {
+         "Month": 3,
+         "Day": 18,
+         "PPM": 407.17,
+         "MD": "March18"
+      },
+      {
+         "Month": 3,
+         "Day": 19,
+         "PPM": 405.07,
+         "MD": "March19"
+      },
+      {
+         "Month": 3,
+         "Day": 20,
+         "PPM": 405.26,
+         "MD": "March20"
+      },
+      {
+         "Month": 3,
+         "Day": 23,
+         "PPM": 405.36,
+         "MD": "March23"
+      },
+      {
+         "Month": 3,
+         "Day": 24,
+         "PPM": 406.12,
+         "MD": "March24"
+      },
+      {
+         "Month": 3,
+         "Day": 25,
+         "PPM": 405.88,
+         "MD": "March25"
+      },
+      {
+         "Month": 3,
+         "Day": 26,
+         "PPM": 405.7,
+         "MD": "March26"
+      },
+      {
+         "Month": 3,
+         "Day": 27,
+         "PPM": 405.92,
+         "MD": "March27"
+      },
+      {
+         "Month": 3,
+         "Day": 28,
+         "PPM": 406.06,
+         "MD": "March28"
+      },
+      {
+         "Month": 3,
+         "Day": 29,
+         "PPM": 406.08,
+         "MD": "March29"
+      },
+      {
+         "Month": 3,
+         "Day": 30,
+         "PPM": 406.03,
+         "MD": "March30"
+      },
+      {
+         "Month": 3,
+         "Day": 31,
+         "PPM": 405,
+         "MD": "March31"
+      },
+      {
+         "Month": 4,
+         "Day": 1,
+         "PPM": 404.37,
+         "MD": "April1"
+      },
+      {
+         "Month": 4,
+         "Day": 2,
+         "PPM": 404.72,
+         "MD": "April2"
+      },
+      {
+         "Month": 4,
+         "Day": 3,
+         "PPM": 406.01,
+         "MD": "April3"
+      },
+      {
+         "Month": 4,
+         "Day": 4,
+         "PPM": 406.13,
+         "MD": "April4"
+      },
+      {
+         "Month": 4,
+         "Day": 5,
+         "PPM": 406.49,
+         "MD": "April5"
+      },
+      {
+         "Month": 4,
+         "Day": 7,
+         "PPM": 407.77,
+         "MD": "April7"
+      },
+      {
+         "Month": 4,
+         "Day": 10,
+         "PPM": 409.36,
+         "MD": "April10"
+      },
+      {
+         "Month": 4,
+         "Day": 11,
+         "PPM": 409,
+         "MD": "April11"
+      },
+      {
+         "Month": 4,
+         "Day": 12,
+         "PPM": 408.52,
+         "MD": "April12"
+      },
+      {
+         "Month": 4,
+         "Day": 13,
+         "PPM": 408.73,
+         "MD": "April13"
+      },
+      {
+         "Month": 4,
+         "Day": 15,
+         "PPM": 408.59,
+         "MD": "April15"
+      },
+      {
+         "Month": 4,
+         "Day": 16,
+         "PPM": 408.13,
+         "MD": "April16"
+      },
+      {
+         "Month": 4,
+         "Day": 17,
+         "PPM": 407.73,
+         "MD": "April17"
+      },
+      {
+         "Month": 4,
+         "Day": 18,
+         "PPM": 407.48,
+         "MD": "April18"
+      },
+      {
+         "Month": 4,
+         "Day": 19,
+         "PPM": 407.16,
+         "MD": "April19"
+      },
+      {
+         "Month": 4,
+         "Day": 20,
+         "PPM": 406.94,
+         "MD": "April20"
+      },
+      {
+         "Month": 4,
+         "Day": 21,
+         "PPM": 407.15,
+         "MD": "April21"
+      },
+      {
+         "Month": 4,
+         "Day": 22,
+         "PPM": 407.97,
+         "MD": "April22"
+      },
+      {
+         "Month": 4,
+         "Day": 23,
+         "PPM": 407.74,
+         "MD": "April23"
+      },
+      {
+         "Month": 4,
+         "Day": 26,
+         "PPM": 407.43,
+         "MD": "April26"
+      },
+      {
+         "Month": 4,
+         "Day": 27,
+         "PPM": 406.56,
+         "MD": "April27"
+      },
+      {
+         "Month": 4,
+         "Day": 28,
+         "PPM": 408.31,
+         "MD": "April28"
+      },
+      {
+         "Month": 4,
+         "Day": 29,
+         "PPM": 407.87,
+         "MD": "April29"
+      },
+      {
+         "Month": 4,
+         "Day": 30,
+         "PPM": 408.45,
+         "MD": "April30"
+      },
+      {
+         "Month": 5,
+         "Day": 1,
+         "PPM": 407.49,
+         "MD": "May1"
+      },
+      {
+         "Month": 5,
+         "Day": 2,
+         "PPM": 407.71,
+         "MD": "May2"
+      },
+      {
+         "Month": 5,
+         "Day": 3,
+         "PPM": 407.77,
+         "MD": "May3"
+      },
+      {
+         "Month": 5,
+         "Day": 4,
+         "PPM": 407.48,
+         "MD": "May4"
+      },
+      {
+         "Month": 5,
+         "Day": 5,
+         "PPM": 407.39,
+         "MD": "May5"
+      },
+      {
+         "Month": 5,
+         "Day": 6,
+         "PPM": 407.63,
+         "MD": "May6"
+      },
+      {
+         "Month": 5,
+         "Day": 7,
+         "PPM": 407.4,
+         "MD": "May7"
+      },
+      {
+         "Month": 5,
+         "Day": 8,
+         "PPM": 407.41,
+         "MD": "May8"
+      },
+      {
+         "Month": 5,
+         "Day": 9,
+         "PPM": 407.68,
+         "MD": "May9"
+      },
+      {
+         "Month": 5,
+         "Day": 10,
+         "PPM": 408.1,
+         "MD": "May10"
+      },
+      {
+         "Month": 5,
+         "Day": 11,
+         "PPM": 407.78,
+         "MD": "May11"
+      },
+      {
+         "Month": 5,
+         "Day": 12,
+         "PPM": 408.36,
+         "MD": "May12"
+      },
+      {
+         "Month": 5,
+         "Day": 13,
+         "PPM": 407.82,
+         "MD": "May13"
+      },
+      {
+         "Month": 5,
+         "Day": 14,
+         "PPM": 407.89,
+         "MD": "May14"
+      },
+      {
+         "Month": 5,
+         "Day": 15,
+         "PPM": 406.99,
+         "MD": "May15"
+      },
+      {
+         "Month": 5,
+         "Day": 16,
+         "PPM": 407.23,
+         "MD": "May16"
+      },
+      {
+         "Month": 5,
+         "Day": 17,
+         "PPM": 407.22,
+         "MD": "May17"
+      },
+      {
+         "Month": 5,
+         "Day": 18,
+         "PPM": 407.6,
+         "MD": "May18"
+      },
+      {
+         "Month": 5,
+         "Day": 19,
+         "PPM": 407.12,
+         "MD": "May19"
+      },
+      {
+         "Month": 5,
+         "Day": 20,
+         "PPM": 407.79,
+         "MD": "May20"
+      },
+      {
+         "Month": 5,
+         "Day": 21,
+         "PPM": 407.23,
+         "MD": "May21"
+      },
+      {
+         "Month": 5,
+         "Day": 22,
+         "PPM": 408.99,
+         "MD": "May22"
+      },
+      {
+         "Month": 5,
+         "Day": 23,
+         "PPM": 408.88,
+         "MD": "May23"
+      },
+      {
+         "Month": 5,
+         "Day": 25,
+         "PPM": 408.11,
+         "MD": "May25"
+      },
+      {
+         "Month": 5,
+         "Day": 26,
+         "PPM": 407.86,
+         "MD": "May26"
+      },
+      {
+         "Month": 5,
+         "Day": 27,
+         "PPM": 408.01,
+         "MD": "May27"
+      },
+      {
+         "Month": 5,
+         "Day": 28,
+         "PPM": 408.11,
+         "MD": "May28"
+      },
+      {
+         "Month": 5,
+         "Day": 29,
+         "PPM": 407.94,
+         "MD": "May29"
+      },
+      {
+         "Month": 5,
+         "Day": 31,
+         "PPM": 407.03,
+         "MD": "May31"
+      },
+      {
+         "Month": 6,
+         "Day": 1,
+         "PPM": 407.1,
+         "MD": "June1"
+      },
+      {
+         "Month": 6,
+         "Day": 2,
+         "PPM": 407.39,
+         "MD": "June2"
+      },
+      {
+         "Month": 6,
+         "Day": 3,
+         "PPM": 407.88,
+         "MD": "June3"
+      },
+      {
+         "Month": 6,
+         "Day": 5,
+         "PPM": 407.53,
+         "MD": "June5"
+      },
+      {
+         "Month": 6,
+         "Day": 6,
+         "PPM": 407.86,
+         "MD": "June6"
+      },
+      {
+         "Month": 6,
+         "Day": 7,
+         "PPM": 407.57,
+         "MD": "June7"
+      },
+      {
+         "Month": 6,
+         "Day": 8,
+         "PPM": 406.34,
+         "MD": "June8"
+      },
+      {
+         "Month": 6,
+         "Day": 9,
+         "PPM": 405.51,
+         "MD": "June9"
+      },
+      {
+         "Month": 6,
+         "Day": 10,
+         "PPM": 405.83,
+         "MD": "June10"
+      },
+      {
+         "Month": 6,
+         "Day": 11,
+         "PPM": 407.42,
+         "MD": "June11"
+      },
+      {
+         "Month": 6,
+         "Day": 12,
+         "PPM": 407.2,
+         "MD": "June12"
+      },
+      {
+         "Month": 6,
+         "Day": 13,
+         "PPM": 407.38,
+         "MD": "June13"
+      },
+      {
+         "Month": 6,
+         "Day": 15,
+         "PPM": 407.33,
+         "MD": "June15"
+      },
+      {
+         "Month": 6,
+         "Day": 16,
+         "PPM": 407.66,
+         "MD": "June16"
+      },
+      {
+         "Month": 6,
+         "Day": 17,
+         "PPM": 406.7,
+         "MD": "June17"
+      },
+      {
+         "Month": 6,
+         "Day": 18,
+         "PPM": 406.97,
+         "MD": "June18"
+      },
+      {
+         "Month": 6,
+         "Day": 19,
+         "PPM": 406.96,
+         "MD": "June19"
+      },
+      {
+         "Month": 6,
+         "Day": 20,
+         "PPM": 406.84,
+         "MD": "June20"
+      },
+      {
+         "Month": 6,
+         "Day": 21,
+         "PPM": 406.55,
+         "MD": "June21"
+      },
+      {
+         "Month": 6,
+         "Day": 22,
+         "PPM": 406.47,
+         "MD": "June22"
+      },
+      {
+         "Month": 6,
+         "Day": 23,
+         "PPM": 407.16,
+         "MD": "June23"
+      },
+      {
+         "Month": 6,
+         "Day": 25,
+         "PPM": 406.06,
+         "MD": "June25"
+      },
+      {
+         "Month": 6,
+         "Day": 26,
+         "PPM": 406.23,
+         "MD": "June26"
+      },
+      {
+         "Month": 6,
+         "Day": 27,
+         "PPM": 405.31,
+         "MD": "June27"
+      },
+      {
+         "Month": 6,
+         "Day": 29,
+         "PPM": 406.09,
+         "MD": "June29"
+      },
+      {
+         "Month": 6,
+         "Day": 30,
+         "PPM": 406.15,
+         "MD": "June30"
+      },
+      {
+         "Month": 7,
+         "Day": 2,
+         "PPM": 406.17,
+         "MD": "July2"
+      },
+      {
+         "Month": 7,
+         "Day": 3,
+         "PPM": 405.73,
+         "MD": "July3"
+      },
+      {
+         "Month": 7,
+         "Day": 4,
+         "PPM": 406.05,
+         "MD": "July4"
+      },
+      {
+         "Month": 7,
+         "Day": 5,
+         "PPM": 405.42,
+         "MD": "July5"
+      },
+      {
+         "Month": 7,
+         "Day": 6,
+         "PPM": 405.25,
+         "MD": "July6"
+      },
+      {
+         "Month": 7,
+         "Day": 7,
+         "PPM": 405.29,
+         "MD": "July7"
+      },
+      {
+         "Month": 7,
+         "Day": 8,
+         "PPM": 405.66,
+         "MD": "July8"
+      },
+      {
+         "Month": 7,
+         "Day": 10,
+         "PPM": 405.61,
+         "MD": "July10"
+      },
+      {
+         "Month": 7,
+         "Day": 12,
+         "PPM": 404.42,
+         "MD": "July12"
+      },
+      {
+         "Month": 7,
+         "Day": 13,
+         "PPM": 404.46,
+         "MD": "July13"
+      },
+      {
+         "Month": 7,
+         "Day": 14,
+         "PPM": 404.14,
+         "MD": "July14"
+      },
+      {
+         "Month": 7,
+         "Day": 15,
+         "PPM": 404.02,
+         "MD": "July15"
+      },
+      {
+         "Month": 7,
+         "Day": 16,
+         "PPM": 404.36,
+         "MD": "July16"
+      },
+      {
+         "Month": 7,
+         "Day": 17,
+         "PPM": 404.8,
+         "MD": "July17"
+      },
+      {
+         "Month": 7,
+         "Day": 18,
+         "PPM": 400.82,
+         "MD": "July18"
+      },
+      {
+         "Month": 7,
+         "Day": 19,
+         "PPM": 403.18,
+         "MD": "July19"
+      },
+      {
+         "Month": 7,
+         "Day": 20,
+         "PPM": 403.23,
+         "MD": "July20"
+      },
+      {
+         "Month": 7,
+         "Day": 21,
+         "PPM": 404.94,
+         "MD": "July21"
+      },
+      {
+         "Month": 7,
+         "Day": 22,
+         "PPM": 404.4,
+         "MD": "July22"
+      },
+      {
+         "Month": 7,
+         "Day": 23,
+         "PPM": 402.51,
+         "MD": "July23"
+      },
+      {
+         "Month": 7,
+         "Day": 24,
+         "PPM": 403.09,
+         "MD": "July24"
+      },
+      {
+         "Month": 7,
+         "Day": 25,
+         "PPM": 404.04,
+         "MD": "July25"
+      },
+      {
+         "Month": 7,
+         "Day": 26,
+         "PPM": 403.97,
+         "MD": "July26"
+      },
+      {
+         "Month": 7,
+         "Day": 27,
+         "PPM": 403.89,
+         "MD": "July27"
+      },
+      {
+         "Month": 7,
+         "Day": 28,
+         "PPM": 404.03,
+         "MD": "July28"
+      },
+      {
+         "Month": 7,
+         "Day": 29,
+         "PPM": 403.96,
+         "MD": "July29"
+      },
+      {
+         "Month": 7,
+         "Day": 30,
+         "PPM": 404,
+         "MD": "July30"
+      },
+      {
+         "Month": 7,
+         "Day": 31,
+         "PPM": 404.01,
+         "MD": "July31"
+      },
+      {
+         "Month": 8,
+         "Day": 1,
+         "PPM": 403.29,
+         "MD": "August1"
+      },
+      {
+         "Month": 8,
+         "Day": 2,
+         "PPM": 403.28,
+         "MD": "August2"
+      },
+      {
+         "Month": 8,
+         "Day": 3,
+         "PPM": 403.22,
+         "MD": "August3"
+      },
+      {
+         "Month": 8,
+         "Day": 4,
+         "PPM": 403.58,
+         "MD": "August4"
+      },
+      {
+         "Month": 8,
+         "Day": 5,
+         "PPM": 403.58,
+         "MD": "August5"
+      },
+      {
+         "Month": 8,
+         "Day": 8,
+         "PPM": 403.31,
+         "MD": "August8"
+      },
+      {
+         "Month": 8,
+         "Day": 9,
+         "PPM": 403.12,
+         "MD": "August9"
+      },
+      {
+         "Month": 8,
+         "Day": 10,
+         "PPM": 402.96,
+         "MD": "August10"
+      },
+      {
+         "Month": 8,
+         "Day": 11,
+         "PPM": 402.98,
+         "MD": "August11"
+      },
+      {
+         "Month": 8,
+         "Day": 13,
+         "PPM": 402.11,
+         "MD": "August13"
+      },
+      {
+         "Month": 8,
+         "Day": 15,
+         "PPM": 401.27,
+         "MD": "August15"
+      },
+      {
+         "Month": 8,
+         "Day": 16,
+         "PPM": 401.43,
+         "MD": "August16"
+      },
+      {
+         "Month": 8,
+         "Day": 18,
+         "PPM": 402.55,
+         "MD": "August18"
+      },
+      {
+         "Month": 8,
+         "Day": 19,
+         "PPM": 402.23,
+         "MD": "August19"
+      },
+      {
+         "Month": 8,
+         "Day": 21,
+         "PPM": 401.98,
+         "MD": "August21"
+      },
+      {
+         "Month": 8,
+         "Day": 22,
+         "PPM": 401.68,
+         "MD": "August22"
+      },
+      {
+         "Month": 8,
+         "Day": 23,
+         "PPM": 402.18,
+         "MD": "August23"
+      },
+      {
+         "Month": 8,
+         "Day": 24,
+         "PPM": 402.01,
+         "MD": "August24"
+      },
+      {
+         "Month": 8,
+         "Day": 25,
+         "PPM": 401.88,
+         "MD": "August25"
+      },
+      {
+         "Month": 8,
+         "Day": 26,
+         "PPM": 402.07,
+         "MD": "August26"
+      },
+      {
+         "Month": 8,
+         "Day": 27,
+         "PPM": 401.45,
+         "MD": "August27"
+      },
+      {
+         "Month": 8,
+         "Day": 28,
+         "PPM": 401.39,
+         "MD": "August28"
+      },
+      {
+         "Month": 8,
+         "Day": 29,
+         "PPM": 399.43,
+         "MD": "August29"
+      },
+      {
+         "Month": 8,
+         "Day": 30,
+         "PPM": 400.93,
+         "MD": "August30"
+      },
+      {
+         "Month": 9,
+         "Day": 2,
+         "PPM": 402.03,
+         "MD": "September2"
+      },
+      {
+         "Month": 9,
+         "Day": 3,
+         "PPM": 401.09,
+         "MD": "September3"
+      },
+      {
+         "Month": 9,
+         "Day": 4,
+         "PPM": 401.19,
+         "MD": "September4"
+      },
+      {
+         "Month": 9,
+         "Day": 5,
+         "PPM": 401.59,
+         "MD": "September5"
+      },
+      {
+         "Month": 9,
+         "Day": 6,
+         "PPM": 401.16,
+         "MD": "September6"
+      },
+      {
+         "Month": 9,
+         "Day": 7,
+         "PPM": 400.35,
+         "MD": "September7"
+      },
+      {
+         "Month": 9,
+         "Day": 8,
+         "PPM": 400.35,
+         "MD": "September8"
+      },
+      {
+         "Month": 9,
+         "Day": 9,
+         "PPM": 401.33,
+         "MD": "September9"
+      },
+      {
+         "Month": 9,
+         "Day": 12,
+         "PPM": 401.67,
+         "MD": "September12"
+      },
+      {
+         "Month": 9,
+         "Day": 13,
+         "PPM": 400.99,
+         "MD": "September13"
+      },
+      {
+         "Month": 9,
+         "Day": 15,
+         "PPM": 400.9,
+         "MD": "September15"
+      },
+      {
+         "Month": 9,
+         "Day": 16,
+         "PPM": 401.24,
+         "MD": "September16"
+      },
+      {
+         "Month": 9,
+         "Day": 17,
+         "PPM": 401.95,
+         "MD": "September17"
+      },
+      {
+         "Month": 9,
+         "Day": 18,
+         "PPM": 401.72,
+         "MD": "September18"
+      },
+      {
+         "Month": 9,
+         "Day": 19,
+         "PPM": 400.85,
+         "MD": "September19"
+      },
+      {
+         "Month": 9,
+         "Day": 20,
+         "PPM": 400.64,
+         "MD": "September20"
+      },
+      {
+         "Month": 9,
+         "Day": 21,
+         "PPM": 400.78,
+         "MD": "September21"
+      },
+      {
+         "Month": 9,
+         "Day": 22,
+         "PPM": 401.02,
+         "MD": "September22"
+      },
+      {
+         "Month": 9,
+         "Day": 23,
+         "PPM": 400.71,
+         "MD": "September23"
+      },
+      {
+         "Month": 9,
+         "Day": 24,
+         "PPM": 400.54,
+         "MD": "September24"
+      },
+      {
+         "Month": 9,
+         "Day": 25,
+         "PPM": 400.74,
+         "MD": "September25"
+      },
+      {
+         "Month": 9,
+         "Day": 26,
+         "PPM": 400.93,
+         "MD": "September26"
+      },
+      {
+         "Month": 9,
+         "Day": 28,
+         "PPM": 400.46,
+         "MD": "September28"
+      },
+      {
+         "Month": 9,
+         "Day": 30,
+         "PPM": 400.97,
+         "MD": "September30"
+      },
+      {
+         "Month": 10,
+         "Day": 1,
+         "PPM": 400.64,
+         "MD": "October1"
+      },
+      {
+         "Month": 10,
+         "Day": 2,
+         "PPM": 400.87,
+         "MD": "October2"
+      },
+      {
+         "Month": 10,
+         "Day": 3,
+         "PPM": 401.03,
+         "MD": "October3"
+      },
+      {
+         "Month": 10,
+         "Day": 4,
+         "PPM": 400.73,
+         "MD": "October4"
+      },
+      {
+         "Month": 10,
+         "Day": 5,
+         "PPM": 401.06,
+         "MD": "October5"
+      },
+      {
+         "Month": 10,
+         "Day": 6,
+         "PPM": 400.83,
+         "MD": "October6"
+      },
+      {
+         "Month": 10,
+         "Day": 7,
+         "PPM": 400.88,
+         "MD": "October7"
+      },
+      {
+         "Month": 10,
+         "Day": 8,
+         "PPM": 401.21,
+         "MD": "October8"
+      },
+      {
+         "Month": 10,
+         "Day": 10,
+         "PPM": 401.57,
+         "MD": "October10"
+      },
+      {
+         "Month": 10,
+         "Day": 11,
+         "PPM": 401.4,
+         "MD": "October11"
+      },
+      {
+         "Month": 10,
+         "Day": 12,
+         "PPM": 401.65,
+         "MD": "October12"
+      },
+      {
+         "Month": 10,
+         "Day": 13,
+         "PPM": 401.34,
+         "MD": "October13"
+      },
+      {
+         "Month": 10,
+         "Day": 14,
+         "PPM": 401.83,
+         "MD": "October14"
+      },
+      {
+         "Month": 10,
+         "Day": 15,
+         "PPM": 401.75,
+         "MD": "October15"
+      },
+      {
+         "Month": 10,
+         "Day": 16,
+         "PPM": 401.72,
+         "MD": "October16"
+      },
+      {
+         "Month": 10,
+         "Day": 17,
+         "PPM": 401.85,
+         "MD": "October17"
+      },
+      {
+         "Month": 10,
+         "Day": 18,
+         "PPM": 401.78,
+         "MD": "October18"
+      },
+      {
+         "Month": 10,
+         "Day": 19,
+         "PPM": 401.23,
+         "MD": "October19"
+      },
+      {
+         "Month": 10,
+         "Day": 20,
+         "PPM": 401.48,
+         "MD": "October20"
+      },
+      {
+         "Month": 10,
+         "Day": 21,
+         "PPM": 401.89,
+         "MD": "October21"
+      },
+      {
+         "Month": 10,
+         "Day": 22,
+         "PPM": 401.74,
+         "MD": "October22"
+      },
+      {
+         "Month": 10,
+         "Day": 23,
+         "PPM": 401.67,
+         "MD": "October23"
+      },
+      {
+         "Month": 10,
+         "Day": 24,
+         "PPM": 402.29,
+         "MD": "October24"
+      },
+      {
+         "Month": 10,
+         "Day": 25,
+         "PPM": 401.83,
+         "MD": "October25"
+      },
+      {
+         "Month": 10,
+         "Day": 26,
+         "PPM": 401.57,
+         "MD": "October26"
+      },
+      {
+         "Month": 10,
+         "Day": 28,
+         "PPM": 402.41,
+         "MD": "October28"
+      },
+      {
+         "Month": 10,
+         "Day": 29,
+         "PPM": 403.2,
+         "MD": "October29"
+      },
+      {
+         "Month": 10,
+         "Day": 30,
+         "PPM": 402.4,
+         "MD": "October30"
+      },
+      {
+         "Month": 10,
+         "Day": 31,
+         "PPM": 402.52,
+         "MD": "October31"
+      },
+      {
+         "Month": 11,
+         "Day": 1,
+         "PPM": 402.18,
+         "MD": "November1"
+      },
+      {
+         "Month": 11,
+         "Day": 2,
+         "PPM": 402.61,
+         "MD": "November2"
+      },
+      {
+         "Month": 11,
+         "Day": 3,
+         "PPM": 403.22,
+         "MD": "November3"
+      },
+      {
+         "Month": 11,
+         "Day": 4,
+         "PPM": 403.78,
+         "MD": "November4"
+      },
+      {
+         "Month": 11,
+         "Day": 5,
+         "PPM": 402.91,
+         "MD": "November5"
+      },
+      {
+         "Month": 11,
+         "Day": 7,
+         "PPM": 403,
+         "MD": "November7"
+      },
+      {
+         "Month": 11,
+         "Day": 8,
+         "PPM": 402.79,
+         "MD": "November8"
+      },
+      {
+         "Month": 11,
+         "Day": 9,
+         "PPM": 402.86,
+         "MD": "November9"
+      },
+      {
+         "Month": 11,
+         "Day": 10,
+         "PPM": 403.36,
+         "MD": "November10"
+      },
+      {
+         "Month": 11,
+         "Day": 11,
+         "PPM": 402.59,
+         "MD": "November11"
+      },
+      {
+         "Month": 11,
+         "Day": 12,
+         "PPM": 402.23,
+         "MD": "November12"
+      },
+      {
+         "Month": 11,
+         "Day": 13,
+         "PPM": 402.49,
+         "MD": "November13"
+      },
+      {
+         "Month": 11,
+         "Day": 14,
+         "PPM": 402.62,
+         "MD": "November14"
+      },
+      {
+         "Month": 11,
+         "Day": 16,
+         "PPM": 404.72,
+         "MD": "November16"
+      },
+      {
+         "Month": 11,
+         "Day": 17,
+         "PPM": 404.25,
+         "MD": "November17"
+      },
+      {
+         "Month": 11,
+         "Day": 18,
+         "PPM": 403.2,
+         "MD": "November18"
+      },
+      {
+         "Month": 11,
+         "Day": 19,
+         "PPM": 404.31,
+         "MD": "November19"
+      },
+      {
+         "Month": 11,
+         "Day": 20,
+         "PPM": 403.42,
+         "MD": "November20"
+      },
+      {
+         "Month": 11,
+         "Day": 21,
+         "PPM": 403.56,
+         "MD": "November21"
+      },
+      {
+         "Month": 11,
+         "Day": 22,
+         "PPM": 403.57,
+         "MD": "November22"
+      },
+      {
+         "Month": 11,
+         "Day": 23,
+         "PPM": 403.49,
+         "MD": "November23"
+      },
+      {
+         "Month": 11,
+         "Day": 24,
+         "PPM": 403.1,
+         "MD": "November24"
+      },
+      {
+         "Month": 11,
+         "Day": 25,
+         "PPM": 405.44,
+         "MD": "November25"
+      },
+      {
+         "Month": 11,
+         "Day": 26,
+         "PPM": 405.42,
+         "MD": "November26"
+      },
+      {
+         "Month": 11,
+         "Day": 27,
+         "PPM": 404.95,
+         "MD": "November27"
+      },
+      {
+         "Month": 11,
+         "Day": 28,
+         "PPM": 404.4,
+         "MD": "November28"
+      },
+      {
+         "Month": 11,
+         "Day": 29,
+         "PPM": 404.66,
+         "MD": "November29"
+      },
+      {
+         "Month": 12,
+         "Day": 2,
+         "PPM": 404.38,
+         "MD": "December2"
+      },
+      {
+         "Month": 12,
+         "Day": 3,
+         "PPM": 404.44,
+         "MD": "December3"
+      },
+      {
+         "Month": 12,
+         "Day": 4,
+         "PPM": 404.38,
+         "MD": "December4"
+      },
+      {
+         "Month": 12,
+         "Day": 5,
+         "PPM": 403.64,
+         "MD": "December5"
+      },
+      {
+         "Month": 12,
+         "Day": 6,
+         "PPM": 403.67,
+         "MD": "December6"
+      },
+      {
+         "Month": 12,
+         "Day": 7,
+         "PPM": 403.38,
+         "MD": "December7"
+      },
+      {
+         "Month": 12,
+         "Day": 8,
+         "PPM": 404.04,
+         "MD": "December8"
+      },
+      {
+         "Month": 12,
+         "Day": 9,
+         "PPM": 404.01,
+         "MD": "December9"
+      },
+      {
+         "Month": 12,
+         "Day": 10,
+         "PPM": 404.16,
+         "MD": "December10"
+      },
+      {
+         "Month": 12,
+         "Day": 11,
+         "PPM": 404.38,
+         "MD": "December11"
+      },
+      {
+         "Month": 12,
+         "Day": 12,
+         "PPM": 404.46,
+         "MD": "December12"
+      },
+      {
+         "Month": 12,
+         "Day": 14,
+         "PPM": 404.4,
+         "MD": "December14"
+      },
+      {
+         "Month": 12,
+         "Day": 15,
+         "PPM": 405.47,
+         "MD": "December15"
+      },
+      {
+         "Month": 12,
+         "Day": 16,
+         "PPM": 404.93,
+         "MD": "December16"
+      },
+      {
+         "Month": 12,
+         "Day": 17,
+         "PPM": 405.34,
+         "MD": "December17"
+      },
+      {
+         "Month": 12,
+         "Day": 18,
+         "PPM": 404.43,
+         "MD": "December18"
+      },
+      {
+         "Month": 12,
+         "Day": 19,
+         "PPM": 403.82,
+         "MD": "December19"
+      },
+      {
+         "Month": 12,
+         "Day": 20,
+         "PPM": 404.15,
+         "MD": "December20"
+      },
+      {
+         "Month": 12,
+         "Day": 21,
+         "PPM": 404.5,
+         "MD": "December21"
+      },
+      {
+         "Month": 12,
+         "Day": 22,
+         "PPM": 404.67,
+         "MD": "December22"
+      },
+      {
+         "Month": 12,
+         "Day": 23,
+         "PPM": 404.91,
+         "MD": "December23"
+      },
+      {
+         "Month": 12,
+         "Day": 24,
+         "PPM": 404.52,
+         "MD": "December24"
+      },
+      {
+         "Month": 12,
+         "Day": 25,
+         "PPM": 404.59,
+         "MD": "December25"
+      },
+      {
+         "Month": 12,
+         "Day": 26,
+         "PPM": 404.46,
+         "MD": "December26"
+      },
+      {
+         "Month": 12,
+         "Day": 27,
+         "PPM": 404.44,
+         "MD": "December27"
+      },
+      {
+         "Month": 12,
+         "Day": 28,
+         "PPM": 404.52,
+         "MD": "December28"
+      },
+      {
+         "Month": 12,
+         "Day": 29,
+         "PPM": 405.33,
+         "MD": "December29"
+      },
+      {
+         "Month": 12,
+         "Day": 30,
+         "PPM": 404.96,
+         "MD": "December30"
+      },
+      {
+         "Month": 12,
+         "Day": 31,
+         "PPM": 405.12,
+         "MD": "December31"
+      }
+   ],
+   "2017": [
+      {
+         "Month": 1,
+         "Day": 1,
+         "PPM": 406.4,
+         "MD": "January1"
+      },
+      {
+         "Month": 1,
+         "Day": 2,
+         "PPM": 406.87,
+         "MD": "January2"
+      },
+      {
+         "Month": 1,
+         "Day": 3,
+         "PPM": 405.5,
+         "MD": "January3"
+      },
+      {
+         "Month": 1,
+         "Day": 4,
+         "PPM": 405.24,
+         "MD": "January4"
+      },
+      {
+         "Month": 1,
+         "Day": 5,
+         "PPM": 405.47,
+         "MD": "January5"
+      },
+      {
+         "Month": 1,
+         "Day": 6,
+         "PPM": 406.01,
+         "MD": "January6"
+      },
+      {
+         "Month": 1,
+         "Day": 7,
+         "PPM": 406.13,
+         "MD": "January7"
+      },
+      {
+         "Month": 1,
+         "Day": 8,
+         "PPM": 406.41,
+         "MD": "January8"
+      },
+      {
+         "Month": 1,
+         "Day": 9,
+         "PPM": 406.24,
+         "MD": "January9"
+      },
+      {
+         "Month": 1,
+         "Day": 10,
+         "PPM": 405.98,
+         "MD": "January10"
+      },
+      {
+         "Month": 1,
+         "Day": 11,
+         "PPM": 406.44,
+         "MD": "January11"
+      },
+      {
+         "Month": 1,
+         "Day": 12,
+         "PPM": 404.77,
+         "MD": "January12"
+      },
+      {
+         "Month": 1,
+         "Day": 13,
+         "PPM": 406.5,
+         "MD": "January13"
+      },
+      {
+         "Month": 1,
+         "Day": 14,
+         "PPM": 405.77,
+         "MD": "January14"
+      },
+      {
+         "Month": 1,
+         "Day": 15,
+         "PPM": 405.02,
+         "MD": "January15"
+      },
+      {
+         "Month": 1,
+         "Day": 16,
+         "PPM": 406.44,
+         "MD": "January16"
+      },
+      {
+         "Month": 1,
+         "Day": 17,
+         "PPM": 406.44,
+         "MD": "January17"
+      },
+      {
+         "Month": 1,
+         "Day": 18,
+         "PPM": 406.04,
+         "MD": "January18"
+      },
+      {
+         "Month": 1,
+         "Day": 19,
+         "PPM": 406.92,
+         "MD": "January19"
+      },
+      {
+         "Month": 1,
+         "Day": 20,
+         "PPM": 406.21,
+         "MD": "January20"
+      },
+      {
+         "Month": 1,
+         "Day": 21,
+         "PPM": 406.47,
+         "MD": "January21"
+      },
+      {
+         "Month": 1,
+         "Day": 24,
+         "PPM": 407.72,
+         "MD": "January24"
+      },
+      {
+         "Month": 1,
+         "Day": 25,
+         "PPM": 407.32,
+         "MD": "January25"
+      },
+      {
+         "Month": 1,
+         "Day": 27,
+         "PPM": 405.59,
+         "MD": "January27"
+      },
+      {
+         "Month": 1,
+         "Day": 28,
+         "PPM": 405.43,
+         "MD": "January28"
+      },
+      {
+         "Month": 1,
+         "Day": 29,
+         "PPM": 405.79,
+         "MD": "January29"
+      },
+      {
+         "Month": 1,
+         "Day": 31,
+         "PPM": 406.7,
+         "MD": "January31"
+      },
+      {
+         "Month": 2,
+         "Day": 1,
+         "PPM": 405.73,
+         "MD": "February1"
+      },
+      {
+         "Month": 2,
+         "Day": 2,
+         "PPM": 406.44,
+         "MD": "February2"
+      },
+      {
+         "Month": 2,
+         "Day": 3,
+         "PPM": 406.26,
+         "MD": "February3"
+      },
+      {
+         "Month": 2,
+         "Day": 4,
+         "PPM": 406.51,
+         "MD": "February4"
+      },
+      {
+         "Month": 2,
+         "Day": 5,
+         "PPM": 406.46,
+         "MD": "February5"
+      },
+      {
+         "Month": 2,
+         "Day": 6,
+         "PPM": 406.16,
+         "MD": "February6"
+      },
+      {
+         "Month": 2,
+         "Day": 7,
+         "PPM": 406.11,
+         "MD": "February7"
+      },
+      {
+         "Month": 2,
+         "Day": 8,
+         "PPM": 406.15,
+         "MD": "February8"
+      },
+      {
+         "Month": 2,
+         "Day": 9,
+         "PPM": 405.92,
+         "MD": "February9"
+      },
+      {
+         "Month": 2,
+         "Day": 10,
+         "PPM": 405.65,
+         "MD": "February10"
+      },
+      {
+         "Month": 2,
+         "Day": 11,
+         "PPM": 406.01,
+         "MD": "February11"
+      },
+      {
+         "Month": 2,
+         "Day": 12,
+         "PPM": 406.5,
+         "MD": "February12"
+      },
+      {
+         "Month": 2,
+         "Day": 13,
+         "PPM": 405.49,
+         "MD": "February13"
+      },
+      {
+         "Month": 2,
+         "Day": 14,
+         "PPM": 406.41,
+         "MD": "February14"
+      },
+      {
+         "Month": 2,
+         "Day": 15,
+         "PPM": 405.78,
+         "MD": "February15"
+      },
+      {
+         "Month": 2,
+         "Day": 16,
+         "PPM": 405.81,
+         "MD": "February16"
+      },
+      {
+         "Month": 2,
+         "Day": 17,
+         "PPM": 405.77,
+         "MD": "February17"
+      },
+      {
+         "Month": 2,
+         "Day": 18,
+         "PPM": 405.89,
+         "MD": "February18"
+      },
+      {
+         "Month": 2,
+         "Day": 19,
+         "PPM": 405.73,
+         "MD": "February19"
+      },
+      {
+         "Month": 2,
+         "Day": 20,
+         "PPM": 406.71,
+         "MD": "February20"
+      },
+      {
+         "Month": 2,
+         "Day": 21,
+         "PPM": 406.75,
+         "MD": "February21"
+      },
+      {
+         "Month": 2,
+         "Day": 23,
+         "PPM": 407.32,
+         "MD": "February23"
+      },
+      {
+         "Month": 2,
+         "Day": 24,
+         "PPM": 408.37,
+         "MD": "February24"
+      },
+      {
+         "Month": 2,
+         "Day": 26,
+         "PPM": 408.6,
+         "MD": "February26"
+      },
+      {
+         "Month": 2,
+         "Day": 27,
+         "PPM": 407.55,
+         "MD": "February27"
+      },
+      {
+         "Month": 2,
+         "Day": 28,
+         "PPM": 407.65,
+         "MD": "February28"
+      },
+      {
+         "Month": 3,
+         "Day": 1,
+         "PPM": 406.82,
+         "MD": "March1"
+      },
+      {
+         "Month": 3,
+         "Day": 2,
+         "PPM": 406.16,
+         "MD": "March2"
+      },
+      {
+         "Month": 3,
+         "Day": 3,
+         "PPM": 407.56,
+         "MD": "March3"
+      },
+      {
+         "Month": 3,
+         "Day": 4,
+         "PPM": 407.5,
+         "MD": "March4"
+      },
+      {
+         "Month": 3,
+         "Day": 8,
+         "PPM": 406.61,
+         "MD": "March8"
+      },
+      {
+         "Month": 3,
+         "Day": 9,
+         "PPM": 405.69,
+         "MD": "March9"
+      },
+      {
+         "Month": 3,
+         "Day": 12,
+         "PPM": 406.88,
+         "MD": "March12"
+      },
+      {
+         "Month": 3,
+         "Day": 13,
+         "PPM": 407.15,
+         "MD": "March13"
+      },
+      {
+         "Month": 3,
+         "Day": 14,
+         "PPM": 407.33,
+         "MD": "March14"
+      },
+      {
+         "Month": 3,
+         "Day": 15,
+         "PPM": 407.66,
+         "MD": "March15"
+      },
+      {
+         "Month": 3,
+         "Day": 16,
+         "PPM": 406.5,
+         "MD": "March16"
+      },
+      {
+         "Month": 3,
+         "Day": 19,
+         "PPM": 406.77,
+         "MD": "March19"
+      },
+      {
+         "Month": 3,
+         "Day": 20,
+         "PPM": 406.35,
+         "MD": "March20"
+      },
+      {
+         "Month": 3,
+         "Day": 21,
+         "PPM": 406.67,
+         "MD": "March21"
+      },
+      {
+         "Month": 3,
+         "Day": 22,
+         "PPM": 406.62,
+         "MD": "March22"
+      },
+      {
+         "Month": 3,
+         "Day": 23,
+         "PPM": 406.7,
+         "MD": "March23"
+      },
+      {
+         "Month": 3,
+         "Day": 25,
+         "PPM": 407.83,
+         "MD": "March25"
+      },
+      {
+         "Month": 3,
+         "Day": 26,
+         "PPM": 406.92,
+         "MD": "March26"
+      },
+      {
+         "Month": 3,
+         "Day": 27,
+         "PPM": 406.61,
+         "MD": "March27"
+      },
+      {
+         "Month": 3,
+         "Day": 28,
+         "PPM": 409.51,
+         "MD": "March28"
+      },
+      {
+         "Month": 3,
+         "Day": 29,
+         "PPM": 409.32,
+         "MD": "March29"
+      },
+      {
+         "Month": 3,
+         "Day": 30,
+         "PPM": 409.01,
+         "MD": "March30"
+      },
+      {
+         "Month": 3,
+         "Day": 31,
+         "PPM": 409.12,
+         "MD": "March31"
+      },
+      {
+         "Month": 4,
+         "Day": 1,
+         "PPM": 408.35,
+         "MD": "April1"
+      },
+      {
+         "Month": 4,
+         "Day": 2,
+         "PPM": 408.11,
+         "MD": "April2"
+      },
+      {
+         "Month": 4,
+         "Day": 3,
+         "PPM": 407.86,
+         "MD": "April3"
+      },
+      {
+         "Month": 4,
+         "Day": 4,
+         "PPM": 408.11,
+         "MD": "April4"
+      },
+      {
+         "Month": 4,
+         "Day": 6,
+         "PPM": 406.96,
+         "MD": "April6"
+      },
+      {
+         "Month": 4,
+         "Day": 7,
+         "PPM": 406.99,
+         "MD": "April7"
+      },
+      {
+         "Month": 4,
+         "Day": 8,
+         "PPM": 407.82,
+         "MD": "April8"
+      },
+      {
+         "Month": 4,
+         "Day": 10,
+         "PPM": 408.73,
+         "MD": "April10"
+      },
+      {
+         "Month": 4,
+         "Day": 11,
+         "PPM": 409.18,
+         "MD": "April11"
+      },
+      {
+         "Month": 4,
+         "Day": 12,
+         "PPM": 409.21,
+         "MD": "April12"
+      },
+      {
+         "Month": 4,
+         "Day": 13,
+         "PPM": 407.84,
+         "MD": "April13"
+      },
+      {
+         "Month": 4,
+         "Day": 14,
+         "PPM": 408.97,
+         "MD": "April14"
+      },
+      {
+         "Month": 4,
+         "Day": 15,
+         "PPM": 409.09,
+         "MD": "April15"
+      },
+      {
+         "Month": 4,
+         "Day": 16,
+         "PPM": 409.56,
+         "MD": "April16"
+      },
+      {
+         "Month": 4,
+         "Day": 17,
+         "PPM": 409.23,
+         "MD": "April17"
+      },
+      {
+         "Month": 4,
+         "Day": 19,
+         "PPM": 409.99,
+         "MD": "April19"
+      },
+      {
+         "Month": 4,
+         "Day": 20,
+         "PPM": 409.85,
+         "MD": "April20"
+      },
+      {
+         "Month": 4,
+         "Day": 21,
+         "PPM": 409.7,
+         "MD": "April21"
+      },
+      {
+         "Month": 4,
+         "Day": 22,
+         "PPM": 409.56,
+         "MD": "April22"
+      },
+      {
+         "Month": 4,
+         "Day": 23,
+         "PPM": 409.7,
+         "MD": "April23"
+      },
+      {
+         "Month": 4,
+         "Day": 25,
+         "PPM": 409.69,
+         "MD": "April25"
+      },
+      {
+         "Month": 4,
+         "Day": 26,
+         "PPM": 412.66,
+         "MD": "April26"
+      },
+      {
+         "Month": 4,
+         "Day": 27,
+         "PPM": 408.68,
+         "MD": "April27"
+      },
+      {
+         "Month": 4,
+         "Day": 28,
+         "PPM": 409.57,
+         "MD": "April28"
+      },
+      {
+         "Month": 4,
+         "Day": 29,
+         "PPM": 409.5,
+         "MD": "April29"
+      },
+      {
+         "Month": 4,
+         "Day": 30,
+         "PPM": 410.02,
+         "MD": "April30"
+      },
+      {
+         "Month": 5,
+         "Day": 1,
+         "PPM": 408.62,
+         "MD": "May1"
+      },
+      {
+         "Month": 5,
+         "Day": 2,
+         "PPM": 409.04,
+         "MD": "May2"
+      },
+      {
+         "Month": 5,
+         "Day": 3,
+         "PPM": 408.25,
+         "MD": "May3"
+      },
+      {
+         "Month": 5,
+         "Day": 6,
+         "PPM": 410.05,
+         "MD": "May6"
+      },
+      {
+         "Month": 5,
+         "Day": 7,
+         "PPM": 409.21,
+         "MD": "May7"
+      },
+      {
+         "Month": 5,
+         "Day": 8,
+         "PPM": 409.49,
+         "MD": "May8"
+      },
+      {
+         "Month": 5,
+         "Day": 9,
+         "PPM": 409.47,
+         "MD": "May9"
+      },
+      {
+         "Month": 5,
+         "Day": 10,
+         "PPM": 408.88,
+         "MD": "May10"
+      },
+      {
+         "Month": 5,
+         "Day": 11,
+         "PPM": 409.83,
+         "MD": "May11"
+      },
+      {
+         "Month": 5,
+         "Day": 12,
+         "PPM": 409.45,
+         "MD": "May12"
+      },
+      {
+         "Month": 5,
+         "Day": 13,
+         "PPM": 408.88,
+         "MD": "May13"
+      },
+      {
+         "Month": 5,
+         "Day": 15,
+         "PPM": 411.31,
+         "MD": "May15"
+      },
+      {
+         "Month": 5,
+         "Day": 17,
+         "PPM": 410.1,
+         "MD": "May17"
+      },
+      {
+         "Month": 5,
+         "Day": 18,
+         "PPM": 410.23,
+         "MD": "May18"
+      },
+      {
+         "Month": 5,
+         "Day": 19,
+         "PPM": 410.33,
+         "MD": "May19"
+      },
+      {
+         "Month": 5,
+         "Day": 20,
+         "PPM": 410.02,
+         "MD": "May20"
+      },
+      {
+         "Month": 5,
+         "Day": 21,
+         "PPM": 409.96,
+         "MD": "May21"
+      },
+      {
+         "Month": 5,
+         "Day": 22,
+         "PPM": 410.07,
+         "MD": "May22"
+      },
+      {
+         "Month": 5,
+         "Day": 23,
+         "PPM": 410.02,
+         "MD": "May23"
+      },
+      {
+         "Month": 5,
+         "Day": 24,
+         "PPM": 410.11,
+         "MD": "May24"
+      },
+      {
+         "Month": 5,
+         "Day": 25,
+         "PPM": 410.11,
+         "MD": "May25"
+      },
+      {
+         "Month": 5,
+         "Day": 26,
+         "PPM": 409.93,
+         "MD": "May26"
+      },
+      {
+         "Month": 5,
+         "Day": 27,
+         "PPM": 409.82,
+         "MD": "May27"
+      },
+      {
+         "Month": 5,
+         "Day": 28,
+         "PPM": 409.81,
+         "MD": "May28"
+      },
+      {
+         "Month": 5,
+         "Day": 29,
+         "PPM": 409.95,
+         "MD": "May29"
+      },
+      {
+         "Month": 5,
+         "Day": 30,
+         "PPM": 409.3,
+         "MD": "May30"
+      },
+      {
+         "Month": 5,
+         "Day": 31,
+         "PPM": 409.34,
+         "MD": "May31"
+      },
+      {
+         "Month": 6,
+         "Day": 1,
+         "PPM": 409.25,
+         "MD": "June1"
+      },
+      {
+         "Month": 6,
+         "Day": 2,
+         "PPM": 409.67,
+         "MD": "June2"
+      },
+      {
+         "Month": 6,
+         "Day": 3,
+         "PPM": 409.66,
+         "MD": "June3"
+      },
+      {
+         "Month": 6,
+         "Day": 4,
+         "PPM": 409.72,
+         "MD": "June4"
+      },
+      {
+         "Month": 6,
+         "Day": 5,
+         "PPM": 409.85,
+         "MD": "June5"
+      },
+      {
+         "Month": 6,
+         "Day": 6,
+         "PPM": 409.92,
+         "MD": "June6"
+      },
+      {
+         "Month": 6,
+         "Day": 7,
+         "PPM": 409.9,
+         "MD": "June7"
+      },
+      {
+         "Month": 6,
+         "Day": 8,
+         "PPM": 409.53,
+         "MD": "June8"
+      },
+      {
+         "Month": 6,
+         "Day": 9,
+         "PPM": 409.74,
+         "MD": "June9"
+      },
+      {
+         "Month": 6,
+         "Day": 10,
+         "PPM": 409.19,
+         "MD": "June10"
+      },
+      {
+         "Month": 6,
+         "Day": 12,
+         "PPM": 409.79,
+         "MD": "June12"
+      },
+      {
+         "Month": 6,
+         "Day": 13,
+         "PPM": 409.68,
+         "MD": "June13"
+      },
+      {
+         "Month": 6,
+         "Day": 14,
+         "PPM": 409.48,
+         "MD": "June14"
+      },
+      {
+         "Month": 6,
+         "Day": 17,
+         "PPM": 408.78,
+         "MD": "June17"
+      },
+      {
+         "Month": 6,
+         "Day": 18,
+         "PPM": 408.72,
+         "MD": "June18"
+      },
+      {
+         "Month": 6,
+         "Day": 19,
+         "PPM": 407.78,
+         "MD": "June19"
+      },
+      {
+         "Month": 6,
+         "Day": 20,
+         "PPM": 408.41,
+         "MD": "June20"
+      },
+      {
+         "Month": 6,
+         "Day": 22,
+         "PPM": 408.2,
+         "MD": "June22"
+      },
+      {
+         "Month": 6,
+         "Day": 23,
+         "PPM": 408.38,
+         "MD": "June23"
+      },
+      {
+         "Month": 6,
+         "Day": 24,
+         "PPM": 408.41,
+         "MD": "June24"
+      },
+      {
+         "Month": 6,
+         "Day": 25,
+         "PPM": 408.69,
+         "MD": "June25"
+      },
+      {
+         "Month": 6,
+         "Day": 26,
+         "PPM": 408.8,
+         "MD": "June26"
+      },
+      {
+         "Month": 6,
+         "Day": 27,
+         "PPM": 408.14,
+         "MD": "June27"
+      },
+      {
+         "Month": 6,
+         "Day": 28,
+         "PPM": 408.29,
+         "MD": "June28"
+      },
+      {
+         "Month": 6,
+         "Day": 29,
+         "PPM": 406.26,
+         "MD": "June29"
+      },
+      {
+         "Month": 6,
+         "Day": 30,
+         "PPM": 406.83,
+         "MD": "June30"
+      },
+      {
+         "Month": 7,
+         "Day": 1,
+         "PPM": 407.29,
+         "MD": "July1"
+      },
+      {
+         "Month": 7,
+         "Day": 2,
+         "PPM": 406.82,
+         "MD": "July2"
+      },
+      {
+         "Month": 7,
+         "Day": 3,
+         "PPM": 407.38,
+         "MD": "July3"
+      },
+      {
+         "Month": 7,
+         "Day": 4,
+         "PPM": 409.34,
+         "MD": "July4"
+      },
+      {
+         "Month": 7,
+         "Day": 5,
+         "PPM": 409.09,
+         "MD": "July5"
+      },
+      {
+         "Month": 7,
+         "Day": 6,
+         "PPM": 407.74,
+         "MD": "July6"
+      },
+      {
+         "Month": 7,
+         "Day": 9,
+         "PPM": 407.42,
+         "MD": "July9"
+      },
+      {
+         "Month": 7,
+         "Day": 10,
+         "PPM": 407.26,
+         "MD": "July10"
+      },
+      {
+         "Month": 7,
+         "Day": 11,
+         "PPM": 407.23,
+         "MD": "July11"
+      },
+      {
+         "Month": 7,
+         "Day": 12,
+         "PPM": 406.74,
+         "MD": "July12"
+      },
+      {
+         "Month": 7,
+         "Day": 13,
+         "PPM": 406.67,
+         "MD": "July13"
+      },
+      {
+         "Month": 7,
+         "Day": 14,
+         "PPM": 406.91,
+         "MD": "July14"
+      },
+      {
+         "Month": 7,
+         "Day": 15,
+         "PPM": 407.19,
+         "MD": "July15"
+      },
+      {
+         "Month": 7,
+         "Day": 16,
+         "PPM": 406.48,
+         "MD": "July16"
+      },
+      {
+         "Month": 7,
+         "Day": 17,
+         "PPM": 407.52,
+         "MD": "July17"
+      },
+      {
+         "Month": 7,
+         "Day": 18,
+         "PPM": 407.31,
+         "MD": "July18"
+      },
+      {
+         "Month": 7,
+         "Day": 19,
+         "PPM": 406.21,
+         "MD": "July19"
+      },
+      {
+         "Month": 7,
+         "Day": 20,
+         "PPM": 406.95,
+         "MD": "July20"
+      },
+      {
+         "Month": 7,
+         "Day": 21,
+         "PPM": 406.78,
+         "MD": "July21"
+      },
+      {
+         "Month": 7,
+         "Day": 22,
+         "PPM": 406.43,
+         "MD": "July22"
+      },
+      {
+         "Month": 7,
+         "Day": 23,
+         "PPM": 407.27,
+         "MD": "July23"
+      },
+      {
+         "Month": 7,
+         "Day": 25,
+         "PPM": 406.38,
+         "MD": "July25"
+      },
+      {
+         "Month": 7,
+         "Day": 26,
+         "PPM": 406.66,
+         "MD": "July26"
+      },
+      {
+         "Month": 7,
+         "Day": 27,
+         "PPM": 406.88,
+         "MD": "July27"
+      },
+      {
+         "Month": 7,
+         "Day": 28,
+         "PPM": 407.07,
+         "MD": "July28"
+      },
+      {
+         "Month": 7,
+         "Day": 29,
+         "PPM": 406.09,
+         "MD": "July29"
+      },
+      {
+         "Month": 7,
+         "Day": 30,
+         "PPM": 407.1,
+         "MD": "July30"
+      },
+      {
+         "Month": 7,
+         "Day": 31,
+         "PPM": 406.9,
+         "MD": "July31"
+      },
+      {
+         "Month": 8,
+         "Day": 1,
+         "PPM": 406.33,
+         "MD": "August1"
+      },
+      {
+         "Month": 8,
+         "Day": 3,
+         "PPM": 406.38,
+         "MD": "August3"
+      },
+      {
+         "Month": 8,
+         "Day": 4,
+         "PPM": 406.16,
+         "MD": "August4"
+      },
+      {
+         "Month": 8,
+         "Day": 5,
+         "PPM": 405.94,
+         "MD": "August5"
+      },
+      {
+         "Month": 8,
+         "Day": 6,
+         "PPM": 406.26,
+         "MD": "August6"
+      },
+      {
+         "Month": 8,
+         "Day": 7,
+         "PPM": 405.4,
+         "MD": "August7"
+      },
+      {
+         "Month": 8,
+         "Day": 8,
+         "PPM": 404.89,
+         "MD": "August8"
+      },
+      {
+         "Month": 8,
+         "Day": 9,
+         "PPM": 405.89,
+         "MD": "August9"
+      },
+      {
+         "Month": 8,
+         "Day": 10,
+         "PPM": 405.38,
+         "MD": "August10"
+      },
+      {
+         "Month": 8,
+         "Day": 11,
+         "PPM": 405.12,
+         "MD": "August11"
+      },
+      {
+         "Month": 8,
+         "Day": 12,
+         "PPM": 405.8,
+         "MD": "August12"
+      },
+      {
+         "Month": 8,
+         "Day": 13,
+         "PPM": 405.49,
+         "MD": "August13"
+      },
+      {
+         "Month": 8,
+         "Day": 14,
+         "PPM": 405.66,
+         "MD": "August14"
+      },
+      {
+         "Month": 8,
+         "Day": 15,
+         "PPM": 405.19,
+         "MD": "August15"
+      },
+      {
+         "Month": 8,
+         "Day": 17,
+         "PPM": 405.64,
+         "MD": "August17"
+      },
+      {
+         "Month": 8,
+         "Day": 18,
+         "PPM": 404.54,
+         "MD": "August18"
+      },
+      {
+         "Month": 8,
+         "Day": 19,
+         "PPM": 404.65,
+         "MD": "August19"
+      },
+      {
+         "Month": 8,
+         "Day": 20,
+         "PPM": 404.71,
+         "MD": "August20"
+      },
+      {
+         "Month": 8,
+         "Day": 21,
+         "PPM": 404.45,
+         "MD": "August21"
+      },
+      {
+         "Month": 8,
+         "Day": 22,
+         "PPM": 404.36,
+         "MD": "August22"
+      },
+      {
+         "Month": 8,
+         "Day": 23,
+         "PPM": 404.33,
+         "MD": "August23"
+      },
+      {
+         "Month": 8,
+         "Day": 24,
+         "PPM": 404.75,
+         "MD": "August24"
+      },
+      {
+         "Month": 8,
+         "Day": 25,
+         "PPM": 404.47,
+         "MD": "August25"
+      },
+      {
+         "Month": 8,
+         "Day": 26,
+         "PPM": 404.72,
+         "MD": "August26"
+      },
+      {
+         "Month": 8,
+         "Day": 27,
+         "PPM": 404.66,
+         "MD": "August27"
+      },
+      {
+         "Month": 8,
+         "Day": 28,
+         "PPM": 404.05,
+         "MD": "August28"
+      },
+      {
+         "Month": 8,
+         "Day": 29,
+         "PPM": 404.03,
+         "MD": "August29"
+      },
+      {
+         "Month": 8,
+         "Day": 30,
+         "PPM": 404,
+         "MD": "August30"
+      },
+      {
+         "Month": 8,
+         "Day": 31,
+         "PPM": 404.17,
+         "MD": "August31"
+      },
+      {
+         "Month": 9,
+         "Day": 1,
+         "PPM": 404.26,
+         "MD": "September1"
+      },
+      {
+         "Month": 9,
+         "Day": 2,
+         "PPM": 404.2,
+         "MD": "September2"
+      },
+      {
+         "Month": 9,
+         "Day": 3,
+         "PPM": 404.01,
+         "MD": "September3"
+      },
+      {
+         "Month": 9,
+         "Day": 4,
+         "PPM": 404,
+         "MD": "September4"
+      },
+      {
+         "Month": 9,
+         "Day": 5,
+         "PPM": 403.45,
+         "MD": "September5"
+      },
+      {
+         "Month": 9,
+         "Day": 6,
+         "PPM": 404.14,
+         "MD": "September6"
+      },
+      {
+         "Month": 9,
+         "Day": 8,
+         "PPM": 403.7,
+         "MD": "September8"
+      },
+      {
+         "Month": 9,
+         "Day": 9,
+         "PPM": 402.87,
+         "MD": "September9"
+      },
+      {
+         "Month": 9,
+         "Day": 10,
+         "PPM": 403.5,
+         "MD": "September10"
+      },
+      {
+         "Month": 9,
+         "Day": 11,
+         "PPM": 403.78,
+         "MD": "September11"
+      },
+      {
+         "Month": 9,
+         "Day": 12,
+         "PPM": 403.45,
+         "MD": "September12"
+      },
+      {
+         "Month": 9,
+         "Day": 13,
+         "PPM": 403.81,
+         "MD": "September13"
+      },
+      {
+         "Month": 9,
+         "Day": 14,
+         "PPM": 403.75,
+         "MD": "September14"
+      },
+      {
+         "Month": 9,
+         "Day": 15,
+         "PPM": 403.86,
+         "MD": "September15"
+      },
+      {
+         "Month": 9,
+         "Day": 16,
+         "PPM": 403.58,
+         "MD": "September16"
+      },
+      {
+         "Month": 9,
+         "Day": 17,
+         "PPM": 402.87,
+         "MD": "September17"
+      },
+      {
+         "Month": 9,
+         "Day": 18,
+         "PPM": 403.55,
+         "MD": "September18"
+      },
+      {
+         "Month": 9,
+         "Day": 19,
+         "PPM": 402.78,
+         "MD": "September19"
+      },
+      {
+         "Month": 9,
+         "Day": 20,
+         "PPM": 403.03,
+         "MD": "September20"
+      },
+      {
+         "Month": 9,
+         "Day": 23,
+         "PPM": 403.03,
+         "MD": "September23"
+      },
+      {
+         "Month": 9,
+         "Day": 24,
+         "PPM": 402.93,
+         "MD": "September24"
+      },
+      {
+         "Month": 9,
+         "Day": 25,
+         "PPM": 402.96,
+         "MD": "September25"
+      },
+      {
+         "Month": 9,
+         "Day": 26,
+         "PPM": 402.49,
+         "MD": "September26"
+      },
+      {
+         "Month": 9,
+         "Day": 27,
+         "PPM": 402.25,
+         "MD": "September27"
+      },
+      {
+         "Month": 9,
+         "Day": 28,
+         "PPM": 402.68,
+         "MD": "September28"
+      },
+      {
+         "Month": 9,
+         "Day": 29,
+         "PPM": 403.23,
+         "MD": "September29"
+      },
+      {
+         "Month": 10,
+         "Day": 1,
+         "PPM": 402.93,
+         "MD": "October1"
+      },
+      {
+         "Month": 10,
+         "Day": 3,
+         "PPM": 402.72,
+         "MD": "October3"
+      },
+      {
+         "Month": 10,
+         "Day": 4,
+         "PPM": 402.91,
+         "MD": "October4"
+      },
+      {
+         "Month": 10,
+         "Day": 5,
+         "PPM": 402.96,
+         "MD": "October5"
+      },
+      {
+         "Month": 10,
+         "Day": 6,
+         "PPM": 403.03,
+         "MD": "October6"
+      },
+      {
+         "Month": 10,
+         "Day": 7,
+         "PPM": 403.17,
+         "MD": "October7"
+      },
+      {
+         "Month": 10,
+         "Day": 8,
+         "PPM": 403.48,
+         "MD": "October8"
+      },
+      {
+         "Month": 10,
+         "Day": 9,
+         "PPM": 403.21,
+         "MD": "October9"
+      },
+      {
+         "Month": 10,
+         "Day": 10,
+         "PPM": 403.28,
+         "MD": "October10"
+      },
+      {
+         "Month": 10,
+         "Day": 11,
+         "PPM": 403.44,
+         "MD": "October11"
+      },
+      {
+         "Month": 10,
+         "Day": 12,
+         "PPM": 403.56,
+         "MD": "October12"
+      },
+      {
+         "Month": 10,
+         "Day": 13,
+         "PPM": 403.56,
+         "MD": "October13"
+      },
+      {
+         "Month": 10,
+         "Day": 14,
+         "PPM": 403.37,
+         "MD": "October14"
+      },
+      {
+         "Month": 10,
+         "Day": 15,
+         "PPM": 404.32,
+         "MD": "October15"
+      },
+      {
+         "Month": 10,
+         "Day": 16,
+         "PPM": 403.86,
+         "MD": "October16"
+      },
+      {
+         "Month": 10,
+         "Day": 18,
+         "PPM": 403.14,
+         "MD": "October18"
+      },
+      {
+         "Month": 10,
+         "Day": 19,
+         "PPM": 403.78,
+         "MD": "October19"
+      },
+      {
+         "Month": 10,
+         "Day": 20,
+         "PPM": 404.39,
+         "MD": "October20"
+      },
+      {
+         "Month": 10,
+         "Day": 21,
+         "PPM": 404.21,
+         "MD": "October21"
+      },
+      {
+         "Month": 10,
+         "Day": 22,
+         "PPM": 404.06,
+         "MD": "October22"
+      },
+      {
+         "Month": 10,
+         "Day": 23,
+         "PPM": 403.82,
+         "MD": "October23"
+      },
+      {
+         "Month": 10,
+         "Day": 24,
+         "PPM": 403.95,
+         "MD": "October24"
+      },
+      {
+         "Month": 10,
+         "Day": 25,
+         "PPM": 403.96,
+         "MD": "October25"
+      },
+      {
+         "Month": 10,
+         "Day": 27,
+         "PPM": 404.22,
+         "MD": "October27"
+      },
+      {
+         "Month": 10,
+         "Day": 28,
+         "PPM": 403.98,
+         "MD": "October28"
+      },
+      {
+         "Month": 10,
+         "Day": 30,
+         "PPM": 404.09,
+         "MD": "October30"
+      },
+      {
+         "Month": 10,
+         "Day": 31,
+         "PPM": 404.28,
+         "MD": "October31"
+      },
+      {
+         "Month": 11,
+         "Day": 1,
+         "PPM": 403.92,
+         "MD": "November1"
+      },
+      {
+         "Month": 11,
+         "Day": 2,
+         "PPM": 404.02,
+         "MD": "November2"
+      },
+      {
+         "Month": 11,
+         "Day": 3,
+         "PPM": 404.15,
+         "MD": "November3"
+      },
+      {
+         "Month": 11,
+         "Day": 4,
+         "PPM": 404.45,
+         "MD": "November4"
+      },
+      {
+         "Month": 11,
+         "Day": 5,
+         "PPM": 404.5,
+         "MD": "November5"
+      },
+      {
+         "Month": 11,
+         "Day": 6,
+         "PPM": 404.35,
+         "MD": "November6"
+      },
+      {
+         "Month": 11,
+         "Day": 7,
+         "PPM": 403.85,
+         "MD": "November7"
+      },
+      {
+         "Month": 11,
+         "Day": 8,
+         "PPM": 404.18,
+         "MD": "November8"
+      },
+      {
+         "Month": 11,
+         "Day": 9,
+         "PPM": 404.64,
+         "MD": "November9"
+      },
+      {
+         "Month": 11,
+         "Day": 10,
+         "PPM": 403.86,
+         "MD": "November10"
+      },
+      {
+         "Month": 11,
+         "Day": 11,
+         "PPM": 404.38,
+         "MD": "November11"
+      },
+      {
+         "Month": 11,
+         "Day": 12,
+         "PPM": 404.7,
+         "MD": "November12"
+      },
+      {
+         "Month": 11,
+         "Day": 13,
+         "PPM": 404.49,
+         "MD": "November13"
+      },
+      {
+         "Month": 11,
+         "Day": 14,
+         "PPM": 404.93,
+         "MD": "November14"
+      },
+      {
+         "Month": 11,
+         "Day": 15,
+         "PPM": 404.94,
+         "MD": "November15"
+      },
+      {
+         "Month": 11,
+         "Day": 16,
+         "PPM": 405.69,
+         "MD": "November16"
+      },
+      {
+         "Month": 11,
+         "Day": 17,
+         "PPM": 405.12,
+         "MD": "November17"
+      },
+      {
+         "Month": 11,
+         "Day": 18,
+         "PPM": 405.63,
+         "MD": "November18"
+      },
+      {
+         "Month": 11,
+         "Day": 19,
+         "PPM": 405.6,
+         "MD": "November19"
+      },
+      {
+         "Month": 11,
+         "Day": 21,
+         "PPM": 405.86,
+         "MD": "November21"
+      },
+      {
+         "Month": 11,
+         "Day": 22,
+         "PPM": 406.47,
+         "MD": "November22"
+      },
+      {
+         "Month": 11,
+         "Day": 23,
+         "PPM": 406.03,
+         "MD": "November23"
+      },
+      {
+         "Month": 11,
+         "Day": 24,
+         "PPM": 406.62,
+         "MD": "November24"
+      },
+      {
+         "Month": 11,
+         "Day": 26,
+         "PPM": 405.93,
+         "MD": "November26"
+      },
+      {
+         "Month": 11,
+         "Day": 27,
+         "PPM": 406.25,
+         "MD": "November27"
+      },
+      {
+         "Month": 11,
+         "Day": 30,
+         "PPM": 406.62,
+         "MD": "November30"
+      },
+      {
+         "Month": 12,
+         "Day": 1,
+         "PPM": 406.25,
+         "MD": "December1"
+      },
+      {
+         "Month": 12,
+         "Day": 2,
+         "PPM": 406.6,
+         "MD": "December2"
+      },
+      {
+         "Month": 12,
+         "Day": 3,
+         "PPM": 407.04,
+         "MD": "December3"
+      },
+      {
+         "Month": 12,
+         "Day": 4,
+         "PPM": 407.21,
+         "MD": "December4"
+      },
+      {
+         "Month": 12,
+         "Day": 5,
+         "PPM": 407.41,
+         "MD": "December5"
+      },
+      {
+         "Month": 12,
+         "Day": 6,
+         "PPM": 406.97,
+         "MD": "December6"
+      },
+      {
+         "Month": 12,
+         "Day": 7,
+         "PPM": 406.61,
+         "MD": "December7"
+      },
+      {
+         "Month": 12,
+         "Day": 8,
+         "PPM": 405.92,
+         "MD": "December8"
+      },
+      {
+         "Month": 12,
+         "Day": 9,
+         "PPM": 406.01,
+         "MD": "December9"
+      },
+      {
+         "Month": 12,
+         "Day": 10,
+         "PPM": 405.84,
+         "MD": "December10"
+      },
+      {
+         "Month": 12,
+         "Day": 11,
+         "PPM": 407.01,
+         "MD": "December11"
+      },
+      {
+         "Month": 12,
+         "Day": 12,
+         "PPM": 406.46,
+         "MD": "December12"
+      },
+      {
+         "Month": 12,
+         "Day": 13,
+         "PPM": 405.92,
+         "MD": "December13"
+      },
+      {
+         "Month": 12,
+         "Day": 14,
+         "PPM": 406.14,
+         "MD": "December14"
+      },
+      {
+         "Month": 12,
+         "Day": 15,
+         "PPM": 406.79,
+         "MD": "December15"
+      },
+      {
+         "Month": 12,
+         "Day": 16,
+         "PPM": 407.7,
+         "MD": "December16"
+      },
+      {
+         "Month": 12,
+         "Day": 17,
+         "PPM": 406.64,
+         "MD": "December17"
+      },
+      {
+         "Month": 12,
+         "Day": 18,
+         "PPM": 406.36,
+         "MD": "December18"
+      },
+      {
+         "Month": 12,
+         "Day": 19,
+         "PPM": 406.14,
+         "MD": "December19"
+      },
+      {
+         "Month": 12,
+         "Day": 20,
+         "PPM": 406.47,
+         "MD": "December20"
+      },
+      {
+         "Month": 12,
+         "Day": 21,
+         "PPM": 406.76,
+         "MD": "December21"
+      },
+      {
+         "Month": 12,
+         "Day": 22,
+         "PPM": 408.17,
+         "MD": "December22"
+      },
+      {
+         "Month": 12,
+         "Day": 23,
+         "PPM": 407.31,
+         "MD": "December23"
+      },
+      {
+         "Month": 12,
+         "Day": 24,
+         "PPM": 406.92,
+         "MD": "December24"
+      },
+      {
+         "Month": 12,
+         "Day": 25,
+         "PPM": 406.86,
+         "MD": "December25"
+      },
+      {
+         "Month": 12,
+         "Day": 26,
+         "PPM": 406.75,
+         "MD": "December26"
+      },
+      {
+         "Month": 12,
+         "Day": 27,
+         "PPM": 406.88,
+         "MD": "December27"
+      },
+      {
+         "Month": 12,
+         "Day": 28,
+         "PPM": 408.26,
+         "MD": "December28"
+      },
+      {
+         "Month": 12,
+         "Day": 29,
+         "PPM": 407.53,
+         "MD": "December29"
+      },
+      {
+         "Month": 12,
+         "Day": 30,
+         "PPM": 407.3,
+         "MD": "December30"
+      },
+      {
+         "Month": 12,
+         "Day": 31,
+         "PPM": 407,
+         "MD": "December31"
+      }
+   ],
+   "2018": [
+      {
+         "Month": 1,
+         "Day": 1,
+         "PPM": 406.94,
+         "MD": "January1"
+      },
+      {
+         "Month": 1,
+         "Day": 2,
+         "PPM": 406.62,
+         "MD": "January2"
+      },
+      {
+         "Month": 1,
+         "Day": 3,
+         "PPM": 406.64,
+         "MD": "January3"
+      },
+      {
+         "Month": 1,
+         "Day": 4,
+         "PPM": 408.54,
+         "MD": "January4"
+      },
+      {
+         "Month": 1,
+         "Day": 5,
+         "PPM": 408.69,
+         "MD": "January5"
+      },
+      {
+         "Month": 1,
+         "Day": 6,
+         "PPM": 407.18,
+         "MD": "January6"
+      },
+      {
+         "Month": 1,
+         "Day": 7,
+         "PPM": 407.43,
+         "MD": "January7"
+      },
+      {
+         "Month": 1,
+         "Day": 8,
+         "PPM": 407.68,
+         "MD": "January8"
+      },
+      {
+         "Month": 1,
+         "Day": 10,
+         "PPM": 408.11,
+         "MD": "January10"
+      },
+      {
+         "Month": 1,
+         "Day": 11,
+         "PPM": 408.7,
+         "MD": "January11"
+      },
+      {
+         "Month": 1,
+         "Day": 12,
+         "PPM": 408,
+         "MD": "January12"
+      },
+      {
+         "Month": 1,
+         "Day": 13,
+         "PPM": 408.89,
+         "MD": "January13"
+      },
+      {
+         "Month": 1,
+         "Day": 14,
+         "PPM": 407.86,
+         "MD": "January14"
+      },
+      {
+         "Month": 1,
+         "Day": 15,
+         "PPM": 407.7,
+         "MD": "January15"
+      },
+      {
+         "Month": 1,
+         "Day": 16,
+         "PPM": 407.93,
+         "MD": "January16"
+      },
+      {
+         "Month": 1,
+         "Day": 17,
+         "PPM": 407.62,
+         "MD": "January17"
+      },
+      {
+         "Month": 1,
+         "Day": 18,
+         "PPM": 407.61,
+         "MD": "January18"
+      },
+      {
+         "Month": 1,
+         "Day": 19,
+         "PPM": 408.42,
+         "MD": "January19"
+      },
+      {
+         "Month": 1,
+         "Day": 20,
+         "PPM": 408.09,
+         "MD": "January20"
+      },
+      {
+         "Month": 1,
+         "Day": 22,
+         "PPM": 408.95,
+         "MD": "January22"
+      },
+      {
+         "Month": 1,
+         "Day": 23,
+         "PPM": 408.85,
+         "MD": "January23"
+      },
+      {
+         "Month": 1,
+         "Day": 24,
+         "PPM": 407.94,
+         "MD": "January24"
+      },
+      {
+         "Month": 1,
+         "Day": 25,
+         "PPM": 408.08,
+         "MD": "January25"
+      },
+      {
+         "Month": 1,
+         "Day": 26,
+         "PPM": 407.96,
+         "MD": "January26"
+      },
+      {
+         "Month": 1,
+         "Day": 27,
+         "PPM": 407.87,
+         "MD": "January27"
+      },
+      {
+         "Month": 1,
+         "Day": 28,
+         "PPM": 407.8,
+         "MD": "January28"
+      },
+      {
+         "Month": 1,
+         "Day": 29,
+         "PPM": 408.23,
+         "MD": "January29"
+      },
+      {
+         "Month": 1,
+         "Day": 30,
+         "PPM": 408.62,
+         "MD": "January30"
+      },
+      {
+         "Month": 1,
+         "Day": 31,
+         "PPM": 407.92,
+         "MD": "January31"
+      },
+      {
+         "Month": 2,
+         "Day": 1,
+         "PPM": 407.83,
+         "MD": "February1"
+      },
+      {
+         "Month": 2,
+         "Day": 2,
+         "PPM": 407.4,
+         "MD": "February2"
+      },
+      {
+         "Month": 2,
+         "Day": 3,
+         "PPM": 407.33,
+         "MD": "February3"
+      },
+      {
+         "Month": 2,
+         "Day": 4,
+         "PPM": 407.32,
+         "MD": "February4"
+      },
+      {
+         "Month": 2,
+         "Day": 5,
+         "PPM": 407.54,
+         "MD": "February5"
+      },
+      {
+         "Month": 2,
+         "Day": 6,
+         "PPM": 407.95,
+         "MD": "February6"
+      },
+      {
+         "Month": 2,
+         "Day": 7,
+         "PPM": 408.18,
+         "MD": "February7"
+      },
+      {
+         "Month": 2,
+         "Day": 8,
+         "PPM": 407.41,
+         "MD": "February8"
+      },
+      {
+         "Month": 2,
+         "Day": 9,
+         "PPM": 408.99,
+         "MD": "February9"
+      },
+      {
+         "Month": 2,
+         "Day": 10,
+         "PPM": 410.03,
+         "MD": "February10"
+      },
+      {
+         "Month": 2,
+         "Day": 11,
+         "PPM": 408.48,
+         "MD": "February11"
+      },
+      {
+         "Month": 2,
+         "Day": 12,
+         "PPM": 408.6,
+         "MD": "February12"
+      },
+      {
+         "Month": 2,
+         "Day": 13,
+         "PPM": 407.97,
+         "MD": "February13"
+      },
+      {
+         "Month": 2,
+         "Day": 14,
+         "PPM": 407.9,
+         "MD": "February14"
+      },
+      {
+         "Month": 2,
+         "Day": 15,
+         "PPM": 408.51,
+         "MD": "February15"
+      },
+      {
+         "Month": 2,
+         "Day": 16,
+         "PPM": 408.38,
+         "MD": "February16"
+      },
+      {
+         "Month": 2,
+         "Day": 17,
+         "PPM": 408.74,
+         "MD": "February17"
+      },
+      {
+         "Month": 2,
+         "Day": 18,
+         "PPM": 408.43,
+         "MD": "February18"
+      },
+      {
+         "Month": 2,
+         "Day": 19,
+         "PPM": 408.41,
+         "MD": "February19"
+      },
+      {
+         "Month": 2,
+         "Day": 20,
+         "PPM": 408.33,
+         "MD": "February20"
+      },
+      {
+         "Month": 2,
+         "Day": 21,
+         "PPM": 408.45,
+         "MD": "February21"
+      },
+      {
+         "Month": 2,
+         "Day": 22,
+         "PPM": 408.26,
+         "MD": "February22"
+      },
+      {
+         "Month": 2,
+         "Day": 23,
+         "PPM": 408.55,
+         "MD": "February23"
+      },
+      {
+         "Month": 2,
+         "Day": 24,
+         "PPM": 408.75,
+         "MD": "February24"
+      },
+      {
+         "Month": 2,
+         "Day": 25,
+         "PPM": 408.88,
+         "MD": "February25"
+      },
+      {
+         "Month": 2,
+         "Day": 26,
+         "PPM": 408.99,
+         "MD": "February26"
+      },
+      {
+         "Month": 2,
+         "Day": 27,
+         "PPM": 408.9,
+         "MD": "February27"
+      },
+      {
+         "Month": 2,
+         "Day": 28,
+         "PPM": 408.58,
+         "MD": "February28"
+      },
+      {
+         "Month": 3,
+         "Day": 1,
+         "PPM": 408.66,
+         "MD": "March1"
+      },
+      {
+         "Month": 3,
+         "Day": 2,
+         "PPM": 408.7,
+         "MD": "March2"
+      },
+      {
+         "Month": 3,
+         "Day": 3,
+         "PPM": 409.58,
+         "MD": "March3"
+      },
+      {
+         "Month": 3,
+         "Day": 4,
+         "PPM": 410.02,
+         "MD": "March4"
+      },
+      {
+         "Month": 3,
+         "Day": 5,
+         "PPM": 409.6,
+         "MD": "March5"
+      },
+      {
+         "Month": 3,
+         "Day": 6,
+         "PPM": 409.01,
+         "MD": "March6"
+      },
+      {
+         "Month": 3,
+         "Day": 7,
+         "PPM": 410.16,
+         "MD": "March7"
+      },
+      {
+         "Month": 3,
+         "Day": 8,
+         "PPM": 410.14,
+         "MD": "March8"
+      },
+      {
+         "Month": 3,
+         "Day": 9,
+         "PPM": 409.94,
+         "MD": "March9"
+      },
+      {
+         "Month": 3,
+         "Day": 10,
+         "PPM": 409.94,
+         "MD": "March10"
+      },
+      {
+         "Month": 3,
+         "Day": 12,
+         "PPM": 408.59,
+         "MD": "March12"
+      },
+      {
+         "Month": 3,
+         "Day": 13,
+         "PPM": 408.57,
+         "MD": "March13"
+      },
+      {
+         "Month": 3,
+         "Day": 14,
+         "PPM": 408.46,
+         "MD": "March14"
+      },
+      {
+         "Month": 3,
+         "Day": 15,
+         "PPM": 408.99,
+         "MD": "March15"
+      },
+      {
+         "Month": 3,
+         "Day": 16,
+         "PPM": 409,
+         "MD": "March16"
+      },
+      {
+         "Month": 3,
+         "Day": 17,
+         "PPM": 408.68,
+         "MD": "March17"
+      },
+      {
+         "Month": 3,
+         "Day": 18,
+         "PPM": 408.22,
+         "MD": "March18"
+      },
+      {
+         "Month": 3,
+         "Day": 19,
+         "PPM": 408.22,
+         "MD": "March19"
+      },
+      {
+         "Month": 3,
+         "Day": 20,
+         "PPM": 409.02,
+         "MD": "March20"
+      },
+      {
+         "Month": 3,
+         "Day": 21,
+         "PPM": 410.14,
+         "MD": "March21"
+      },
+      {
+         "Month": 3,
+         "Day": 22,
+         "PPM": 409.54,
+         "MD": "March22"
+      },
+      {
+         "Month": 3,
+         "Day": 23,
+         "PPM": 409.57,
+         "MD": "March23"
+      },
+      {
+         "Month": 3,
+         "Day": 24,
+         "PPM": 409.14,
+         "MD": "March24"
+      },
+      {
+         "Month": 3,
+         "Day": 25,
+         "PPM": 410.13,
+         "MD": "March25"
+      },
+      {
+         "Month": 3,
+         "Day": 26,
+         "PPM": 409.8,
+         "MD": "March26"
+      },
+      {
+         "Month": 3,
+         "Day": 27,
+         "PPM": 410.03,
+         "MD": "March27"
+      },
+      {
+         "Month": 3,
+         "Day": 28,
+         "PPM": 410.05,
+         "MD": "March28"
+      },
+      {
+         "Month": 3,
+         "Day": 29,
+         "PPM": 410.37,
+         "MD": "March29"
+      },
+      {
+         "Month": 3,
+         "Day": 30,
+         "PPM": 409.77,
+         "MD": "March30"
+      },
+      {
+         "Month": 4,
+         "Day": 1,
+         "PPM": 409.25,
+         "MD": "April1"
+      },
+      {
+         "Month": 4,
+         "Day": 2,
+         "PPM": 409.48,
+         "MD": "April2"
+      },
+      {
+         "Month": 4,
+         "Day": 3,
+         "PPM": 409.61,
+         "MD": "April3"
+      },
+      {
+         "Month": 4,
+         "Day": 4,
+         "PPM": 408.69,
+         "MD": "April4"
+      },
+      {
+         "Month": 4,
+         "Day": 5,
+         "PPM": 408.84,
+         "MD": "April5"
+      },
+      {
+         "Month": 4,
+         "Day": 6,
+         "PPM": 409.01,
+         "MD": "April6"
+      },
+      {
+         "Month": 4,
+         "Day": 7,
+         "PPM": 409.45,
+         "MD": "April7"
+      },
+      {
+         "Month": 4,
+         "Day": 8,
+         "PPM": 409.37,
+         "MD": "April8"
+      },
+      {
+         "Month": 4,
+         "Day": 9,
+         "PPM": 409.36,
+         "MD": "April9"
+      },
+      {
+         "Month": 4,
+         "Day": 10,
+         "PPM": 409.54,
+         "MD": "April10"
+      },
+      {
+         "Month": 4,
+         "Day": 12,
+         "PPM": 409.53,
+         "MD": "April12"
+      },
+      {
+         "Month": 4,
+         "Day": 20,
+         "PPM": 410.99,
+         "MD": "April20"
+      },
+      {
+         "Month": 4,
+         "Day": 21,
+         "PPM": 411.12,
+         "MD": "April21"
+      },
+      {
+         "Month": 4,
+         "Day": 22,
+         "PPM": 411.66,
+         "MD": "April22"
+      },
+      {
+         "Month": 4,
+         "Day": 23,
+         "PPM": 412.36,
+         "MD": "April23"
+      },
+      {
+         "Month": 4,
+         "Day": 24,
+         "PPM": 411.92,
+         "MD": "April24"
+      },
+      {
+         "Month": 4,
+         "Day": 25,
+         "PPM": 411.91,
+         "MD": "April25"
+      },
+      {
+         "Month": 4,
+         "Day": 26,
+         "PPM": 411.31,
+         "MD": "April26"
+      },
+      {
+         "Month": 4,
+         "Day": 28,
+         "PPM": 410.89,
+         "MD": "April28"
+      },
+      {
+         "Month": 4,
+         "Day": 29,
+         "PPM": 411.19,
+         "MD": "April29"
+      },
+      {
+         "Month": 4,
+         "Day": 30,
+         "PPM": 409.46,
+         "MD": "April30"
+      },
+      {
+         "Month": 5,
+         "Day": 1,
+         "PPM": 409.14,
+         "MD": "May1"
+      },
+      {
+         "Month": 5,
+         "Day": 3,
+         "PPM": 409.22,
+         "MD": "May3"
+      },
+      {
+         "Month": 5,
+         "Day": 4,
+         "PPM": 409.31,
+         "MD": "May4"
+      },
+      {
+         "Month": 5,
+         "Day": 9,
+         "PPM": 410.09,
+         "MD": "May9"
+      },
+      {
+         "Month": 5,
+         "Day": 10,
+         "PPM": 410.51,
+         "MD": "May10"
+      },
+      {
+         "Month": 5,
+         "Day": 11,
+         "PPM": 411.7,
+         "MD": "May11"
+      },
+      {
+         "Month": 5,
+         "Day": 12,
+         "PPM": 411.92,
+         "MD": "May12"
+      },
+      {
+         "Month": 5,
+         "Day": 13,
+         "PPM": 411.16,
+         "MD": "May13"
+      },
+      {
+         "Month": 5,
+         "Day": 14,
+         "PPM": 412.43,
+         "MD": "May14"
+      },
+      {
+         "Month": 5,
+         "Day": 15,
+         "PPM": 411.96,
+         "MD": "May15"
+      },
+      {
+         "Month": 5,
+         "Day": 16,
+         "PPM": 412.07,
+         "MD": "May16"
+      },
+      {
+         "Month": 5,
+         "Day": 17,
+         "PPM": 412.01,
+         "MD": "May17"
+      },
+      {
+         "Month": 5,
+         "Day": 18,
+         "PPM": 411.47,
+         "MD": "May18"
+      },
+      {
+         "Month": 5,
+         "Day": 19,
+         "PPM": 411.96,
+         "MD": "May19"
+      },
+      {
+         "Month": 5,
+         "Day": 20,
+         "PPM": 411.82,
+         "MD": "May20"
+      },
+      {
+         "Month": 5,
+         "Day": 22,
+         "PPM": 410.07,
+         "MD": "May22"
+      },
+      {
+         "Month": 5,
+         "Day": 24,
+         "PPM": 411.44,
+         "MD": "May24"
+      },
+      {
+         "Month": 5,
+         "Day": 25,
+         "PPM": 411.95,
+         "MD": "May25"
+      },
+      {
+         "Month": 5,
+         "Day": 26,
+         "PPM": 411.98,
+         "MD": "May26"
+      },
+      {
+         "Month": 5,
+         "Day": 27,
+         "PPM": 410.99,
+         "MD": "May27"
+      },
+      {
+         "Month": 5,
+         "Day": 28,
+         "PPM": 411.55,
+         "MD": "May28"
+      },
+      {
+         "Month": 5,
+         "Day": 29,
+         "PPM": 411.8,
+         "MD": "May29"
+      },
+      {
+         "Month": 5,
+         "Day": 30,
+         "PPM": 411.47,
+         "MD": "May30"
+      },
+      {
+         "Month": 5,
+         "Day": 31,
+         "PPM": 411.61,
+         "MD": "May31"
+      },
+      {
+         "Month": 6,
+         "Day": 1,
+         "PPM": 411.68,
+         "MD": "June1"
+      },
+      {
+         "Month": 6,
+         "Day": 2,
+         "PPM": 410.8,
+         "MD": "June2"
+      },
+      {
+         "Month": 6,
+         "Day": 3,
+         "PPM": 410.61,
+         "MD": "June3"
+      },
+      {
+         "Month": 6,
+         "Day": 4,
+         "PPM": 410.46,
+         "MD": "June4"
+      },
+      {
+         "Month": 6,
+         "Day": 5,
+         "PPM": 410.82,
+         "MD": "June5"
+      },
+      {
+         "Month": 6,
+         "Day": 6,
+         "PPM": 410.99,
+         "MD": "June6"
+      },
+      {
+         "Month": 6,
+         "Day": 7,
+         "PPM": 410.88,
+         "MD": "June7"
+      },
+      {
+         "Month": 6,
+         "Day": 8,
+         "PPM": 411.61,
+         "MD": "June8"
+      },
+      {
+         "Month": 6,
+         "Day": 9,
+         "PPM": 411.22,
+         "MD": "June9"
+      },
+      {
+         "Month": 6,
+         "Day": 10,
+         "PPM": 411.58,
+         "MD": "June10"
+      },
+      {
+         "Month": 6,
+         "Day": 11,
+         "PPM": 411.03,
+         "MD": "June11"
+      },
+      {
+         "Month": 6,
+         "Day": 12,
+         "PPM": 411.82,
+         "MD": "June12"
+      },
+      {
+         "Month": 6,
+         "Day": 13,
+         "PPM": 410.8,
+         "MD": "June13"
+      },
+      {
+         "Month": 6,
+         "Day": 14,
+         "PPM": 411.09,
+         "MD": "June14"
+      },
+      {
+         "Month": 6,
+         "Day": 15,
+         "PPM": 410.98,
+         "MD": "June15"
+      },
+      {
+         "Month": 6,
+         "Day": 16,
+         "PPM": 410.85,
+         "MD": "June16"
+      },
+      {
+         "Month": 6,
+         "Day": 17,
+         "PPM": 410.73,
+         "MD": "June17"
+      },
+      {
+         "Month": 6,
+         "Day": 18,
+         "PPM": 410.35,
+         "MD": "June18"
+      },
+      {
+         "Month": 6,
+         "Day": 19,
+         "PPM": 409.32,
+         "MD": "June19"
+      },
+      {
+         "Month": 6,
+         "Day": 20,
+         "PPM": 409.83,
+         "MD": "June20"
+      },
+      {
+         "Month": 6,
+         "Day": 21,
+         "PPM": 411.17,
+         "MD": "June21"
+      },
+      {
+         "Month": 6,
+         "Day": 23,
+         "PPM": 410.76,
+         "MD": "June23"
+      },
+      {
+         "Month": 6,
+         "Day": 24,
+         "PPM": 410.97,
+         "MD": "June24"
+      },
+      {
+         "Month": 6,
+         "Day": 25,
+         "PPM": 410.34,
+         "MD": "June25"
+      },
+      {
+         "Month": 6,
+         "Day": 26,
+         "PPM": 410.39,
+         "MD": "June26"
+      },
+      {
+         "Month": 6,
+         "Day": 27,
+         "PPM": 409.84,
+         "MD": "June27"
+      },
+      {
+         "Month": 6,
+         "Day": 28,
+         "PPM": 411.17,
+         "MD": "June28"
+      },
+      {
+         "Month": 6,
+         "Day": 29,
+         "PPM": 411.57,
+         "MD": "June29"
+      },
+      {
+         "Month": 6,
+         "Day": 30,
+         "PPM": 409.64,
+         "MD": "June30"
+      },
+      {
+         "Month": 7,
+         "Day": 2,
+         "PPM": 409.2,
+         "MD": "July2"
+      },
+      {
+         "Month": 7,
+         "Day": 3,
+         "PPM": 409.74,
+         "MD": "July3"
+      },
+      {
+         "Month": 7,
+         "Day": 4,
+         "PPM": 409.79,
+         "MD": "July4"
+      },
+      {
+         "Month": 7,
+         "Day": 6,
+         "PPM": 409.48,
+         "MD": "July6"
+      },
+      {
+         "Month": 7,
+         "Day": 7,
+         "PPM": 408.7,
+         "MD": "July7"
+      },
+      {
+         "Month": 7,
+         "Day": 8,
+         "PPM": 409.53,
+         "MD": "July8"
+      },
+      {
+         "Month": 7,
+         "Day": 9,
+         "PPM": 408.11,
+         "MD": "July9"
+      },
+      {
+         "Month": 7,
+         "Day": 11,
+         "PPM": 409.36,
+         "MD": "July11"
+      },
+      {
+         "Month": 7,
+         "Day": 12,
+         "PPM": 409.17,
+         "MD": "July12"
+      },
+      {
+         "Month": 7,
+         "Day": 13,
+         "PPM": 409.48,
+         "MD": "July13"
+      },
+      {
+         "Month": 7,
+         "Day": 14,
+         "PPM": 409.25,
+         "MD": "July14"
+      },
+      {
+         "Month": 7,
+         "Day": 15,
+         "PPM": 408.5,
+         "MD": "July15"
+      },
+      {
+         "Month": 7,
+         "Day": 16,
+         "PPM": 408.85,
+         "MD": "July16"
+      },
+      {
+         "Month": 7,
+         "Day": 17,
+         "PPM": 408.54,
+         "MD": "July17"
+      },
+      {
+         "Month": 7,
+         "Day": 18,
+         "PPM": 408.18,
+         "MD": "July18"
+      },
+      {
+         "Month": 7,
+         "Day": 19,
+         "PPM": 408.52,
+         "MD": "July19"
+      },
+      {
+         "Month": 7,
+         "Day": 20,
+         "PPM": 408.19,
+         "MD": "July20"
+      },
+      {
+         "Month": 7,
+         "Day": 21,
+         "PPM": 409.02,
+         "MD": "July21"
+      },
+      {
+         "Month": 7,
+         "Day": 22,
+         "PPM": 408.34,
+         "MD": "July22"
+      },
+      {
+         "Month": 7,
+         "Day": 23,
+         "PPM": 408.6,
+         "MD": "July23"
+      },
+      {
+         "Month": 7,
+         "Day": 24,
+         "PPM": 408.69,
+         "MD": "July24"
+      },
+      {
+         "Month": 7,
+         "Day": 25,
+         "PPM": 408.29,
+         "MD": "July25"
+      },
+      {
+         "Month": 7,
+         "Day": 26,
+         "PPM": 407.84,
+         "MD": "July26"
+      },
+      {
+         "Month": 7,
+         "Day": 27,
+         "PPM": 407.76,
+         "MD": "July27"
+      },
+      {
+         "Month": 7,
+         "Day": 28,
+         "PPM": 408.47,
+         "MD": "July28"
+      },
+      {
+         "Month": 7,
+         "Day": 30,
+         "PPM": 406.79,
+         "MD": "July30"
+      },
+      {
+         "Month": 7,
+         "Day": 31,
+         "PPM": 407.31,
+         "MD": "July31"
+      },
+      {
+         "Month": 8,
+         "Day": 1,
+         "PPM": 407.53,
+         "MD": "August1"
+      },
+      {
+         "Month": 8,
+         "Day": 2,
+         "PPM": 407.55,
+         "MD": "August2"
+      },
+      {
+         "Month": 8,
+         "Day": 3,
+         "PPM": 407.67,
+         "MD": "August3"
+      },
+      {
+         "Month": 8,
+         "Day": 4,
+         "PPM": 407.9,
+         "MD": "August4"
+      },
+      {
+         "Month": 8,
+         "Day": 5,
+         "PPM": 407.49,
+         "MD": "August5"
+      },
+      {
+         "Month": 8,
+         "Day": 6,
+         "PPM": 406.8,
+         "MD": "August6"
+      },
+      {
+         "Month": 8,
+         "Day": 7,
+         "PPM": 407.33,
+         "MD": "August7"
+      },
+      {
+         "Month": 8,
+         "Day": 8,
+         "PPM": 407.3,
+         "MD": "August8"
+      },
+      {
+         "Month": 8,
+         "Day": 9,
+         "PPM": 407.26,
+         "MD": "August9"
+      },
+      {
+         "Month": 8,
+         "Day": 10,
+         "PPM": 407.26,
+         "MD": "August10"
+      },
+      {
+         "Month": 8,
+         "Day": 11,
+         "PPM": 407.14,
+         "MD": "August11"
+      },
+      {
+         "Month": 8,
+         "Day": 12,
+         "PPM": 407.31,
+         "MD": "August12"
+      },
+      {
+         "Month": 8,
+         "Day": 13,
+         "PPM": 406.89,
+         "MD": "August13"
+      },
+      {
+         "Month": 8,
+         "Day": 14,
+         "PPM": 407.17,
+         "MD": "August14"
+      },
+      {
+         "Month": 8,
+         "Day": 15,
+         "PPM": 407.01,
+         "MD": "August15"
+      },
+      {
+         "Month": 8,
+         "Day": 16,
+         "PPM": 406.85,
+         "MD": "August16"
+      },
+      {
+         "Month": 8,
+         "Day": 17,
+         "PPM": 407.09,
+         "MD": "August17"
+      },
+      {
+         "Month": 8,
+         "Day": 18,
+         "PPM": 407.16,
+         "MD": "August18"
+      },
+      {
+         "Month": 8,
+         "Day": 19,
+         "PPM": 407.01,
+         "MD": "August19"
+      },
+      {
+         "Month": 8,
+         "Day": 20,
+         "PPM": 407.05,
+         "MD": "August20"
+      },
+      {
+         "Month": 8,
+         "Day": 21,
+         "PPM": 407.09,
+         "MD": "August21"
+      },
+      {
+         "Month": 8,
+         "Day": 22,
+         "PPM": 406.85,
+         "MD": "August22"
+      },
+      {
+         "Month": 8,
+         "Day": 23,
+         "PPM": 406.48,
+         "MD": "August23"
+      },
+      {
+         "Month": 8,
+         "Day": 24,
+         "PPM": 406.65,
+         "MD": "August24"
+      },
+      {
+         "Month": 8,
+         "Day": 25,
+         "PPM": 406.76,
+         "MD": "August25"
+      },
+      {
+         "Month": 8,
+         "Day": 26,
+         "PPM": 406.54,
+         "MD": "August26"
+      },
+      {
+         "Month": 8,
+         "Day": 27,
+         "PPM": 406.53,
+         "MD": "August27"
+      },
+      {
+         "Month": 8,
+         "Day": 28,
+         "PPM": 406.43,
+         "MD": "August28"
+      },
+      {
+         "Month": 8,
+         "Day": 29,
+         "PPM": 406.27,
+         "MD": "August29"
+      },
+      {
+         "Month": 8,
+         "Day": 30,
+         "PPM": 406.36,
+         "MD": "August30"
+      },
+      {
+         "Month": 8,
+         "Day": 31,
+         "PPM": 405.24,
+         "MD": "August31"
+      },
+      {
+         "Month": 9,
+         "Day": 1,
+         "PPM": 405.42,
+         "MD": "September1"
+      },
+      {
+         "Month": 9,
+         "Day": 2,
+         "PPM": 405.53,
+         "MD": "September2"
+      },
+      {
+         "Month": 9,
+         "Day": 3,
+         "PPM": 405.77,
+         "MD": "September3"
+      },
+      {
+         "Month": 9,
+         "Day": 4,
+         "PPM": 406.18,
+         "MD": "September4"
+      },
+      {
+         "Month": 9,
+         "Day": 5,
+         "PPM": 405.96,
+         "MD": "September5"
+      },
+      {
+         "Month": 9,
+         "Day": 6,
+         "PPM": 405.83,
+         "MD": "September6"
+      },
+      {
+         "Month": 9,
+         "Day": 7,
+         "PPM": 403.97,
+         "MD": "September7"
+      },
+      {
+         "Month": 9,
+         "Day": 8,
+         "PPM": 405.19,
+         "MD": "September8"
+      },
+      {
+         "Month": 9,
+         "Day": 9,
+         "PPM": 405,
+         "MD": "September9"
+      },
+      {
+         "Month": 9,
+         "Day": 10,
+         "PPM": 405.52,
+         "MD": "September10"
+      },
+      {
+         "Month": 9,
+         "Day": 11,
+         "PPM": 405.65,
+         "MD": "September11"
+      },
+      {
+         "Month": 9,
+         "Day": 12,
+         "PPM": 405.02,
+         "MD": "September12"
+      },
+      {
+         "Month": 9,
+         "Day": 13,
+         "PPM": 405.37,
+         "MD": "September13"
+      },
+      {
+         "Month": 9,
+         "Day": 14,
+         "PPM": 405.4,
+         "MD": "September14"
+      },
+      {
+         "Month": 9,
+         "Day": 15,
+         "PPM": 405.78,
+         "MD": "September15"
+      },
+      {
+         "Month": 9,
+         "Day": 16,
+         "PPM": 405.19,
+         "MD": "September16"
+      },
+      {
+         "Month": 9,
+         "Day": 17,
+         "PPM": 405.81,
+         "MD": "September17"
+      },
+      {
+         "Month": 9,
+         "Day": 18,
+         "PPM": 405.83,
+         "MD": "September18"
+      },
+      {
+         "Month": 9,
+         "Day": 19,
+         "PPM": 405.79,
+         "MD": "September19"
+      },
+      {
+         "Month": 9,
+         "Day": 20,
+         "PPM": 405.64,
+         "MD": "September20"
+      },
+      {
+         "Month": 9,
+         "Day": 21,
+         "PPM": 405.65,
+         "MD": "September21"
+      },
+      {
+         "Month": 9,
+         "Day": 22,
+         "PPM": 405.91,
+         "MD": "September22"
+      },
+      {
+         "Month": 9,
+         "Day": 23,
+         "PPM": 405.45,
+         "MD": "September23"
+      },
+      {
+         "Month": 9,
+         "Day": 24,
+         "PPM": 405.41,
+         "MD": "September24"
+      },
+      {
+         "Month": 9,
+         "Day": 25,
+         "PPM": 405.38,
+         "MD": "September25"
+      },
+      {
+         "Month": 9,
+         "Day": 26,
+         "PPM": 405.8,
+         "MD": "September26"
+      },
+      {
+         "Month": 9,
+         "Day": 27,
+         "PPM": 405.88,
+         "MD": "September27"
+      },
+      {
+         "Month": 9,
+         "Day": 29,
+         "PPM": 405.37,
+         "MD": "September29"
+      },
+      {
+         "Month": 9,
+         "Day": 30,
+         "PPM": 405.65,
+         "MD": "September30"
+      },
+      {
+         "Month": 10,
+         "Day": 1,
+         "PPM": 405.31,
+         "MD": "October1"
+      },
+      {
+         "Month": 10,
+         "Day": 2,
+         "PPM": 405.33,
+         "MD": "October2"
+      },
+      {
+         "Month": 10,
+         "Day": 3,
+         "PPM": 405.62,
+         "MD": "October3"
+      },
+      {
+         "Month": 10,
+         "Day": 4,
+         "PPM": 405.44,
+         "MD": "October4"
+      },
+      {
+         "Month": 10,
+         "Day": 5,
+         "PPM": 405.75,
+         "MD": "October5"
+      },
+      {
+         "Month": 10,
+         "Day": 6,
+         "PPM": 405.42,
+         "MD": "October6"
+      },
+      {
+         "Month": 10,
+         "Day": 7,
+         "PPM": 405.55,
+         "MD": "October7"
+      },
+      {
+         "Month": 10,
+         "Day": 8,
+         "PPM": 405.34,
+         "MD": "October8"
+      },
+      {
+         "Month": 10,
+         "Day": 9,
+         "PPM": 405.33,
+         "MD": "October9"
+      },
+      {
+         "Month": 10,
+         "Day": 10,
+         "PPM": 405.65,
+         "MD": "October10"
+      },
+      {
+         "Month": 10,
+         "Day": 11,
+         "PPM": 405.52,
+         "MD": "October11"
+      },
+      {
+         "Month": 10,
+         "Day": 12,
+         "PPM": 405.66,
+         "MD": "October12"
+      },
+      {
+         "Month": 10,
+         "Day": 13,
+         "PPM": 406.03,
+         "MD": "October13"
+      },
+      {
+         "Month": 10,
+         "Day": 14,
+         "PPM": 406.03,
+         "MD": "October14"
+      },
+      {
+         "Month": 10,
+         "Day": 15,
+         "PPM": 405.83,
+         "MD": "October15"
+      },
+      {
+         "Month": 10,
+         "Day": 16,
+         "PPM": 405.87,
+         "MD": "October16"
+      },
+      {
+         "Month": 10,
+         "Day": 18,
+         "PPM": 406.03,
+         "MD": "October18"
+      },
+      {
+         "Month": 10,
+         "Day": 19,
+         "PPM": 406.17,
+         "MD": "October19"
+      },
+      {
+         "Month": 10,
+         "Day": 20,
+         "PPM": 406.12,
+         "MD": "October20"
+      },
+      {
+         "Month": 10,
+         "Day": 21,
+         "PPM": 406.56,
+         "MD": "October21"
+      },
+      {
+         "Month": 10,
+         "Day": 22,
+         "PPM": 406.87,
+         "MD": "October22"
+      },
+      {
+         "Month": 10,
+         "Day": 23,
+         "PPM": 406.8,
+         "MD": "October23"
+      },
+      {
+         "Month": 10,
+         "Day": 24,
+         "PPM": 407.08,
+         "MD": "October24"
+      },
+      {
+         "Month": 10,
+         "Day": 25,
+         "PPM": 406.47,
+         "MD": "October25"
+      },
+      {
+         "Month": 10,
+         "Day": 26,
+         "PPM": 406.35,
+         "MD": "October26"
+      },
+      {
+         "Month": 10,
+         "Day": 27,
+         "PPM": 406.19,
+         "MD": "October27"
+      },
+      {
+         "Month": 10,
+         "Day": 28,
+         "PPM": 406.65,
+         "MD": "October28"
+      },
+      {
+         "Month": 10,
+         "Day": 29,
+         "PPM": 405.89,
+         "MD": "October29"
+      },
+      {
+         "Month": 10,
+         "Day": 30,
+         "PPM": 406.79,
+         "MD": "October30"
+      },
+      {
+         "Month": 10,
+         "Day": 31,
+         "PPM": 406.32,
+         "MD": "October31"
+      },
+      {
+         "Month": 11,
+         "Day": 1,
+         "PPM": 406.59,
+         "MD": "November1"
+      },
+      {
+         "Month": 11,
+         "Day": 2,
+         "PPM": 406.61,
+         "MD": "November2"
+      },
+      {
+         "Month": 11,
+         "Day": 4,
+         "PPM": 407.16,
+         "MD": "November4"
+      },
+      {
+         "Month": 11,
+         "Day": 5,
+         "PPM": 406.95,
+         "MD": "November5"
+      },
+      {
+         "Month": 11,
+         "Day": 7,
+         "PPM": 406.67,
+         "MD": "November7"
+      },
+      {
+         "Month": 11,
+         "Day": 8,
+         "PPM": 407.06,
+         "MD": "November8"
+      },
+      {
+         "Month": 11,
+         "Day": 9,
+         "PPM": 407.13,
+         "MD": "November9"
+      },
+      {
+         "Month": 11,
+         "Day": 11,
+         "PPM": 407.79,
+         "MD": "November11"
+      },
+      {
+         "Month": 11,
+         "Day": 14,
+         "PPM": 409.18,
+         "MD": "November14"
+      },
+      {
+         "Month": 11,
+         "Day": 15,
+         "PPM": 409.14,
+         "MD": "November15"
+      },
+      {
+         "Month": 11,
+         "Day": 16,
+         "PPM": 409.52,
+         "MD": "November16"
+      },
+      {
+         "Month": 11,
+         "Day": 17,
+         "PPM": 408.03,
+         "MD": "November17"
+      },
+      {
+         "Month": 11,
+         "Day": 18,
+         "PPM": 408.54,
+         "MD": "November18"
+      },
+      {
+         "Month": 11,
+         "Day": 20,
+         "PPM": 408.96,
+         "MD": "November20"
+      },
+      {
+         "Month": 11,
+         "Day": 21,
+         "PPM": 408.42,
+         "MD": "November21"
+      },
+      {
+         "Month": 11,
+         "Day": 22,
+         "PPM": 408.8,
+         "MD": "November22"
+      },
+      {
+         "Month": 11,
+         "Day": 23,
+         "PPM": 408.41,
+         "MD": "November23"
+      },
+      {
+         "Month": 11,
+         "Day": 24,
+         "PPM": 408.43,
+         "MD": "November24"
+      },
+      {
+         "Month": 11,
+         "Day": 25,
+         "PPM": 408.42,
+         "MD": "November25"
+      },
+      {
+         "Month": 11,
+         "Day": 26,
+         "PPM": 408.42,
+         "MD": "November26"
+      },
+      {
+         "Month": 11,
+         "Day": 27,
+         "PPM": 408.41,
+         "MD": "November27"
+      },
+      {
+         "Month": 11,
+         "Day": 28,
+         "PPM": 408.49,
+         "MD": "November28"
+      },
+      {
+         "Month": 11,
+         "Day": 29,
+         "PPM": 408.35,
+         "MD": "November29"
+      },
+      {
+         "Month": 11,
+         "Day": 30,
+         "PPM": 408.44,
+         "MD": "November30"
+      },
+      {
+         "Month": 12,
+         "Day": 1,
+         "PPM": 408.17,
+         "MD": "December1"
+      },
+      {
+         "Month": 12,
+         "Day": 2,
+         "PPM": 408.64,
+         "MD": "December2"
+      },
+      {
+         "Month": 12,
+         "Day": 3,
+         "PPM": 409.18,
+         "MD": "December3"
+      },
+      {
+         "Month": 12,
+         "Day": 4,
+         "PPM": 408.44,
+         "MD": "December4"
+      },
+      {
+         "Month": 12,
+         "Day": 6,
+         "PPM": 408.21,
+         "MD": "December6"
+      },
+      {
+         "Month": 12,
+         "Day": 7,
+         "PPM": 408.16,
+         "MD": "December7"
+      },
+      {
+         "Month": 12,
+         "Day": 8,
+         "PPM": 408.32,
+         "MD": "December8"
+      },
+      {
+         "Month": 12,
+         "Day": 9,
+         "PPM": 409.83,
+         "MD": "December9"
+      },
+      {
+         "Month": 12,
+         "Day": 10,
+         "PPM": 409.36,
+         "MD": "December10"
+      },
+      {
+         "Month": 12,
+         "Day": 11,
+         "PPM": 409.17,
+         "MD": "December11"
+      },
+      {
+         "Month": 12,
+         "Day": 12,
+         "PPM": 409.73,
+         "MD": "December12"
+      },
+      {
+         "Month": 12,
+         "Day": 13,
+         "PPM": 409.34,
+         "MD": "December13"
+      },
+      {
+         "Month": 12,
+         "Day": 14,
+         "PPM": 408.8,
+         "MD": "December14"
+      },
+      {
+         "Month": 12,
+         "Day": 15,
+         "PPM": 409.59,
+         "MD": "December15"
+      },
+      {
+         "Month": 12,
+         "Day": 16,
+         "PPM": 409.59,
+         "MD": "December16"
+      },
+      {
+         "Month": 12,
+         "Day": 17,
+         "PPM": 408.64,
+         "MD": "December17"
+      },
+      {
+         "Month": 12,
+         "Day": 18,
+         "PPM": 408.78,
+         "MD": "December18"
+      },
+      {
+         "Month": 12,
+         "Day": 19,
+         "PPM": 409.54,
+         "MD": "December19"
+      },
+      {
+         "Month": 12,
+         "Day": 20,
+         "PPM": 409.53,
+         "MD": "December20"
+      },
+      {
+         "Month": 12,
+         "Day": 21,
+         "PPM": 409.59,
+         "MD": "December21"
+      },
+      {
+         "Month": 12,
+         "Day": 22,
+         "PPM": 409.5,
+         "MD": "December22"
+      },
+      {
+         "Month": 12,
+         "Day": 23,
+         "PPM": 409.56,
+         "MD": "December23"
+      },
+      {
+         "Month": 12,
+         "Day": 24,
+         "PPM": 409.39,
+         "MD": "December24"
+      },
+      {
+         "Month": 12,
+         "Day": 25,
+         "PPM": 409.24,
+         "MD": "December25"
+      },
+      {
+         "Month": 12,
+         "Day": 26,
+         "PPM": 409.2,
+         "MD": "December26"
+      },
+      {
+         "Month": 12,
+         "Day": 27,
+         "PPM": 408.83,
+         "MD": "December27"
+      },
+      {
+         "Month": 12,
+         "Day": 28,
+         "PPM": 409.06,
+         "MD": "December28"
+      },
+      {
+         "Month": 12,
+         "Day": 29,
+         "PPM": 408.7,
+         "MD": "December29"
+      },
+      {
+         "Month": 12,
+         "Day": 30,
+         "PPM": 409.14,
+         "MD": "December30"
+      },
+      {
+         "Month": 12,
+         "Day": 31,
+         "PPM": 409.45,
+         "MD": "December31"
+      }
+   ],
+   "2019": [
+      {
+         "Month": 1,
+         "Day": 1,
+         "PPM": 409.73,
+         "MD": "January1"
+      },
+      {
+         "Month": 1,
+         "Day": 2,
+         "PPM": 409.82,
+         "MD": "January2"
+      },
+      {
+         "Month": 1,
+         "Day": 3,
+         "PPM": 409.99,
+         "MD": "January3"
+      },
+      {
+         "Month": 1,
+         "Day": 4,
+         "PPM": 410.03,
+         "MD": "January4"
+      },
+      {
+         "Month": 1,
+         "Day": 5,
+         "PPM": 409.05,
+         "MD": "January5"
+      },
+      {
+         "Month": 1,
+         "Day": 7,
+         "PPM": 410.99,
+         "MD": "January7"
+      },
+      {
+         "Month": 1,
+         "Day": 8,
+         "PPM": 410.73,
+         "MD": "January8"
+      },
+      {
+         "Month": 1,
+         "Day": 9,
+         "PPM": 410.62,
+         "MD": "January9"
+      },
+      {
+         "Month": 1,
+         "Day": 10,
+         "PPM": 408.9,
+         "MD": "January10"
+      },
+      {
+         "Month": 1,
+         "Day": 11,
+         "PPM": 409.3,
+         "MD": "January11"
+      },
+      {
+         "Month": 1,
+         "Day": 12,
+         "PPM": 413.45,
+         "MD": "January12"
+      },
+      {
+         "Month": 1,
+         "Day": 15,
+         "PPM": 409.09,
+         "MD": "January15"
+      },
+      {
+         "Month": 1,
+         "Day": 17,
+         "PPM": 409.9,
+         "MD": "January17"
+      },
+      {
+         "Month": 1,
+         "Day": 18,
+         "PPM": 410.26,
+         "MD": "January18"
+      },
+      {
+         "Month": 1,
+         "Day": 19,
+         "PPM": 412.14,
+         "MD": "January19"
+      },
+      {
+         "Month": 1,
+         "Day": 20,
+         "PPM": 413.21,
+         "MD": "January20"
+      },
+      {
+         "Month": 1,
+         "Day": 22,
+         "PPM": 413.86,
+         "MD": "January22"
+      },
+      {
+         "Month": 1,
+         "Day": 23,
+         "PPM": 413.36,
+         "MD": "January23"
+      },
+      {
+         "Month": 1,
+         "Day": 24,
+         "PPM": 410.56,
+         "MD": "January24"
+      },
+      {
+         "Month": 1,
+         "Day": 25,
+         "PPM": 410,
+         "MD": "January25"
+      },
+      {
+         "Month": 1,
+         "Day": 26,
+         "PPM": 410.9,
+         "MD": "January26"
+      },
+      {
+         "Month": 1,
+         "Day": 27,
+         "PPM": 410.96,
+         "MD": "January27"
+      },
+      {
+         "Month": 1,
+         "Day": 28,
+         "PPM": 411.6,
+         "MD": "January28"
+      },
+      {
+         "Month": 1,
+         "Day": 29,
+         "PPM": 411.24,
+         "MD": "January29"
+      },
+      {
+         "Month": 1,
+         "Day": 30,
+         "PPM": 411.42,
+         "MD": "January30"
+      },
+      {
+         "Month": 1,
+         "Day": 31,
+         "PPM": 410.73,
+         "MD": "January31"
+      },
+      {
+         "Month": 2,
+         "Day": 1,
+         "PPM": 410.52,
+         "MD": "February1"
+      },
+      {
+         "Month": 2,
+         "Day": 2,
+         "PPM": 410.66,
+         "MD": "February2"
+      },
+      {
+         "Month": 2,
+         "Day": 3,
+         "PPM": 410.6,
+         "MD": "February3"
+      },
+      {
+         "Month": 2,
+         "Day": 4,
+         "PPM": 412.55,
+         "MD": "February4"
+      },
+      {
+         "Month": 2,
+         "Day": 5,
+         "PPM": 410.47,
+         "MD": "February5"
+      },
+      {
+         "Month": 2,
+         "Day": 6,
+         "PPM": 411.29,
+         "MD": "February6"
+      },
+      {
+         "Month": 2,
+         "Day": 7,
+         "PPM": 410.77,
+         "MD": "February7"
+      },
+      {
+         "Month": 2,
+         "Day": 8,
+         "PPM": 411.37,
+         "MD": "February8"
+      },
+      {
+         "Month": 2,
+         "Day": 9,
+         "PPM": 414.27,
+         "MD": "February9"
+      },
+      {
+         "Month": 2,
+         "Day": 10,
+         "PPM": 411.97,
+         "MD": "February10"
+      },
+      {
+         "Month": 2,
+         "Day": 11,
+         "PPM": 413.52,
+         "MD": "February11"
+      },
+      {
+         "Month": 2,
+         "Day": 12,
+         "PPM": 411.8,
+         "MD": "February12"
+      },
+      {
+         "Month": 2,
+         "Day": 13,
+         "PPM": 412.1,
+         "MD": "February13"
+      },
+      {
+         "Month": 2,
+         "Day": 15,
+         "PPM": 412.54,
+         "MD": "February15"
+      },
+      {
+         "Month": 2,
+         "Day": 16,
+         "PPM": 412.5,
+         "MD": "February16"
+      },
+      {
+         "Month": 2,
+         "Day": 17,
+         "PPM": 411.51,
+         "MD": "February17"
+      },
+      {
+         "Month": 2,
+         "Day": 18,
+         "PPM": 411.86,
+         "MD": "February18"
+      },
+      {
+         "Month": 2,
+         "Day": 19,
+         "PPM": 410.46,
+         "MD": "February19"
+      },
+      {
+         "Month": 2,
+         "Day": 20,
+         "PPM": 410.65,
+         "MD": "February20"
+      },
+      {
+         "Month": 2,
+         "Day": 21,
+         "PPM": 411.03,
+         "MD": "February21"
+      },
+      {
+         "Month": 2,
+         "Day": 22,
+         "PPM": 410.53,
+         "MD": "February22"
+      },
+      {
+         "Month": 2,
+         "Day": 23,
+         "PPM": 410.81,
+         "MD": "February23"
+      },
+      {
+         "Month": 2,
+         "Day": 24,
+         "PPM": 411.81,
+         "MD": "February24"
+      },
+      {
+         "Month": 2,
+         "Day": 25,
+         "PPM": 411.52,
+         "MD": "February25"
+      },
+      {
+         "Month": 2,
+         "Day": 26,
+         "PPM": 414.03,
+         "MD": "February26"
+      },
+      {
+         "Month": 2,
+         "Day": 27,
+         "PPM": 411.87,
+         "MD": "February27"
+      },
+      {
+         "Month": 2,
+         "Day": 28,
+         "PPM": 414.12,
+         "MD": "February28"
+      },
+      {
+         "Month": 3,
+         "Day": 1,
+         "PPM": 411.56,
+         "MD": "March1"
+      },
+      {
+         "Month": 3,
+         "Day": 2,
+         "PPM": 411.92,
+         "MD": "March2"
+      },
+      {
+         "Month": 3,
+         "Day": 3,
+         "PPM": 412.74,
+         "MD": "March3"
+      },
+      {
+         "Month": 3,
+         "Day": 4,
+         "PPM": 413.37,
+         "MD": "March4"
+      },
+      {
+         "Month": 3,
+         "Day": 5,
+         "PPM": 410.99,
+         "MD": "March5"
+      },
+      {
+         "Month": 3,
+         "Day": 6,
+         "PPM": 411.2,
+         "MD": "March6"
+      },
+      {
+         "Month": 3,
+         "Day": 7,
+         "PPM": 411.19,
+         "MD": "March7"
+      },
+      {
+         "Month": 3,
+         "Day": 8,
+         "PPM": 412.05,
+         "MD": "March8"
+      },
+      {
+         "Month": 3,
+         "Day": 9,
+         "PPM": 413.55,
+         "MD": "March9"
+      },
+      {
+         "Month": 3,
+         "Day": 10,
+         "PPM": 412.79,
+         "MD": "March10"
+      },
+      {
+         "Month": 3,
+         "Day": 11,
+         "PPM": 411.92,
+         "MD": "March11"
+      },
+      {
+         "Month": 3,
+         "Day": 12,
+         "PPM": 412.13,
+         "MD": "March12"
+      },
+      {
+         "Month": 3,
+         "Day": 13,
+         "PPM": 412.04,
+         "MD": "March13"
+      },
+      {
+         "Month": 3,
+         "Day": 14,
+         "PPM": 412.19,
+         "MD": "March14"
+      },
+      {
+         "Month": 3,
+         "Day": 15,
+         "PPM": 413.4,
+         "MD": "March15"
+      },
+      {
+         "Month": 3,
+         "Day": 16,
+         "PPM": 410.62,
+         "MD": "March16"
+      },
+      {
+         "Month": 3,
+         "Day": 17,
+         "PPM": 411.64,
+         "MD": "March17"
+      },
+      {
+         "Month": 3,
+         "Day": 18,
+         "PPM": 414.84,
+         "MD": "March18"
+      },
+      {
+         "Month": 3,
+         "Day": 19,
+         "PPM": 412.97,
+         "MD": "March19"
+      },
+      {
+         "Month": 3,
+         "Day": 20,
+         "PPM": 412.22,
+         "MD": "March20"
+      },
+      {
+         "Month": 3,
+         "Day": 21,
+         "PPM": 410.18,
+         "MD": "March21"
+      },
+      {
+         "Month": 3,
+         "Day": 22,
+         "PPM": 409.93,
+         "MD": "March22"
+      },
+      {
+         "Month": 3,
+         "Day": 23,
+         "PPM": 410.99,
+         "MD": "March23"
+      },
+      {
+         "Month": 3,
+         "Day": 25,
+         "PPM": 410.85,
+         "MD": "March25"
+      },
+      {
+         "Month": 3,
+         "Day": 26,
+         "PPM": 410.44,
+         "MD": "March26"
+      },
+      {
+         "Month": 3,
+         "Day": 28,
+         "PPM": 411.94,
+         "MD": "March28"
+      },
+      {
+         "Month": 3,
+         "Day": 29,
+         "PPM": 412.06,
+         "MD": "March29"
+      },
+      {
+         "Month": 3,
+         "Day": 31,
+         "PPM": 412.37,
+         "MD": "March31"
+      },
+      {
+         "Month": 4,
+         "Day": 1,
+         "PPM": 411.69,
+         "MD": "April1"
+      },
+      {
+         "Month": 4,
+         "Day": 3,
+         "PPM": 412.96,
+         "MD": "April3"
+      },
+      {
+         "Month": 4,
+         "Day": 4,
+         "PPM": 412.7,
+         "MD": "April4"
+      },
+      {
+         "Month": 4,
+         "Day": 5,
+         "PPM": 412.15,
+         "MD": "April5"
+      },
+      {
+         "Month": 4,
+         "Day": 6,
+         "PPM": 411.26,
+         "MD": "April6"
+      },
+      {
+         "Month": 4,
+         "Day": 7,
+         "PPM": 412.18,
+         "MD": "April7"
+      },
+      {
+         "Month": 4,
+         "Day": 8,
+         "PPM": 412.31,
+         "MD": "April8"
+      },
+      {
+         "Month": 4,
+         "Day": 9,
+         "PPM": 412.53,
+         "MD": "April9"
+      },
+      {
+         "Month": 4,
+         "Day": 10,
+         "PPM": 413.85,
+         "MD": "April10"
+      },
+      {
+         "Month": 4,
+         "Day": 12,
+         "PPM": 413.87,
+         "MD": "April12"
+      },
+      {
+         "Month": 4,
+         "Day": 13,
+         "PPM": 414.1,
+         "MD": "April13"
+      },
+      {
+         "Month": 4,
+         "Day": 14,
+         "PPM": 414.64,
+         "MD": "April14"
+      },
+      {
+         "Month": 4,
+         "Day": 15,
+         "PPM": 412.67,
+         "MD": "April15"
+      },
+      {
+         "Month": 4,
+         "Day": 16,
+         "PPM": 413.09,
+         "MD": "April16"
+      },
+      {
+         "Month": 4,
+         "Day": 17,
+         "PPM": 413.63,
+         "MD": "April17"
+      },
+      {
+         "Month": 4,
+         "Day": 18,
+         "PPM": 413.43,
+         "MD": "April18"
+      },
+      {
+         "Month": 4,
+         "Day": 19,
+         "PPM": 413.86,
+         "MD": "April19"
+      },
+      {
+         "Month": 4,
+         "Day": 20,
+         "PPM": 413.88,
+         "MD": "April20"
+      },
+      {
+         "Month": 4,
+         "Day": 21,
+         "PPM": 413.63,
+         "MD": "April21"
+      },
+      {
+         "Month": 4,
+         "Day": 22,
+         "PPM": 414.14,
+         "MD": "April22"
+      },
+      {
+         "Month": 4,
+         "Day": 24,
+         "PPM": 413.37,
+         "MD": "April24"
+      },
+      {
+         "Month": 4,
+         "Day": 25,
+         "PPM": 413.68,
+         "MD": "April25"
+      },
+      {
+         "Month": 4,
+         "Day": 26,
+         "PPM": 413.54,
+         "MD": "April26"
+      },
+      {
+         "Month": 4,
+         "Day": 27,
+         "PPM": 414.24,
+         "MD": "April27"
+      },
+      {
+         "Month": 4,
+         "Day": 28,
+         "PPM": 414.14,
+         "MD": "April28"
+      },
+      {
+         "Month": 4,
+         "Day": 29,
+         "PPM": 414.11,
+         "MD": "April29"
+      },
+      {
+         "Month": 4,
+         "Day": 30,
+         "PPM": 414.52,
+         "MD": "April30"
+      },
+      {
+         "Month": 5,
+         "Day": 1,
+         "PPM": 414.88,
+         "MD": "May1"
+      },
+      {
+         "Month": 5,
+         "Day": 3,
+         "PPM": 414.81,
+         "MD": "May3"
+      },
+      {
+         "Month": 5,
+         "Day": 4,
+         "PPM": 413.27,
+         "MD": "May4"
+      },
+      {
+         "Month": 5,
+         "Day": 5,
+         "PPM": 413.75,
+         "MD": "May5"
+      },
+      {
+         "Month": 5,
+         "Day": 6,
+         "PPM": 414.49,
+         "MD": "May6"
+      },
+      {
+         "Month": 5,
+         "Day": 7,
+         "PPM": 414.24,
+         "MD": "May7"
+      },
+      {
+         "Month": 5,
+         "Day": 8,
+         "PPM": 414.5,
+         "MD": "May8"
+      },
+      {
+         "Month": 5,
+         "Day": 9,
+         "PPM": 414.23,
+         "MD": "May9"
+      },
+      {
+         "Month": 5,
+         "Day": 10,
+         "PPM": 414.26,
+         "MD": "May10"
+      },
+      {
+         "Month": 5,
+         "Day": 11,
+         "PPM": 414.75,
+         "MD": "May11"
+      },
+      {
+         "Month": 5,
+         "Day": 12,
+         "PPM": 415.27,
+         "MD": "May12"
+      },
+      {
+         "Month": 5,
+         "Day": 13,
+         "PPM": 415.4,
+         "MD": "May13"
+      },
+      {
+         "Month": 5,
+         "Day": 14,
+         "PPM": 415.3,
+         "MD": "May14"
+      },
+      {
+         "Month": 5,
+         "Day": 15,
+         "PPM": 415.64,
+         "MD": "May15"
+      },
+      {
+         "Month": 5,
+         "Day": 16,
+         "PPM": 415.58,
+         "MD": "May16"
+      },
+      {
+         "Month": 5,
+         "Day": 17,
+         "PPM": 415.22,
+         "MD": "May17"
+      },
+      {
+         "Month": 5,
+         "Day": 19,
+         "PPM": 414.75,
+         "MD": "May19"
+      },
+      {
+         "Month": 5,
+         "Day": 20,
+         "PPM": 414.73,
+         "MD": "May20"
+      },
+      {
+         "Month": 5,
+         "Day": 22,
+         "PPM": 414.48,
+         "MD": "May22"
+      },
+      {
+         "Month": 5,
+         "Day": 23,
+         "PPM": 414.88,
+         "MD": "May23"
+      },
+      {
+         "Month": 5,
+         "Day": 24,
+         "PPM": 414.78,
+         "MD": "May24"
+      },
+      {
+         "Month": 5,
+         "Day": 25,
+         "PPM": 414.85,
+         "MD": "May25"
+      },
+      {
+         "Month": 5,
+         "Day": 26,
+         "PPM": 414.06,
+         "MD": "May26"
+      },
+      {
+         "Month": 5,
+         "Day": 27,
+         "PPM": 414.82,
+         "MD": "May27"
+      },
+      {
+         "Month": 5,
+         "Day": 28,
+         "PPM": 414.17,
+         "MD": "May28"
+      },
+      {
+         "Month": 5,
+         "Day": 29,
+         "PPM": 414.14,
+         "MD": "May29"
+      },
+      {
+         "Month": 5,
+         "Day": 30,
+         "PPM": 414.4,
+         "MD": "May30"
+      },
+      {
+         "Month": 5,
+         "Day": 31,
+         "PPM": 414.38,
+         "MD": "May31"
+      },
+      {
+         "Month": 6,
+         "Day": 1,
+         "PPM": 414.14,
+         "MD": "June1"
+      },
+      {
+         "Month": 6,
+         "Day": 2,
+         "PPM": 414.25,
+         "MD": "June2"
+      },
+      {
+         "Month": 6,
+         "Day": 3,
+         "PPM": 414.4,
+         "MD": "June3"
+      },
+      {
+         "Month": 6,
+         "Day": 4,
+         "PPM": 414.28,
+         "MD": "June4"
+      },
+      {
+         "Month": 6,
+         "Day": 5,
+         "PPM": 414.19,
+         "MD": "June5"
+      },
+      {
+         "Month": 6,
+         "Day": 7,
+         "PPM": 414.42,
+         "MD": "June7"
+      },
+      {
+         "Month": 6,
+         "Day": 8,
+         "PPM": 414.79,
+         "MD": "June8"
+      },
+      {
+         "Month": 6,
+         "Day": 9,
+         "PPM": 414.31,
+         "MD": "June9"
+      },
+      {
+         "Month": 6,
+         "Day": 10,
+         "PPM": 414.25,
+         "MD": "June10"
+      },
+      {
+         "Month": 6,
+         "Day": 12,
+         "PPM": 413.91,
+         "MD": "June12"
+      },
+      {
+         "Month": 6,
+         "Day": 13,
+         "PPM": 414.73,
+         "MD": "June13"
+      },
+      {
+         "Month": 6,
+         "Day": 14,
+         "PPM": 414.33,
+         "MD": "June14"
+      },
+      {
+         "Month": 6,
+         "Day": 15,
+         "PPM": 412.95,
+         "MD": "June15"
+      },
+      {
+         "Month": 6,
+         "Day": 16,
+         "PPM": 414.24,
+         "MD": "June16"
+      },
+      {
+         "Month": 6,
+         "Day": 17,
+         "PPM": 413.62,
+         "MD": "June17"
+      },
+      {
+         "Month": 6,
+         "Day": 18,
+         "PPM": 414.14,
+         "MD": "June18"
+      },
+      {
+         "Month": 6,
+         "Day": 19,
+         "PPM": 414.25,
+         "MD": "June19"
+      },
+      {
+         "Month": 6,
+         "Day": 20,
+         "PPM": 413.95,
+         "MD": "June20"
+      },
+      {
+         "Month": 6,
+         "Day": 21,
+         "PPM": 413.26,
+         "MD": "June21"
+      },
+      {
+         "Month": 6,
+         "Day": 22,
+         "PPM": 413.54,
+         "MD": "June22"
+      },
+      {
+         "Month": 6,
+         "Day": 23,
+         "PPM": 413.33,
+         "MD": "June23"
+      },
+      {
+         "Month": 6,
+         "Day": 24,
+         "PPM": 413.78,
+         "MD": "June24"
+      },
+      {
+         "Month": 6,
+         "Day": 25,
+         "PPM": 413.8,
+         "MD": "June25"
+      },
+      {
+         "Month": 6,
+         "Day": 26,
+         "PPM": 413.5,
+         "MD": "June26"
+      },
+      {
+         "Month": 6,
+         "Day": 28,
+         "PPM": 413.05,
+         "MD": "June28"
+      },
+      {
+         "Month": 6,
+         "Day": 29,
+         "PPM": 413.01,
+         "MD": "June29"
+      },
+      {
+         "Month": 6,
+         "Day": 30,
+         "PPM": 413.54,
+         "MD": "June30"
+      },
+      {
+         "Month": 7,
+         "Day": 1,
+         "PPM": 413.55,
+         "MD": "July1"
+      },
+      {
+         "Month": 7,
+         "Day": 2,
+         "PPM": 413.63,
+         "MD": "July2"
+      },
+      {
+         "Month": 7,
+         "Day": 3,
+         "PPM": 413.43,
+         "MD": "July3"
+      },
+      {
+         "Month": 7,
+         "Day": 4,
+         "PPM": 413.44,
+         "MD": "July4"
+      },
+      {
+         "Month": 7,
+         "Day": 5,
+         "PPM": 413.11,
+         "MD": "July5"
+      },
+      {
+         "Month": 7,
+         "Day": 6,
+         "PPM": 413.25,
+         "MD": "July6"
+      },
+      {
+         "Month": 7,
+         "Day": 7,
+         "PPM": 413.15,
+         "MD": "July7"
+      },
+      {
+         "Month": 7,
+         "Day": 8,
+         "PPM": 410.76,
+         "MD": "July8"
+      },
+      {
+         "Month": 7,
+         "Day": 9,
+         "PPM": 411.59,
+         "MD": "July9"
+      },
+      {
+         "Month": 7,
+         "Day": 10,
+         "PPM": 411.38,
+         "MD": "July10"
+      },
+      {
+         "Month": 7,
+         "Day": 11,
+         "PPM": 412.16,
+         "MD": "July11"
+      },
+      {
+         "Month": 7,
+         "Day": 12,
+         "PPM": 412.56,
+         "MD": "July12"
+      },
+      {
+         "Month": 7,
+         "Day": 13,
+         "PPM": 412.96,
+         "MD": "July13"
+      },
+      {
+         "Month": 7,
+         "Day": 18,
+         "PPM": 412.15,
+         "MD": "July18"
+      },
+      {
+         "Month": 7,
+         "Day": 19,
+         "PPM": 412.08,
+         "MD": "July19"
+      },
+      {
+         "Month": 7,
+         "Day": 20,
+         "PPM": 412.2,
+         "MD": "July20"
+      },
+      {
+         "Month": 7,
+         "Day": 21,
+         "PPM": 410.5,
+         "MD": "July21"
+      },
+      {
+         "Month": 7,
+         "Day": 22,
+         "PPM": 411.41,
+         "MD": "July22"
+      },
+      {
+         "Month": 7,
+         "Day": 23,
+         "PPM": 411.4,
+         "MD": "July23"
+      },
+      {
+         "Month": 7,
+         "Day": 24,
+         "PPM": 411.07,
+         "MD": "July24"
+      },
+      {
+         "Month": 7,
+         "Day": 27,
+         "PPM": 409.83,
+         "MD": "July27"
+      },
+      {
+         "Month": 7,
+         "Day": 28,
+         "PPM": 409.23,
+         "MD": "July28"
+      },
+      {
+         "Month": 7,
+         "Day": 29,
+         "PPM": 408.96,
+         "MD": "July29"
+      },
+      {
+         "Month": 7,
+         "Day": 30,
+         "PPM": 410.1,
+         "MD": "July30"
+      },
+      {
+         "Month": 7,
+         "Day": 31,
+         "PPM": 410.76,
+         "MD": "July31"
+      },
+      {
+         "Month": 8,
+         "Day": 1,
+         "PPM": 410.51,
+         "MD": "August1"
+      },
+      {
+         "Month": 8,
+         "Day": 2,
+         "PPM": 410.41,
+         "MD": "August2"
+      },
+      {
+         "Month": 8,
+         "Day": 3,
+         "PPM": 410.45,
+         "MD": "August3"
+      },
+      {
+         "Month": 8,
+         "Day": 4,
+         "PPM": 410.16,
+         "MD": "August4"
+      },
+      {
+         "Month": 8,
+         "Day": 5,
+         "PPM": 410.86,
+         "MD": "August5"
+      },
+      {
+         "Month": 8,
+         "Day": 6,
+         "PPM": 410,
+         "MD": "August6"
+      },
+      {
+         "Month": 8,
+         "Day": 7,
+         "PPM": 410.29,
+         "MD": "August7"
+      },
+      {
+         "Month": 8,
+         "Day": 8,
+         "PPM": 410.22,
+         "MD": "August8"
+      },
+      {
+         "Month": 8,
+         "Day": 9,
+         "PPM": 410.5,
+         "MD": "August9"
+      },
+      {
+         "Month": 8,
+         "Day": 10,
+         "PPM": 410.38,
+         "MD": "August10"
+      },
+      {
+         "Month": 8,
+         "Day": 11,
+         "PPM": 410.43,
+         "MD": "August11"
+      },
+      {
+         "Month": 8,
+         "Day": 12,
+         "PPM": 410.65,
+         "MD": "August12"
+      },
+      {
+         "Month": 8,
+         "Day": 13,
+         "PPM": 410.43,
+         "MD": "August13"
+      },
+      {
+         "Month": 8,
+         "Day": 14,
+         "PPM": 409.78,
+         "MD": "August14"
+      },
+      {
+         "Month": 8,
+         "Day": 15,
+         "PPM": 410.08,
+         "MD": "August15"
+      },
+      {
+         "Month": 8,
+         "Day": 16,
+         "PPM": 410.35,
+         "MD": "August16"
+      },
+      {
+         "Month": 8,
+         "Day": 17,
+         "PPM": 410.15,
+         "MD": "August17"
+      },
+      {
+         "Month": 8,
+         "Day": 19,
+         "PPM": 410.28,
+         "MD": "August19"
+      },
+      {
+         "Month": 8,
+         "Day": 20,
+         "PPM": 409.03,
+         "MD": "August20"
+      },
+      {
+         "Month": 8,
+         "Day": 21,
+         "PPM": 409.59,
+         "MD": "August21"
+      },
+      {
+         "Month": 8,
+         "Day": 22,
+         "PPM": 409.95,
+         "MD": "August22"
+      },
+      {
+         "Month": 8,
+         "Day": 23,
+         "PPM": 409.47,
+         "MD": "August23"
+      },
+      {
+         "Month": 8,
+         "Day": 24,
+         "PPM": 409.1,
+         "MD": "August24"
+      },
+      {
+         "Month": 8,
+         "Day": 25,
+         "PPM": 409.12,
+         "MD": "August25"
+      },
+      {
+         "Month": 8,
+         "Day": 26,
+         "PPM": 409.44,
+         "MD": "August26"
+      },
+      {
+         "Month": 8,
+         "Day": 27,
+         "PPM": 409.62,
+         "MD": "August27"
+      },
+      {
+         "Month": 8,
+         "Day": 28,
+         "PPM": 409.7,
+         "MD": "August28"
+      },
+      {
+         "Month": 8,
+         "Day": 29,
+         "PPM": 409.53,
+         "MD": "August29"
+      },
+      {
+         "Month": 8,
+         "Day": 31,
+         "PPM": 409.25,
+         "MD": "August31"
+      },
+      {
+         "Month": 9,
+         "Day": 1,
+         "PPM": 408.23,
+         "MD": "September1"
+      },
+      {
+         "Month": 9,
+         "Day": 2,
+         "PPM": 409.14,
+         "MD": "September2"
+      },
+      {
+         "Month": 9,
+         "Day": 3,
+         "PPM": 408.75,
+         "MD": "September3"
+      },
+      {
+         "Month": 9,
+         "Day": 4,
+         "PPM": 409.39,
+         "MD": "September4"
+      },
+      {
+         "Month": 9,
+         "Day": 5,
+         "PPM": 408.54,
+         "MD": "September5"
+      },
+      {
+         "Month": 9,
+         "Day": 6,
+         "PPM": 408.45,
+         "MD": "September6"
+      },
+      {
+         "Month": 9,
+         "Day": 7,
+         "PPM": 409.2,
+         "MD": "September7"
+      },
+      {
+         "Month": 9,
+         "Day": 8,
+         "PPM": 409.13,
+         "MD": "September8"
+      },
+      {
+         "Month": 9,
+         "Day": 9,
+         "PPM": 409.06,
+         "MD": "September9"
+      },
+      {
+         "Month": 9,
+         "Day": 10,
+         "PPM": 408.77,
+         "MD": "September10"
+      },
+      {
+         "Month": 9,
+         "Day": 11,
+         "PPM": 408.71,
+         "MD": "September11"
+      },
+      {
+         "Month": 9,
+         "Day": 12,
+         "PPM": 408.03,
+         "MD": "September12"
+      },
+      {
+         "Month": 9,
+         "Day": 13,
+         "PPM": 408.33,
+         "MD": "September13"
+      },
+      {
+         "Month": 9,
+         "Day": 14,
+         "PPM": 408.12,
+         "MD": "September14"
+      },
+      {
+         "Month": 9,
+         "Day": 16,
+         "PPM": 408.64,
+         "MD": "September16"
+      },
+      {
+         "Month": 9,
+         "Day": 17,
+         "PPM": 408.66,
+         "MD": "September17"
+      },
+      {
+         "Month": 9,
+         "Day": 18,
+         "PPM": 408.59,
+         "MD": "September18"
+      },
+      {
+         "Month": 9,
+         "Day": 19,
+         "PPM": 408.77,
+         "MD": "September19"
+      },
+      {
+         "Month": 9,
+         "Day": 20,
+         "PPM": 408.08,
+         "MD": "September20"
+      },
+      {
+         "Month": 9,
+         "Day": 21,
+         "PPM": 408.26,
+         "MD": "September21"
+      },
+      {
+         "Month": 9,
+         "Day": 22,
+         "PPM": 408.48,
+         "MD": "September22"
+      },
+      {
+         "Month": 9,
+         "Day": 23,
+         "PPM": 408.83,
+         "MD": "September23"
+      },
+      {
+         "Month": 9,
+         "Day": 24,
+         "PPM": 408.32,
+         "MD": "September24"
+      },
+      {
+         "Month": 9,
+         "Day": 25,
+         "PPM": 408.5,
+         "MD": "September25"
+      },
+      {
+         "Month": 9,
+         "Day": 26,
+         "PPM": 408.05,
+         "MD": "September26"
+      },
+      {
+         "Month": 9,
+         "Day": 27,
+         "PPM": 407.96,
+         "MD": "September27"
+      },
+      {
+         "Month": 9,
+         "Day": 28,
+         "PPM": 408.09,
+         "MD": "September28"
+      },
+      {
+         "Month": 9,
+         "Day": 29,
+         "PPM": 408.22,
+         "MD": "September29"
+      },
+      {
+         "Month": 9,
+         "Day": 30,
+         "PPM": 408.41,
+         "MD": "September30"
+      },
+      {
+         "Month": 10,
+         "Day": 1,
+         "PPM": 408.21,
+         "MD": "October1"
+      },
+      {
+         "Month": 10,
+         "Day": 2,
+         "PPM": 407.84,
+         "MD": "October2"
+      },
+      {
+         "Month": 10,
+         "Day": 3,
+         "PPM": 407.53,
+         "MD": "October3"
+      },
+      {
+         "Month": 10,
+         "Day": 4,
+         "PPM": 407.51,
+         "MD": "October4"
+      },
+      {
+         "Month": 10,
+         "Day": 5,
+         "PPM": 408,
+         "MD": "October5"
+      },
+      {
+         "Month": 10,
+         "Day": 6,
+         "PPM": 407.92,
+         "MD": "October6"
+      },
+      {
+         "Month": 10,
+         "Day": 7,
+         "PPM": 408.2,
+         "MD": "October7"
+      },
+      {
+         "Month": 10,
+         "Day": 8,
+         "PPM": 408.23,
+         "MD": "October8"
+      },
+      {
+         "Month": 10,
+         "Day": 9,
+         "PPM": 408.33,
+         "MD": "October9"
+      },
+      {
+         "Month": 10,
+         "Day": 10,
+         "PPM": 408.78,
+         "MD": "October10"
+      },
+      {
+         "Month": 10,
+         "Day": 11,
+         "PPM": 408.86,
+         "MD": "October11"
+      },
+      {
+         "Month": 10,
+         "Day": 12,
+         "PPM": 408.37,
+         "MD": "October12"
+      },
+      {
+         "Month": 10,
+         "Day": 13,
+         "PPM": 408.41,
+         "MD": "October13"
+      },
+      {
+         "Month": 10,
+         "Day": 14,
+         "PPM": 408.46,
+         "MD": "October14"
+      },
+      {
+         "Month": 10,
+         "Day": 15,
+         "PPM": 408.44,
+         "MD": "October15"
+      },
+      {
+         "Month": 10,
+         "Day": 16,
+         "PPM": 408.64,
+         "MD": "October16"
+      },
+      {
+         "Month": 10,
+         "Day": 17,
+         "PPM": 408.78,
+         "MD": "October17"
+      },
+      {
+         "Month": 10,
+         "Day": 18,
+         "PPM": 408.9,
+         "MD": "October18"
+      },
+      {
+         "Month": 10,
+         "Day": 19,
+         "PPM": 408.72,
+         "MD": "October19"
+      },
+      {
+         "Month": 10,
+         "Day": 20,
+         "PPM": 408.48,
+         "MD": "October20"
+      },
+      {
+         "Month": 10,
+         "Day": 21,
+         "PPM": 408.68,
+         "MD": "October21"
+      },
+      {
+         "Month": 10,
+         "Day": 22,
+         "PPM": 409.09,
+         "MD": "October22"
+      },
+      {
+         "Month": 10,
+         "Day": 23,
+         "PPM": 408.66,
+         "MD": "October23"
+      },
+      {
+         "Month": 10,
+         "Day": 26,
+         "PPM": 408.71,
+         "MD": "October26"
+      },
+      {
+         "Month": 10,
+         "Day": 27,
+         "PPM": 408.66,
+         "MD": "October27"
+      },
+      {
+         "Month": 10,
+         "Day": 28,
+         "PPM": 408.58,
+         "MD": "October28"
+      },
+      {
+         "Month": 10,
+         "Day": 29,
+         "PPM": 408.85,
+         "MD": "October29"
+      },
+      {
+         "Month": 10,
+         "Day": 30,
+         "PPM": 409.17,
+         "MD": "October30"
+      },
+      {
+         "Month": 10,
+         "Day": 31,
+         "PPM": 409.64,
+         "MD": "October31"
+      },
+      {
+         "Month": 11,
+         "Day": 1,
+         "PPM": 410.83,
+         "MD": "November1"
+      },
+      {
+         "Month": 11,
+         "Day": 3,
+         "PPM": 409.29,
+         "MD": "November3"
+      },
+      {
+         "Month": 11,
+         "Day": 4,
+         "PPM": 409.42,
+         "MD": "November4"
+      },
+      {
+         "Month": 11,
+         "Day": 6,
+         "PPM": 410.07,
+         "MD": "November6"
+      },
+      {
+         "Month": 11,
+         "Day": 7,
+         "PPM": 410.25,
+         "MD": "November7"
+      },
+      {
+         "Month": 11,
+         "Day": 8,
+         "PPM": 410.28,
+         "MD": "November8"
+      },
+      {
+         "Month": 11,
+         "Day": 9,
+         "PPM": 410.08,
+         "MD": "November9"
+      },
+      {
+         "Month": 11,
+         "Day": 10,
+         "PPM": 410.12,
+         "MD": "November10"
+      },
+      {
+         "Month": 11,
+         "Day": 11,
+         "PPM": 409.68,
+         "MD": "November11"
+      },
+      {
+         "Month": 11,
+         "Day": 12,
+         "PPM": 410.46,
+         "MD": "November12"
+      },
+      {
+         "Month": 11,
+         "Day": 13,
+         "PPM": 410.34,
+         "MD": "November13"
+      },
+      {
+         "Month": 11,
+         "Day": 14,
+         "PPM": 410.55,
+         "MD": "November14"
+      },
+      {
+         "Month": 11,
+         "Day": 16,
+         "PPM": 410.01,
+         "MD": "November16"
+      },
+      {
+         "Month": 11,
+         "Day": 17,
+         "PPM": 409.82,
+         "MD": "November17"
+      },
+      {
+         "Month": 11,
+         "Day": 19,
+         "PPM": 410.17,
+         "MD": "November19"
+      },
+      {
+         "Month": 11,
+         "Day": 20,
+         "PPM": 410.05,
+         "MD": "November20"
+      },
+      {
+         "Month": 11,
+         "Day": 21,
+         "PPM": 410.5,
+         "MD": "November21"
+      },
+      {
+         "Month": 11,
+         "Day": 22,
+         "PPM": 410.48,
+         "MD": "November22"
+      },
+      {
+         "Month": 11,
+         "Day": 23,
+         "PPM": 410.11,
+         "MD": "November23"
+      },
+      {
+         "Month": 11,
+         "Day": 24,
+         "PPM": 411.13,
+         "MD": "November24"
+      },
+      {
+         "Month": 11,
+         "Day": 25,
+         "PPM": 410.46,
+         "MD": "November25"
+      },
+      {
+         "Month": 11,
+         "Day": 26,
+         "PPM": 410.67,
+         "MD": "November26"
+      },
+      {
+         "Month": 11,
+         "Day": 27,
+         "PPM": 410.58,
+         "MD": "November27"
+      },
+      {
+         "Month": 11,
+         "Day": 28,
+         "PPM": 410.86,
+         "MD": "November28"
+      },
+      {
+         "Month": 11,
+         "Day": 29,
+         "PPM": 410.67,
+         "MD": "November29"
+      },
+      {
+         "Month": 11,
+         "Day": 30,
+         "PPM": 410.7,
+         "MD": "November30"
+      },
+      {
+         "Month": 12,
+         "Day": 1,
+         "PPM": 410.88,
+         "MD": "December1"
+      },
+      {
+         "Month": 12,
+         "Day": 2,
+         "PPM": 410.9,
+         "MD": "December2"
+      },
+      {
+         "Month": 12,
+         "Day": 3,
+         "PPM": 411.13,
+         "MD": "December3"
+      },
+      {
+         "Month": 12,
+         "Day": 4,
+         "PPM": 411.23,
+         "MD": "December4"
+      },
+      {
+         "Month": 12,
+         "Day": 5,
+         "PPM": 410.45,
+         "MD": "December5"
+      },
+      {
+         "Month": 12,
+         "Day": 6,
+         "PPM": 411.48,
+         "MD": "December6"
+      },
+      {
+         "Month": 12,
+         "Day": 7,
+         "PPM": 411.4,
+         "MD": "December7"
+      },
+      {
+         "Month": 12,
+         "Day": 8,
+         "PPM": 411.37,
+         "MD": "December8"
+      },
+      {
+         "Month": 12,
+         "Day": 9,
+         "PPM": 411.07,
+         "MD": "December9"
+      },
+      {
+         "Month": 12,
+         "Day": 10,
+         "PPM": 410.88,
+         "MD": "December10"
+      },
+      {
+         "Month": 12,
+         "Day": 11,
+         "PPM": 411.2,
+         "MD": "December11"
+      },
+      {
+         "Month": 12,
+         "Day": 12,
+         "PPM": 411.37,
+         "MD": "December12"
+      },
+      {
+         "Month": 12,
+         "Day": 13,
+         "PPM": 411.69,
+         "MD": "December13"
+      },
+      {
+         "Month": 12,
+         "Day": 14,
+         "PPM": 411.68,
+         "MD": "December14"
+      },
+      {
+         "Month": 12,
+         "Day": 15,
+         "PPM": 411.67,
+         "MD": "December15"
+      },
+      {
+         "Month": 12,
+         "Day": 16,
+         "PPM": 411.75,
+         "MD": "December16"
+      },
+      {
+         "Month": 12,
+         "Day": 17,
+         "PPM": 411.8,
+         "MD": "December17"
+      },
+      {
+         "Month": 12,
+         "Day": 18,
+         "PPM": 411.83,
+         "MD": "December18"
+      },
+      {
+         "Month": 12,
+         "Day": 19,
+         "PPM": 411.75,
+         "MD": "December19"
+      },
+      {
+         "Month": 12,
+         "Day": 20,
+         "PPM": 411.69,
+         "MD": "December20"
+      },
+      {
+         "Month": 12,
+         "Day": 21,
+         "PPM": 412.73,
+         "MD": "December21"
+      },
+      {
+         "Month": 12,
+         "Day": 22,
+         "PPM": 413.02,
+         "MD": "December22"
+      },
+      {
+         "Month": 12,
+         "Day": 23,
+         "PPM": 412.02,
+         "MD": "December23"
+      },
+      {
+         "Month": 12,
+         "Day": 24,
+         "PPM": 412.28,
+         "MD": "December24"
+      },
+      {
+         "Month": 12,
+         "Day": 25,
+         "PPM": 411.05,
+         "MD": "December25"
+      },
+      {
+         "Month": 12,
+         "Day": 26,
+         "PPM": 412.36,
+         "MD": "December26"
+      },
+      {
+         "Month": 12,
+         "Day": 27,
+         "PPM": 412.63,
+         "MD": "December27"
+      },
+      {
+         "Month": 12,
+         "Day": 28,
+         "PPM": 412.11,
+         "MD": "December28"
+      },
+      {
+         "Month": 12,
+         "Day": 29,
+         "PPM": 412.75,
+         "MD": "December29"
+      },
+      {
+         "Month": 12,
+         "Day": 30,
+         "PPM": 413.08,
+         "MD": "December30"
+      },
+      {
+         "Month": 12,
+         "Day": 31,
+         "PPM": 413.2,
+         "MD": "December31"
+      }
+   ],
+   "2020": [
+      {
+         "Month": 1,
+         "Day": 1,
+         "PPM": 412.64,
+         "MD": "January1"
+      },
+      {
+         "Month": 1,
+         "Day": 3,
+         "PPM": 413.01,
+         "MD": "January3"
+      },
+      {
+         "Month": 1,
+         "Day": 4,
+         "PPM": 413.24,
+         "MD": "January4"
+      },
+      {
+         "Month": 1,
+         "Day": 5,
+         "PPM": 413.58,
+         "MD": "January5"
+      },
+      {
+         "Month": 1,
+         "Day": 6,
+         "PPM": 413.29,
+         "MD": "January6"
+      },
+      {
+         "Month": 1,
+         "Day": 7,
+         "PPM": 413.18,
+         "MD": "January7"
+      },
+      {
+         "Month": 1,
+         "Day": 8,
+         "PPM": 413.56,
+         "MD": "January8"
+      },
+      {
+         "Month": 1,
+         "Day": 9,
+         "PPM": 413.33,
+         "MD": "January9"
+      },
+      {
+         "Month": 1,
+         "Day": 10,
+         "PPM": 413.54,
+         "MD": "January10"
+      },
+      {
+         "Month": 1,
+         "Day": 11,
+         "PPM": 413.15,
+         "MD": "January11"
+      },
+      {
+         "Month": 1,
+         "Day": 12,
+         "PPM": 413.07,
+         "MD": "January12"
+      },
+      {
+         "Month": 1,
+         "Day": 14,
+         "PPM": 412.37,
+         "MD": "January14"
+      },
+      {
+         "Month": 1,
+         "Day": 15,
+         "PPM": 412.48,
+         "MD": "January15"
+      },
+      {
+         "Month": 1,
+         "Day": 16,
+         "PPM": 412.63,
+         "MD": "January16"
+      },
+      {
+         "Month": 1,
+         "Day": 17,
+         "PPM": 412.85,
+         "MD": "January17"
+      },
+      {
+         "Month": 1,
+         "Day": 18,
+         "PPM": 413.39,
+         "MD": "January18"
+      },
+      {
+         "Month": 1,
+         "Day": 19,
+         "PPM": 413.37,
+         "MD": "January19"
+      },
+      {
+         "Month": 1,
+         "Day": 20,
+         "PPM": 413.25,
+         "MD": "January20"
+      },
+      {
+         "Month": 1,
+         "Day": 21,
+         "PPM": 415.85,
+         "MD": "January21"
+      },
+      {
+         "Month": 1,
+         "Day": 22,
+         "PPM": 414.08,
+         "MD": "January22"
+      },
+      {
+         "Month": 1,
+         "Day": 23,
+         "PPM": 413.91,
+         "MD": "January23"
+      },
+      {
+         "Month": 1,
+         "Day": 24,
+         "PPM": 412.73,
+         "MD": "January24"
+      },
+      {
+         "Month": 1,
+         "Day": 25,
+         "PPM": 412.4,
+         "MD": "January25"
+      },
+      {
+         "Month": 1,
+         "Day": 26,
+         "PPM": 412.96,
+         "MD": "January26"
+      },
+      {
+         "Month": 1,
+         "Day": 27,
+         "PPM": 413.53,
+         "MD": "January27"
+      },
+      {
+         "Month": 1,
+         "Day": 28,
+         "PPM": 414.67,
+         "MD": "January28"
+      },
+      {
+         "Month": 1,
+         "Day": 29,
+         "PPM": 413.74,
+         "MD": "January29"
+      },
+      {
+         "Month": 1,
+         "Day": 30,
+         "PPM": 413.95,
+         "MD": "January30"
+      },
+      {
+         "Month": 1,
+         "Day": 31,
+         "PPM": 414.89,
+         "MD": "January31"
+      },
+      {
+         "Month": 2,
+         "Day": 1,
+         "PPM": 414.49,
+         "MD": "February1"
+      },
+      {
+         "Month": 2,
+         "Day": 2,
+         "PPM": 414.32,
+         "MD": "February2"
+      },
+      {
+         "Month": 2,
+         "Day": 3,
+         "PPM": 414.8,
+         "MD": "February3"
+      },
+      {
+         "Month": 2,
+         "Day": 4,
+         "PPM": 413.9,
+         "MD": "February4"
+      },
+      {
+         "Month": 2,
+         "Day": 5,
+         "PPM": 413.85,
+         "MD": "February5"
+      },
+      {
+         "Month": 2,
+         "Day": 6,
+         "PPM": 414.4,
+         "MD": "February6"
+      },
+      {
+         "Month": 2,
+         "Day": 7,
+         "PPM": 414.11,
+         "MD": "February7"
+      },
+      {
+         "Month": 2,
+         "Day": 8,
+         "PPM": 414.73,
+         "MD": "February8"
+      },
+      {
+         "Month": 2,
+         "Day": 10,
+         "PPM": 416.08,
+         "MD": "February10"
+      },
+      {
+         "Month": 2,
+         "Day": 11,
+         "PPM": 415.4,
+         "MD": "February11"
+      },
+      {
+         "Month": 2,
+         "Day": 12,
+         "PPM": 415.11,
+         "MD": "February12"
+      },
+      {
+         "Month": 2,
+         "Day": 13,
+         "PPM": 413.81,
+         "MD": "February13"
+      },
+      {
+         "Month": 2,
+         "Day": 14,
+         "PPM": 412.98,
+         "MD": "February14"
+      },
+      {
+         "Month": 2,
+         "Day": 15,
+         "PPM": 413.05,
+         "MD": "February15"
+      },
+      {
+         "Month": 2,
+         "Day": 16,
+         "PPM": 413.81,
+         "MD": "February16"
+      },
+      {
+         "Month": 2,
+         "Day": 17,
+         "PPM": 413.85,
+         "MD": "February17"
+      },
+      {
+         "Month": 2,
+         "Day": 18,
+         "PPM": 413.56,
+         "MD": "February18"
+      },
+      {
+         "Month": 2,
+         "Day": 19,
+         "PPM": 413.53,
+         "MD": "February19"
+      },
+      {
+         "Month": 2,
+         "Day": 20,
+         "PPM": 415.11,
+         "MD": "February20"
+      },
+      {
+         "Month": 2,
+         "Day": 21,
+         "PPM": 414.36,
+         "MD": "February21"
+      },
+      {
+         "Month": 2,
+         "Day": 22,
+         "PPM": 414.18,
+         "MD": "February22"
+      },
+      {
+         "Month": 2,
+         "Day": 23,
+         "PPM": 414.14,
+         "MD": "February23"
+      },
+      {
+         "Month": 2,
+         "Day": 24,
+         "PPM": 414.09,
+         "MD": "February24"
+      },
+      {
+         "Month": 2,
+         "Day": 25,
+         "PPM": 413.5,
+         "MD": "February25"
+      },
+      {
+         "Month": 2,
+         "Day": 26,
+         "PPM": 413.02,
+         "MD": "February26"
+      },
+      {
+         "Month": 2,
+         "Day": 27,
+         "PPM": 413.47,
+         "MD": "February27"
+      },
+      {
+         "Month": 2,
+         "Day": 28,
+         "PPM": 413.69,
+         "MD": "February28"
+      },
+      {
+         "Month": 2,
+         "Day": 29,
+         "PPM": 414.12,
+         "MD": "February29"
+      },
+      {
+         "Month": 3,
+         "Day": 1,
+         "PPM": 414.25,
+         "MD": "March1"
+      },
+      {
+         "Month": 3,
+         "Day": 2,
+         "PPM": 413.71,
+         "MD": "March2"
+      },
+      {
+         "Month": 3,
+         "Day": 3,
+         "PPM": 414.01,
+         "MD": "March3"
+      },
+      {
+         "Month": 3,
+         "Day": 4,
+         "PPM": 413.05,
+         "MD": "March4"
+      },
+      {
+         "Month": 3,
+         "Day": 5,
+         "PPM": 413.5,
+         "MD": "March5"
+      },
+      {
+         "Month": 3,
+         "Day": 6,
+         "PPM": 414.23,
+         "MD": "March6"
+      },
+      {
+         "Month": 3,
+         "Day": 7,
+         "PPM": 414.3,
+         "MD": "March7"
+      },
+      {
+         "Month": 3,
+         "Day": 9,
+         "PPM": 413.95,
+         "MD": "March9"
+      },
+      {
+         "Month": 3,
+         "Day": 10,
+         "PPM": 413.78,
+         "MD": "March10"
+      },
+      {
+         "Month": 3,
+         "Day": 11,
+         "PPM": 414.37,
+         "MD": "March11"
+      },
+      {
+         "Month": 3,
+         "Day": 12,
+         "PPM": 414.14,
+         "MD": "March12"
+      },
+      {
+         "Month": 3,
+         "Day": 13,
+         "PPM": 414.11,
+         "MD": "March13"
+      },
+      {
+         "Month": 3,
+         "Day": 14,
+         "PPM": 414.33,
+         "MD": "March14"
+      },
+      {
+         "Month": 3,
+         "Day": 15,
+         "PPM": 414.24,
+         "MD": "March15"
+      },
+      {
+         "Month": 3,
+         "Day": 16,
+         "PPM": 414.37,
+         "MD": "March16"
+      },
+      {
+         "Month": 3,
+         "Day": 17,
+         "PPM": 414.15,
+         "MD": "March17"
+      },
+      {
+         "Month": 3,
+         "Day": 18,
+         "PPM": 414.58,
+         "MD": "March18"
+      },
+      {
+         "Month": 3,
+         "Day": 19,
+         "PPM": 413.99,
+         "MD": "March19"
+      },
+      {
+         "Month": 3,
+         "Day": 20,
+         "PPM": 414.34,
+         "MD": "March20"
+      },
+      {
+         "Month": 3,
+         "Day": 25,
+         "PPM": 415.34,
+         "MD": "March25"
+      },
+      {
+         "Month": 3,
+         "Day": 26,
+         "PPM": 415.43,
+         "MD": "March26"
+      },
+      {
+         "Month": 3,
+         "Day": 27,
+         "PPM": 415.43,
+         "MD": "March27"
+      },
+      {
+         "Month": 3,
+         "Day": 28,
+         "PPM": 415.89,
+         "MD": "March28"
+      },
+      {
+         "Month": 3,
+         "Day": 29,
+         "PPM": 415.71,
+         "MD": "March29"
+      },
+      {
+         "Month": 3,
+         "Day": 30,
+         "PPM": 415.65,
+         "MD": "March30"
+      },
+      {
+         "Month": 3,
+         "Day": 31,
+         "PPM": 415.68,
+         "MD": "March31"
+      },
+      {
+         "Month": 4,
+         "Day": 1,
+         "PPM": 415.81,
+         "MD": "April1"
+      },
+      {
+         "Month": 4,
+         "Day": 2,
+         "PPM": 415.6,
+         "MD": "April2"
+      },
+      {
+         "Month": 4,
+         "Day": 4,
+         "PPM": 416.03,
+         "MD": "April4"
+      },
+      {
+         "Month": 4,
+         "Day": 5,
+         "PPM": 416.03,
+         "MD": "April5"
+      },
+      {
+         "Month": 4,
+         "Day": 6,
+         "PPM": 415.7,
+         "MD": "April6"
+      },
+      {
+         "Month": 4,
+         "Day": 7,
+         "PPM": 415.59,
+         "MD": "April7"
+      },
+      {
+         "Month": 4,
+         "Day": 8,
+         "PPM": 416.96,
+         "MD": "April8"
+      },
+      {
+         "Month": 4,
+         "Day": 9,
+         "PPM": 417.85,
+         "MD": "April9"
+      },
+      {
+         "Month": 4,
+         "Day": 10,
+         "PPM": 416.67,
+         "MD": "April10"
+      },
+      {
+         "Month": 4,
+         "Day": 11,
+         "PPM": 416.33,
+         "MD": "April11"
+      },
+      {
+         "Month": 4,
+         "Day": 12,
+         "PPM": 415.46,
+         "MD": "April12"
+      },
+      {
+         "Month": 4,
+         "Day": 13,
+         "PPM": 415.81,
+         "MD": "April13"
+      },
+      {
+         "Month": 4,
+         "Day": 14,
+         "PPM": 416.09,
+         "MD": "April14"
+      },
+      {
+         "Month": 4,
+         "Day": 15,
+         "PPM": 415.91,
+         "MD": "April15"
+      },
+      {
+         "Month": 4,
+         "Day": 16,
+         "PPM": 417.08,
+         "MD": "April16"
+      },
+      {
+         "Month": 4,
+         "Day": 17,
+         "PPM": 416.8,
+         "MD": "April17"
+      },
+      {
+         "Month": 4,
+         "Day": 18,
+         "PPM": 416.76,
+         "MD": "April18"
+      },
+      {
+         "Month": 4,
+         "Day": 19,
+         "PPM": 416.05,
+         "MD": "April19"
+      },
+      {
+         "Month": 4,
+         "Day": 20,
+         "PPM": 416.29,
+         "MD": "April20"
+      },
+      {
+         "Month": 4,
+         "Day": 21,
+         "PPM": 416.28,
+         "MD": "April21"
+      },
+      {
+         "Month": 4,
+         "Day": 22,
+         "PPM": 415.6,
+         "MD": "April22"
+      },
+      {
+         "Month": 4,
+         "Day": 23,
+         "PPM": 415.62,
+         "MD": "April23"
+      },
+      {
+         "Month": 4,
+         "Day": 24,
+         "PPM": 415.46,
+         "MD": "April24"
+      },
+      {
+         "Month": 4,
+         "Day": 26,
+         "PPM": 416.12,
+         "MD": "April26"
+      },
+      {
+         "Month": 4,
+         "Day": 27,
+         "PPM": 416.12,
+         "MD": "April27"
+      },
+      {
+         "Month": 4,
+         "Day": 28,
+         "PPM": 415.5,
+         "MD": "April28"
+      },
+      {
+         "Month": 4,
+         "Day": 29,
+         "PPM": 417.21,
+         "MD": "April29"
+      },
+      {
+         "Month": 4,
+         "Day": 30,
+         "PPM": 417.31,
+         "MD": "April30"
+      },
+      {
+         "Month": 5,
+         "Day": 1,
+         "PPM": 418.03,
+         "MD": "May1"
+      },
+      {
+         "Month": 5,
+         "Day": 2,
+         "PPM": 417.42,
+         "MD": "May2"
+      },
+      {
+         "Month": 5,
+         "Day": 3,
+         "PPM": 418.12,
+         "MD": "May3"
+      },
+      {
+         "Month": 5,
+         "Day": 5,
+         "PPM": 416.57,
+         "MD": "May5"
+      },
+      {
+         "Month": 5,
+         "Day": 6,
+         "PPM": 415.67,
+         "MD": "May6"
+      },
+      {
+         "Month": 5,
+         "Day": 7,
+         "PPM": 416.41,
+         "MD": "May7"
+      },
+      {
+         "Month": 5,
+         "Day": 8,
+         "PPM": 416.97,
+         "MD": "May8"
+      },
+      {
+         "Month": 5,
+         "Day": 9,
+         "PPM": 417.23,
+         "MD": "May9"
+      },
+      {
+         "Month": 5,
+         "Day": 10,
+         "PPM": 417.04,
+         "MD": "May10"
+      },
+      {
+         "Month": 5,
+         "Day": 11,
+         "PPM": 417.16,
+         "MD": "May11"
+      },
+      {
+         "Month": 5,
+         "Day": 12,
+         "PPM": 416.71,
+         "MD": "May12"
+      },
+      {
+         "Month": 5,
+         "Day": 13,
+         "PPM": 416.98,
+         "MD": "May13"
+      },
+      {
+         "Month": 5,
+         "Day": 14,
+         "PPM": 416.86,
+         "MD": "May14"
+      },
+      {
+         "Month": 5,
+         "Day": 15,
+         "PPM": 416,
+         "MD": "May15"
+      },
+      {
+         "Month": 5,
+         "Day": 18,
+         "PPM": 417,
+         "MD": "May18"
+      },
+      {
+         "Month": 5,
+         "Day": 19,
+         "PPM": 416.85,
+         "MD": "May19"
+      },
+      {
+         "Month": 5,
+         "Day": 20,
+         "PPM": 417.06,
+         "MD": "May20"
+      },
+      {
+         "Month": 5,
+         "Day": 21,
+         "PPM": 417.13,
+         "MD": "May21"
+      },
+      {
+         "Month": 5,
+         "Day": 22,
+         "PPM": 416.82,
+         "MD": "May22"
+      },
+      {
+         "Month": 5,
+         "Day": 24,
+         "PPM": 417.69,
+         "MD": "May24"
+      },
+      {
+         "Month": 5,
+         "Day": 25,
+         "PPM": 418.12,
+         "MD": "May25"
+      },
+      {
+         "Month": 5,
+         "Day": 26,
+         "PPM": 417.7,
+         "MD": "May26"
+      },
+      {
+         "Month": 5,
+         "Day": 27,
+         "PPM": 417.88,
+         "MD": "May27"
+      },
+      {
+         "Month": 5,
+         "Day": 28,
+         "PPM": 417.33,
+         "MD": "May28"
+      },
+      {
+         "Month": 5,
+         "Day": 29,
+         "PPM": 416.83,
+         "MD": "May29"
+      },
+      {
+         "Month": 5,
+         "Day": 30,
+         "PPM": 416.47,
+         "MD": "May30"
+      },
+      {
+         "Month": 5,
+         "Day": 31,
+         "PPM": 416.94,
+         "MD": "May31"
+      },
+      {
+         "Month": 6,
+         "Day": 1,
+         "PPM": 418.32,
+         "MD": "June1"
+      },
+      {
+         "Month": 6,
+         "Day": 2,
+         "PPM": 417.7,
+         "MD": "June2"
+      },
+      {
+         "Month": 6,
+         "Day": 3,
+         "PPM": 417.37,
+         "MD": "June3"
+      },
+      {
+         "Month": 6,
+         "Day": 4,
+         "PPM": 416.54,
+         "MD": "June4"
+      },
+      {
+         "Month": 6,
+         "Day": 6,
+         "PPM": 416.35,
+         "MD": "June6"
+      },
+      {
+         "Month": 6,
+         "Day": 8,
+         "PPM": 416.3,
+         "MD": "June8"
+      },
+      {
+         "Month": 6,
+         "Day": 10,
+         "PPM": 415.77,
+         "MD": "June10"
+      },
+      {
+         "Month": 6,
+         "Day": 11,
+         "PPM": 416.41,
+         "MD": "June11"
+      },
+      {
+         "Month": 6,
+         "Day": 12,
+         "PPM": 416.69,
+         "MD": "June12"
+      },
+      {
+         "Month": 6,
+         "Day": 13,
+         "PPM": 416.55,
+         "MD": "June13"
+      },
+      {
+         "Month": 6,
+         "Day": 14,
+         "PPM": 416.81,
+         "MD": "June14"
+      },
+      {
+         "Month": 6,
+         "Day": 15,
+         "PPM": 416.81,
+         "MD": "June15"
+      },
+      {
+         "Month": 6,
+         "Day": 16,
+         "PPM": 416.27,
+         "MD": "June16"
+      },
+      {
+         "Month": 6,
+         "Day": 17,
+         "PPM": 415.92,
+         "MD": "June17"
+      },
+      {
+         "Month": 6,
+         "Day": 18,
+         "PPM": 416.28,
+         "MD": "June18"
+      },
+      {
+         "Month": 6,
+         "Day": 19,
+         "PPM": 415.71,
+         "MD": "June19"
+      },
+      {
+         "Month": 6,
+         "Day": 20,
+         "PPM": 416.12,
+         "MD": "June20"
+      },
+      {
+         "Month": 6,
+         "Day": 21,
+         "PPM": 416.31,
+         "MD": "June21"
+      },
+      {
+         "Month": 6,
+         "Day": 22,
+         "PPM": 416.21,
+         "MD": "June22"
+      },
+      {
+         "Month": 6,
+         "Day": 23,
+         "PPM": 416.13,
+         "MD": "June23"
+      },
+      {
+         "Month": 6,
+         "Day": 24,
+         "PPM": 416.4,
+         "MD": "June24"
+      },
+      {
+         "Month": 6,
+         "Day": 25,
+         "PPM": 415.5,
+         "MD": "June25"
+      },
+      {
+         "Month": 6,
+         "Day": 26,
+         "PPM": 415.82,
+         "MD": "June26"
+      },
+      {
+         "Month": 6,
+         "Day": 27,
+         "PPM": 415.98,
+         "MD": "June27"
+      },
+      {
+         "Month": 6,
+         "Day": 28,
+         "PPM": 415.57,
+         "MD": "June28"
+      },
+      {
+         "Month": 6,
+         "Day": 29,
+         "PPM": 415.9,
+         "MD": "June29"
+      },
+      {
+         "Month": 6,
+         "Day": 30,
+         "PPM": 415.49,
+         "MD": "June30"
+      },
+      {
+         "Month": 7,
+         "Day": 1,
+         "PPM": 415.29,
+         "MD": "July1"
+      },
+      {
+         "Month": 7,
+         "Day": 2,
+         "PPM": 415.25,
+         "MD": "July2"
+      },
+      {
+         "Month": 7,
+         "Day": 3,
+         "PPM": 415.23,
+         "MD": "July3"
+      },
+      {
+         "Month": 7,
+         "Day": 4,
+         "PPM": 415.29,
+         "MD": "July4"
+      },
+      {
+         "Month": 7,
+         "Day": 5,
+         "PPM": 415.13,
+         "MD": "July5"
+      },
+      {
+         "Month": 7,
+         "Day": 6,
+         "PPM": 415.22,
+         "MD": "July6"
+      },
+      {
+         "Month": 7,
+         "Day": 7,
+         "PPM": 415.28,
+         "MD": "July7"
+      },
+      {
+         "Month": 7,
+         "Day": 8,
+         "PPM": 415.47,
+         "MD": "July8"
+      },
+      {
+         "Month": 7,
+         "Day": 9,
+         "PPM": 414.72,
+         "MD": "July9"
+      },
+      {
+         "Month": 7,
+         "Day": 10,
+         "PPM": 415.27,
+         "MD": "July10"
+      },
+      {
+         "Month": 7,
+         "Day": 11,
+         "PPM": 415.56,
+         "MD": "July11"
+      },
+      {
+         "Month": 7,
+         "Day": 12,
+         "PPM": 415.13,
+         "MD": "July12"
+      },
+      {
+         "Month": 7,
+         "Day": 13,
+         "PPM": 413.31,
+         "MD": "July13"
+      },
+      {
+         "Month": 7,
+         "Day": 14,
+         "PPM": 414.62,
+         "MD": "July14"
+      },
+      {
+         "Month": 7,
+         "Day": 15,
+         "PPM": 415.19,
+         "MD": "July15"
+      },
+      {
+         "Month": 7,
+         "Day": 16,
+         "PPM": 415.2,
+         "MD": "July16"
+      },
+      {
+         "Month": 7,
+         "Day": 17,
+         "PPM": 414.2,
+         "MD": "July17"
+      },
+      {
+         "Month": 7,
+         "Day": 18,
+         "PPM": 414.04,
+         "MD": "July18"
+      },
+      {
+         "Month": 7,
+         "Day": 19,
+         "PPM": 413.87,
+         "MD": "July19"
+      },
+      {
+         "Month": 7,
+         "Day": 20,
+         "PPM": 414,
+         "MD": "July20"
+      },
+      {
+         "Month": 7,
+         "Day": 21,
+         "PPM": 414.06,
+         "MD": "July21"
+      },
+      {
+         "Month": 7,
+         "Day": 22,
+         "PPM": 414.22,
+         "MD": "July22"
+      },
+      {
+         "Month": 7,
+         "Day": 23,
+         "PPM": 413.32,
+         "MD": "July23"
+      },
+      {
+         "Month": 7,
+         "Day": 24,
+         "PPM": 414,
+         "MD": "July24"
+      },
+      {
+         "Month": 7,
+         "Day": 25,
+         "PPM": 413.82,
+         "MD": "July25"
+      },
+      {
+         "Month": 7,
+         "Day": 26,
+         "PPM": 413.11,
+         "MD": "July26"
+      },
+      {
+         "Month": 7,
+         "Day": 27,
+         "PPM": 413.36,
+         "MD": "July27"
+      },
+      {
+         "Month": 7,
+         "Day": 28,
+         "PPM": 413.73,
+         "MD": "July28"
+      },
+      {
+         "Month": 7,
+         "Day": 29,
+         "PPM": 413.72,
+         "MD": "July29"
+      },
+      {
+         "Month": 7,
+         "Day": 30,
+         "PPM": 413.93,
+         "MD": "July30"
+      },
+      {
+         "Month": 7,
+         "Day": 31,
+         "PPM": 411.39,
+         "MD": "July31"
+      },
+      {
+         "Month": 8,
+         "Day": 1,
+         "PPM": 413.33,
+         "MD": "August1"
+      },
+      {
+         "Month": 8,
+         "Day": 2,
+         "PPM": 413.37,
+         "MD": "August2"
+      },
+      {
+         "Month": 8,
+         "Day": 3,
+         "PPM": 413.65,
+         "MD": "August3"
+      },
+      {
+         "Month": 8,
+         "Day": 7,
+         "PPM": 412.81,
+         "MD": "August7"
+      },
+      {
+         "Month": 8,
+         "Day": 8,
+         "PPM": 412.86,
+         "MD": "August8"
+      },
+      {
+         "Month": 8,
+         "Day": 9,
+         "PPM": 413.27,
+         "MD": "August9"
+      },
+      {
+         "Month": 8,
+         "Day": 10,
+         "PPM": 412.55,
+         "MD": "August10"
+      },
+      {
+         "Month": 8,
+         "Day": 11,
+         "PPM": 412.4,
+         "MD": "August11"
+      },
+      {
+         "Month": 8,
+         "Day": 12,
+         "PPM": 412.89,
+         "MD": "August12"
+      },
+      {
+         "Month": 8,
+         "Day": 13,
+         "PPM": 412.82,
+         "MD": "August13"
+      },
+      {
+         "Month": 8,
+         "Day": 15,
+         "PPM": 412.54,
+         "MD": "August15"
+      },
+      {
+         "Month": 8,
+         "Day": 17,
+         "PPM": 412.58,
+         "MD": "August17"
+      },
+      {
+         "Month": 8,
+         "Day": 18,
+         "PPM": 412.19,
+         "MD": "August18"
+      },
+      {
+         "Month": 8,
+         "Day": 19,
+         "PPM": 412.15,
+         "MD": "August19"
+      },
+      {
+         "Month": 8,
+         "Day": 21,
+         "PPM": 412.45,
+         "MD": "August21"
+      },
+      {
+         "Month": 8,
+         "Day": 22,
+         "PPM": 412.58,
+         "MD": "August22"
+      },
+      {
+         "Month": 8,
+         "Day": 23,
+         "PPM": 412.21,
+         "MD": "August23"
+      },
+      {
+         "Month": 8,
+         "Day": 24,
+         "PPM": 411.96,
+         "MD": "August24"
+      },
+      {
+         "Month": 8,
+         "Day": 25,
+         "PPM": 412.47,
+         "MD": "August25"
+      },
+      {
+         "Month": 8,
+         "Day": 26,
+         "PPM": 411.99,
+         "MD": "August26"
+      },
+      {
+         "Month": 8,
+         "Day": 27,
+         "PPM": 411.6,
+         "MD": "August27"
+      },
+      {
+         "Month": 8,
+         "Day": 28,
+         "PPM": 411.58,
+         "MD": "August28"
+      },
+      {
+         "Month": 8,
+         "Day": 29,
+         "PPM": 411.94,
+         "MD": "August29"
+      },
+      {
+         "Month": 8,
+         "Day": 30,
+         "PPM": 411.9,
+         "MD": "August30"
+      },
+      {
+         "Month": 8,
+         "Day": 31,
+         "PPM": 411.44,
+         "MD": "August31"
+      },
+      {
+         "Month": 9,
+         "Day": 1,
+         "PPM": 411.93,
+         "MD": "September1"
+      },
+      {
+         "Month": 9,
+         "Day": 2,
+         "PPM": 411.85,
+         "MD": "September2"
+      },
+      {
+         "Month": 9,
+         "Day": 3,
+         "PPM": 411.69,
+         "MD": "September3"
+      },
+      {
+         "Month": 9,
+         "Day": 4,
+         "PPM": 410.96,
+         "MD": "September4"
+      },
+      {
+         "Month": 9,
+         "Day": 5,
+         "PPM": 411.36,
+         "MD": "September5"
+      },
+      {
+         "Month": 9,
+         "Day": 6,
+         "PPM": 411.89,
+         "MD": "September6"
+      },
+      {
+         "Month": 9,
+         "Day": 7,
+         "PPM": 411.37,
+         "MD": "September7"
+      },
+      {
+         "Month": 9,
+         "Day": 8,
+         "PPM": 411.75,
+         "MD": "September8"
+      },
+      {
+         "Month": 9,
+         "Day": 9,
+         "PPM": 411.16,
+         "MD": "September9"
+      },
+      {
+         "Month": 9,
+         "Day": 10,
+         "PPM": 410.99,
+         "MD": "September10"
+      }
+   ]
+}
