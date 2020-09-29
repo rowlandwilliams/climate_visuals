@@ -7,6 +7,7 @@
   "dependencies": {
     "cheerio": "latest",
     "express": "^4.17.1",
-    "request": "latest"
+    "request": "latest",
+    "node-fetch": "^2.6.1"
   }
 }
