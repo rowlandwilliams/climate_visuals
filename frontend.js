@@ -1,3 +1,28 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // define app for CO2 dashboard
 const app = document.getElementById('root')
 const container = document.createElement('div');
