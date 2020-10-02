@@ -4,6 +4,7 @@ var app = express();
 const fetch   = require('node-fetch');
 const request = require("request-promise");
 const cheerio = require("cheerio");
+const moment = require('moment');
 
 
 
@@ -30,13 +31,16 @@ app.get('/', function(req, res){
             // create array of objects
             data = data.map(x => ({
                 year: Number(x[0]),
-                month: Number(x[1]),
+                month: Number(x[1]) + 1,
                 day: Number(x[2]),
                 ppm: Number(x[3]),
+                week: moment(new Date(x[0], x[1], x[2])).week(),
                 ymd: x[0] + '_' + x[1] + '_' + x[2],
                 ym: x[0] + '_' + x[1],
                 md: x[1] + '_' + x[2]
             }))
+            
+            
             
             // define final data
             var finalData = [];
