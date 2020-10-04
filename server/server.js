@@ -38,28 +38,29 @@ app.get('/', function(req, res){
                 ymd: x[0] + '_' + x[1] + '_' + x[2],
             }))
             
+            // filter data to get only potential years required (prevent filtering each time)
+            var latestDay = data.slice(data.length-1);
+            var year = latestDay[0].year;
+            // define potential years (-2 accounts for across 2 years)
+            var years = [year, year-1, year-2, year-10, year-100, year-1000];
             
-            
+            var data = data.filter(x => years.includes(x.year));
+            console.log(data)
+
             // define final data
             var finalData = [];
 
             // get last 7 days of data
             var latestData = data.slice(data.length-7)
-            //console.log(latestData)
-            // get all years in latest data (accounts for end/start of years)
-            // var years = latestData.map(x => x.year);
-            // var years = [...new Set(years)];
-            
-
             finalData.push(latestData);
-            //console.log(finalData)
+            
             // daily data begins on 11/05/2016
             // weekly data begins on 29/02/1958
             // yearly data begins 1830
             // 5 years data before 1830
 
-
             // Get data for 1, 10, 100, and 1000 years ago
+            
             // 1 year ago
             // generate ymd ids matching data from last year based on latest data
             var ids = latestData.map((x) => (x.year-1)  + 
@@ -72,8 +73,6 @@ app.get('/', function(req, res){
             // 10 years ago
             // data now weekly so match nearest week based on latest day
             // find year and month
-            // get latest day
-            var latestDay = data.slice(data.length-1)
             // filter data based on latestday year-10 then current week
             finalData.push(data.filter(x => x.year == (latestDay[0].year - 10))
                     .filter(x => x.week == latestDay[0].week))
