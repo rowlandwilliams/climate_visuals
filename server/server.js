@@ -36,6 +36,7 @@ app.get('/', function(req, res){
                 ppm: Number(x[3]),
                 week: moment(new Date(x[0], x[1], x[2])).week(),
                 ymd: x[0] + '_' + x[1] + '_' + x[2],
+                date: new Date(x[0], x[1], x[2])
             }))
             
             // filter data to get only potential years required (prevent filtering each time)
@@ -97,6 +98,7 @@ app.get('/', function(req, res){
             
 
         }
+        res.setHeader('Access-Control-Allow-Origin', '*');
         res.send(finalData)
 
     })
