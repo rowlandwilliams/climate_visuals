@@ -26,7 +26,7 @@ app.get('/', function(req, res){
             data = data.replace(/\)/g, '');
             data = data.substring(3, data.length-2) + ']'
             data = JSON.parse(data)
-            //console.log(data)
+            
 
             // create array of objects
             data = data.map(x => ({
@@ -45,7 +45,7 @@ app.get('/', function(req, res){
             var years = [year, year-1, year-2, year-10, year-100, year-1000];
             
             var data = data.filter(x => years.includes(x.year));
-            console.log(data)
+           
 
             // define final data
             var finalData = [];
@@ -89,6 +89,12 @@ app.get('/', function(req, res){
 
             var year = round5((latestDay[0].year - 1000));
             finalData.push(data.filter(x => x.year == (latestDay[0].year - 1000)));
+
+            // calculate difference between today and day x
+            var latestPPM = latestDay[0].ppm;
+            console.log(latestPPM)
+            finalData.map((array) => array.map((x) => x.diff = Math.round((latestPPM - x.ppm) * 100) / 100));
+            
 
         }
         res.send(finalData)
