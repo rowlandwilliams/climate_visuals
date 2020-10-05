@@ -6,10 +6,9 @@ fetch(link)
     .then(response => response.json())
     .then(data => {
 
-        console.log(data);
         // define dimensions
         const width = 500;
-        const height = 300;
+        const height = 2000;
         const margin = 5;
         const padding = 10;
         const adj = 30;
@@ -32,17 +31,15 @@ fetch(link)
 
         // define domains, convert string back to date object.
         x.domain(d3.extent(data[0], function(d){
-            return Date.parse(d.date)
+            return Date.parse(d.date2)
         }));
 
-        
 
         var ppm = data.map((array) => array.map((x) => x.ppm)).flat()
         y.domain([Math.round((d3.min(ppm)-10)), Math.round((d3.max(ppm)+1))]);
 
         // define axes
-        var xAxis = d3.axisBottom(x).ticks(7).tickFormat(d3.timeFormat('%b %d')).tickValues(data[0].map(d => Date.parse(d.date)))
-        console.log(xAxis)
+        var xAxis = d3.axisBottom(x).ticks(7).tickFormat(d3.timeFormat('%b %d')).tickValues(data[0].map(d => Date.parse(d.date2)))
         var yAxis = d3.axisLeft(y)
         
 
@@ -56,35 +53,50 @@ fetch(link)
             .attr('class', 'axis')
             .call(yAxis)
 
+        // define lines and add
+        var lineCurrent = d3.line()
+                .x(function(d) {return x(Date.parse(d.date2));})
+                .y(function(d) {return y(d.ppm);});
+
+        var lineLast = d3.line()
+                .x(function(d) {return x(Date.parse(d.date2));})
+                .y(function(d) {return y(d.ppm);});
+
+
+        svg.append('path')
+            .data([data[0]])
+            .attr('class', 'line')
+            .attr('d', lineCurrent)
+            .attr("stroke", "red")
+            .attr("stroke-width", 1)
+            .attr("fill", "none");
+
+        //console.log(data)   
+        svg.append('path')
+            .data([data[1]])
+            .attr('class', 'line2')
+            .attr('d', lineLast)
+            .attr("stroke", "blue")
+            .attr("stroke-width", 1)
+            .attr("fill", "none");
+
+
+        
     })
 
 
         
         
 
-        // // define axes
-        // var xAxis = d3.axisBottom(x).ticks(5).tickFormat(d3.format('d')).tickValues(plotData.map(d => d.Year))
-        // var yAxis = d3.axisLeft(y)
         
 
         
 
 
 
-        // // define line and add
-        // var valueline = d3.line()
-        //         .x(function(d) {return x(d.Year);})
-        //         .y(function(d) {return y(d.PPM);});
+        
 
-        // svg.append('path')
-        //     .data([plotData])
-        //     .attr('class', 'line')
-        //     .attr('d', valueline)
-        //     .attr("stroke", "black")
-        //     .attr("stroke-width", 1)
-        //     .attr("fill", "none");
-
-        // }
+        
     
 
 

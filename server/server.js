@@ -36,7 +36,9 @@ app.get('/', function(req, res){
                 ppm: Number(x[3]),
                 week: moment(new Date(x[0], x[1], x[2])).week(),
                 ymd: x[0] + '_' + x[1] + '_' + x[2],
-                date: new Date(x[0], x[1], x[2])
+                date: new Date(x[0], x[1], x[2]),
+                date2: new Date(x[0], x[1], x[2])
+
             }))
             
             // filter data to get only potential years required (prevent filtering each time)
@@ -71,30 +73,38 @@ app.get('/', function(req, res){
             var temp = data.filter(x => ids.includes(x.ymd));
             finalData.push(temp);
             
-            // 10 years ago
-            // data now weekly so match nearest week based on latest day
-            // find year and month
-            // filter data based on latestday year-10 then current week
-            finalData.push(data.filter(x => x.year == (latestDay[0].year - 10))
-                    .filter(x => x.week == latestDay[0].week))
+            // update date 2 for last year
+            finalData[1].forEach(x => x.date2 = new Date((x.year + 1), x.month, x.day))
             
-            
-            // 100 years ago
-            // data now yearly so simple year match
-            finalData.push(data.filter(x => x.year == (latestDay[0].year - 100)))            
-            
-            // round 1000 years ago to nearest 5 years (data only every 5 years)
-            function round5(x) {
-                return (x % 5) >= 2.5 ? parseInt(x / 5) * 5 + 5 : parseInt(x / 5) * 5;
-            }
 
-            var year = round5((latestDay[0].year - 1000));
-            finalData.push(data.filter(x => x.year == (latestDay[0].year - 1000)));
+           //finalData[1] = finalData[1].map((x) => x.date2 = new Date((x.year + 1), x.month, x.day));
+            //console.log(test)
+            //finalData = finalData.flat()
+            
+            // // 10 years ago
+            // // data now weekly so match nearest week based on latest day
+            // // find year and month
+            // // filter data based on latestday year-10 then current week
+            // finalData.push(data.filter(x => x.year == (latestDay[0].year - 10))
+            //         .filter(x => x.week == latestDay[0].week))
+            
+            
+            // // 100 years ago
+            // // data now yearly so simple year match
+            // finalData.push(data.filter(x => x.year == (latestDay[0].year - 100)))            
+            
+            // // round 1000 years ago to nearest 5 years (data only every 5 years)
+            // function round5(x) {
+            //     return (x % 5) >= 2.5 ? parseInt(x / 5) * 5 + 5 : parseInt(x / 5) * 5;
+            // }
 
-            // calculate difference between today and day x
-            var latestPPM = latestDay[0].ppm;
-            console.log(latestPPM)
-            finalData.map((array) => array.map((x) => x.diff = Math.round((latestPPM - x.ppm) * 100) / 100));
+            // var year = round5((latestDay[0].year - 1000));
+            // finalData.push(data.filter(x => x.year == (latestDay[0].year - 1000)));
+
+            // // calculate difference between today and day x
+            // var latestPPM = latestDay[0].ppm;
+            // console.log(latestPPM)
+            // finalData.map((array) => array.map((x) => x.diff = Math.round((latestPPM - x.ppm) * 100) / 100));
             
 
         }
