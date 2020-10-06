@@ -73,17 +73,26 @@ app.get('/', function(req, res){
             var temp = data.filter(x => ids.includes(x.ymd));
             finalData.push(temp);
             
+            
             // update date 2 for last year
             finalData[1].forEach(x => x.date2 = new Date((x.year + 1), x.month, x.day))
+            // extract needed keys
+            finalData = finalData.map((array) => array.map((x) => ({
+                date: x.date2,
+                year: x.year,
+                ppm: x.ppm
+
+            })))
+            finalData = finalData.flat()
             
 
-           //finalData[1] = finalData[1].map((x) => x.date2 = new Date((x.year + 1), x.month, x.day));
-            //console.log(test)
-            //finalData = finalData.flat()
             
-            // // 10 years ago
-            // // data now weekly so match nearest week based on latest day
-            // // find year and month
+
+           
+            
+            // 10 years ago
+            // data now weekly so match nearest week based on latest day
+            // find year and month
             // // filter data based on latestday year-10 then current week
             // finalData.push(data.filter(x => x.year == (latestDay[0].year - 10))
             //         .filter(x => x.week == latestDay[0].week))

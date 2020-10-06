@@ -6,9 +6,14 @@ fetch(link)
     .then(response => response.json())
     .then(data => {
 
+        // define years present in data 
+        var years = data.map(x => x.year)
+        var years = [...new Set(years)] 
+        console.log(years)
+
         // define dimensions
         const width = 500;
-        const height = 2000;
+        const height = 5000;
         const margin = 5;
         const padding = 10;
         const adj = 30;
@@ -30,16 +35,16 @@ fetch(link)
         const y = d3.scaleLinear().rangeRound([height, 0]);
 
         // define domains, convert string back to date object.
-        x.domain(d3.extent(data[0], function(d){
-            return Date.parse(d.date2)
+        x.domain(d3.extent(data, function(d){
+            return Date.parse(d.date)
         }));
 
-
-        var ppm = data.map((array) => array.map((x) => x.ppm)).flat()
+        console.log(data)
+        var ppm = data.map((x) => x.ppm)
         y.domain([Math.round((d3.min(ppm)-10)), Math.round((d3.max(ppm)+1))]);
 
         // define axes
-        var xAxis = d3.axisBottom(x).ticks(7).tickFormat(d3.timeFormat('%b %d')).tickValues(data[0].map(d => Date.parse(d.date2)))
+        var xAxis = d3.axisBottom(x).ticks(7).tickFormat(d3.timeFormat('%b %d')).tickValues(data.map(d => Date.parse(d.date)))
         var yAxis = d3.axisLeft(y)
         
 
@@ -55,30 +60,97 @@ fetch(link)
 
         // define lines and add
         var lineCurrent = d3.line()
-                .x(function(d) {return x(Date.parse(d.date2));})
+                .x(function(d) {return x(Date.parse(d.date));})
                 .y(function(d) {return y(d.ppm);});
 
         var lineLast = d3.line()
-                .x(function(d) {return x(Date.parse(d.date2));})
+                .x(function(d) {return x(Date.parse(d.date));})
                 .y(function(d) {return y(d.ppm);});
 
-
+        
         svg.append('path')
-            .data([data[0]])
+            .data([data.filter(x => x.year == years[0])])
             .attr('class', 'line')
             .attr('d', lineCurrent)
             .attr("stroke", "red")
             .attr("stroke-width", 1)
             .attr("fill", "none");
 
-        //console.log(data)   
+        // //console.log(data)   
         svg.append('path')
-            .data([data[1]])
-            .attr('class', 'line2')
+            .data([data.filter(x => x.year == years[1])])
+            .attr('class', 'line')
             .attr('d', lineLast)
             .attr("stroke", "blue")
             .attr("stroke-width", 1)
             .attr("fill", "none");
+
+        // // create circle to travel along line
+        // var focus = svg.append('g')
+        //                .append('circle')
+        //                     .style('fill', 'skyblue')
+        //                     .attr('stroke', 'black')
+        //                     .attr('r', 8.5)
+        //                     .style('display', 'none')
+
+        
+        // // Create the text that travels along the line
+        // var focusText = svg
+        //     .append('g')
+        //     .append('text') 
+        //         .style("display", 'none')
+        //         .attr("text-anchor", "left")
+        //         .attr("alignment-baseline", "middle")
+
+        // // Create a rect on top of the svg area: this rectangle recovers mouse position
+        // svg
+        //     .append('rect')
+        //     .style("fill", "none")
+        //     .style("pointer-events", "all")
+        //     .attr('width', width+100)
+        //     .attr('height', height+100)
+        //     .on('mouseover', mouseover)
+        //     .on('mousemove', mousemove)
+        //     .on('mouseout', mouseout);
+
+     
+        // // display tooltip on mouseover
+        // function mouseover() {
+        //         focus.style("display", null)
+        //         focusText.style("display", null)
+        //     }
+    
+    
+        // //  find the closest X index of the mouse:
+        // var bisectYear = d3.bisector(d => Date.parse(d.date2)).left;
+        // //var bisectPPM = d3.biserctor(d => d.PPM).right;
+
+
+        // function mousemove() {
+        //         // take x mouse position and convert to equivalent date
+        //         var x0 = x.invert(d3.mouse(this)[0]);
+        //         // find index of plotData array that is closest to mouse
+        //         var i = bisectYear(data[0], x0, 1);
+        //         d0 = data[i-1],
+        //         d1 = data[i],                                 
+        //         d = x0 - d0.date > d1.date - x0 ? d1 : d0;
+                
+        //         focus
+        //           .attr("cx", x(d.date))
+        //           .attr("cy", y(d.ppm))
+        //         focusText
+        //           .html(d.Year + "  :  " + d.PPM + "PPM")
+        //           .attr("x", x(d.date)+15)
+        //           .attr("y", y(d.ppm))
+        //         }
+    
+        //     function mouseout() {
+        //             focus.style("display", 'none')
+        //             focusText.style("display", 'none')
+        //           } 
+       
+
+        
 
 
         
