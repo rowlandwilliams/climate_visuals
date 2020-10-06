@@ -35,9 +35,9 @@ app.get('/', function(req, res){
                 day: Number(x[2]),
                 ppm: Number(x[3]),
                 week: moment(new Date(x[0], x[1], x[2])).week(),
-                ymd: x[0] + '_' + x[1] + '_' + x[2],
-                date: new Date(x[0], x[1], x[2]),
-                date2: new Date(x[0], x[1], x[2])
+                ymd: x[0] + '_' + x[1] + '_' + x[2]
+                //date: new Date(x[0], x[1], x[2]),
+                //date2: new Date(x[0], x[1], x[2])
 
             }))
             
@@ -52,10 +52,16 @@ app.get('/', function(req, res){
 
             // define final data
             var finalData = [];
+            //var test = {}
 
-            // get last 7 days of data
-            var latestData = data.slice(data.length-7)
-            finalData.push(latestData);
+            // get last 7 days of data and calculate average
+            var latestData = data.slice(data.length-7);
+            var latestAverage = latestData.map(x => x.ppm).reduce((a, b) => a + b, 0)/latestData.length
+            console.log(latestAverage)
+
+            
+            finalData.push({year: year, ppm: latestAverage});
+            finalData.push({year: 2019, ppm: 400})
             
             // daily data begins on 11/05/2016
             // weekly data begins on 29/02/1958
@@ -66,24 +72,24 @@ app.get('/', function(req, res){
             
             // 1 year ago
             // generate ymd ids matching data from last year based on latest data
-            var ids = latestData.map((x) => (x.year-1)  + 
-                            '_' + (x.month) + '_' + x.day)
+            // var ids = latestData.map((x) => (x.year-1)  + 
+            //                 '_' + (x.month) + '_' + x.day)
             
-            // pull new last year ids out of data and add to latestData
-            var temp = data.filter(x => ids.includes(x.ymd));
-            finalData.push(temp);
+            // // pull new last year ids out of data and add to latestData
+            // var temp = data.filter(x => ids.includes(x.ymd));
+            // finalData.push(temp);
             
             
-            // update date 2 for last year
-            finalData[1].forEach(x => x.date2 = new Date((x.year + 1), x.month, x.day))
-            // extract needed keys
-            finalData = finalData.map((array) => array.map((x) => ({
-                date: x.date2,
-                year: x.year,
-                ppm: x.ppm
+            // // update date 2 for last year
+            // finalData[1].forEach(x => x.date2 = new Date((x.year + 1), x.month, x.day))
+            // // extract needed keys
+            // finalData = finalData.map((array) => array.map((x) => ({
+            //     date: x.date2,
+            //     year: x.year,
+            //     ppm: x.ppm
 
-            })))
-            finalData = finalData.flat()
+            // })))
+            // finalData = finalData.flat()
             
 
             

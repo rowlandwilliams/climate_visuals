@@ -9,7 +9,7 @@ fetch(link)
         // define years present in data 
         var years = data.map(x => x.year)
         var years = [...new Set(years)] 
-        console.log(years)
+        //console.log(years)
 
         // define dimensions
         const width = 500;
@@ -31,59 +31,82 @@ fetch(link)
             .classed("svg-content", true);
 
         // prepare scales
-        const x = d3.scaleTime().range([0, width]);
+        //const x = d3.scaleTime().range([0, width]);
         const y = d3.scaleLinear().rangeRound([height, 0]);
 
         // define domains, convert string back to date object.
-        x.domain(d3.extent(data, function(d){
-            return Date.parse(d.date)
-        }));
+        // x.domain(d3.extent(data, function(d){
+        //     return Date.parse(d.date)
+        // }));
 
         console.log(data)
         var ppm = data.map((x) => x.ppm)
-        y.domain([Math.round((d3.min(ppm)-10)), Math.round((d3.max(ppm)+1))]);
+        console.log(ppm)
+        y.domain([200, 420])//Math.round((d3.max(ppm)+3))]);
 
         // define axes
-        var xAxis = d3.axisBottom(x).ticks(7).tickFormat(d3.timeFormat('%b %d')).tickValues(data.map(d => Date.parse(d.date)))
+        //var xAxis = d3.axisBottom(x).ticks(7).tickFormat(d3.timeFormat('%b %d')).tickValues(data.map(d => Date.parse(d.date)))
         var yAxis = d3.axisLeft(y)
+        console.log(yAxis)
         
 
         // // add axes
-        svg.append('g')
-            .attr('class', 'x axis')
-            .attr('transform', 'translate(0,' + height + ')')
-            .call(xAxis)
+        // svg.append('g')
+        //     .attr('class', 'x axis')
+        //     .attr('transform', 'translate(0,' + height + ')')
+        //     .call(xAxis)
 
         svg.append('g')
             .attr('class', 'axis')
             .call(yAxis)
 
-        // define lines and add
-        var lineCurrent = d3.line()
-                .x(function(d) {return x(Date.parse(d.date));})
-                .y(function(d) {return y(d.ppm);});
+        //var test = data[0].ppm;
 
-        var lineLast = d3.line()
-                .x(function(d) {return x(Date.parse(d.date));})
-                .y(function(d) {return y(d.ppm);});
+        //var ppmData = data.map(x=> x.ppm)
+        for (var i=0; i<data.length; i++) {
+            svg.append("line")
+            .attr("x1", 0)
+            .attr("x2", width)
+            .attr("y1", y(data[i].ppm))
+            .attr("y2", y(data[i].ppm))
+            .attr("stroke-width", 4)
+            .attr("stroke", "black")
+        }
+        // svg.append("line")
+        //     .attr("x1", 0)
+        //     .attr("x2", width)
+        //     .attr("y1", test)
+        //     .attr("y2", test)
+        //     .attr("stroke-width", 4)
+        //     .attr("stroke", "black")
+            
+
+        // define lines and add
+        // var lineCurrent = d3.line()
+        //         .x(function(d) {return x(Date.parse(d.date));})
+        //         .y(function(d) {return y(d.ppm);});
+
+        // var lineLast = d3.line()
+        //         .x(function(d) {return x(Date.parse(d.date));})
+        //         .y(function(d) {return y(d.ppm);});
 
         
-        svg.append('path')
-            .data([data.filter(x => x.year == years[0])])
-            .attr('class', 'line')
-            .attr('d', lineCurrent)
-            .attr("stroke", "red")
-            .attr("stroke-width", 1)
-            .attr("fill", "none");
+        // svg.append('path')
+        //     .data([data.filter(x => x.year == years[0])])
+        //     .attr('class', 'line')
+        //     .attr('d', lineCurrent)
+        //     .attr("stroke", "red")
+        //     .attr("stroke-width", 1)
+        //     .attr("fill", "none");
 
-        // //console.log(data)   
-        svg.append('path')
-            .data([data.filter(x => x.year == years[1])])
-            .attr('class', 'line')
-            .attr('d', lineLast)
-            .attr("stroke", "blue")
-            .attr("stroke-width", 1)
-            .attr("fill", "none");
+        // // //console.log(data)   
+        // svg.append('path')
+        //     .data([data.filter(x => x.year == years[1])])
+        //     .attr('class', 'line')
+        //     .attr('d', lineLast)
+        //     .attr("stroke", "blue")
+        //     .attr("stroke-width", 1)
+        //     .attr("fill", "none");
 
         // // create circle to travel along line
         // var focus = svg.append('g')
