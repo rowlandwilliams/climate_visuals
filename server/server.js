@@ -49,7 +49,6 @@ app.get('/', function(req, res){
             
             var data = data.filter(x => years.includes(x.year));
            
-
             // define final data
             var finalData = [];
             //var test = {}
@@ -57,11 +56,8 @@ app.get('/', function(req, res){
             // get last 7 days of data and calculate average
             var latestData = data.slice(data.length-7);
             var latestAverage = latestData.map(x => x.ppm).reduce((a, b) => a + b, 0)/latestData.length
-            console.log(latestAverage)
-
+            finalData.push({year: year, ppm: latestAverage, text: 'Current CO2 levels (7-day average)'});
             
-            finalData.push({year: year, ppm: latestAverage});
-            finalData.push({year: 2019, ppm: 400})
             
             // daily data begins on 11/05/2016
             // weekly data begins on 29/02/1958
@@ -72,12 +68,13 @@ app.get('/', function(req, res){
             
             // 1 year ago
             // generate ymd ids matching data from last year based on latest data
-            // var ids = latestData.map((x) => (x.year-1)  + 
-            //                 '_' + (x.month) + '_' + x.day)
+            var ids = latestData.map((x) => (x.year-1)  + 
+                            '_' + (x.month) + '_' + x.day)
             
             // // pull new last year ids out of data and add to latestData
-            // var temp = data.filter(x => ids.includes(x.ymd));
-            // finalData.push(temp);
+            var temp = data.filter(x => ids.includes(x.ymd));
+            var lastAverage = temp.map(x => x.ppm).reduce((a, b) => a + b, 0)/temp.length
+            finalData.push({year: temp[0].year, ppm: lastAverage, text: 'This week in ' + temp[0].year});
             
             
             // // update date 2 for last year
@@ -100,21 +97,28 @@ app.get('/', function(req, res){
             // data now weekly so match nearest week based on latest day
             // find year and month
             // // filter data based on latestday year-10 then current week
-            // finalData.push(data.filter(x => x.year == (latestDay[0].year - 10))
-            //         .filter(x => x.week == latestDay[0].week))
+            var temp = data.filter(x => x.year == (latestDay[0].year - 10))
+                        .filter(x => x.week == latestDay[0].week)
+            finalData.push({year: temp[0].year, ppm: temp[0].ppm, text: 'This week in ' + temp[0].year})
             
             
             // // 100 years ago
             // // data now yearly so simple year match
-            // finalData.push(data.filter(x => x.year == (latestDay[0].year - 100)))            
+            var temp = data.filter(x => x.year == (latestDay[0].year - 100))
+            finalData.push({year: temp[0].year, ppm: temp[0].ppm, text: 'This week in ' + temp[0].year})
+    
             
-            // // round 1000 years ago to nearest 5 years (data only every 5 years)
-            // function round5(x) {
-            //     return (x % 5) >= 2.5 ? parseInt(x / 5) * 5 + 5 : parseInt(x / 5) * 5;
-            // }
+            // round 1000 years ago to nearest 5 years (data only every 5 years)
+            function round5(x) {
+                return (x % 5) >= 2.5 ? parseInt(x / 5) * 5 + 5 : parseInt(x / 5) * 5;
+            }
 
-            // var year = round5((latestDay[0].year - 1000));
-            // finalData.push(data.filter(x => x.year == (latestDay[0].year - 1000)));
+            var year = round5((latestDay[0].year - 1000));
+            var temp = data.filter(x => x.year == (latestDay[0].year - 1000))
+            finalData.push({year: temp[0].year, ppm: temp[0].ppm, text: 'This week in ' + temp[0].year});
+
+            // round ppm
+            finalData.forEach(x => x.ppm = Math.round(x.ppm *100) / 100)
 
             // // calculate difference between today and day x
             // var latestPPM = latestDay[0].ppm;

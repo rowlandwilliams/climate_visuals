@@ -9,11 +9,10 @@ fetch(link)
         // define years present in data 
         var years = data.map(x => x.year)
         var years = [...new Set(years)] 
-        //console.log(years)
 
         // define dimensions
         const width = 500;
-        const height = 5000;
+        const height = 10000;
         const margin = 5;
         const padding = 10;
         const adj = 30;
@@ -31,46 +30,66 @@ fetch(link)
             .classed("svg-content", true);
 
         // prepare scales
-        //const x = d3.scaleTime().range([0, width]);
         const y = d3.scaleLinear().rangeRound([height, 0]);
-
-        // define domains, convert string back to date object.
-        // x.domain(d3.extent(data, function(d){
-        //     return Date.parse(d.date)
-        // }));
-
-        console.log(data)
+        // range of y values
         var ppm = data.map((x) => x.ppm)
-        console.log(ppm)
-        y.domain([200, 420])//Math.round((d3.max(ppm)+3))]);
+        
+        
+        // define minimum for axis
+        var min = Math.floor(d3.min(ppm))
+        if (min%2 !=0) { //if odd get first even number below
+            min = min -1
+        }
+        y.domain([min, (d3.max(ppm))]);
 
-        // define axes
-        //var xAxis = d3.axisBottom(x).ticks(7).tickFormat(d3.timeFormat('%b %d')).tickValues(data.map(d => Date.parse(d.date)))
-        var yAxis = d3.axisLeft(y)
-        console.log(yAxis)
+        // sort ticks
+        ticks = y.ticks()
+        function sortTicks(...arr) {
+            var temp = [];
+            for (var i = ticks[0]; i <= ticks[ticks.length-1]; i+=2) {
+                temp.push(i)
+            }
+            if (temp[0] > data[data.length-1].ppm) {
+                temp.unshift(temp[0]-2) // add tick below if needed
+            }
+            temp.push(data[0].ppm);
+            return temp;
+        }
+        var ticks = sortTicks(ticks)
+       
+        // define axis and add ticks
+        var yAxis = d3.axisLeft(y).tickValues(ticks)
         
 
-        // // add axes
-        // svg.append('g')
-        //     .attr('class', 'x axis')
-        //     .attr('transform', 'translate(0,' + height + ')')
-        //     .call(xAxis)
-
+        // add axes
         svg.append('g')
             .attr('class', 'axis')
             .call(yAxis)
 
-        //var test = data[0].ppm;
-
-        //var ppmData = data.map(x=> x.ppm)
+        // append lines and text
         for (var i=0; i<data.length; i++) {
-            svg.append("line")
-            .attr("x1", 0)
-            .attr("x2", width)
-            .attr("y1", y(data[i].ppm))
-            .attr("y2", y(data[i].ppm))
-            .attr("stroke-width", 4)
-            .attr("stroke", "black")
+            var line = svg.append("g")
+            line.append('line')
+                    .attr("x1", 0)
+                    .attr("x2", width)
+                    .attr("y1", y(data[i].ppm))
+                    .attr("y2", y(data[i].ppm))
+                    .attr("stroke-width", 1.5)
+                    .attr("stroke", "black")
+
+            line.append('text')
+                    .attr('class', 'ppm-text')
+                    .attr('text-anchor', 'middle')
+                    .attr('x', width/2)
+                    .attr('y', y(data[i].ppm +0.18))
+                    .text(data[i].ppm + ' PPM')
+
+            line.append('text')
+                    .attr('class', 'comment-text')
+                    .attr('text-anchor', 'middle')
+                    .attr('x', width/2)
+                    .attr('y', y(data[i].ppm -0.5))
+                    .text(data[i].text)
         }
         // svg.append("line")
         //     .attr("x1", 0)
