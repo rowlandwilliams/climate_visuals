@@ -1,6 +1,6 @@
 body {
     font-family: 'Dosis', sans-serif;
-    background-color: lightgray;
+    /* background-color: lightgray; */
     
 }
 
@@ -13,5 +13,14 @@ body {
     max-width: 800px;
     margin: 0 auto;
 }
+
+.line--fade {
+    opacity: 0.4;  
+  }
+    
+.line--hover {
+    stroke-width: 2px;
+    opacity: 1.0;
+  }
 
 

@@ -58,10 +58,16 @@ fetch(link)
         var ticks = sortTicks(ticks)
        
         // define axis and add ticks
+        const innerWidth  = width - margin;
+        //var yAxisGrid = d3.axisLeft(y).tickSize(-innerWidth)
         var yAxis = d3.axisLeft(y).tickValues(ticks)
         
 
         // add axes
+        // svg.append('g')
+        //     .attr('class', 'axislines')
+        //     .call(yAxisGrid)
+
         svg.append('g')
             .attr('class', 'axis')
             .call(yAxis)
@@ -70,129 +76,58 @@ fetch(link)
         for (var i=0; i<data.length; i++) {
             var line = svg.append("g")
             line.append('line')
+                    .attr('class', 'line')
+                    .attr('id', 'line')
                     .attr("x1", 0)
                     .attr("x2", width)
                     .attr("y1", y(data[i].ppm))
                     .attr("y2", y(data[i].ppm))
                     .attr("stroke-width", 1.5)
                     .attr("stroke", "black")
+                    
 
-            line.append('text')
-                    .attr('class', 'ppm-text')
-                    .attr('text-anchor', 'middle')
-                    .attr('x', width/2)
-                    .attr('y', y(data[i].ppm +0.18))
-                    .text(data[i].ppm + ' PPM')
+            // line2 = svg.append('g')
+            line.append('line')
+                    .attr('class', 'line2')
+                    .attr("x1", 0)
+                    .attr("x2", width)
+                    .attr("y1", y(data[i].ppm))
+                    .attr("y2", y(data[i].ppm))
+                    .attr("stroke-width", 50)
+                    .attr("stroke", "transparent")
+                    .on('mouseover', mouseover)
+                    .on('mouseout', mouseout)
+                    
 
-            line.append('text')
-                    .attr('class', 'comment-text')
-                    .attr('text-anchor', 'middle')
-                    .attr('x', width/2)
-                    .attr('y', y(data[i].ppm -0.5))
-                    .text(data[i].text)
+            // line.append('text')
+            //         .attr('class', 'ppm-text')
+            //         .attr('text-anchor', 'middle')
+            //         .attr('x', width/2)
+            //         .attr('y', y(data[i].ppm +0.18))
+            //         .text(data[i].ppm + ' PPM')
+
+            // line.append('text')
+            //         .attr('class', 'comment-text')
+            //         .attr('text-anchor', 'middle')
+            //         .attr('x', width/2)
+            //         .attr('y', y(data[i].ppm -0.5))
+            //         .text(data[i].text)
         }
-        // svg.append("line")
-        //     .attr("x1", 0)
-        //     .attr("x2", width)
-        //     .attr("y1", test)
-        //     .attr("y2", test)
-        //     .attr("stroke-width", 4)
-        //     .attr("stroke", "black")
-            
-
-        // define lines and add
-        // var lineCurrent = d3.line()
-        //         .x(function(d) {return x(Date.parse(d.date));})
-        //         .y(function(d) {return y(d.ppm);});
-
-        // var lineLast = d3.line()
-        //         .x(function(d) {return x(Date.parse(d.date));})
-        //         .y(function(d) {return y(d.ppm);});
-
-        
-        // svg.append('path')
-        //     .data([data.filter(x => x.year == years[0])])
-        //     .attr('class', 'line')
-        //     .attr('d', lineCurrent)
-        //     .attr("stroke", "red")
-        //     .attr("stroke-width", 1)
-        //     .attr("fill", "none");
-
-        // // //console.log(data)   
-        // svg.append('path')
-        //     .data([data.filter(x => x.year == years[1])])
-        //     .attr('class', 'line')
-        //     .attr('d', lineLast)
-        //     .attr("stroke", "blue")
-        //     .attr("stroke-width", 1)
-        //     .attr("fill", "none");
-
-        // // create circle to travel along line
-        // var focus = svg.append('g')
-        //                .append('circle')
-        //                     .style('fill', 'skyblue')
-        //                     .attr('stroke', 'black')
-        //                     .attr('r', 8.5)
-        //                     .style('display', 'none')
-
-        
-        // // Create the text that travels along the line
-        // var focusText = svg
-        //     .append('g')
-        //     .append('text') 
-        //         .style("display", 'none')
-        //         .attr("text-anchor", "left")
-        //         .attr("alignment-baseline", "middle")
-
-        // // Create a rect on top of the svg area: this rectangle recovers mouse position
-        // svg
-        //     .append('rect')
-        //     .style("fill", "none")
-        //     .style("pointer-events", "all")
-        //     .attr('width', width+100)
-        //     .attr('height', height+100)
-        //     .on('mouseover', mouseover)
-        //     .on('mousemove', mousemove)
-        //     .on('mouseout', mouseout);
-
-     
-        // // display tooltip on mouseover
-        // function mouseover() {
-        //         focus.style("display", null)
-        //         focusText.style("display", null)
-        //     }
-    
-    
-        // //  find the closest X index of the mouse:
-        // var bisectYear = d3.bisector(d => Date.parse(d.date2)).left;
-        // //var bisectPPM = d3.biserctor(d => d.PPM).right;
-
-
-        // function mousemove() {
-        //         // take x mouse position and convert to equivalent date
-        //         var x0 = x.invert(d3.mouse(this)[0]);
-        //         // find index of plotData array that is closest to mouse
-        //         var i = bisectYear(data[0], x0, 1);
-        //         d0 = data[i-1],
-        //         d1 = data[i],                                 
-        //         d = x0 - d0.date > d1.date - x0 ? d1 : d0;
-                
-        //         focus
-        //           .attr("cx", x(d.date))
-        //           .attr("cy", y(d.ppm))
-        //         focusText
-        //           .html(d.Year + "  :  " + d.PPM + "PPM")
-        //           .attr("x", x(d.date)+15)
-        //           .attr("y", y(d.ppm))
-        //         }
-    
-        //     function mouseout() {
-        //             focus.style("display", 'none')
-        //             focusText.style("display", 'none')
-        //           } 
        
+        function mouseover(d) {
+            var me = this.previousElementSibling // grab thinner line
+            d3.selectAll('.line').classed('line--hover', function() {
+                return (this === me);
+            }).classed("line--fade", function() {
+                return (this !== me);
+            })  
+        }
 
-        
+        function mouseout(d) {
+            d3.selectAll('.line')
+              .classed("line--hover", false)
+              .classed("line--fade", false);
+          }
 
 
         
