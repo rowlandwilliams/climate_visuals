@@ -1,5 +1,6 @@
-// plot data from across years
+// plot data from across years                    
 d3.select('body').append('div').attr('class', 'graphContainer');
+
 var link = 'http://localhost:3000/'
 
 fetch(link)
@@ -17,6 +18,13 @@ fetch(link)
         const padding = 10;
         const adj = 30;
 
+        // div for tooltip
+        // var tooltip = d3.select('body').append('div')
+        //             .attr('class', 'tooltip')
+        //             .style('opacity', 0)
+
+        
+
         // append svg
         const svg = d3.select(".graphContainer").append("svg")
             .attr("preserveAspectRatio", "xMidYMid")
@@ -29,6 +37,13 @@ fetch(link)
             .style("margin", margin)
             .classed("svg-content", true);
 
+        
+        var tooltip = d3.select('body').append('div')
+            .attr('class', 'tooltip')
+            .style('opacity', 0)
+            //.style('position', 'absolute')
+
+        
         // prepare scales
         const y = d3.scaleLinear().rangeRound([height, 0]);
         // range of y values
@@ -69,7 +84,7 @@ fetch(link)
         //     .call(yAxisGrid)
 
         svg.append('g')
-            .attr('class', 'axis')
+            .attr('class', 'line')
             .call(yAxis)
 
         // append lines and text
@@ -99,34 +114,81 @@ fetch(link)
                     .on('mouseout', mouseout)
                     
 
-            // line.append('text')
-            //         .attr('class', 'ppm-text')
-            //         .attr('text-anchor', 'middle')
-            //         .attr('x', width/2)
-            //         .attr('y', y(data[i].ppm +0.18))
-            //         .text(data[i].ppm + ' PPM')
+            line.append('text')
+                    .attr('class', 'ppm-text')
+                    .attr('text-anchor', 'middle')
+                    .attr('x', width/2)
+                    .attr('y', y(data[i].ppm +0.18))
+                    .text(data[i].ppm + ' PPM')
+
+            line.append('text')
+                    .attr('class', 'comment-text')
+                    .attr('text-anchor', 'middle')
+                    .attr('x', width/2)
+                    .attr('y', y(data[i].ppm -0.3))
+                    .text(data[i].text)
 
             // line.append('text')
-            //         .attr('class', 'comment-text')
-            //         .attr('text-anchor', 'middle')
-            //         .attr('x', width/2)
-            //         .attr('y', y(data[i].ppm -0.5))
+            //         .attr('class', 'tooltip')
+            //         .attr('x', width + 5)
+            //         .attr('y', y(data[i].ppm))
             //         .text(data[i].text)
+
+            
         }
        
         function mouseover(d) {
             var me = this.previousElementSibling // grab thinner line
+            var ppmText = this.nextElementSibling; // get text
+            var commentText = ppmText.nextElementSibling;
+
             d3.selectAll('.line').classed('line--hover', function() {
                 return (this === me);
             }).classed("line--fade", function() {
                 return (this !== me);
             })  
+
+            d3.selectAll('.ppm-text')
+                .classed('text--hover', function() {
+                    return (this === ppmText);
+                })
+                .classed('text--fade', function() {
+                    return (this !== ppmText);
+                })
+
+            d3.selectAll('.comment-text').classed('text--hover', function() {
+                return (this === commentText);
+            }).classed('text--fade', function() {
+                return (this !== commentText);
+            })
+
+            var pos = me.getBoundingClientRect()
+            console.log(pos)
+            
+            d3.select('.tooltip')
+                .transition()
+                .duration(200)
+                .style('opacity', 1)
+                .style('left', pos.x + pos.width + 10 + 'px')
+                .style('top', pos.y + 'px');
+            
+            
         }
 
         function mouseout(d) {
             d3.selectAll('.line')
               .classed("line--hover", false)
               .classed("line--fade", false);
+
+            d3.selectAll('.ppm-text, .comment-text')
+              .classed('text--hover', false)
+              .classed('text--fade', false)
+
+            // hide tooltip
+            tooltip
+                .transition()
+                .duration(500)
+                .style("opacity", 0)
           }
 
 
