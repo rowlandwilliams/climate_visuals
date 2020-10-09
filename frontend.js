@@ -18,13 +18,6 @@ fetch(link)
         const padding = 10;
         const adj = 30;
 
-        // div for tooltip
-        // var tooltip = d3.select('body').append('div')
-        //             .attr('class', 'tooltip')
-        //             .style('opacity', 0)
-
-        
-
         // append svg
         const svg = d3.select(".graphContainer").append("svg")
             .attr("preserveAspectRatio", "xMidYMid")
@@ -48,7 +41,6 @@ fetch(link)
         const y = d3.scaleLinear().rangeRound([height, 0]);
         // range of y values
         var ppm = data.map((x) => x.ppm)
-        
         
         // define minimum for axis
         var min = Math.floor(d3.min(ppm))
@@ -78,11 +70,6 @@ fetch(link)
         var yAxis = d3.axisLeft(y).tickValues(ticks)
         
 
-        // add axes
-        // svg.append('g')
-        //     .attr('class', 'axislines')
-        //     .call(yAxisGrid)
-
         svg.append('g')
             .attr('class', 'line')
             .call(yAxis)
@@ -92,7 +79,7 @@ fetch(link)
             var line = svg.append("g")
             line.append('line')
                     .attr('class', 'line')
-                    .attr('id', 'line')
+                    .attr('id', data[i].year)
                     .attr("x1", 0)
                     .attr("x2", width)
                     .attr("y1", y(data[i].ppm))
@@ -104,6 +91,7 @@ fetch(link)
             // line2 = svg.append('g')
             line.append('line')
                     .attr('class', 'line2')
+                    .attr('id', data[i].year)
                     .attr("x1", 0)
                     .attr("x2", width)
                     .attr("y1", y(data[i].ppm))
@@ -128,19 +116,15 @@ fetch(link)
                     .attr('y', y(data[i].ppm -0.3))
                     .text(data[i].text)
 
-            // line.append('text')
-            //         .attr('class', 'tooltip')
-            //         .attr('x', width + 5)
-            //         .attr('y', y(data[i].ppm))
-            //         .text(data[i].text)
-
             
         }
        
         function mouseover(d) {
             var me = this.previousElementSibling // grab thinner line
+            //console.log(me)
             var ppmText = this.nextElementSibling; // get text
             var commentText = ppmText.nextElementSibling;
+            //console.log(commentText)
 
             d3.selectAll('.line').classed('line--hover', function() {
                 return (this === me);
@@ -162,15 +146,19 @@ fetch(link)
                 return (this !== commentText);
             })
 
-            var pos = me.getBoundingClientRect()
-            console.log(pos)
+            // get position of thin line element
+            var pos = me.getBoundingClientRect();
+            var id = d3.select(this).attr('id') // match tooltip comment to year id
             
-            d3.select('.tooltip')
-                .transition()
-                .duration(200)
-                .style('opacity', 1)
-                .style('left', pos.x + pos.width + 10 + 'px')
-                .style('top', pos.y + 'px');
+
+            tooltip
+                 .transition()
+                 .duration(200)
+                 .style('opacity', 1)
+            tooltip
+                .html(data.filter((x) => x.year == id)[0].tooltip)
+                .style('left', pos.x + pos.width + 5 + 'px')
+                .style('top', window.pageYOffset + pos.y + 6.5 + 'px'); // position relative to thin line with window offset
             
             
         }
@@ -187,8 +175,9 @@ fetch(link)
             // hide tooltip
             tooltip
                 .transition()
-                .duration(500)
+                .duration(200)
                 .style("opacity", 0)
+               
           }
 
 

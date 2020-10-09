@@ -41,26 +41,28 @@ body {
 .tooltip {
     position: absolute; 
     text-align: center;
-    width: 60px;
-    height: 12px;
+    min-width: auto; 
+    /* min-height: ; */
     padding: 8px;
     margin-top: -20px;
-    font: 10px sans-serif;
+    font: 14px;
     background: black;
     pointer-events: none;
+    border-radius: 3px;
+    color: white;
   }
 
 /* Creates a small triangle extender for the tooltip */
-/* div.tooltip:after {
+.tooltip:after {
     clear;
     box-sizing: border-box;
     display: inline;
     font-size: 11px;
-    top: 95%;
-    left: 50%;
+    top: 30%;
+    left: -10%;
     line-height: 1;
-    color: rgba(0, 0, 0, 0.6);
-    content: "\25BC";
+    color: black;
+    content: "\25C0";
     position: absolute;
     text-align: center;
-  } */
+  }
