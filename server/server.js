@@ -123,17 +123,36 @@ app.get('/', function(req, res){
 
             // put first data set for horizontal into key
             fullData['first'] = finalData
-            fullData['second'] = latestData.map(x => ({
-                'year': x.year,
-                'ppm': x.ppm,
-                'date': x.date 
+            
+            // weekly totals
+            var test  = data.filter(x => x.year == 2020).map(x => ({
+                'week': x.week,
+                'ppm':x.ppm
             }))
 
+            var total = 0
+            console.log(test.forEach((week) => total += week.ppm ))
+            //console.log(test)
 
+
+            test.forEach(week => {total += week.ppm})
+
+            //console.log(total)
+            
+            
+            fullData['second'] = latestData.map((x) => ({
+                'year': x.year,
+                'ppm': x.ppm,
+                'date': x.date
+                //'week': x.week
+            }))
+            
+            
+            
         }
         res.setHeader('Access-Control-Allow-Origin', '*');
         res.send(fullData)
-        
+
 
     })
 

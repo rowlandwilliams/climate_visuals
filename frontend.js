@@ -47,30 +47,32 @@ fetch(link)
         var ppm = data1.map((x) => x.ppm);
         var min = Math.floor(d3.min(ppm))
         
+        if (min%2 !=0) { //if odd get first even number below
+            min = min -1
+        }
+        
+        function sortTicks([...ticks], [...data]) {
+            var temp = [];
+            for (var i = ticks[0]; i <= ticks[ticks.length-1]; i+=2) {
+                temp.push(i) // starting at lowest tick value add each second value in range
+            }
+            if (temp[0] > data[data.length-1].ppm) { // check if lowest tick is above lowest ppm value (due to rounding)
+                temp.unshift(temp[0]-2) // add tick below if needed
+            }
+            temp.push(data[0].ppm); // add highest value for custom highest tick
+            return temp;
+            }
+        
+        
+        
+        
         // define function for initial axes
         function initialState() {
-            if (min%2 !=0) { //if odd get first even number below
-                min = min -1
-            }
             // initial axis domain
             y.domain([min, (d3.max(ppm))]);
 
-            // sort ticks
-            ticks = y.ticks()
-            function sortTicks(...arr) {
-            var temp = [];
-            for (var i = ticks[0]; i <= ticks[ticks.length-1]; i+=2) {
-                temp.push(i)
-            }
-            if (temp[0] > data1[data1.length-1].ppm) {
-                temp.unshift(temp[0]-2) // add tick below if needed
-            }
-            temp.push(data1[0].ppm);
-            return temp;
-            }
-
-            var ticks = sortTicks(ticks);
-
+            //ticks = y.ticks()
+            var ticks = sortTicks(y.ticks(), data1);
             var yAxis = d3.axisLeft(y).tickValues(ticks)
 
             svg.append('g')
@@ -209,15 +211,31 @@ fetch(link)
                 // access detailed data
                 var plotData = data['second'];
                 var ppmNew = plotData.map((x) => x.ppm); // define new max
-                y.domain([min, (d3.max(ppmNew))]); // reformat domain
-                var yAxis = d3.axisLeft(y) // define new axis to append
                 
+                y.domain([min, (d3.max(ppmNew))]); // reformat domain
+                var ticks = sortTicks(y.ticks(), plotData);
+                console.log(ticks)
+                var yAxis = d3.axisLeft(y).tickValues(ticks) // define new axis to append
+                
+                const x = d3.scaleTime().range([0, width]);
+                // define domains
+                x.domain(d3.extent(plotData, function(d){
+                    return Date.parse(d.date)
+                }))
+
+
+                var xAxis = d3.axisBottom(x).ticks(7).tickFormat(d3.timeFormat('%b %d')).tickValues(plotData.map(d => Date.parse(d.date)))
                 // remove previous axis and lines/text and append new one
                 svg.selectAll('#yaxis, .line, .line2, .ppm-text, .comment-text').remove();
                 svg.append('g')
                     .attr('class', 'line')
                     .attr('id', 'yaxis')
                     .call(yAxis)
+
+                svg.append('g')
+                    .attr('class', 'line')
+                    .attr('id', 'xaxis')
+                    .call(xAxis)
                 // replot initial data
                 initialRender(data1);
 
