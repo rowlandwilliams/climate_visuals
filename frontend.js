@@ -7,13 +7,17 @@ fetch(link)
     .then(response => response.json())
     .then(data => {
 
+        // subset average data
+        var data1 = data['first']
+        
         // define years present in data 
-        var years = data.map(x => x.year)
+        var years = data1.map(x => x.year)
         var years = [...new Set(years)] 
+
 
         // define dimensions
         const width = 500;
-        const height = 10000;
+        const height = 7000;
         const margin = 5;
         const padding = 10;
         const adj = 30;
@@ -36,97 +40,110 @@ fetch(link)
             .style('opacity', 0)
             //.style('position', 'absolute')
 
-        
-        // prepare scales
+        // define base axis 
         const y = d3.scaleLinear().rangeRound([height, 0]);
-        // range of y values
-        var ppm = data.map((x) => x.ppm)
         
         // define minimum for axis
+        var ppm = data1.map((x) => x.ppm);
         var min = Math.floor(d3.min(ppm))
-        if (min%2 !=0) { //if odd get first even number below
-            min = min -1
-        }
-        y.domain([min, (d3.max(ppm))]);
+        
+        // define function for initial axes
+        function initialState() {
+            if (min%2 !=0) { //if odd get first even number below
+                min = min -1
+            }
+            // initial axis domain
+            y.domain([min, (d3.max(ppm))]);
 
-        // sort ticks
-        ticks = y.ticks()
-        function sortTicks(...arr) {
+            // sort ticks
+            ticks = y.ticks()
+            function sortTicks(...arr) {
             var temp = [];
             for (var i = ticks[0]; i <= ticks[ticks.length-1]; i+=2) {
                 temp.push(i)
             }
-            if (temp[0] > data[data.length-1].ppm) {
+            if (temp[0] > data1[data1.length-1].ppm) {
                 temp.unshift(temp[0]-2) // add tick below if needed
             }
-            temp.push(data[0].ppm);
+            temp.push(data1[0].ppm);
             return temp;
-        }
-        var ticks = sortTicks(ticks)
-       
-        // define axis and add ticks
-        const innerWidth  = width - margin;
-        //var yAxisGrid = d3.axisLeft(y).tickSize(-innerWidth)
-        var yAxis = d3.axisLeft(y).tickValues(ticks)
+            }
+
+            var ticks = sortTicks(ticks);
+
+            var yAxis = d3.axisLeft(y).tickValues(ticks)
+
+            svg.append('g')
+            .attr('class', 'line')
+            .attr('id', 'yaxis')
+            .call(yAxis)
+        }   
+
+        // define initial state
+        initialState();
         
 
-        svg.append('g')
-            .attr('class', 'line')
-            .call(yAxis)
-
         // append lines and text
-        for (var i=0; i<data.length; i++) {
-            var line = svg.append("g")
-            line.append('line')
-                    .attr('class', 'line')
-                    .attr('id', data[i].year)
-                    .attr("x1", 0)
-                    .attr("x2", width)
-                    .attr("y1", y(data[i].ppm))
-                    .attr("y2", y(data[i].ppm))
-                    .attr("stroke-width", 1.5)
-                    .attr("stroke", "black")
-                    
+        // inital render function
 
-            // line2 = svg.append('g')
-            line.append('line')
-                    .attr('class', 'line2')
-                    .attr('id', data[i].year)
-                    .attr("x1", 0)
-                    .attr("x2", width)
-                    .attr("y1", y(data[i].ppm))
-                    .attr("y2", y(data[i].ppm))
-                    .attr("stroke-width", 50)
-                    .attr("stroke", "transparent")
-                    .on('mouseover', mouseover)
-                    .on('mouseout', mouseout)
-                    
-
-            line.append('text')
-                    .attr('class', 'ppm-text')
-                    .attr('text-anchor', 'middle')
-                    .attr('x', width/2)
-                    .attr('y', y(data[i].ppm +0.18))
-                    .text(data[i].ppm + ' PPM')
-
-            line.append('text')
-                    .attr('class', 'comment-text')
-                    .attr('text-anchor', 'middle')
-                    .attr('x', width/2)
-                    .attr('y', y(data[i].ppm -0.3))
-                    .text(data[i].text)
-
-            
+        function initialRender(d) {
+            //var changed = false;
+            for (var i=0; i<d.length; i++) {
+                var line = svg.append("g")
+                line.append('line')
+                        .attr('class', 'line')
+                        //.attr('id', d[i].year)
+                        .attr("x1", 0)
+                        .attr("x2", width)
+                        .attr("y1", y(d[i].ppm))
+                        .attr("y2", y(d[i].ppm))
+                        .attr("stroke-width", 1.5)
+                        .attr("stroke", "black")
+                        
+    
+                // line2 = svg.append('g')
+                line.append('line')
+                        //.attr('class', 'line2')
+                        .attr('id', d[i].year)
+                        .attr("x1", 0)
+                        .attr("x2", width)
+                        .attr("y1", y(d[i].ppm))
+                        .attr("y2", y(d[i].ppm))
+                        .attr("stroke-width", 100)
+                        .attr("stroke", "transparent")
+                        .on('mouseover', mouseover)
+                        .on('mouseout', mouseout)
+                        .on('click', plotNew)
+                        
+    
+                line.append('text')
+                        .attr('class', 'ppm-text')
+                        .attr('text-anchor', 'middle')
+                        .attr('x', width/2)
+                        .attr('y', y(d[i].ppm +0.18))
+                        .text(d[i].ppm + ' PPM')
+                        
+    
+                line.append('text')
+                        .attr('class', 'comment-text')
+                        .attr('text-anchor', 'middle')
+                        .attr('x', width/2)
+                        .attr('y', y(d[i].ppm -0.3))
+                        .text(d[i].text)  
+            }
         }
+        
+        initialRender(data1)
+        
        
         function mouseover(d) {
             var me = this.previousElementSibling // grab thinner line
-            //console.log(me)
             var ppmText = this.nextElementSibling; // get text
             var commentText = ppmText.nextElementSibling;
-            //console.log(commentText)
+            
 
-            d3.selectAll('.line').classed('line--hover', function() {
+            d3.selectAll('.line')
+            .classed('line--hover', function() {
                 return (this === me);
             }).classed("line--fade", function() {
                 return (this !== me);
@@ -153,10 +170,10 @@ fetch(link)
 
             tooltip
                  .transition()
-                 .duration(200)
+                 .duration(500)
                  .style('opacity', 1)
             tooltip
-                .html(data.filter((x) => x.year == id)[0].tooltip)
+                .html(data1.filter((x) => x.year == id)[0].tooltip)
                 .style('left', pos.x + pos.width + 5 + 'px')
                 .style('top', window.pageYOffset + pos.y + 6.5 + 'px'); // position relative to thin line with window offset
             
@@ -180,6 +197,43 @@ fetch(link)
                
           }
 
+        
+
+        function plotNew(d) {
+            // get id of clicked transparent line (correponds to year)
+            var id = d3.select(this).attr('id') 
+           
+            // if transparent line hasnt been selected change class to selected, plot new axis and replot initial data
+            if (!d3.select('[id="' + id + '"]').classed('selected')) {
+                
+                // access detailed data
+                var plotData = data['second'];
+                var ppmNew = plotData.map((x) => x.ppm); // define new max
+                y.domain([min, (d3.max(ppmNew))]); // reformat domain
+                var yAxis = d3.axisLeft(y) // define new axis to append
+                
+                // remove previous axis and lines/text and append new one
+                svg.selectAll('#yaxis, .line, .line2, .ppm-text, .comment-text').remove();
+                svg.append('g')
+                    .attr('class', 'line')
+                    .attr('id', 'yaxis')
+                    .call(yAxis)
+                // replot initial data
+                initialRender(data1);
+
+                // // after render pass selected class to newly rendered line
+                d3.select('[id="' + id + '"]').classed('selected', true);
+            }
+            else   {
+                // remove components and replot initial state, remove selected class
+                svg.selectAll('#yaxis, .line, .selected, .ppm-text, .comment-text').remove();
+                initialState()
+                initialRender(data1)
+                d3.select('[id="' + id + '"]').classed('selected', false);
+            }
+ 
+            
+          }
 
         
     })

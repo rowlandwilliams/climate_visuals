@@ -35,8 +35,8 @@ app.get('/', function(req, res){
                 day: Number(x[2]),
                 ppm: Number(x[3]),
                 week: moment(new Date(x[0], x[1], x[2])).week(),
-                ymd: x[0] + '_' + x[1] + '_' + x[2]
-                //date: new Date(x[0], x[1], x[2]),
+                ymd: x[0] + '_' + x[1] + '_' + x[2],
+                date: new Date(x[0], x[1], x[2]),
                 //date2: new Date(x[0], x[1], x[2])
 
             }))
@@ -51,10 +51,11 @@ app.get('/', function(req, res){
            
             // define final data
             var finalData = [];
-            //var test = {}
+            var fullData = {};
 
             // get last 7 days of data and calculate average
             var latestData = data.slice(data.length-7);
+            console.log(latestData)
             var latestAverage = latestData.map(x => x.ppm).reduce((a, b) => a + b, 0)/latestData.length
             finalData.push({year: year, ppm: latestAverage, text: 'Current CO2 levels (7-day average)', tooltip: 'Latest'});
             
@@ -120,15 +121,19 @@ app.get('/', function(req, res){
             // round ppm
             finalData.forEach(x => x.ppm = Math.round(x.ppm *100) / 100)
 
-            // // calculate difference between today and day x
-            // var latestPPM = latestDay[0].ppm;
-            // console.log(latestPPM)
-            // finalData.map((array) => array.map((x) => x.diff = Math.round((latestPPM - x.ppm) * 100) / 100));
-            
+            // put first data set for horizontal into key
+            fullData['first'] = finalData
+            fullData['second'] = latestData.map(x => ({
+                'year': x.year,
+                'ppm': x.ppm,
+                'date': x.date 
+            }))
+
 
         }
         res.setHeader('Access-Control-Allow-Origin', '*');
-        res.send(finalData)
+        res.send(fullData)
+        
 
     })
 
