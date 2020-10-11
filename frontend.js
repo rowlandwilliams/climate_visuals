@@ -1,5 +1,5 @@
 // plot data from across years                    
-d3.select('body').append('div').attr('class', 'graphContainer');
+//d3.select('body').append('div').attr('class', 'graphContainer');
 
 var link = 'http://localhost:3000/'
 
@@ -23,7 +23,7 @@ fetch(link)
         const adj = 30;
 
         // append svg
-        const svg = d3.select(".graphContainer").append("svg")
+        const svg = d3.select(".timelineContainer").append("svg")
             .attr("preserveAspectRatio", "xMidYMid")
             .attr("viewBox", "-"
                 + adj + " -"
