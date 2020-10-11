@@ -65,6 +65,7 @@ body {
 
 .lineGraphContainer {
     min-height: 500px;
+    overflow: hidden
 }
 
 .donutContainer {

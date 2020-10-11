@@ -37,10 +37,12 @@ app.get('/', function(req, res){
                 week: moment(new Date(x[0], x[1], x[2])).week(),
                 ymd: x[0] + '_' + x[1] + '_' + x[2],
                 date: new Date(x[0], x[1], x[2]),
-                //date2: new Date(x[0], x[1], x[2])
+                date2: new Date(2020, x[1], x[2])
 
             }))
             
+            var originalData = data;
+
             // filter data to get only potential years required (prevent filtering each time)
             var latestDay = data.slice(data.length-1);
             var year = latestDay[0].year;
@@ -147,6 +149,43 @@ app.get('/', function(req, res){
                 //'week': x.week
             }))
             
+
+            // begin data extraction for plot 2
+            // if data is 5 yearly or yearly - need to plot according to svg width
+            // if data is weekly or daily, can plot according to y axis date
+            // get unique years
+            var allYears = [... new Set(originalData.map(x => x.year))]
+            // for each year new dataset
+
+            var lineData = allYears.map((x) => ({
+                'year': x,
+                'values': originalData
+                            .filter((y) => y.year == x)
+                            .map(z => ({
+                                'date': z.date2,
+                                'ppm': z.ppm
+                            }))
+            }))
+
+            // split up into 5 yearly/yearly (horizontal line) and then weekly/daily
+            lineData.forEach(year => {
+                var length = year.values.length
+                if (length > 1){
+                    year.class = 'multi'
+                }
+                else {
+                    year.class = 'single'
+                }
+            })
+            
+            fullData['third'] = lineData
+            console.log(allYears)
+            console.log(lineData)
+            
+            
+            //[{year: 1010, values: [{data: x, ppm: 415}]}, {}]
+
+
             
             
         }
