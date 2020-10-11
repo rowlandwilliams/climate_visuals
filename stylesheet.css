@@ -1,22 +1,23 @@
+* { box-sizing: border-box; } /* fit to viewport */
+
 body {
     font-family: 'Dosis', sans-serif;   
     background-color:#ff6961;
+    /* margin: 0; */
 }
 
-/* .leftColumn {
-    width: 50%;
-} */
+
 .columnContainer {
     display: flex;
     flex-direction: column;
-    height: 97vh;
+    /* height: 97vh; */
 }
 
 .leftColumn, .rightColumn {
-    width: 100%;
-    /* max-height: 500px; */
+    width: 100%; /* ensure grow on screen change */
 }
-@media (min-width: 550px) {
+
+@media (min-width: 740px) {
     .columnContainer {
         flex-direction: row;
     }
@@ -33,7 +34,6 @@ body {
     padding-left: 30px;
     padding: 10px;
     position: relative;
-    
     display: inline-flex;
     flex-direction: row;
 }
@@ -48,33 +48,34 @@ body {
     background-color: #F4F1F1;
     border-radius: 4px;
     box-shadow: 0 0 10px 0 RGBA(0, 0, 0, 0.50);
-    margin: 30px 0 30px 0;
+    margin: 10px 0 30px 0;
 }
 
 .statsContainer {
     padding: 30px;
-    max-height: 240px;
+    min-height: 280px;
+    max-height: 300px;
   }
 
 .timelineContainer {
     /* min-height: 400px; */
-    max-height: 400px;
+    max-height: 420px;
     overflow: scroll;
 }
 
-.lineGraphContainer, .donutContainer {
+.lineGraphContainer {
+    min-height: 500px;
+}
+
+.donutContainer {
     padding: 30px;
-    min-height: 390px;
+    min-height: 280px;
     max-height: 400px;
-    /* min-height: 200px;
-    max-height: 400px; */
+    
 }
 
 
-
-/* svg .svg-content{
-    position: relative;
-} */
+/* timeline chart interactivity */
 
 .line--fade {
     opacity: 0.4;  
@@ -86,9 +87,7 @@ body {
   }
 
 .text--fade {
-    opacity: 0.4;
-    
-   
+    opacity: 0.4;   
 }
 
 .text--hover {
