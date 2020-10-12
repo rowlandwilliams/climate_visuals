@@ -185,6 +185,9 @@ app.get('/', function(req, res){
             
             //[{year: 1010, values: [{data: x, ppm: 415}]}, {}]
 
+            // write to file
+            fullData = JSON.stringify(fullData)
+            fs.writeFileSync('data.json', fullData);
 
             
             
