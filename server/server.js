@@ -133,7 +133,7 @@ app.get('/', function(req, res){
             }))
 
             var total = 0
-            console.log(test.forEach((week) => total += week.ppm ))
+            //console.log(test.forEach((week) => total += week.ppm ))
             //console.log(test)
 
 
@@ -169,18 +169,25 @@ app.get('/', function(req, res){
 
             // split up into 5 yearly/yearly (horizontal line) and then weekly/daily
             lineData.forEach(year => {
-                var length = year.values.length
+                var length = year.values.length;
                 if (length > 1){
                     year.class = 'multi'
                 }
                 else {
-                    year.class = 'single'
+                    year.class = 'single';
+                    year.values[1] = {
+                        'date': new Date(2020, 11, 31), // add date for end of year to plot straight line
+                        'ppm': year.values[0].ppm
+                    } 
                 }
+
+
             })
             
+            
+        
+
             fullData['third'] = lineData
-            console.log(allYears)
-            console.log(lineData)
             
             
             //[{year: 1010, values: [{data: x, ppm: 415}]}, {}]

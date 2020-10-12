@@ -259,8 +259,11 @@ fetch(link)
             
           }
 
+          //console.log(data['third'])
+          var test = data['third']//.filter(x => x.class == 'multi')
+          console.log(test)
 
-          plotLineGraph()
+          plotLineGraph(test)
           
         //   // plot line graph
         //   var lineData = data['third']
