@@ -1,8 +1,13 @@
-// plot data from across years                    
-//d3.select('body').append('div').attr('class', 'graphContainer');
+
+
+
+
+
 
 var link = './data.json'
 //var link = 'http://localhost:3000/'
+
+
 
 fetch(link)
     .then(response => response.json())
@@ -250,56 +255,64 @@ fetch(link)
                 initialRender(data1)
                 d3.select('[id="' + id + '"]').classed('selected', false);
             }
- 
+            
             
           }
 
 
+          plotLineGraph()
+          
+        //   // plot line graph
+        //   var lineData = data['third']
 
-          // plot line graph
-          var lineData = data['third']
+        //   // define dimensions
+        //   const width2 = 200;
+        //   const height2 = 200;
+        // //   const margin = 5;
+        // //   const padding = 10;
+        // //   const adj = 30;
 
-          // define dimensions
-          const width2 = 200;
-          const height2 = 100;
-        //   const margin = 5;
-        //   const padding = 10;
-        //   const adj = 30;
-
-          // append svg
-          const svg2 = d3.select(".lineGraphContainer").append("svg")
-            .attr("preserveAspectRatio", "xMidYMid")
-            .attr("viewBox", "-"
-                + adj + " -"
-                + adj + " "
-                + (width2 + adj *3) + " "
-                + (height2 + adj*3))
-            .style("padding", padding)
-            .style("margin", margin)
-            .classed("svg-content", true);
-
-        // define base axis 
-        const y2 = d3.scaleLinear().rangeRound([height2, 0]);
         
-        // define minimum for axis
-        //var ppm = lineData.map((x) => x.ppm);
-        // var min = Math.floor(d3.min(ppm))
         
-        // if (min%2 !=0) { //if odd get first even number below
-        //     min = min -1
-        // }
+        
+        
+        
+        // console.log(RIGHT_CHARTS_WIDTH)
+          
+        // // append svg
+        //   const svg2 = d3.select(".lineGraphContainer").append("svg")
+        //     .attr("preserveAspectRatio", "xMidYMid")
+        //     .attr("viewBox", "-"
+        //         + 30 + " -"
+        //         + 0 + " "
+        //         + (width2 + 0) + " "
+        //         + (height2 + 0))
+        //     .style("padding", 5)
+        //     .style("margin", 2)
+        //     .classed("svg-content", true);
 
-        // initial axis domain
-        y2.domain([200, 412]);
+        // // define base axis 
+        // const y2 = d3.scaleLinear().rangeRound([height2, 0]);
+        
+        // // define minimum for axis
+        // //var ppm = lineData.map((x) => x.ppm);
+        // // var min = Math.floor(d3.min(ppm))
+        
+        // // if (min%2 !=0) { //if odd get first even number below
+        // //     min = min -1
+        // // }
 
-        //ticks = y.ticks()
-        //var ticks = sortTicks(y2.ticks(), plot);
-        var yAxis2 = d3.axisLeft(y2)//.tickValues(ticks)
+        // // initial axis domain
+        // y2.domain([200, 412]);
 
-        svg2.append('g')
-        .attr('class', 'line')
-        .attr('id', 'yaxis')
-        .call(yAxis2)
+        // //ticks = y.ticks()
+        // //var ticks = sortTicks(y2.ticks(), plot);
+        // var yAxis2 = d3.axisLeft(y2)//.tickValues(ticks)
+
+        // svg2.append('g')
+        // .attr('class', 'line')
+        // .attr('id', 'yaxis')
+        // .call(yAxis2)
             
         
     })
