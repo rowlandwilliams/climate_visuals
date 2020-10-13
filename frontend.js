@@ -145,7 +145,8 @@ fetch(link)
         
        
         function mouseover(d) {
-            var me = this.previousElementSibling // grab thinner line
+            var me = this.previousElementSibling
+            console.log(me) // grab thinner line
             var ppmText = this.nextElementSibling; // get text
             var commentText = ppmText.nextElementSibling;
             
@@ -209,7 +210,7 @@ fetch(link)
 
         function plotNew(d) {
             // get id of clicked transparent line (correponds to year)
-            var id = d3.select(this).attr('id') 
+            var id = d3.select(this).attr('id'); 
            
             // if transparent line hasnt been selected change class to selected, plot new axis and replot initial data
             if (!d3.select('[id="' + id + '"]').classed('selected')) {
@@ -259,75 +260,16 @@ fetch(link)
             
           }
 
-          //console.log(data['third'])
+          
           var test = data['third']//.filter(x => x.class == 'multi')
-          //console.log(test)
+          
 
           plotLineGraph(test)
 
           
-          var months = []
-          for (var i=1; i<13; i++) {
-              months.push(new Date(2020, i, 0))
-          }
           
-          console.log(months)
-          //console.log(new Date(2020, 11, 31))
 
-
-        //console.log(test)
-          
-        //   // plot line graph
-        //   var lineData = data['third']
-
-        //   // define dimensions
-        //   const width2 = 200;
-        //   const height2 = 200;
-        // //   const margin = 5;
-        // //   const padding = 10;
-        // //   const adj = 30;
-
-        
-        
-        
-        
-        
-        // console.log(RIGHT_CHARTS_WIDTH)
-          
-        // // append svg
-        //   const svg2 = d3.select(".lineGraphContainer").append("svg")
-        //     .attr("preserveAspectRatio", "xMidYMid")
-        //     .attr("viewBox", "-"
-        //         + 30 + " -"
-        //         + 0 + " "
-        //         + (width2 + 0) + " "
-        //         + (height2 + 0))
-        //     .style("padding", 5)
-        //     .style("margin", 2)
-        //     .classed("svg-content", true);
-
-        // // define base axis 
-        // const y2 = d3.scaleLinear().rangeRound([height2, 0]);
-        
-        // // define minimum for axis
-        // //var ppm = lineData.map((x) => x.ppm);
-        // // var min = Math.floor(d3.min(ppm))
-        
-        // // if (min%2 !=0) { //if odd get first even number below
-        // //     min = min -1
-        // // }
-
-        // // initial axis domain
-        // y2.domain([200, 412]);
-
-        // //ticks = y.ticks()
-        // //var ticks = sortTicks(y2.ticks(), plot);
-        // var yAxis2 = d3.axisLeft(y2)//.tickValues(ticks)
-
-        // svg2.append('g')
-        // .attr('class', 'line')
-        // .attr('id', 'yaxis')
-        // .call(yAxis2)
+       
             
         
     })

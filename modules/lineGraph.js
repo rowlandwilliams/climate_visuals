@@ -8,6 +8,21 @@ let lMargin = {top: 100, right: 20, bottom:40, left: 40},
     lWidth = lineChartWidth - lMargin.left - lMargin.right,
     lHeight = lineGraphHeight - lMargin.top - lMargin.bottom;
 
+// var ltooltip = d3.select('body').append('div')
+//     .attr('class', 'latest-tooltip')
+//     .style('opacity', 1)
+
+
+
+
+//     .style('left', 250 + 'px')
+//     .style('top', 2500 + 'px');    
+// //ltooltip
+    //.html('suhdude')
+    // .style('left', 100 + 'px')
+    // .style('top', window.pageYOffset + 'px');
+
+
 
 // plot initial line graph
 
@@ -120,12 +135,7 @@ function plotLineGraph(data) {
         }
 
     function mouseover(d) {
-        // var test = '.year_' + d.data.date.substr(0,4)
-        // //test = test.getFullYear();
-        // console.log(test)
-        // console.log(d3.selectAll(test))
-        // d3.selectAll('.year_' + d.data.date.substr(0,4)).classed('year--hover', true);
-        //d.data.ppm.parentNode.appendChild(d.data.ppm);
+        
         focus.attr("transform", "translate(" + lx0(Date.parse(d.data.date)) + "," + ly0(d.data.ppm) + ")");
         focus.select("text").text(d.data.ppm + ' PPM');
 
@@ -138,6 +148,28 @@ function plotLineGraph(data) {
       }
     
     });
+
+    // grab 2020 line position and append tooltip
+    //var lineContainer = d3.select('.lineGraphContainer').node().getBoundingClientRect();
+    var line2020 = d3.select('.line_2020').node().getBoundingClientRect();
+
+    //var boxWidth = 
+    var ltooltip = d3.select('body').append('div')
+        .attr('class', 'latest-tooltip')
+        .style('opacity', 1)
+
+    // // define right padding
+    // var rightPadding = document.querySelector('.rightColumn')
+    // //var rightPadding = rightPadding.currentStyle
+    // console.log(window.getComputedStyle(rightPadding).getPropertyValue('padding-right')) 
+    
+    ltooltip
+        .html('suhdude')
+        .style('left', line2020.x + line2020.width + 'px') //30 = paddingf
+        .style('top', window.pageYOffset + line2020.y - lMargin.top + 'px')
+        .style('height', lMargin.top + 'px')
+    
+    
     
 }
 
