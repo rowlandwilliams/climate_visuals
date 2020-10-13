@@ -54,8 +54,15 @@ function plotLineGraph(data) {
 
     // define line funciton
     let lineGraphLine = d3.line()
-        .x(d => lx0(Date.parse(d.date))) // maybe map here
+        .x(d => lx0(Date.parse(d.date))) 
         .y(d => ly0(d.ppm))
+
+    // define voronoi function
+    // initiate voronoi
+    var voronoi = d3.voronoi()
+        .x(function(d) { return lx0(Date.parse(d.date)) + Math.random() -0.5})
+        .y(function(d) { return ly0(d.ppm) + Math.random() -0.5})
+        //.extent([0, 0], [lWidth, lHeight]); // work on this
 
 
     var year = lsvg.selectAll('.year')
@@ -66,48 +73,66 @@ function plotLineGraph(data) {
 
     year.append('path')
         .attr('class', 'line')
-        .attr('d', function(d) { return lineGraphLine(d.values); })
+        .attr('d', function(d) { d.line = this; return lineGraphLine(d.values); })
         .attr('fill', 'none')
         .style('stroke', '#9c9c9c')
-           
-    // initiate voronoi
-    var voronoi = d3.voronoi()
-        .x(function(d) { return lx0(Date.parse(d.date))})
-        .y(function(d) { return ly0(d.ppm)})
-        .extent([0,0], [lWidth, lHeight]);
+     
+        
+    // add focus to hover over grid
+    var focus = lsvg.append("g")
+        .attr("class", "focus")
+        .attr("transform", "translate(-100,-100)");
 
-    // create the grid
-    lsvg.selectAll('path')
-        .data(voronoi(data))
-        .enter().append('path')
-        .attr('d', (function(d, i) { return 'M' + d.join('l') + 'Z'; }))
-        .datum(function(d, i) { return d.point; })
-        .attr("class", function(d,i) { return "voronoi " + d.year; })
-         //.style("stroke", "#2074A0") //If you want to look at the cells
-        .style("fill", "none")
-        .style("pointer-events", "all")
-        .on("mouseover", showTooltip)
-        .on("mouseout",  removeTooltip);
+    focus.append("circle")
+        .attr("fill", "none")
+        .attr("class", "notation")
+        .attr("stroke-width", "1.5")
+        .attr("r", 5);
 
-    function showTooltip(d) {
-        console.log('suh')
-            $(this).popover({
-                placement: 'auto top', //place the tooltip above the item
-                container: '#chart', //the name (class or id) of the container
-                trigger: 'manual',
-                html : true,
-                content: function() { return d.year; } //the content inside the tooltip
-            });
-            $(this).popover('show');
-        }
+    focus.append("text")
+        .attr("y", -40)
+        .attr("class", "tt_year");
+
+    // define voronoi grid
+    var v = voronoi(d3.merge(data.map(x => x.values)))
     
-    function removeTooltip() {
-            //Hide the tooltip
-            $('.popover').each(function() {
-                $(this).remove();
-            });
+
+    var voronoiGroup = lsvg.append("g")
+      .attr("class", "voronoi");
+
+    voronoiGroup.selectAll('path')
+        .data(v.polygons())
+        .enter().append('path')
+            .attr('d', function(d) { return d ? "M" + d.join("L") + "Z" : null; })
+            
+
+    // add tooltip 
+    var site = null;
+    const radius = 100
+
+    lsvg.on("mousemove", function() {
+        var mouse = d3.mouse(this);
+        var newsite = v.find(mouse[0], mouse[1], radius); // match mouse position to voroni grid
+        if (newsite !== site) {
+            if (site) mouseout(site);
+            site = newsite;
+            if (site) mouseover(site);
         }
 
+    function mouseover(d) {
+        //d3.select(d.data.ppm).classed('year--hover', true);
+        //d.data.ppm.parentNode.appendChild(d.data.ppm);
+        focus.attr("transform", "translate(" + lx0(Date.parse(d.data.date)) + "," + ly0(d.data.ppm) + ")");
+        focus.select("text").text(d.data.ppm + ' PPM');
+
+    }
+
+    function mouseout(d) {
+        //d3.select(d.data.ppm).classed("city--hover", false);
+        focus.attr("transform", "translate(-100,-100)");
+      }
+    
+    });
     
 }
 

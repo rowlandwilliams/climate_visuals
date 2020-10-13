@@ -129,3 +129,12 @@ body {
     position: absolute;
     text-align: center;
   }
+
+  .voronoi path {
+      fill: none;
+      pointer-events: all;
+  }
+
+  .year--hover {
+    stroke: #000;  
+  }

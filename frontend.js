@@ -261,7 +261,7 @@ fetch(link)
 
           //console.log(data['third'])
           var test = data['third']//.filter(x => x.class == 'multi')
-          console.log(test)
+          //console.log(test)
 
           plotLineGraph(test)
           
