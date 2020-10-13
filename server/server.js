@@ -168,6 +168,12 @@ app.get('/', function(req, res){
             }))
 
             // split up into 5 yearly/yearly (horizontal line) and then weekly/daily
+            // add months for single data
+            var months = []
+            for (var i=0; i<13; i++) {
+                months.push(new Date(2020, i, 0)) // need to add year functionality
+            }
+            
             lineData.forEach(year => {
                 var length = year.values.length;
                 if (length > 1){
@@ -175,22 +181,19 @@ app.get('/', function(req, res){
                 }
                 else {
                     year.class = 'single';
-                    year.values[1] = {
-                        'date': new Date(2020, 11, 31), // add date for end of year to plot straight line
-                        'ppm': year.values[0].ppm
-                    } 
+                    var ppm = year.values[0].ppm;
+                    year.values = months.map(month => ({
+                        'date': month,
+                        'ppm': ppm
+                    }))
+                    
                 }
-
-
             })
+
             
-            
-        
 
             fullData['third'] = lineData
             
-            
-            //[{year: 1010, values: [{data: x, ppm: 415}]}, {}]
 
             // write to file
             fullData = JSON.stringify(fullData)

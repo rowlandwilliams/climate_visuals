@@ -69,10 +69,10 @@ function plotLineGraph(data) {
         .data(data)
     .enter() // apply g path to each year
         .append('g')
-        .attr('class', function(d,i) {return "year_" + d.year}); // add custom year for voronoi
+        .attr('class', function(d,i) {return "line_" + d.year}); // add custom year for voronoi
 
     year.append('path')
-        .attr('class', 'line')
+        .attr('class', function(d,i) {return "year_" + d.year})
         .attr('d', function(d) { d.line = this; return lineGraphLine(d.values); })
         .attr('fill', 'none')
         .style('stroke', '#9c9c9c')
@@ -84,13 +84,13 @@ function plotLineGraph(data) {
         .attr("transform", "translate(-100,-100)");
 
     focus.append("circle")
-        .attr("fill", "none")
+        .attr("fill", "white")
         .attr("class", "notation")
         .attr("stroke-width", "1.5")
         .attr("r", 5);
 
     focus.append("text")
-        .attr("y", -40)
+        .attr('text-anchor', 'middle')
         .attr("class", "tt_year");
 
     // define voronoi grid
@@ -120,7 +120,11 @@ function plotLineGraph(data) {
         }
 
     function mouseover(d) {
-        //d3.select(d.data.ppm).classed('year--hover', true);
+        // var test = '.year_' + d.data.date.substr(0,4)
+        // //test = test.getFullYear();
+        // console.log(test)
+        // console.log(d3.selectAll(test))
+        // d3.selectAll('.year_' + d.data.date.substr(0,4)).classed('year--hover', true);
         //d.data.ppm.parentNode.appendChild(d.data.ppm);
         focus.attr("transform", "translate(" + lx0(Date.parse(d.data.date)) + "," + ly0(d.data.ppm) + ")");
         focus.select("text").text(d.data.ppm + ' PPM');
@@ -128,7 +132,8 @@ function plotLineGraph(data) {
     }
 
     function mouseout(d) {
-        //d3.select(d.data.ppm).classed("city--hover", false);
+        d3.selectAll('.year_' + d.data.date.substr(0,4)).classed('year--hover', false);
+
         focus.attr("transform", "translate(-100,-100)");
       }
     

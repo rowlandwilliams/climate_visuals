@@ -264,6 +264,18 @@ fetch(link)
           //console.log(test)
 
           plotLineGraph(test)
+
+          
+          var months = []
+          for (var i=1; i<13; i++) {
+              months.push(new Date(2020, i, 0))
+          }
+          
+          console.log(months)
+          //console.log(new Date(2020, 11, 31))
+
+
+        //console.log(test)
           
         //   // plot line graph
         //   var lineData = data['third']
