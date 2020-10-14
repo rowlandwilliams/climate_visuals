@@ -52,13 +52,13 @@ body {
 }
 
 .bubbleContainer {
-    padding: 30px;
+    /* padding: 30px; */
     min-height: 280px;
     max-height: 300px;
   }
 
 .timelineContainer {
-    /* min-height: 400px; */
+    min-height: 420px;
     max-height: 420px;
     overflow: scroll;
 }
@@ -153,4 +153,9 @@ body {
       border-radius: 3px;
       color: white;
       opacity: 0.5;
+    }
+
+
+    .bubbleContainer svg {
+        fill: black;
     }
