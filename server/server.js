@@ -15,7 +15,7 @@ app.get('/', function(req, res){
 
         if(!error){
             
-            // load html
+            ///// PROCESS API DATA /////
             var $ = cheerio.load(html);
     
             var data = $('body');
@@ -41,116 +41,31 @@ app.get('/', function(req, res){
 
             }))
             
+
+            ///// BEGIN DATA FORMATTING ///// 
             var originalData = data;
+            var fullData = {}; // data to send
 
-            // filter data to get only potential years required (prevent filtering each time)
-            var latestDay = data.slice(data.length-1);
-            var year = latestDay[0].year;
-            // define potential years (-2 accounts for across 2 years)
-            var years = [year, year-1, year-2, year-10, year-100, year-1000];
+
+            ///// BUBBLE CHART /////
+            // average ppm for each year
+            var allYears = [... new Set(data.map(x => x.year))]
+            var bubbleData = allYears.map(year => ({
+                'year': year,
+                'avgppm': data.filter(x => x.year == year)
+                        .map(x => x.ppm)
+                        .reduce((a, b) => a + b, 0) / data.filter(x => x.year == year).length
+            }))
+
+            // round avg ppm
+            bubbleData.forEach(year => (year.avgppm = Math.round(year.avgppm * 100) / 100))
+            fullData['first'] = bubbleData;
             
-            var data = data.filter(x => years.includes(x.year));
-           
-            // define final data
-            var finalData = [];
-            var fullData = {};
-
             // get last 7 days of data and calculate average
             var latestData = data.slice(data.length-7);
-            console.log(latestData)
-            var latestAverage = latestData.map(x => x.ppm).reduce((a, b) => a + b, 0)/latestData.length
-            finalData.push({year: year, ppm: latestAverage, text: 'Current CO2 levels (7-day average)', tooltip: 'Latest'});
-            
-            
-            // daily data begins on 11/05/2016
-            // weekly data begins on 29/02/1958
-            // yearly data begins 1830
-            // 5 years data before 1830
-
-            // Get data for 1, 10, 100, and 1000 years ago
-            
-            // 1 year ago
-            // generate ymd ids matching data from last year based on latest data
-            var ids = latestData.map((x) => (x.year-1)  + 
-                            '_' + (x.month) + '_' + x.day)
-            
-            // // pull new last year ids out of data and add to latestData
-            var temp = data.filter(x => ids.includes(x.ymd));
-            var lastAverage = temp.map(x => x.ppm).reduce((a, b) => a + b, 0)/temp.length
-            finalData.push({year: temp[0].year, ppm: lastAverage, text: 'This week in ' + temp[0].year, tooltip: 'Last year'});
-            
-            
-            // // update date 2 for last year
-            // finalData[1].forEach(x => x.date2 = new Date((x.year + 1), x.month, x.day))
-            // // extract needed keys
-            // finalData = finalData.map((array) => array.map((x) => ({
-            //     date: x.date2,
-            //     year: x.year,
-            //     ppm: x.ppm
-
-            // })))
-            // finalData = finalData.flat()
             
 
-            
-
-           
-            
-            // 10 years ago
-            // data now weekly so match nearest week based on latest day
-            // find year and month
-            // // filter data based on latestday year-10 then current week
-            var temp = data.filter(x => x.year == (latestDay[0].year - 10))
-                        .filter(x => x.week == latestDay[0].week)
-            finalData.push({year: temp[0].year, ppm: temp[0].ppm, text: 'This week in ' + temp[0].year, tooltip: '10 years ago'})
-            
-            
-            // // 100 years ago
-            // // data now yearly so simple year match
-            var temp = data.filter(x => x.year == (latestDay[0].year - 100))
-            finalData.push({year: temp[0].year, ppm: temp[0].ppm, text: 'This week in ' + temp[0].year, tooltip: '100 years ago'})
-    
-            
-            // round 1000 years ago to nearest 5 years (data only every 5 years)
-            function round5(x) {
-                return (x % 5) >= 2.5 ? parseInt(x / 5) * 5 + 5 : parseInt(x / 5) * 5;
-            }
-
-            var year = round5((latestDay[0].year - 1000));
-            var temp = data.filter(x => x.year == (latestDay[0].year - 1000))
-            finalData.push({year: temp[0].year, ppm: temp[0].ppm, text: 'This week in ' + temp[0].year, tooltip: '1000 years ago'});
-
-            // round ppm
-            finalData.forEach(x => x.ppm = Math.round(x.ppm *100) / 100)
-
-            // put first data set for horizontal into key
-            fullData['first'] = finalData
-            
-            // weekly totals
-            var test  = data.filter(x => x.year == 2020).map(x => ({
-                'week': x.week,
-                'ppm':x.ppm
-            }))
-
-            var total = 0
-            //console.log(test.forEach((week) => total += week.ppm ))
-            //console.log(test)
-
-
-            test.forEach(week => {total += week.ppm})
-
-            //console.log(total)
-            
-            
-            fullData['second'] = latestData.map((x) => ({
-                'year': x.year,
-                'ppm': x.ppm,
-                'date': x.date
-                //'week': x.week
-            }))
-            
-
-            // begin data extraction for plot 2
+            ///// LINEGRAPH DATA /////
             // if data is 5 yearly or yearly - need to plot according to svg width
             // if data is weekly or daily, can plot according to y axis date
             // get unique years
@@ -167,8 +82,7 @@ app.get('/', function(req, res){
                             }))
             }))
 
-            // split up into 5 yearly/yearly (horizontal line) and then weekly/daily
-            // add months for single data
+            // add months for earlier year data which is yearly (months help plotting and tooltip generation)
             var months = []
             for (var i=0; i<13; i++) {
                 months.push(new Date(2020, i, 0)) // need to add year functionality
@@ -189,12 +103,9 @@ app.get('/', function(req, res){
                     
                 }
             })
-
             
-
-            fullData['third'] = lineData
+            fullData['second'] = lineData
             
-
             // write to file
             fullData = JSON.stringify(fullData)
             fs.writeFileSync('data.json', fullData);
@@ -203,6 +114,7 @@ app.get('/', function(req, res){
             
         }
         res.setHeader('Access-Control-Allow-Origin', '*');
+        //res.send(originalData);
         res.send(fullData)
 
 
@@ -227,3 +139,84 @@ app.listen(3000, () => {
   
 
   
+///// TIMELINE GRAPH /////
+            // filter data to get only potential years required (prevent filtering each time)
+            // var latestDay = data.slice(data.length-1);
+            // var year = latestDay[0].year;
+            // // define potential years (-2 accounts for across 2 years)
+            // var years = [year, year-1, year-2, year-10, year-100, year-1000];
+            
+            // var data = data.filter(x => years.includes(x.year));
+           
+            // // define final data
+            // var finalData = [];
+
+            // //console.log(latestData)
+            // var latestAverage = latestData.map(x => x.ppm).reduce((a, b) => a + b, 0)/latestData.length
+            // finalData.push({year: year, ppm: latestAverage, text: 'Current CO2 levels (7-day average)', tooltip: 'Latest'});
+            
+            
+            // // daily data begins on 11/05/2016
+            // // weekly data begins on 29/02/1958
+            // // yearly data begins 1830
+            // // 5 years data before 1830
+
+            // // Get data for 1, 10, 100, and 1000 years ago
+            
+            // // 1 year ago
+            // // generate ymd ids matching data from last year based on latest data
+            // var ids = latestData.map((x) => (x.year-1)  + 
+            //                 '_' + (x.month) + '_' + x.day)
+            
+            // // // pull new last year ids out of data and add to latestData
+            // var temp = data.filter(x => ids.includes(x.ymd));
+            // var lastAverage = temp.map(x => x.ppm).reduce((a, b) => a + b, 0)/temp.length
+            // finalData.push({year: temp[0].year, ppm: lastAverage, text: 'This week in ' + temp[0].year, tooltip: 'Last year'});
+            
+            
+            // // 10 years ago
+            // // data now weekly so match nearest week based on latest day
+            // // find year and month
+            // // // filter data based on latestday year-10 then current week
+            // var temp = data.filter(x => x.year == (latestDay[0].year - 10))
+            //             .filter(x => x.week == latestDay[0].week)
+            // finalData.push({year: temp[0].year, ppm: temp[0].ppm, text: 'This week in ' + temp[0].year, tooltip: '10 years ago'})
+            
+            
+            // // // 100 years ago
+            // // // data now yearly so simple year match
+            // var temp = data.filter(x => x.year == (latestDay[0].year - 100))
+            // finalData.push({year: temp[0].year, ppm: temp[0].ppm, text: 'This week in ' + temp[0].year, tooltip: '100 years ago'})
+    
+            
+            // // round 1000 years ago to nearest 5 years (data only every 5 years)
+            // function round5(x) {
+            //     return (x % 5) >= 2.5 ? parseInt(x / 5) * 5 + 5 : parseInt(x / 5) * 5;
+            // }
+
+            // var year = round5((latestDay[0].year - 1000));
+            // var temp = data.filter(x => x.year == (latestDay[0].year - 1000))
+            // finalData.push({year: temp[0].year, ppm: temp[0].ppm, text: 'This week in ' + temp[0].year, tooltip: '1000 years ago'});
+
+            // // round ppm
+            // finalData.forEach(x => x.ppm = Math.round(x.ppm *100) / 100)
+
+            // // put first data set for horizontal into key
+            // fullData['first'] = finalData
+            
+            // weekly totals
+            // var test  = data.filter(x => x.year == 2020).map(x => ({
+            //     'week': x.week,
+            //     'ppm':x.ppm
+            // }))
+
+            // var total = 0
+            // test.forEach(week => {total += week.ppm})
+
+            // fullData['second'] = latestData.map((x) => ({
+            //     'year': x.year,
+            //     'ppm': x.ppm,
+            //     'date': x.date
+            //     //'week': x.week
+            // }))
+            

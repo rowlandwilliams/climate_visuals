@@ -8,20 +8,6 @@ let lMargin = {top: 100, right: 20, bottom:40, left: 40},
     lWidth = lineChartWidth - lMargin.left - lMargin.right,
     lHeight = lineGraphHeight - lMargin.top - lMargin.bottom;
 
-// var ltooltip = d3.select('body').append('div')
-//     .attr('class', 'latest-tooltip')
-//     .style('opacity', 1)
-
-
-
-
-//     .style('left', 250 + 'px')
-//     .style('top', 2500 + 'px');    
-// //ltooltip
-    //.html('suhdude')
-    // .style('left', 100 + 'px')
-    // .style('top', window.pageYOffset + 'px');
-
 
 
 // plot initial line graph
@@ -73,7 +59,6 @@ function plotLineGraph(data) {
         .y(d => ly0(d.ppm))
 
     // define voronoi function
-    // initiate voronoi
     var voronoi = d3.voronoi()
         .x(function(d) { return lx0(Date.parse(d.date)) + Math.random() -0.5})
         .y(function(d) { return ly0(d.ppm) + Math.random() -0.5})
