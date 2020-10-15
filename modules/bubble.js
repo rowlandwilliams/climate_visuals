@@ -1,8 +1,8 @@
 // define plot dimenstions
-var bubbleChartWidth = document.querySelector('.leftColumn').offsetWidth;
-var bubbleChartHeight = document.querySelector('.bubbleContainer').offsetHeight //- PADDING;  
+var bubbleChartWidth = document.querySelector('.leftColumn').offsetWidth -50;
+var bubbleChartHeight = document.querySelector('.bubbleContainer').offsetHeight -50//- PADDING;  
 
-let bMargin = {top: 0, right: 20, bottom:0, left: 20},
+let bMargin = {top: 20, right: 20, bottom:-20, left: 20},
     bWidth = bubbleChartWidth - bMargin.left - bMargin.right,
     bHeight = bubbleChartHeight - bMargin.top - bMargin.bottom;
 
@@ -17,18 +17,21 @@ var bubbleRadius = Math.min(xCell, yCell) / 2;
 // append svg
 const bsvg = d3.select('.bubbleContainer').append('svg')
     .attr('class', 'bsvg')
-    .attr('width', bWidth + bMargin.left + bMargin.right)
-    .attr('height', bHeight + bMargin.top + bMargin.bottom)
+    .attr('width', bWidth )
+    .attr('height', bHeight )
+    .attr('transform', 'translate(' + bMargin.left + ',' + bMargin.top + ')');
+
    
-var circle = bsvg.append('g')
-                .attr('class', 'circle')
+var rect = bsvg.append('g')
+                .attr('class', 'rect')
 
 for (var i=0; i<16; i++) {
     for (var j=0; j<22; j++) {
-    circle.append('circle')
-    .attr('r', bubbleRadius*0.5)
-    .attr('cx', xCell / 2 + (xCell * j) + 'px')
-    .attr('cy', ((yCell / 2) + (yCell*i)) + 'px')
+    rect.append('rect')
+    .attr('width', bubbleRadius)
+    .attr('height', bubbleRadius)
+    .attr('x', xCell / 2 + (xCell * j) + 'px')
+    .attr('y', ((yCell / 2) + (yCell*i)) + 'px')
     }
 }
 
