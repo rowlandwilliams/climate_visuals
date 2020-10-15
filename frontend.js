@@ -4,20 +4,7 @@ fetch(link)
     .then(response => response.json())
     .then(data => {
         
-        var nodes = createNodes(data['first'])
-        //console.log(nodes)
-        //bubbleChart(data['first']);
-
-        //var test = Array.from({length: 20}, () => ({r: 100 + Math.random() * 10}))
-        //console.log(test);
-        //const circles = pack(nodes)
-        const circles = pack(nodes);
-        console.log(circles)
-        plotBubble(circles)
-
-
-        // console.log(test)
-        // console.log(circles)
+        
         
 
         plotLineGraph(data['second'])
