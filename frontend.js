@@ -3,11 +3,12 @@ var link = './data.json'
 fetch(link)
     .then(response => response.json())
     .then(data => {
-        //console.log(data['first'].slice(0,10))
-          var test = data['first'].length// data['first'].slice(data['first'].length -10, data['first'].length -1)
-          console.log(test);
-          plotBubble(data['first'])        
-          plotLineGraph(data['second'])
+        
+        
+        bubbleChart(data['first']);
+        
+
+        plotLineGraph(data['second'])
        
     })
 
