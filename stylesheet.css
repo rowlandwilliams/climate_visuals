@@ -18,7 +18,7 @@
 }
 
 
-.leftColumn, .rightColumn {
+.leftColumn {
     width: 100%; /* ensure grow on screen change */
 }
 
@@ -32,11 +32,16 @@
         /* margin-bottom: 20px; */
     }
     
-    .rightColumn {
+    .middleColumn {
         padding: 0 20px 0 30px; 
         width: 50%; 
         margin-top: 100px; 
         /* margin-bottom: 20px; */
+    }
+
+    .rightColumn {
+        width: 35%;
+         
     }
 
 }
@@ -45,61 +50,38 @@
     color: white;
     font-size: 28px;
     letter-spacing: 7px;
-    /* padding-left: 30px; */
     padding: 10px;
-    /* position: relative; */
-    /* display: inline-flex; */
-    /* flex-direction: row; */
-}
-
-/* .rowland {
-    font-size: 14px;
-    margin-top: auto; /* push down in parent */
-    /* margin-left: 20px;
-} */ 
-
-#graphContainer {
-    /* background-color: #F4F1F1; */
-    border-radius: 4px;
-    /* box-shadow: 0 0 6px 0 RGBA(0, 0, 0, 0.50); */
-    /* margin: 10px 0 30px 0; */
+    
 }
 
 .bubbleContainer {
-    /* padding: 30px; */
     min-height: 800px;
     max-height: 1000px;
     margin-top: 20px;
     border-radius: 0px 10px 0px 0px;
     overflow: hidden;
-    /* background-color: #F4F1F1; */
   }
-
-/* .timelineContainer {
-    min-height: 420px;
-    max-height: 420px;
-    /* overflow: scroll; */
 
 
 .lineGraphContainer {
     /* min-height: 850px;
     max-height: 1000px; */
     height: 100%;
-    /* margin-bottom: auto; */
-    /* overflow: hidden; */
+    
     position: relative;
 }
 
-/* .lineGraphContainer svg {
-    position: absolute;
-} */
 
-/* .donutContainer {
-    padding: 30px;
-    min-height: 280px;
-    max-height: 400px;
+
+.donutContainer {
+    /* padding: 30px; */
+    margin-top: 50px;
+    margin-right: 30px;
+    background-color: white;
+    min-height: 550px;
+    max-height: 600px;
     
-} */
+}
 
 
 /* timeline chart interactivity */

@@ -6,7 +6,7 @@ fetch(link)
         
         
         plotTile(data['first'])
-        console.log(data['first'])
+        console.log(data['third'])
 
         plotLineGraph(data['second'])
        
