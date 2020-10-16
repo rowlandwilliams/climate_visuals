@@ -7,7 +7,7 @@ fetch(link)
         
         plotTile(data['first'])
 
-        //plotLineGraph(data['second'])
+        plotLineGraph(data['second'])
        
     })
 

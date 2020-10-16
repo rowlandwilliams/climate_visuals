@@ -1,12 +1,12 @@
 // define dimensions for line graph
-var PADDING = 10
-var LEFT_CHARTS_WIDTH = document.querySelector('.leftColumn').offsetWidth;
-var lineChartWidth = document.querySelector('.rightColumn').offsetWidth;
-var lineGraphHeight = document.querySelector('.lineGraphContainer').offsetHeight - PADDING;  
+var PADDING = 0 // PADDING FROM TOP
+//var LEFT_CHARTS_WIDTH = document.querySelector('.leftColumn').offsetWidth;
+var lineContainerWidth = document.querySelector('.lineGraphContainer').offsetWidth;
+var lineContainerHeight = document.querySelector('.lineGraphContainer').offsetHeight - PADDING;  
 
-let lMargin = {top: 100, right: 20, bottom:40, left: 40},
-    lWidth = lineChartWidth - lMargin.left - lMargin.right,
-    lHeight = lineGraphHeight - lMargin.top - lMargin.bottom;
+let lMargin = {top: 40, right: 20, bottom:0, left: 40},
+    lWidth = lineContainerWidth - lMargin.left - lMargin.right,
+    lHeight = lineContainerHeight //- lMargin.top - lMargin.bottom;
 
 
 
@@ -29,8 +29,8 @@ function plotLineGraph(data) {
         .scale(ly0)
 
     const lsvg = d3.select(".lineGraphContainer").append("svg")
-        .attr('width', lWidth + lMargin.left + lMargin.right)
-        .attr('height', lHeight + lMargin.top + lMargin.bottom)
+        .attr('width', lWidth)
+        .attr('height', lHeight)
         .append('g')
         .attr('transform', 'translate(' + lMargin.left + ',' + lMargin.top + ')');
 
@@ -75,7 +75,7 @@ function plotLineGraph(data) {
         .attr('class', function(d,i) {return "year_" + d.year})
         .attr('d', function(d) { d.line = this; return lineGraphLine(d.values); })
         .attr('fill', 'none')
-        .style('stroke', '#9c9c9c')
+        .style('stroke', '#F4F1F1')
      
         
     // add focus to hover over grid

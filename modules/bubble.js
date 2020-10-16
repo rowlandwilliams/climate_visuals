@@ -1,3 +1,6 @@
+// set height of tile container
+
+
 // define plot dimenstions
 var bubbleChartWidth = document.querySelector('.leftColumn').offsetWidth ; // removed padding to fill container
 var bubbleChartHeight = document.querySelector('.bubbleContainer').offsetHeight //- PADDING;  
