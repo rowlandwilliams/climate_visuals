@@ -5,7 +5,7 @@ fetch(link)
     .then(data => {
         
         
-        
+        plotTile(data['first'])
 
         //plotLineGraph(data['second'])
        

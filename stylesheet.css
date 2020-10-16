@@ -26,7 +26,7 @@
     padding: 0;
     box-sizing: border-box;
     /* margin: 0; */
-} */
+/* } */ 
 
 
 .columnContainer {
@@ -46,7 +46,7 @@
     }
 
     .leftColumn {
-        width: 10%;
+        max-width: 185px;
     }
     
     .rightColumn {
@@ -57,7 +57,7 @@
 
 .titleContainer {
     color: #D8D8D8;
-    font-size: 24px;
+    font-size: 28px;
     letter-spacing: 7px;
     /* padding-left: 30px; */
     padding: 10px;
