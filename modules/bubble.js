@@ -13,20 +13,25 @@ let bMargin = {top: 0, right: 0, bottom:0, left: 0},
 // NEED TO ADD VERSION THAT SCALES WITH ADDED YEARS
 var xCell = (bWidth ) / 8;
 var yCell = (bHeight ) / 44;
-var bubbleRadius = Math.min(xCell, yCell) / 2;
+
 
 
 
 // define function to generate position for given datapoint
 function generatePos(index) {
-    if(!index) return {x: 0, y: 0};
-    
-    var nthColumn = index % 8; // find column
-    var nthRow = Math.floor(index / 8); // find row
+    var firstPos = {x:0, y: yCell*43};
 
+    if(!index) return firstPos;
+    
+
+    // index 1 = go -1 in x direction and 0 in y
+    var nColumn = index % 8
+    var nRow = Math.floor(index / 8)
+    
+    
     return {
-        x: xCell * nthColumn,
-        y: yCell * nthRow
+        x: firstPos.x + (nColumn * xCell),
+        y: firstPos.y - (nRow * yCell) 
     }
 
 }
@@ -44,11 +49,20 @@ function plotTile(data) {
         .data(data)
             .enter()
         .append('rect')
+        .style('opacity', 0)
         .attr('width', xCell)
         .attr('height', yCell)
         .attr('x', function(d, i) { return generatePos(i).x })
         .attr('y', function(d, i) { return generatePos(i).y })
         .attr('d', d=> d.avgppm)
+        .attr('class', function(d) { return 'tile' + d.year})
+        .transition()
+        .delay(function(_, i) {
+            return i * 10
+        })
+        .style('opacity', 1)
+
+    
 
 
 }
