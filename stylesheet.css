@@ -29,12 +29,14 @@
 
     .leftColumn {
         max-width: 185px;
+        /* margin-bottom: 20px; */
     }
     
     .rightColumn {
         padding: 0 20px 0 30px; 
-        width: 60%; 
-        margin-top: 100px; // push down graph
+        width: 50%; 
+        margin-top: 100px; 
+        /* margin-bottom: 20px; */
     }
 
 }

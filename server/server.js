@@ -47,7 +47,7 @@ app.get('/', function(req, res){
             var fullData = {}; // data to send
 
 
-            ///// BUBBLE CHART /////
+            ///// TILES /////
             // average ppm for each year
             var allYears = [... new Set(data.map(x => x.year))]
             var bubbleData = allYears.map(year => ({
@@ -57,18 +57,23 @@ app.get('/', function(req, res){
                         .reduce((a, b) => a + b, 0) / data.filter(x => x.year == year).length
             }))
 
+            // generate century id for donut
+            bubbleData.forEach(year => year.century = Math.floor((year.year-1) / 100) + 1)
+
             // round avg ppm
             bubbleData.forEach(year => (year.avgppm = Math.round(year.avgppm * 100) / 100))
             fullData['first'] = bubbleData;
             
-            // get last 7 days of data and calculate average
-            var latestData = data.slice(data.length-7);
+            
             
 
             ///// LINEGRAPH DATA /////
             // if data is 5 yearly or yearly - need to plot according to svg width
             // if data is weekly or daily, can plot according to y axis date
             // get unique years
+            // get last 7 days of data and calculate average
+            var latestData = data.slice(data.length-7);
+
             var allYears = [... new Set(originalData.map(x => x.year))]
             // for each year new dataset
 
@@ -106,16 +111,41 @@ app.get('/', function(req, res){
             
             fullData['second'] = lineData
             
+        
+
+            ///// DONUT /////
+            // calculate change 
+            // difference between start and end of century
+            var centuries = bubbleData.map(x => x.century)
+            var centuries = [... new Set(centuries)]
+                    
+            
+            var change = centuries.map(test => 
+                    bubbleData
+                        .filter((x) => x.century == test))
+                    .map(y => ({
+                        'century': y[0].century,
+                        'change': y[y.length-1].avgppm - y[0].avgppm
+                    }))
+                    
+            var changeSum = change.map(x=>x.change).reduce((a,b) => a + b, 0)
+            for (var i=0; i<change.length; i++) {
+                change[i].change = change[i].change < 0 ? 0 : change[i].change;
+                change[i].changepc = change[i].change/changeSum * 100
+            }
+            
+            fullData['third'] = change;    
+    
             // write to file
             fullData = JSON.stringify(fullData)
             fs.writeFileSync('data.json', fullData);
+            
+            
 
-            
-            
         }
         res.setHeader('Access-Control-Allow-Origin', '*');
         //res.send(originalData);
-        res.send(fullData)
+        res.send(change)
 
 
     })
