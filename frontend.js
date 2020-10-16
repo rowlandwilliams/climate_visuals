@@ -7,7 +7,7 @@ fetch(link)
         
         
 
-        plotLineGraph(data['second'])
+        //plotLineGraph(data['second'])
        
     })
 

@@ -1,12 +1,32 @@
-* { box-sizing: border-box;
+/* * { box-sizing: border-box; */
     /* overflow-x:hidden */
-} /* fit to viewport */
+/* } fit to viewport */
 
-body {
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  } */
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  html, body {
+    box-sizing: border-box;
     font-family: 'Dosis', sans-serif;   
     background-color:#ff6961;
+  }
+
+/* body, html{
+    font-family: 'Dosis', sans-serif;   
+    background-color:#ff6961;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     /* margin: 0; */
-}
+} */
 
 
 .columnContainer {
@@ -14,6 +34,7 @@ body {
     flex-direction: column;
     /* height: 97vh; */
 }
+
 
 .leftColumn, .rightColumn {
     width: 100%; /* ensure grow on screen change */
@@ -23,21 +44,26 @@ body {
     .columnContainer {
         flex-direction: row;
     }
+
+    .leftColumn {
+        width: 10%;
+    }
     
     .rightColumn {
         padding: 0 20px 0 30px  
     }
+
 }
 
 .titleContainer {
     color: #D8D8D8;
     font-size: 24px;
     letter-spacing: 7px;
-    padding-left: 30px;
+    /* padding-left: 30px; */
     padding: 10px;
-    position: relative;
-    display: inline-flex;
-    flex-direction: row;
+    /* position: relative; */
+    /* display: inline-flex; */
+    /* flex-direction: row; */
 }
 
 /* .rowland {
@@ -50,13 +76,15 @@ body {
     background-color: #F4F1F1;
     border-radius: 4px;
     box-shadow: 0 0 10px 0 RGBA(0, 0, 0, 0.50);
-    margin: 10px 0 30px 0;
+    /* margin: 10px 0 30px 0; */
 }
 
 .bubbleContainer {
     /* padding: 30px; */
-    min-height: 400px;
-    max-height: 600px;
+    min-height: 800px;
+    max-height: 1000px;
+    margin-top: 20px;
+    background-color: #F4F1F1;
   }
 
 .timelineContainer {
