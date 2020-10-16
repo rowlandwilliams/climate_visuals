@@ -36,6 +36,8 @@ function generatePos(index) {
 
 }
 
+// Build color scale
+
 
 function plotTile(data) {
     // append svg
@@ -44,23 +46,30 @@ function plotTile(data) {
         .attr('width', bWidth )
         .attr('height', bHeight )
 
+    var color = d3.scaleLinear()
+        .domain([d3.min(data.map(x => x.avgppm)), d3.max(data.map(x => x.avgppm))])
+        .range(['rgba(255, 105, 97, 0.5)', 'rgba(255, 105, 97, 1)'])
+// red = 'rgba(255, 105, 97, 1)', rgb(58,58,71) black
     // append rect and enter data
     bsvg.selectAll('rect')
         .data(data)
             .enter()
         .append('rect')
-        .style('opacity', 0)
+        .style('opacity', 1)
         .attr('width', xCell)
         .attr('height', yCell)
         .attr('x', function(d, i) { return generatePos(i).x })
         .attr('y', function(d, i) { return generatePos(i).y })
         .attr('d', d=> d.avgppm)
+        .attr('fill', function(d) { return color(d.avgppm) })
         .attr('class', function(d) { return 'tile' + d.year})
-        .transition()
-        .delay(function(_, i) {
-            return i * 10
-        })
-        .style('opacity', 1)
+        .attr("rx", 2)
+        .attr("ry", 2)
+        // .transition()
+        // .delay(function(_, i) {
+        //     return i * 10
+        // })
+        // .style('opacity', 1)
 
     
 
