@@ -8,6 +8,7 @@ fetch(link)
         plotTile(data['first'])
         //plotDonut(data['third'])
         plotLineGraph(data['second'])
+        console.log(d3.min(d3.merge(data['second'].map(x => x.values.map(y => y.ppm)))))
        
     })
 

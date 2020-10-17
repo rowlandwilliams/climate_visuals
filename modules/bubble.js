@@ -65,6 +65,7 @@ function plotTile(data) {
         .attr("ry", 2)
         .on('mouseover', bmouseover)
         .on('mouseout', bmouseout)
+        
         // .transition()
         // .delay(function(_, i) {
         //     return i * 10
