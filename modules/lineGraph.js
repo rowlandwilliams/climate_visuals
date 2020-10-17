@@ -13,6 +13,8 @@ let lMargin = {top: 40, right: 20, bottom:30, left: 40},
 // plot initial line graph
 
 function plotLineGraph(data) {
+    var test = data
+    
     let lx0 = d3.scaleTime()
         .domain([new Date(2020, 0, 1), new Date(2020, 11, 31)])
         .range([0, lWidth])
@@ -43,14 +45,17 @@ function plotLineGraph(data) {
         .remove())
         .call(g => g.selectAll('text')
         .attr('dx', '2.8em'))
+        
     
     lsvg.append('g')
-        .attr('class', 'lXAxis')
+        .attr('class', 'lYAxis')
         .call(lYAxis)
         .call(g => g.selectAll(".domain, line") // remove axis line and ticks
         .remove())
         .call(g => g.selectAll('text') // move labels right
         .attr('dx', '0.5em'))
+        .attr('class', 'lg_ytext')
+        .attr('stroke', '#F4F1F1')
 
 
     // define line funciton
@@ -65,17 +70,23 @@ function plotLineGraph(data) {
         //.extent([0, 0], [lWidth, lHeight]); // work on this
 
 
-    var year = lsvg.selectAll('.year')
-        .data(data)
-    .enter() // apply g path to each year
-        .append('g')
-        .attr('class', function(d,i) {return "line_" + d.year}); // add custom year for voronoi
+    var year = lsvg.append('g')
+        .attr('class', 'year_lines')
 
-    year.append('path')
-        .attr('class', function(d,i) {return "year_" + d.year})
+
+    year.selectAll('.year_line')    
+        .data(data)
+    .enter() // apply path to each year
+        .append('path')
+        .attr('class', 'year_line')
+        .attr('id', function(d,i) {return "year_" + d.year})
+        //.attr('id', 'lgline')
         .attr('d', function(d) { d.line = this; return lineGraphLine(d.values); })
         .attr('fill', 'none')
         .style('stroke', '#F4F1F1')
+        .style('stroke-width', 1)
+     
+        
      
         
     // add focus to hover over grid
@@ -94,17 +105,21 @@ function plotLineGraph(data) {
         .attr("class", "tt_year");
 
     // define voronoi grid
-    var v = voronoi(d3.merge(data.map(x => x.values)))
+    //test.forEach(year => year.values.forEach(value => value.year = year.year))
     
+
+    var v = voronoi(d3.merge(data.map(x => x.values)))
+    console.log(v.polygons())
 
     var voronoiGroup = lsvg.append("g")
       .attr("class", "voronoi");
 
+    console.log(v)  
     voronoiGroup.selectAll('path')
         .data(v.polygons())
         .enter().append('path')
             .attr('d', function(d) { return d ? "M" + d.join("L") + "Z" : null; })
-            
+            //.attr('class', function(d) { return d.data.year })
 
     // add tooltip 
     var site = null;
@@ -120,23 +135,27 @@ function plotLineGraph(data) {
         }
 
     function mouseover(d) {
-        
+        console.log(d.data)
         focus.attr("transform", "translate(" + lx0(Date.parse(d.data.date)) + "," + ly0(d.data.ppm) + ")");
         focus.select("text").text(d.data.ppm + ' PPM');
+        d3.select('.db_ytext')
+            .text(d.data.year)
 
     }
 
     function mouseout(d) {
         d3.selectAll('.year_' + d.data.date.substr(0,4)).classed('year--hover', false);
-
         focus.attr("transform", "translate(-100,-100)");
+        d3.select('.db_ytext')
+            .text('')
+
       }
     
     });
 
     // grab 2020 line position and append tooltip
     //var lineContainer = d3.select('.lineGraphContainer').node().getBoundingClientRect();
-    var line2020 = d3.select('.line_2020').node().getBoundingClientRect();
+    //var line2020 = d3.select('.line_2020').node().getBoundingClientRect();
 
     //var boxWidth = 
     var ltooltip = d3.select('body').append('div')

@@ -83,7 +83,8 @@ app.get('/', function(req, res){
                             .filter((y) => y.year == x)
                             .map(z => ({
                                 'date': z.date2,
-                                'ppm': z.ppm
+                                'ppm': z.ppm,
+                                'year': x
                             }))
             }))
 
@@ -103,12 +104,13 @@ app.get('/', function(req, res){
                     var ppm = year.values[0].ppm;
                     year.values = months.map(month => ({
                         'date': month,
-                        'ppm': ppm
+                        'ppm': ppm,
+                        'year': year.year // add year for voronoi lg
                     }))
                     
                 }
             })
-            
+            console.log(lineData)
             fullData['second'] = lineData
             
         
@@ -146,7 +148,7 @@ app.get('/', function(req, res){
         }
         res.setHeader('Access-Control-Allow-Origin', '*');
         //res.send(originalData);
-        res.send(change)
+        res.send(lineData)
 
 
     })

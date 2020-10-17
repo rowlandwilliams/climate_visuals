@@ -1,6 +1,3 @@
-// set height of tile container
-
-
 // define plot dimenstions
 var bubbleChartWidth = document.querySelector('.leftColumn').offsetWidth ; // removed padding to fill container
 var bubbleChartHeight = document.querySelector('.bubbleContainer').offsetHeight //- PADDING;  
@@ -16,8 +13,6 @@ let bMargin = {top: 0, right: 0, bottom:30, left: 0},
 // NEED TO ADD VERSION THAT SCALES WITH ADDED YEARS
 var xCell = (bWidth ) / 8;
 var yCell = (bHeight ) / 44;
-
-
 
 
 // define function to generate position for given datapoint
@@ -64,17 +59,55 @@ function plotTile(data) {
         .attr('x', function(d, i) { return generatePos(i).x })
         .attr('y', function(d, i) { return generatePos(i).y })
         .attr('d', d=> d.avgppm)
-        .attr('fill', function(d) { return color(d.avgppm) })
+        .style('fill', function(d) { return color(d.avgppm) })
         .attr('class', function(d) { return 'tile' + d.year})
         .attr("rx", 2)
         .attr("ry", 2)
+        .on('mouseover', bmouseover)
+        .on('mouseout', bmouseout)
         // .transition()
         // .delay(function(_, i) {
         //     return i * 10
         // })
         // .style('opacity', 1)
 
-    
+    function bmouseover() {
+        // define initial colour
+        var fill = d3.select(this).style('fill');
+
+        // define linegraph line class and apply respective tile colour
+        var lClass =  d3.select(this).attr('class').substring(4)
+        
+        d3.selectAll('.year_line')
+            .style('opacity', function(d) {
+                return d.year == lClass ? 1 : 0.5  })
+            .style('stroke', function(d) {
+                return d.year == lClass ? fill : '#F4F1F1' })
+            .style('stroke-width', function(d) {
+                return d.year == lClass ? '3px' : '1px' })
+
+        d3.selectAll('.lg_ytext')
+                .style('opacity', 0.5) // fade y ticks
+
+        d3.select('.db_ytext')
+                .text(lClass) // year to dashboard
+        
+        
+        
+    } 
+
+    function bmouseout() {
+        d3.selectAll('.year_line')
+            .style('opacity', 1)
+            .style('stroke', '#F4F1F1')
+            .style('stroke-width', '1px')
+
+        d3.selectAll('.lg_ytext')
+            .style('opacity', 1)
+
+        d3.select('.db_ytext')
+            .text('') // remove text
+    }
 
 
 }
