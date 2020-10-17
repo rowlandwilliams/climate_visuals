@@ -118,7 +118,7 @@ app.get('/', function(req, res){
             // difference between start and end of century
             var centuries = bubbleData.map(x => x.century)
             var centuries = [... new Set(centuries)]
-                    
+            //var totalChange =      
             
             var change = centuries.map(test => 
                     bubbleData
@@ -129,8 +129,9 @@ app.get('/', function(req, res){
                     }))
                     
             var changeSum = change.map(x=>x.change).reduce((a,b) => a + b, 0)
+            //var totalChange = change
             for (var i=0; i<change.length; i++) {
-                change[i].change = change[i].change < 0 ? 0 : change[i].change;
+                //change[i].change = change[i].change < 0 ? 0 : change[i].change;
                 change[i].changepc = change[i].change/changeSum * 100
             }
             

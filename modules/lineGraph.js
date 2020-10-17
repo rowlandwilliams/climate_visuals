@@ -4,9 +4,9 @@ var PADDING = 0 // PADDING FROM TOP
 var lineContainerWidth = document.querySelector('.lineGraphContainer').offsetWidth;
 var lineContainerHeight = document.querySelector('.lineGraphContainer').offsetHeight - PADDING;  
 
-let lMargin = {top: 40, right: 20, bottom:0, left: 40},
+let lMargin = {top: 40, right: 20, bottom:30, left: 40},
     lWidth = lineContainerWidth - lMargin.left - lMargin.right,
-    lHeight = lineContainerHeight //- lMargin.top - lMargin.bottom;
+    lHeight = lineContainerHeight - lMargin.bottom;
 
 
 
