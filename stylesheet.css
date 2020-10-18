@@ -79,7 +79,7 @@ body {
 .bubbleContainer {
     min-height: 200px;
     /* max-height: 1000px; */
-    margin-top: 20px;
+    /* margin-top: 20px; */
     border-radius: 30px;
     /* overflow: hidden; */
   }

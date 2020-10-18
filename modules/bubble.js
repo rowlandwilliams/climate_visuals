@@ -2,9 +2,11 @@
 var bubbleChartWidth = document.querySelector('.leftColumn').offsetWidth ; // removed padding to fill container
 var bubbleChartHeight = document.querySelector('.bubbleContainer').offsetHeight //- PADDING;  
 
-let bMargin = {top: 0, right: 0, bottom:30, left: 0},
+let bMargin = {top: 20, right: 0, bottom:0, left: 0},
     bWidth = LEFT_CHARTS_WIDTH //- bMargin.left - bMargin.right,
-    bHeight = LEFT_ROW_2_HEIGHT - bMargin.top - bMargin.bottom;
+    bHeight = LEFT_ROW_2_HEIGHT - bMargin.top - bMargin.bottom
+
+    // bHeight = LEFT_ROW_2_HEIGHT - bMargin.top - bMargin.bottom;
 
 
 // pack x circles into a container
@@ -41,8 +43,9 @@ function plotTile(data) {
     // append svg
     const bsvg = d3.select('.bubbleContainer').append('svg')
         .attr('class', 'bsvg')
-        .attr('width', bWidth )
-        .attr('height', bHeight )
+        .attr('width', bWidth  )
+        .attr('height', bHeight + bMargin.top + bMargin.bottom)
+        .attr('transform', 'translate(0,' + bMargin.top + ')')
 
     var color = d3.scaleLinear()
         .domain([d3.min(data.map(x => x.avgppm)), d3.max(data.map(x => x.avgppm))])
