@@ -1,21 +1,37 @@
-  * {
+html {
+  box-sizing: border-box;
+}
+
+/* *, *:before, *:after {
+  box-sizing: inherit;
+} */
+
+body {
+  margin: 0;
+  font-family: 'Dosis', sans-serif;   
+  background-color: #9c9c9c;
+}
+  
+  
+  
+  /* * {
     margin: 0;
     padding: 0;
-  }
+  } */
   
-  html, body {
+  /* html, body {
     box-sizing: border-box;
     font-family: 'Dosis', sans-serif;   
     background-color: #9c9c9c;
     /* background-color: #D8D8D8;; */ 
-  }
+  /* } */ 
 
 
-.columnContainer {
+/* .columnContainer {
     display: flex;
     flex-direction: column;
     /* height: 97vh; */
-}
+/* } */ 
 
 
 .leftColumn {
@@ -27,22 +43,28 @@
         flex-direction: row;
     }
 
+    .leftColumn, .middleColumn {
+      display: inline-block;
+      vertical-align: top;
+    }
+
     .leftColumn {
         max-width: 185px;
+        /* padding: 60px 30px 30px 30px; */
         /* margin-bottom: 20px; */
     }
     
     .middleColumn {
         padding: 0 20px 0 30px; 
-        width: 70%; 
+        width: calc(100% - 800px);
         margin-top: 100px; 
         /* margin-bottom: 20px; */
     }
 
-    .rightColumn {
+    /* .rightColumn {
         width: 35%;
          
-    }
+    } */
 
 }
 
@@ -55,8 +77,8 @@
 }
 
 .bubbleContainer {
-    min-height: 800px;
-    max-height: 1000px;
+    min-height: 200px;
+    /* max-height: 1000px; */
     margin-top: 20px;
     border-radius: 30px;
     /* overflow: hidden; */
@@ -70,22 +92,23 @@
 .lineGraphContainer {
     /* min-height: 850px;
     max-height: 1000px; */
-    height: 100%;
+    /* height: 100%; */
     margin-left: 50px;
     position: relative;
+    /* max-height: 600px; */
 }
 
 
 
-.donutContainer {
+/* .donutContainer {
     /* padding: 30px; */
-    margin-top: 50px;
-    margin-right: 30px;
+    /* margin-top: 50px;
+    margin-right: 30px; */
     /* background-color: white; */
-    min-height: 550px;
-    max-height: 600px;
+    /* min-height: 550px;
+    max-height: 600px; */
     
-}
+/* } */ 
 
 
 /* timeline chart interactivity */
@@ -162,6 +185,4 @@
     }
 
 
-    .bubbleContainer svg {
-        fill: black;
-    }
+    

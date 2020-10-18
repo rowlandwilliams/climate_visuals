@@ -3,8 +3,8 @@ var bubbleChartWidth = document.querySelector('.leftColumn').offsetWidth ; // re
 var bubbleChartHeight = document.querySelector('.bubbleContainer').offsetHeight //- PADDING;  
 
 let bMargin = {top: 0, right: 0, bottom:30, left: 0},
-    bWidth = bubbleChartWidth //- bMargin.left - bMargin.right,
-    bHeight = bubbleChartHeight - bMargin.top - bMargin.bottom;
+    bWidth = LEFT_CHARTS_WIDTH //- bMargin.left - bMargin.right,
+    bHeight = LEFT_ROW_2_HEIGHT - bMargin.top - bMargin.bottom;
 
 
 // pack x circles into a container

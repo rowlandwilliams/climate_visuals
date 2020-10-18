@@ -1,13 +1,16 @@
 // define dimensions for line graph
 var PADDING = 30 // PADDING FROM TOP
 //var LEFT_CHARTS_WIDTH = document.querySelector('.leftColumn').offsetWidth;
-var lineContainerWidth = document.querySelector('.middleColumn').offsetWidth;
-var lineContainerHeight = document.querySelector('.middleColumn').offsetHeight - PADDING;  
+// var lineContainerWidth = document.querySelector('.middleColumn').offsetWidth;
+// var lineContainerHeight = document.querySelector('.middleColumn').offsetHeight - PADDING;  
 
-let lMargin = {top: 50, right: 20, bottom:0, left: 40},
-    lWidth = lineContainerWidth - lMargin.left - lMargin.right,
-    lHeight = lineContainerHeight - lMargin.top - lMargin.bottom;
+let lMargin = {top: 20, right: 20, bottom:0, left: 20},
+    
 
+
+lWidth = MIDDLE_CHARTS_WIDTH - lMargin.left - lMargin.right,
+lHeight = MIDDLE_ROW_2_HEIGHT - lMargin.top - lMargin.bottom;
+// console.log(MIDDLE_ROW_HEIGHT)
 
 let lx0 = d3.scaleTime()
     .domain([new Date(2020, 0, 1), new Date(2020, 11, 31)])
@@ -42,20 +45,20 @@ function plotLineGraph(data) {
         .scale(ly0)
 
     var lsvg = d3.select(".lineGraphContainer").append("svg")
-        .attr('width', lWidth)
-        .attr('height', lHeight)
+        .attr('width', lWidth + lMargin.left + lMargin.right)
+        .attr('height', lHeight +lMargin.top + lMargin.bottom)
         .append('g')
         .attr('transform', 'translate(' + lMargin.left + ',' + lMargin.top + ')');
 
     
-    lsvg.append('g')
-        .attr('class', 'lXAxis')
-        .attr('transform', 'translate(0, ' + (lHeight -10) + ')')
-        .call(lXAxis)
-        .call(g => g.selectAll(".domain, line") // remove axis line and ticks
-        .remove())
-        .call(g => g.selectAll('text')
-        .attr('dx', '2.8em'))
+    // lsvg.append('g')
+    //     .attr('class', 'lXAxis')
+    //     .attr('transform', 'translate(0, ' + (lHeight ) + ')')
+    //     .call(lXAxis)
+    //     .call(g => g.selectAll(".domain, line") // remove axis line and ticks
+    //     .remove())
+    //     .call(g => g.selectAll('text')
+    //     .attr('dx', '2.8em'))
         
     
     lsvg.append('g')
@@ -139,7 +142,7 @@ function plotLineGraph(data) {
     
     
     function mouseover(d) {
-        console.log(d.data)
+        // console.log(d.data)
         focus.attr("transform", "translate(" + lx0(Date.parse(d.data.date)) + "," + ly0(d.data.ppm) + ")");
         focus.select("text").text(d.data.ppm + ' PPM');
         d3.select('.db_ytext')
