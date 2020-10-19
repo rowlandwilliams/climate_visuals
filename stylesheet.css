@@ -54,10 +54,19 @@ body {
 }
 
 .dashboard {
+  background-color: #F4F1F1;
+  opacity: 0.8;
+  border-radius: 5px;
+  color: #202020;
+  font-size: 24px;
   /* background-color: blue; */
   /* padding: 10px; */
   /* min-height: 100px; */
   /* padding: 20px; */
+}
+
+.db_text {
+  padding: 12px;
 }
 
 .titleContainer {

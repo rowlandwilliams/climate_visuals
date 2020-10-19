@@ -11,6 +11,7 @@ let ly0 = d3.scaleLinear()
     .domain([275, 420])
     .range([lHeight - lMargin.bottom, lMargin.top]);
 
+console.log(lx0.domain())    
 let lXAxis = g => g
     .attr("transform", 'translate(0,' + (lHeight - lMargin.bottom) + ')')
     .call(d3.axisBottom(lx0).tickFormat(d3.timeFormat('%b')))
@@ -92,6 +93,7 @@ function plotLineGraph(data) {
     focus.append("circle")
         .attr("fill", "none")
         .attr("class", "notation")
+        .attr('stroke', 'red')
         .attr("stroke-width", "1.5")
         .attr("r", 5);
 
@@ -99,6 +101,25 @@ function plotLineGraph(data) {
         .attr('text-anchor', 'middle')
         .attr("class", "tt_year");
 
+    var crossHair = lsvg.append('g')
+        .attr("class", "crossHair")
+        .style('opacity', 0)
+        // .attr("transform", "translate(-100,-100)");
+       
+    
+    crossHair.append('rect') 
+        .attr('id', 'crossHairY')
+        .attr('height', 3)
+        .attr('width', 100)
+        .attr('fill', 'red')
+        
+    
+    crossHair.append('rect')
+        .attr('id', 'crossHairX')
+        .attr('fill', 'red')
+        .attr('width', 3)
+        .attr('height', 100)
+        
     
     
 
@@ -131,11 +152,21 @@ function plotLineGraph(data) {
     
     
     function mouseover(d) {
-        // console.log(d.data)
+       
         focus.attr("transform", "translate(" + lx0(Date.parse(d.data.date)) + "," + ly0(d.data.ppm) + ")");
         focus.select("text").text(d.data.ppm + ' PPM');
+        // focus.select('.vertical').attr("transform", "translate(" + lx0(Date.parse(d.data.date)) + "," + ly0(275) + ")")
         d3.select('.db_ytext')
             .text(d.data.year)
+        // adjust crossHair style
+        crossHair
+            .style('opacity', 1); 
+        crossHair.select("#crossHairX")
+            .attr("transform", "translate(" + lx0(Date.parse(d.data.date)) + "," + (ly0(ly0.domain()[0]) - 100) + ")")
+
+        crossHair.select("#crossHairY")
+            .attr("transform", "translate(" + lx0(lx0.domain()[0]) + "," + (ly0(d.data.ppm)) + ")")
+         
 
     }
 
@@ -144,6 +175,8 @@ function plotLineGraph(data) {
         focus.attr("transform", "translate(-100,-100)");
         d3.select('.db_ytext')
             .text('')
+        crossHair
+            .style('opacity', 0); 
 
     }
 
