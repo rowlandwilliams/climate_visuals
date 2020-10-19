@@ -92,10 +92,11 @@ function plotLineGraph(data) {
 
     focus.append("circle")
         .attr("fill", "none")
-        .attr("class", "notation")
+        .attr("class", "focus_ring")
         .attr('stroke', 'red')
         .attr("stroke-width", "1.5")
-        .attr("r", 5);
+        .attr("r", 5)
+        .style('opacity', 0)
 
     focus.append("text")
         .attr('text-anchor', 'middle')
@@ -134,49 +135,76 @@ function plotLineGraph(data) {
         .data(v.polygons())
         .enter().append('path')
             .attr('d', function(d) { return d ? "M" + d.join("L") + "Z" : null; })
+            .on('mouseover', d => mouseover(d.data))
+            .on('mouseout', d => mouseout(d.data))
             //.attr('class', function(d) { return d.data.year })
 
     // add tooltip 
     var site = null;
     const radius = 100
 
-    lsvg
-        .on("mousemove", function() {
-        var mouse = d3.mouse(this);
-        var newsite = v.find(mouse[0], mouse[1], radius); // match mouse position to voroni grid
-        if (newsite !== site) {
-            if (site) mouseout(site);
-            site = newsite;
-            if (site) mouseover(site);
-        }})
+    
+
+
+    // lsvg
+    //     .on("mousemove", function() {
+    //     var mouse = d3.mouse(this);
+    //     console.log(mouse)
+    //     var newsite = v.find(mouse[0], mouse[1], radius); // match mouse position to voroni grid
+    //     if (newsite !== site) {
+    //         if (site) mouseout(site);
+    //         site = newsite;
+    //         if (site) mouseover(site);
+    //     }})
     
     
     function mouseover(d) {
+        
+        focus
+            .select('.focus_ring')
+            .style('opacity', 1)
+        focus.attr("transform", "translate(" + lx0(Date.parse(d.date)) + "," + ly0(d.ppm) + ")");
        
-        focus.attr("transform", "translate(" + lx0(Date.parse(d.data.date)) + "," + ly0(d.data.ppm) + ")");
-        focus.select("text").text(d.data.ppm + ' PPM');
-        // focus.select('.vertical').attr("transform", "translate(" + lx0(Date.parse(d.data.date)) + "," + ly0(275) + ")")
-        d3.select('.db_ytext')
-            .text(d.data.year)
+        d3.select('.db_ytext') // change dashboard text
+             .text(d.year)
         // adjust crossHair style
         crossHair
-            .style('opacity', 1); 
+                .style('opacity', 1); 
         crossHair.select("#crossHairX")
-            .attr("transform", "translate(" + lx0(Date.parse(d.data.date)) + "," + (ly0(ly0.domain()[0]) - 100) + ")")
-
+                .attr("transform", "translate(" + lx0(Date.parse(d.date)) + "," + (ly0(ly0.domain()[0]) - 100) + ")")
         crossHair.select("#crossHairY")
-            .attr("transform", "translate(" + lx0(lx0.domain()[0]) + "," + (ly0(d.data.ppm)) + ")")
+                .attr("transform", "translate(" + lx0(lx0.domain()[0]) + "," + (ly0(d.ppm)) + ")")
+        
+        // select line
+        var year = d.year
+        var fill = d3.select('.tile' + year).style('fill');
+
+        d3.selectAll('.year_line')
+            .style('opacity', function(d) {
+                return d.year == year ? 1 : 0.3  })
+            .style('stroke', function(d) {
+                return d.year == year ? fill : '#F4F1F1' })
+            .style('stroke-width', function(d) {
+                return d.year == year ? '3px' : '1px' })
+        
+        
          
 
     }
 
     function mouseout(d) {
-        d3.selectAll('.year_' + d.data.date.substr(0,4)).classed('year--hover', false);
-        focus.attr("transform", "translate(-100,-100)");
-        d3.select('.db_ytext')
-            .text('')
+        focus
+            .select('.focus_ring') // circle
+            .style('opacity', 0)
         crossHair
-            .style('opacity', 0); 
+            .style('opacity', 0);
+
+        d3.selectAll('.year_line')
+            .style('opacity', 1)
+            .style('stroke', '#F4F1F1')
+            .style('stroke-width', '1px')
+        
+       
 
     }
 
