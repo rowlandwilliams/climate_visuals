@@ -30,7 +30,6 @@ var LGCONT_HEIGHT = (document.querySelector('.lineGraphContainer').offsetHeight)
 
 
 
-
 // window.addEventListener('resize', onResize);
 
 // function onResize() {

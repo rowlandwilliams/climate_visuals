@@ -1,3 +1,5 @@
+var timeParse = d3.timeFormat('%d %B')
+
 let lMargin = {top: 20, right: 30, bottom:20, left: 30},
 
 lWidth = LGCONT_WIDTH // initially make width / height equal to container width
@@ -11,7 +13,7 @@ let ly0 = d3.scaleLinear()
     .domain([275, 420])
     .range([lHeight - lMargin.bottom, lMargin.top]);
 
-console.log(lx0.domain())    
+   
 let lXAxis = g => g
     .attr("transform", 'translate(0,' + (lHeight - lMargin.bottom) + ')')
     .call(d3.axisBottom(lx0).tickFormat(d3.timeFormat('%b')))
@@ -166,7 +168,13 @@ function plotLineGraph(data) {
         focus.attr("transform", "translate(" + lx0(Date.parse(d.date)) + "," + ly0(d.ppm) + ")");
        
         d3.select('.db_ytext') // change dashboard text
-             .text(d.year)
+             .text(timeParse(Date.parse(d.date))+ ' ' + d.year)
+
+        d3.select('.db_ppmtext') // change dashboard text
+             .text(d.ppm + ' PPM')
+
+        // d3.select('.db_date')
+        //     .text(timeParse(Date.parse(d.date)))
         // adjust crossHair style
         crossHair
                 .style('opacity', 1); 
