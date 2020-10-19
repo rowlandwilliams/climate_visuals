@@ -14,8 +14,35 @@ function plotCenturies(data) {
     //const root = treemap(data);
     // data.sort((a,b) => b.changepc - a.changepc)
     // console.log(data)
+    // add up data before 17 century inc.
+    var obj = [{
+        'century': 'rest',
+        'changepc': 0
+     }]
+
+    for (var i=0; i<data.length; i++) {
+        if(data[i].century < 18) {
+            var sum = obj.filter(x=>x.century = 'rest')[0].changepc = data[i].changepc
+            var pc = data[i].changepc
+            
+            obj.filter(x=>x.century = 'rest')[0].changepc = sum +pc
+            console.log(obj.filter(x=>x.century = 'rest')[0].changepc)
+        } 
+        else {
+            var temp = {
+                'century': data[i].century,
+                'changepc': data[i].changepc
+            }
+            obj.push(temp) 
+        }
+    }
+
+
+    console.log(obj);
+
+    //console.log(test)
     var data = {
-        'children': data.reverse()
+        'children': obj.reverse()
     }
 
     
@@ -27,15 +54,11 @@ function plotCenturies(data) {
 
 
     const root = d3.hierarchy(data);
-    console.log(root)
+    
     root.sum(d => d.changepc)
         .sort((a,b) => a.changepc - b.changepc)
 
     treeMapLayout(root)
-    console.log(root)
-    console.log(treeMapLayout(root))
-    console.log(root.descendants())
-    console.log(root.leaves())
     
     csvg.selectAll('rect')
         .data(root.leaves())

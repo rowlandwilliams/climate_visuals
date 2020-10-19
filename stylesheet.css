@@ -86,6 +86,9 @@ body {
 
 }
 
+.centDashboard {
+  background-color: green;
+}
 .centSVG {
   fill: red;
 }

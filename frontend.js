@@ -24,7 +24,11 @@ document.querySelector('.lineGraphContainer').setAttribute('style', 'height:' + 
 
 
 var LGCONT_HEIGHT = (document.querySelector('.lineGraphContainer').offsetHeight)
-document.querySelector('.centuriesContainer').setAttribute('style', 'height:' + PAGE_HEIGHT + 'px')
+
+document.querySelector('.centDashboard').setAttribute('style', 'height:' + (PAGE_HEIGHT * 0.4) + 'px')
+
+
+document.querySelector('.centuriesContainer').setAttribute('style', 'height:' + (PAGE_HEIGHT * 0.6) + 'px')
 var CENTCONT_HEIGHT = document.querySelector('.centuriesContainer').offsetHeight;
 
 
@@ -62,6 +66,7 @@ fetch(link)
         
         plotLineGraph(data['second'])
         plotCenturies(data['third'])
+        console.log(data['third'])
         
         
        
