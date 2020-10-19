@@ -1,13 +1,11 @@
-// define plot dimenstions
-var bubbleChartWidth = document.querySelector('.leftColumn').offsetWidth ; // removed padding to fill container
-var bubbleChartHeight = document.querySelector('.bubbleContainer').offsetHeight //- PADDING;  
 
-let bMargin = {top: 20, right: 0, bottom:0, left: 0},
-    bWidth = LEFT_CHARTS_WIDTH //- bMargin.left - bMargin.right,
-    bHeight = LEFT_ROW_2_HEIGHT - bMargin.top - bMargin.bottom
+let bMargin = {top: 20, right: 0, bottom:20, left: 0},
+bHeight = BUBBLE_HEIGHT - bMargin.top - bMargin.bottom,
+bWidth = LEFT_CHARTS_WIDTH //- bMargin.left - bMargin.right,
 
-    // bHeight = LEFT_ROW_2_HEIGHT - bMargin.top - bMargin.bottom;
 
+    
+// console.log('bubble', bHeight)
 
 // pack x circles into a container
 // 352 data point
@@ -45,7 +43,7 @@ function plotTile(data) {
         .attr('class', 'bsvg')
         .attr('width', bWidth  )
         .attr('height', bHeight + bMargin.top + bMargin.bottom)
-        .attr('transform', 'translate(0,' + bMargin.top + ')')
+        .attr('transform', 'translate(' + bMargin.left + ',' + bMargin.top + ')')
 
     var color = d3.scaleLinear()
         .domain([d3.min(data.map(x => x.avgppm)), d3.max(data.map(x => x.avgppm))])
@@ -84,14 +82,14 @@ function plotTile(data) {
         
         d3.selectAll('.year_line')
             .style('opacity', function(d) {
-                return d.year == lClass ? 1 : 0.5  })
+                return d.year == lClass ? 1 : 0.3  })
             .style('stroke', function(d) {
                 return d.year == lClass ? fill : '#F4F1F1' })
             .style('stroke-width', function(d) {
                 return d.year == lClass ? '3px' : '1px' })
 
         d3.selectAll('.lg_ytext')
-                .style('opacity', 0.5) // fade y ticks
+                .style('opacity', 0.3) // fade y ticks
 
         d3.select('.db_ytext')
                 .text(lClass) // year to dashboard

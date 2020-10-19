@@ -1,30 +1,26 @@
-// define dimensions for line graph
-var PADDING = 30 // PADDING FROM TOP
-//var LEFT_CHARTS_WIDTH = document.querySelector('.leftColumn').offsetWidth;
-// var lineContainerWidth = document.querySelector('.middleColumn').offsetWidth;
-// var lineContainerHeight = document.querySelector('.middleColumn').offsetHeight - PADDING;  
+let lMargin = {top: 20, right: 30, bottom:20, left: 30},
 
-let lMargin = {top: 20, right: 20, bottom:0, left: 20},
-    
-
-
-lWidth = MIDDLE_CHARTS_WIDTH - lMargin.left - lMargin.right,
-lHeight = MIDDLE_ROW_2_HEIGHT - lMargin.top - lMargin.bottom;
-// console.log(MIDDLE_ROW_HEIGHT)
+lWidth = LGCONT_WIDTH // initially make width / height equal to container width
+lHeight = LGCONT_HEIGHT
 
 let lx0 = d3.scaleTime()
     .domain([new Date(2020, 0, 1), new Date(2020, 11, 31)])
-    .range([0, lWidth])
+    .range([lMargin.left, lWidth - lMargin.right])
 
 let ly0 = d3.scaleLinear()
-    .domain([274, 415])
-    .range([lHeight, 0]);
+    .domain([275, 420])
+    .range([lHeight - lMargin.bottom, lMargin.top]);
 
-let lXAxis = d3.axisBottom()
-    .scale(lx0)
-    .tickFormat(d3.timeFormat('%b'))
+let lXAxis = g => g
+    .attr("transform", 'translate(0,' + (lHeight - lMargin.bottom) + ')')
+    .call(d3.axisBottom(lx0).tickFormat(d3.timeFormat('%b')))
 
-console.log(new Date(2020, 0, 1))
+
+let  lYAxis = g => g
+    .attr("transform", 'translate(' + lMargin.left +',0)')
+    .call(d3.axisLeft(ly0))   
+
+
 // define line funciton
 let lineGraphLine = d3.line()
     .x(d => lx0(Date.parse(d.date))) 
@@ -36,41 +32,38 @@ var voronoi = d3.voronoi()
     .y(function(d) { return ly0(d.ppm) })//+ Math.random() -0.5})
     // .extent([0, 0], [lWidth, lHeight]); // work on this
 
+
+    
 // plot initial line graph // min ppm 275.3 in1620
 function plotLineGraph(data) {
     
-
-
-    let lYAxis = d3.axisLeft()
-        .scale(ly0)
-
     var lsvg = d3.select(".lineGraphContainer").append("svg")
-        .attr('width', lWidth + lMargin.left + lMargin.right)
-        .attr('height', lHeight +lMargin.top + lMargin.bottom)
-        .append('g')
-        .attr('transform', 'translate(' + lMargin.left + ',' + lMargin.top + ')');
+        .attr('width', lWidth) // could add padding here
+        .attr('height', lHeight)
+        .attr('viewBox', [0, 0, lWidth, lHeight])
+        // .attr('transform', 'translate(' + (lMargin.left) + ',' + (lMargin.top)  + ')')
 
     
-    // lsvg.append('g')
-    //     .attr('class', 'lXAxis')
-    //     .attr('transform', 'translate(0, ' + (lHeight ) + ')')
-    //     .call(lXAxis)
-    //     .call(g => g.selectAll(".domain, line") // remove axis line and ticks
-    //     .remove())
-    //     .call(g => g.selectAll('text')
-    //     .attr('dx', '2.8em'))
+    lsvg.append('g')
+        .call(lXAxis)
+        .call(g => g.selectAll(".domain, line") // remove axis line and ticks
+        .remove())
+        .call(g => g.selectAll('text')
+        .attr('dx', '2.8em'))
+        .attr('stroke', '#F4F1F1')
         
     
     lsvg.append('g')
-        .attr('class', 'lYAxis')
         .call(lYAxis)
+        // .attr('class', 'lYAxis')
+        // .call(lYAxis)
         .call(g => g.selectAll(".domain, line") // remove axis line and ticks
         .remove())
         .call(g => g.selectAll('text') // move labels right
-        .attr('dx', '0.5em'))
+        .attr('dx', 'em'))
         .attr('class', 'lg_ytext')
         .attr('stroke', '#F4F1F1')
-
+        
 
     var year = lsvg.append('g')
         .attr('class', 'year_lines')
@@ -91,13 +84,13 @@ function plotLineGraph(data) {
         
      
         
-    // add focus to hover over grid
+    //add focus to hover over grid
     var focus = lsvg.append("g")
         .attr("class", "focus")
         .attr("transform", "translate(-100,-100)");
 
     focus.append("circle")
-        .attr("fill", "white")
+        .attr("fill", "none")
         .attr("class", "notation")
         .attr("stroke-width", "1.5")
         .attr("r", 5);
@@ -106,8 +99,7 @@ function plotLineGraph(data) {
         .attr('text-anchor', 'middle')
         .attr("class", "tt_year");
 
-    // define voronoi grid
-    //test.forEach(year => year.values.forEach(value => value.year = year.year))
+    
     
 
     var v = voronoi(d3.merge(data.map(x => x.values)))
@@ -136,9 +128,6 @@ function plotLineGraph(data) {
             site = newsite;
             if (site) mouseover(site);
         }})
-        .on('click', updateLineGraph)
-
-    
     
     
     function mouseover(d) {
@@ -158,65 +147,7 @@ function plotLineGraph(data) {
 
     }
 
-    lsvg.on('click', updateLineGraph)
 
-    function updateLineGraph(data) {
-        // define new axis
-        let ly1 = d3.scaleLinear()
-            .domain([350, 420])
-            .range([lHeight, 0]);
-
-        let lYAxis = d3.axisLeft()
-            .scale(ly1)
-
-        
-
-        // remove previous axis and lines/text and append new one
-        d3.select('.lineGraphContainer svg').remove()
-
-
-        var lsvg = d3.select(".lineGraphContainer").append("svg")
-            .attr('width', lWidth)
-            .attr('height', lHeight)
-            .append('g')
-            .attr('transform', 'translate(' + lMargin.left + ',' + lMargin.top + ')');
-
-        
-        lsvg.append('g')
-            .attr('class', 'lXAxis')
-            .attr('transform', 'translate(0, ' + (lHeight -10) + ')')
-            .call(lXAxis)
-            .call(g => g.selectAll(".domain, line") // remove axis line and ticks
-            .remove())
-            .call(g => g.selectAll('text')
-            .attr('dx', '2.8em'))
-
-        lsvg.append('g')
-            .attr('class', 'lYAxis')
-            .call(lYAxis)
-            .call(g => g.selectAll(".domain, line") // remove axis line and ticks
-            .remove())
-            .call(g => g.selectAll('text') // move labels right
-            .attr('dx', '0.5em'))
-            .attr('class', 'lg_ytext')
-            .attr('stroke', '#F4F1F1')
-
-        var year = lsvg.append('g')
-            .attr('class', 'year_lines')
-    
-    
-        year.selectAll('.year_line')    
-            .data([data])
-        .enter() // apply path to each year
-            .append('path')
-            .attr('class', 'year_line')
-            .attr('id', function(d,i) {console.log(d); return "year_" + d.year})
-            //.attr('id', 'lgline')
-            .attr('d', function(d) { return lineGraphLine(d.values); })
-            .attr('fill', 'none')
-            .style('stroke', '#F4F1F1')
-            .style('stroke-width', 1)
-    }
     
 }
 
