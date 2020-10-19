@@ -1,5 +1,5 @@
 // HEIGHTS
-var PAGE_HEIGHT = window.innerHeight;
+var PAGE_HEIGHT = window.innerHeight - 40;
 var PAGE_WIDTH = window.innerWidth
 var PADDING = 30;
 
@@ -59,8 +59,10 @@ fetch(link)
         
         
         plotTile(data['first'])
-        //plotDonut(data['third'])
+        
         plotLineGraph(data['second'])
+        plotCenturies(data['third'])
+        
         
        
     })

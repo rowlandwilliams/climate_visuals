@@ -10,3 +10,45 @@ var csvg = d3.select(".centuriesContainer").append("svg")
         .attr('class', 'centSVG')
         .attr('transform', 'translate(' + cMargin.left + ',' + cMargin.top + ')')
 
+function plotCenturies(data) {
+    //const root = treemap(data);
+    // data.sort((a,b) => b.changepc - a.changepc)
+    // console.log(data)
+    var data = {
+        'children': data.reverse()
+    }
+
+    
+
+    
+
+    const treeMapLayout = d3.treemap()
+                        .size([cWidth, cHeight])
+
+
+    const root = d3.hierarchy(data);
+    console.log(root)
+    root.sum(d => d.changepc)
+        .sort((a,b) => a.changepc - b.changepc)
+
+    treeMapLayout(root)
+    console.log(root)
+    console.log(treeMapLayout(root))
+    console.log(root.descendants())
+    console.log(root.leaves())
+    
+    csvg.selectAll('rect')
+        .data(root.leaves())
+            .enter()
+        .append('rect')
+        .attr('x', d=>d.x0)
+        .attr('y', d=>d.y0)
+        .attr("width",  d=>d.x1 - d.x0)
+        .attr("height", d=>d.y1 - d.y0)
+        .attr("fill", "#5AB7A9")
+        .attr('stroke', 'black')
+
+
+
+
+}
