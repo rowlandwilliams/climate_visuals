@@ -3,10 +3,10 @@ var CHARTS_HEIGHT = window.innerHeight;
 var PADDING = 30;
 var LEFT_ROW_1_HEIGHT = document.querySelector('.titleContainer').offsetHeight //+ 2 * PADDING; // title
 var LEFT_ROW_2_HEIGHT = CHARTS_HEIGHT - LEFT_ROW_1_HEIGHT - 20//PADDING; // bubble tiles
-// var LEFT_ROW_3_HEIGHT = CHARTS_HEIGHT - LEFT_ROW_1_HEIGHT - LEFT_ROW_2_HEIGHT - PADDING - document.querySelector('#bottom-container .chart-title').offsetHeight;
+
 var MIDDLE_ROW_1_HEIGHT = document.querySelector('.dashboard').offsetHeight + 3 * PADDING + 20;
 var MIDDLE_ROW_2_HEIGHT = (CHARTS_HEIGHT - MIDDLE_ROW_1_HEIGHT) - 0// - document.querySelector('').offsetHeight) * 0.75;
-// var RIGHT_ROW_3_HEIGHT = (CHARTS_HEIGHT - RIGHT_ROW_1_HEIGHT - document.querySelector('#middle-row .chart-title').offsetHeight) * 0.25;
+
 // WIDTHS
 var LEFT_CHARTS_WIDTH = document.querySelector('.leftColumn').offsetWidth;
 var MIDDLE_CHARTS_WIDTH = document.querySelector('.middleColumn').offsetWidth - PADDING;
