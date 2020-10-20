@@ -38,10 +38,10 @@ function generatePos(index) {
 // Build color scale
 
 
-function plotTile(data) {
+function plotTile() {
     // append svg
-    
-    var data = data.bubble;
+    console.log(global)
+    //var data = data.bubble;
 
     const bsvg = d3.select('.bubbleContainer').append('svg')
         .attr('class', 'bsvg')
@@ -50,12 +50,12 @@ function plotTile(data) {
         .attr('transform', 'translate(' + bMargin.left + ',' + bMargin.top + ')')
 
     var color = d3.scaleLinear()
-        .domain([d3.min(data.map(x => x.avgppm)), d3.max(data.map(x => x.avgppm))])
+        .domain([d3.min(global.bubble.map(x => x.avgppm)), d3.max(global.bubble.map(x => x.avgppm))])
         .range(['rgba(255, 105, 97, 0.5)', 'rgba(255, 105, 97, 1)'])
 // red = 'rgba(255, 105, 97, 1)', rgb(58,58,71) black
     // append rect and enter data
     bsvg.selectAll('rect')
-        .data(data)
+        .data(global.bubble)
             .enter()
         .append('rect')
         .style('opacity', 1)
@@ -116,11 +116,11 @@ function plotTile(data) {
     }
 
 
+
+
+
+
+
+
+
 }
-
-
-
-
-
-
-

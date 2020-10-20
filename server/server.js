@@ -37,7 +37,8 @@ app.get('/', function(req, res){
                 week: moment(new Date(x[0], x[1], x[2])).week(),
                 ymd: x[0] + '_' + x[1] + '_' + x[2],
                 date: new Date(x[0], x[1], x[2]),
-                date2: new Date(2020, x[1], x[2])
+                date2: new Date(2020, x[1], x[2]),
+                century: Math.floor(((Number(x[0]) - 1) / 100) + 1)
 
             }))
             
@@ -46,6 +47,8 @@ app.get('/', function(req, res){
             var latestData = data.slice(data.length-7);
             var latestYear = latestData[latestData.length - 1].year
             var fullData = {}; // data to send
+
+            
 
             // filter data from 1500
             var data = data.filter(x => x.year <= latestYear && x.year >= 1520)
@@ -84,6 +87,7 @@ app.get('/', function(req, res){
 
             var lineData = allYears.map((x) => ({
                 'year': x,
+                'century': Math.floor(((x-1) / 100) + 1),
                 'values': data
                             .filter((y) => y.year == x)
                             .map(z => ({
@@ -144,9 +148,11 @@ app.get('/', function(req, res){
             }
             
             // aggregate the change from 1500 - 1700
+            
+            
             console.log(change)
 
-            fullData['centuries'] = change;    
+            fullData['centuries'] = change.shift(); // remove 16th    
     
             // write to file
             fullData = JSON.stringify(fullData)
@@ -157,7 +163,7 @@ app.get('/', function(req, res){
         }
         res.setHeader('Access-Control-Allow-Origin', '*');
         //res.send(originalData);
-        res.send(data)
+        res.send(lineData)
 
 
     })

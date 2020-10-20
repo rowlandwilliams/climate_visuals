@@ -10,11 +10,14 @@ var csvg = d3.select(".centuriesContainer").append("svg")
         .attr('class', 'centSVG')
         .attr('transform', 'translate(' + cMargin.left + ',' + cMargin.top + ')')
 
-function plotCenturies(data) {
+function plotCenturies() {
+    
+    
     var data = {
-        'children': data.centuries.reverse()
+        'children': global.centuries.reverse()
     }
-
+    console.log(data)
+    
     const treeMapLayout = d3.treemap()
                         .size([cWidth, cHeight])
 
@@ -37,7 +40,9 @@ function plotCenturies(data) {
         .attr("height", d=>d.y1 - d.y0)
         .attr("fill", "#5AB7A9")
         .attr('stroke', 'black')
-        .on('click', d => updateLineGraph)
+        .on('click', d => updateLineGraph(d.data.century))
 
+    
 
 }
+

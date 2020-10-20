@@ -24,24 +24,23 @@ var CENTCONT_HEIGHT = document.querySelector('.centuriesContainer').offsetHeight
 
 
 // DEFINE GLOBAL DATA
-var global = 0;
+var global = [];
 var link = './data.json'
+
 
 fetch(link)
     .then(response => response.json())
     .then(data => {
         
-        var global = data;
-        console.log(global)
-        plotTile(global)
-        plotLineGraph(global)
-        plotCenturies(global)
+        global = data;
         
-        
-        
-       
-    })
+        plotTile()
+        plotLineGraph()
+        plotCenturies()
+          
+});
 
-console.log(global)
+
+
 
   
