@@ -11,47 +11,12 @@ var csvg = d3.select(".centuriesContainer").append("svg")
         .attr('transform', 'translate(' + cMargin.left + ',' + cMargin.top + ')')
 
 function plotCenturies(data) {
-    //const root = treemap(data);
-    // data.sort((a,b) => b.changepc - a.changepc)
-    // console.log(data)
-    // add up data before 17 century inc.
-    var obj = [{
-        'century': 'rest',
-        'changepc': 0
-     }]
-
-    for (var i=0; i<data.length; i++) {
-        if(data[i].century < 18) {
-            var sum = obj.filter(x=>x.century = 'rest')[0].changepc = data[i].changepc
-            var pc = data[i].changepc
-            
-            obj.filter(x=>x.century = 'rest')[0].changepc = sum +pc
-            console.log(obj.filter(x=>x.century = 'rest')[0].changepc)
-        } 
-        else {
-            var temp = {
-                'century': data[i].century,
-                'changepc': data[i].changepc
-            }
-            obj.push(temp) 
-        }
-    }
-
-
-    console.log(obj);
-
-    //console.log(test)
     var data = {
-        'children': obj.reverse()
+        'children': data.centuries.reverse()
     }
-
-    
-
-    
 
     const treeMapLayout = d3.treemap()
                         .size([cWidth, cHeight])
-
 
     const root = d3.hierarchy(data);
     
@@ -59,19 +24,20 @@ function plotCenturies(data) {
         .sort((a,b) => a.changepc - b.changepc)
 
     treeMapLayout(root)
+    console.log(root.leaves())
     
     csvg.selectAll('rect')
         .data(root.leaves())
             .enter()
         .append('rect')
+        .attr('class', d=> 'cent' + d.data.century)
         .attr('x', d=>d.x0)
         .attr('y', d=>d.y0)
         .attr("width",  d=>d.x1 - d.x0)
         .attr("height", d=>d.y1 - d.y0)
         .attr("fill", "#5AB7A9")
         .attr('stroke', 'black')
-
-
+        .on('click', d => updateLineGraph)
 
 
 }

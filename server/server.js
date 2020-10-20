@@ -43,8 +43,12 @@ app.get('/', function(req, res){
             
 
             ///// BEGIN DATA FORMATTING ///// 
-            var originalData = data;
+            var latestData = data.slice(data.length-7);
+            var latestYear = latestData[latestData.length - 1].year
             var fullData = {}; // data to send
+
+            // filter data from 1500
+            var data = data.filter(x => x.year <= latestYear && x.year >= 1520)
 
 
             ///// TILES /////
@@ -62,7 +66,8 @@ app.get('/', function(req, res){
 
             // round avg ppm
             bubbleData.forEach(year => (year.avgppm = Math.round(year.avgppm * 100) / 100))
-            fullData['first'] = bubbleData;
+            fullData['bubble'] = bubbleData;
+            console.log(bubbleData.length)
             
             
             
@@ -72,14 +77,14 @@ app.get('/', function(req, res){
             // if data is weekly or daily, can plot according to y axis date
             // get unique years
             // get last 7 days of data and calculate average
-            var latestData = data.slice(data.length-7);
+            
 
-            var allYears = [... new Set(originalData.map(x => x.year))]
+            var allYears = [... new Set(data.map(x => x.year))]
             // for each year new dataset
 
             var lineData = allYears.map((x) => ({
                 'year': x,
-                'values': originalData
+                'values': data
                             .filter((y) => y.year == x)
                             .map(z => ({
                                 'date': z.date2,
@@ -110,34 +115,38 @@ app.get('/', function(req, res){
                     
                 }
             })
-            console.log(lineData)
-            fullData['second'] = lineData
+            // console.log(lineData)
+            fullData['linegraph'] = lineData
             
         
 
-            ///// DONUT /////
+            ///// CENTURIES /////
             // calculate change 
             // difference between start and end of century
             var centuries = bubbleData.map(x => x.century)
             var centuries = [... new Set(centuries)]
             //var totalChange =      
             
-            var change = centuries.map(test => 
-                    bubbleData
-                        .filter((x) => x.century == test))
+            var change = centuries.map(cent => 
+                    bubbleData // yearly averages
+                        .filter((x) => x.century == cent))
                     .map(y => ({
                         'century': y[0].century,
                         'change': y[y.length-1].avgppm - y[0].avgppm
                     }))
                     
-            var changeSum = change.map(x=>x.change).reduce((a,b) => a + b, 0)
+            var changeSum = change.map(x=>x.change).filter(x => x >= 0).reduce((a,b) => a + b, 0) // % of the increase - neg values 0
+            
             //var totalChange = change
             for (var i=0; i<change.length; i++) {
-                //change[i].change = change[i].change < 0 ? 0 : change[i].change;
+                change[i].change = change[i].change < 0 ? 0 : change[i].change;
                 change[i].changepc = change[i].change/changeSum * 100
             }
             
-            fullData['third'] = change;    
+            // aggregate the change from 1500 - 1700
+            console.log(change)
+
+            fullData['centuries'] = change;    
     
             // write to file
             fullData = JSON.stringify(fullData)
@@ -148,7 +157,7 @@ app.get('/', function(req, res){
         }
         res.setHeader('Access-Control-Allow-Origin', '*');
         //res.send(originalData);
-        res.send(lineData)
+        res.send(data)
 
 
     })

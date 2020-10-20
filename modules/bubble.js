@@ -9,22 +9,23 @@ bWidth = LEFT_CHARTS_WIDTH //- bMargin.left - bMargin.right,
 
 // pack x circles into a container
 // 352 data point
+// 254 from 1500, 250 from 1520
 
 // NEED TO ADD VERSION THAT SCALES WITH ADDED YEARS
-var xCell = (bWidth ) / 8;
-var yCell = (bHeight ) / 44;
+var xCell = (bWidth ) / 5;
+var yCell = (bHeight ) / 50;
 
 
 // define function to generate position for given datapoint
 function generatePos(index) {
-    var firstPos = {x:0, y: yCell*43};
+    var firstPos = {x:0, y: yCell*49};
 
     if(!index) return firstPos;
     
 
     // index 1 = go -1 in x direction and 0 in y
-    var nColumn = index % 8
-    var nRow = Math.floor(index / 8)
+    var nColumn = index % 5
+    var nRow = Math.floor(index / 5)
     
     
     return {
@@ -39,6 +40,9 @@ function generatePos(index) {
 
 function plotTile(data) {
     // append svg
+    
+    var data = data.bubble;
+
     const bsvg = d3.select('.bubbleContainer').append('svg')
         .attr('class', 'bsvg')
         .attr('width', bWidth  )

@@ -1,5 +1,5 @@
 var timeParse = d3.timeFormat('%d %B')
-
+var red = 'rgba(255, 105, 97, 1)'
 let lMargin = {top: 20, right: 30, bottom:20, left: 30},
 
 lWidth = LGCONT_WIDTH // initially make width / height equal to container width
@@ -35,11 +35,16 @@ var voronoi = d3.voronoi()
     .y(function(d) { return ly0(d.ppm) })//+ Math.random() -0.5})
     // .extent([0, 0], [lWidth, lHeight]); // work on this
 
+var test;
 
-    
+function update(data) {
+    test = data  
+}
+  
 // plot initial line graph // min ppm 275.3 in1620
 function plotLineGraph(data) {
-    
+    var data = data.linegraph
+
     var lsvg = d3.select(".lineGraphContainer").append("svg")
         .attr('width', lWidth) // could add padding here
         .attr('height', lHeight)
@@ -95,7 +100,7 @@ function plotLineGraph(data) {
     focus.append("circle")
         .attr("fill", "none")
         .attr("class", "focus_ring")
-        .attr('stroke', 'red')
+        .attr('stroke', red)
         .attr("stroke-width", "1.5")
         .attr("r", 5)
         .style('opacity', 0)
@@ -114,12 +119,12 @@ function plotLineGraph(data) {
         .attr('id', 'crossHairY')
         .attr('height', 3)
         .attr('width', 100)
-        .attr('fill', 'red')
+        .attr('fill', red)
         
     
     crossHair.append('rect')
         .attr('id', 'crossHairX')
-        .attr('fill', 'red')
+        .attr('fill', red)
         .attr('width', 3)
         .attr('height', 100)
         
@@ -139,25 +144,14 @@ function plotLineGraph(data) {
             .attr('d', function(d) { return d ? "M" + d.join("L") + "Z" : null; })
             .on('mouseover', d => mouseover(d.data))
             .on('mouseout', d => mouseout(d.data))
+            
             //.attr('class', function(d) { return d.data.year })
 
     // add tooltip 
     var site = null;
     const radius = 100
 
-    
 
-
-    // lsvg
-    //     .on("mousemove", function() {
-    //     var mouse = d3.mouse(this);
-    //     console.log(mouse)
-    //     var newsite = v.find(mouse[0], mouse[1], radius); // match mouse position to voroni grid
-    //     if (newsite !== site) {
-    //         if (site) mouseout(site);
-    //         site = newsite;
-    //         if (site) mouseover(site);
-    //     }})
     
     
     function mouseover(d) {
@@ -216,8 +210,30 @@ function plotLineGraph(data) {
 
     }
 
-
+    passData(data)
     
+}
+
+function passData(data) {
+    updateLineGraph(data)
+}
+
+function updateLineGraph() {
+    fetch(link)
+        .then(response => response.json())
+        .then(data => {
+        
+        
+        
+        plotLineGraph(data)
+        
+        
+        
+        
+       
+    })
+        
+      
 }
 
 
