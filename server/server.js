@@ -87,18 +87,6 @@ app.get('/', function(req, res){
             // for each year new dataset
 
             
-            // .reduce((a,year) => {
-            //     var cent = year.century;
-            //     a[cent] = year;
-            //     return a
-            // }, {})
-
-        
-            // get data into array of objects for each century and then add to object with century as key
-            // var lineData = allCent.map(cent => 
-            //    data
-            //         .filter((y) => y.century == cent))
-                
             // allYear.map(year => .filter(x => ))
             var months = []
             for (var i=0; i<13; i++) {
@@ -106,20 +94,20 @@ app.get('/', function(req, res){
             }
             
 
-            //[{'c21': [{year: 2020}, {year: 2019}]]]
+            // first extract required data from raw and add century (now a flat array)
             var lineData = allYears.map(year => ({
                 'century': Math.floor(((year - 1) / 100) + 1),
                 'year': year,
                 'values': data
                     .filter(x => x.year == year)
                     .map(y => ({
-                        'date': y.date,
+                        'date': y.date2,
                         'ppm': y.ppm
 
                     }))
             }))
-
-
+            
+            // if only yearly data available, add month data to help plotting/voronoi
             lineData.forEach(year => {
                     var length = year.values.length;
                     if (length == 1){
@@ -133,51 +121,27 @@ app.get('/', function(req, res){
                         
                     }})
 
+            // convert flat array to array of arrays nested by century        
             var lineData = allCent.map(cent => 
                    lineData
                         .filter((y) => y.century == cent))
 
-            var test = {}
+            var final = []
             
-
+            // pull century out of each year object and use it as a grouping variable
             lineData.forEach(arr => {
+                var temp = {};
+                temp['century'] = arr[0].century
+                temp['year_values'] = []
                 arr.forEach(obj => {
-                    const cent = 'c' + String(obj.century);
                     delete obj.century
-                    // const subset = ({ century , year })(obj);
-                    // console.log(subset)
-                    if (test[cent]) {
-                        test[cent].push(obj)
-                    }
-                    else {
-                        test[cent] = [obj]
-                    }
+                    temp['year_values'].push(obj)
                 })
+                final.push(temp)
             })
                         
-            // add months for earlier year data which is yearly (months help plotting and tooltip generation)
-            
-            
-            
-
-            // lineData.forEach(year => {
-            //     var length = year.values.length;
-            //     if (length > 1){
-            //         year.class = 'multi'
-            //     }
-            //     else {
-            //         year.class = 'single';
-            //         var ppm = year.values[0].ppm;
-            //         year.values = months.map(month => ({
-            //             'date': month,
-            //             'ppm': ppm,
-            //             'year': year.year // add year for voronoi lg
-            //         }))
-                    
-            //     }
-            // })
-            // console.log(lineData)
-            fullData['linegraph'] = test
+            // add to data to send
+            fullData['linegraph'] = final
             
         
 
@@ -213,7 +177,7 @@ app.get('/', function(req, res){
 
             fullData['centuries'] = test_cent //change.shift(); // remove 16th    
     
-            // write to file
+            //write to file
             fullData = JSON.stringify(fullData)
             fs.writeFileSync('data.json', fullData);
             
@@ -222,7 +186,7 @@ app.get('/', function(req, res){
         }
         res.setHeader('Access-Control-Allow-Origin', '*');
         //res.send(originalData);
-        res.send(test)
+        res.send(final)
 
 
     })

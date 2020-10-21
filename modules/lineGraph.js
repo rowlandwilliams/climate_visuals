@@ -71,22 +71,39 @@ function plotLineGraph() {
         .attr('stroke', '#F4F1F1')
         
 
-    var years = lsvg.append('g')
-        .attr('class', 'year_lines')
+    // var years = lsvg.append('g')
+    //     .attr('class', 'year_lines')
 
-
-    years.selectAll('.year_line')    
+    var centuries = lsvg.selectAll('.century')
         .data(global.linegraph)
-    .enter() // apply path to each year
+        .enter()    
+        .append('g')
+        .attr('class', 'century')
+        .attr('id', function(d) { return d.century; })
+        
+    centuries .selectAll('.year_line')
+        .data(d => d.year_values)
+    .enter()
         .append('path')
         .attr('class', 'year_line')
-        .attr('id', function(d,i) {return "year_" + d.year})
-        .attr('cent', function(d,i) {return 'cent_' + d.century})
-        //.attr('id', 'lgline')
+        .attr('id', function(d) { console.log(d); return "year_" + d.year})
         .attr('d', function(d) { return lineGraphLine(d.values); })
         .attr('fill', 'none')
         .style('stroke', '#F4F1F1')
         .style('stroke-width', 1)
+            
+        
+
+    // centuries.selectAll('.century')   
+    //     .data((d,i) => d[i]) 
+    //     .enter() // apply path to each year
+    //     .append('path')
+    //     .attr('class', 'year_line')
+    //     .attr('id', function(d,i) { console.log(d); return "year_" + d.year})
+    //     .attr('d', function(d) { return lineGraphLine(d.values); })
+    //     .attr('fill', 'none')
+    //     .style('stroke', '#F4F1F1')
+    //     .style('stroke-width', 1)
      
         
      
@@ -130,19 +147,19 @@ function plotLineGraph() {
     
     
 
-    var v = voronoi(d3.merge(global.linegraph.map(x => x.values)))
+    // var v = voronoi(d3.merge(global.linegraph.map(x => x.values)))
     
 
-    var voronoiGroup = lsvg.append("g")
-      .attr("class", "voronoi");
+    // var voronoiGroup = lsvg.append("g")
+    //   .attr("class", "voronoi");
 
      
-    voronoiGroup.selectAll('path')
-        .data(v.polygons())
-        .enter().append('path')
-            .attr('d', function(d) { return d ? "M" + d.join("L") + "Z" : null; })
-            .on('mouseover', d => mouseover(d.data))
-            .on('mouseout', d => mouseout(d.data))
+    // voronoiGroup.selectAll('path')
+    //     .data(v.polygons())
+    //     .enter().append('path')
+    //         .attr('d', function(d) { return d ? "M" + d.join("L") + "Z" : null; })
+    //         .on('mouseover', d => mouseover(d.data))
+    //         .on('mouseout', d => mouseout(d.data))
             
             //.attr('class', function(d) { return d.data.year })
 
