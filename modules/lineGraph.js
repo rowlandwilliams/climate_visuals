@@ -71,7 +71,7 @@ function plotLineGraph() {
         .attr('class', 'century')
         .attr('id', function(d) { return d.century; })
         
-    centuries .selectAll('.year_line')
+    centuries.selectAll('.year_line')
         .data(d => d.year_values)
     .enter()
         .append('path')
@@ -171,7 +171,6 @@ function plotLineGraph() {
         
         // select line
         var year = d.year
-        console.log(d)
         var fill = d3.select('.tile' + year).style('fill');
 
         d3.selectAll('.year_line')
@@ -199,7 +198,6 @@ function plotLineGraph() {
             .style('stroke', '#F4F1F1')
             .style('stroke-width', '1px')
         
-       
 
     }
 
@@ -207,44 +205,14 @@ function plotLineGraph() {
     
 }
 
-// function test(data) {
-//     console.log(data)
-//     return data
-// }
+
 
 function updateLineGraph(century) {
     
-    //.select('.voronoi').remove()
-
-    var newData = global.linegraph.filter(x => x.century == century)
-    // console.log(newData)
-    var lines = lsvg.select('.year_lines')
-   
-    // lines.selectAll('path')    
-    //     .data(newData)
-        
-    // console.log(lines)
-    // lines.exit()
-    //     .remove() // remove any 
-    
-
-    
-    // years
-    //     .enter() // apply path to each year
-    //     .append('path')
-    //     .attr('class', 'year_line')
-    //     .attr('id', function(d,i) {return "year_" + d.year})
-    //     //.attr('id', 'lgline')
-    //     .attr('d', function(d) { return lineGraphLine(d.values); })
-    //     .attr('fill', 'none')
-    //     .style('stroke', 'yellow')
-    //     .style('stroke-width', 1)
-
-    // exit remove any line that arent in new data
-    
-
-    // years.exit()
-    // .remove()
+    lsvg.selectAll('.century')
+        .data(global.linegraph.filter(x => x.century == century), function(d) { return d.century; })
+        .exit()
+        .remove()
 
     
 }
