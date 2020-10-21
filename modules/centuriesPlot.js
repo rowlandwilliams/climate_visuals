@@ -42,7 +42,15 @@ function plotCenturies() {
         .attr('stroke', 'black')
         .on('click', d => updateLineGraph(d.data.century))
 
-    
+    csvg.selectAll('text')
+        .data(root.leaves())
+        .enter()
+        .append('text')
+            .attr('x', d=>d.x0+5)
+            .attr('y', d=> d.y0+20)
+            .text(function(d) { return d.data.century })
+            .attr('font-size', '20px')
+            .attr('stroke', 'black')
 
 }
 

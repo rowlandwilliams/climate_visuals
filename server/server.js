@@ -70,7 +70,7 @@ app.get('/', function(req, res){
             // round avg ppm
             bubbleData.forEach(year => (year.avgppm = Math.round(year.avgppm * 100) / 100))
             fullData['bubble'] = bubbleData;
-            console.log(bubbleData.length)
+            //console.log(bubbleData.length)
             
             
             
@@ -80,79 +80,138 @@ app.get('/', function(req, res){
             // if data is weekly or daily, can plot according to y axis date
             // get unique years
             // get last 7 days of data and calculate average
-            
+            var allCent = [... new Set(data.map(x => x.century))]//.map(x => 'c' + x)
+            //console.log(allCent.map(x => Number(x.substr(1,2))))
 
             var allYears = [... new Set(data.map(x => x.year))]
             // for each year new dataset
 
-            var lineData = allYears.map((x) => ({
-                'year': x,
-                'century': Math.floor(((x-1) / 100) + 1),
-                'values': data
-                            .filter((y) => y.year == x)
-                            .map(z => ({
-                                'date': z.date2,
-                                'ppm': z.ppm,
-                                'year': x
-                            }))
-            }))
+            
+            // .reduce((a,year) => {
+            //     var cent = year.century;
+            //     a[cent] = year;
+            //     return a
+            // }, {})
 
-            // add months for earlier year data which is yearly (months help plotting and tooltip generation)
+        
+            // get data into array of objects for each century and then add to object with century as key
+            // var lineData = allCent.map(cent => 
+            //    data
+            //         .filter((y) => y.century == cent))
+                
+            // allYear.map(year => .filter(x => ))
             var months = []
             for (var i=0; i<13; i++) {
                 months.push(new Date(2020, i, 0)) // need to add year functionality
             }
             
-            lineData.forEach(year => {
-                var length = year.values.length;
-                if (length > 1){
-                    year.class = 'multi'
-                }
-                else {
-                    year.class = 'single';
-                    var ppm = year.values[0].ppm;
-                    year.values = months.map(month => ({
-                        'date': month,
-                        'ppm': ppm,
-                        'year': year.year // add year for voronoi lg
+
+            //[{'c21': [{year: 2020}, {year: 2019}]]]
+            var lineData = allYears.map(year => ({
+                'century': Math.floor(((year - 1) / 100) + 1),
+                'year': year,
+                'values': data
+                    .filter(x => x.year == year)
+                    .map(y => ({
+                        'date': y.date,
+                        'ppm': y.ppm
+
                     }))
-                    
-                }
+            }))
+
+
+            lineData.forEach(year => {
+                    var length = year.values.length;
+                    if (length == 1){
+
+                        var ppm = year.values[0].ppm;
+                        year.values = months.map(month => ({
+                            'date': month,
+                            'ppm': ppm,
+                            'year': year.year // add year for voronoi lg
+                        }))
+                        
+                    }})
+
+            var lineData = allCent.map(cent => 
+                   lineData
+                        .filter((y) => y.century == cent))
+
+            var test = {}
+            
+
+            lineData.forEach(arr => {
+                arr.forEach(obj => {
+                    const cent = 'c' + String(obj.century);
+                    delete obj.century
+                    // const subset = ({ century , year })(obj);
+                    // console.log(subset)
+                    if (test[cent]) {
+                        test[cent].push(obj)
+                    }
+                    else {
+                        test[cent] = [obj]
+                    }
+                })
             })
+                        
+            // add months for earlier year data which is yearly (months help plotting and tooltip generation)
+            
+            
+            
+
+            // lineData.forEach(year => {
+            //     var length = year.values.length;
+            //     if (length > 1){
+            //         year.class = 'multi'
+            //     }
+            //     else {
+            //         year.class = 'single';
+            //         var ppm = year.values[0].ppm;
+            //         year.values = months.map(month => ({
+            //             'date': month,
+            //             'ppm': ppm,
+            //             'year': year.year // add year for voronoi lg
+            //         }))
+                    
+            //     }
+            // })
             // console.log(lineData)
-            fullData['linegraph'] = lineData
+            fullData['linegraph'] = test
             
         
 
-            ///// CENTURIES /////
-            // calculate change 
-            // difference between start and end of century
-            var centuries = bubbleData.map(x => x.century)
-            var centuries = [... new Set(centuries)]
-            //var totalChange =      
+            // ///// CENTURIES /////
+            // // calculate change 
+            // // difference between start and end of century
+            // var centuries = bubbleData.map(x => x.century)
+            // var centuries = [... new Set(centuries)]
+            // //var totalChange =      
             
-            var change = centuries.map(cent => 
-                    bubbleData // yearly averages
-                        .filter((x) => x.century == cent))
-                    .map(y => ({
-                        'century': y[0].century,
-                        'change': y[y.length-1].avgppm - y[0].avgppm
-                    }))
+            // var change = centuries.map(cent => 
+            //         bubbleData // yearly averages
+            //             .filter((x) => x.century == cent))
+            //         .map(y => ({
+            //             'century': y[0].century,
+            //             'change': y[y.length-1].avgppm - y[0].avgppm
+            //         }))
                     
-            var changeSum = change.map(x=>x.change).filter(x => x >= 0).reduce((a,b) => a + b, 0) // % of the increase - neg values 0
+            // var changeSum = change.map(x=>x.change).filter(x => x >= 0).reduce((a,b) => a + b, 0) // % of the increase - neg values 0
             
-            //var totalChange = change
-            for (var i=0; i<change.length; i++) {
-                change[i].change = change[i].change < 0 ? 0 : change[i].change;
-                change[i].changepc = change[i].change/changeSum * 100
-            }
+            // //var totalChange = change
+            // for (var i=0; i<change.length; i++) {
+            //     change[i].change = change[i].change < 0 ? 0 : change[i].change;
+            //     change[i].changepc = change[i].change/changeSum * 100
+            // }
             
             // aggregate the change from 1500 - 1700
+            var test_cent = [{'century': 21, 'changepc': 30}, {'century': 20, 'changepc': 30},
+             {'century': 19, 'changepc': 10}, {'century': 18, 'changepc': 10}, {'century': 17, 'changepc': 10},
+             {'century': 16, 'changepc': 10}]
             
             
-            console.log(change)
 
-            fullData['centuries'] = change.shift(); // remove 16th    
+            fullData['centuries'] = test_cent //change.shift(); // remove 16th    
     
             // write to file
             fullData = JSON.stringify(fullData)
@@ -163,7 +222,7 @@ app.get('/', function(req, res){
         }
         res.setHeader('Access-Control-Allow-Origin', '*');
         //res.send(originalData);
-        res.send(lineData)
+        res.send(test)
 
 
     })

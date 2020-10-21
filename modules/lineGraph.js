@@ -81,6 +81,7 @@ function plotLineGraph() {
         .append('path')
         .attr('class', 'year_line')
         .attr('id', function(d,i) {return "year_" + d.year})
+        .attr('cent', function(d,i) {return 'cent_' + d.century})
         //.attr('id', 'lgline')
         .attr('d', function(d) { return lineGraphLine(d.values); })
         .attr('fill', 'none')
@@ -212,33 +213,38 @@ function plotLineGraph() {
     
 }
 
+// function test(data) {
+//     console.log(data)
+//     return data
+// }
 
 function updateLineGraph(century) {
-    // lsvg.selectAll('.year_line').remove()
-    //console.log(global.linegraph.filter(x => x.century == century));
-
-    // const lines = lsvg.selectAll(".year_line")
-    //     .data(global.linegraph.filter(x => x.century == century))
-    // .attr("class", "year_line");
-
-    // var years = lsvg.append('g')
-    //     .attr('class', 'year_lines')
-
-
-    var years = lsvg.selectAll('.year_line')    
-        .data(global.linegraph.filter(x => x.century == century))
-        .exit().remove() // remove any 
     
-    years.data(global.linegraph.filter(x => x.century == century))   
-    .enter() // apply path to each year
-        .append('path')
-        .attr('class', 'year_line')
-        .attr('id', function(d,i) {return "year_" + d.year})
-        //.attr('id', 'lgline')
-        .attr('d', function(d) { console.log(d); return lineGraphLine(d.values); })
-        .attr('fill', 'none')
-        .style('stroke', '#F4F1F1')
-        .style('stroke-width', 1)
+    //.select('.voronoi').remove()
+
+    var newData = global.linegraph.filter(x => x.century == century)
+    // console.log(newData)
+    var lines = lsvg.select('.year_lines')
+    console.log(lines)
+    // lines.selectAll('path')    
+    //     .data(newData)
+        
+    // console.log(lines)
+    // lines.exit()
+    //     .remove() // remove any 
+    
+
+    
+    // years
+    //     .enter() // apply path to each year
+    //     .append('path')
+    //     .attr('class', 'year_line')
+    //     .attr('id', function(d,i) {return "year_" + d.year})
+    //     //.attr('id', 'lgline')
+    //     .attr('d', function(d) { return lineGraphLine(d.values); })
+    //     .attr('fill', 'none')
+    //     .style('stroke', 'yellow')
+    //     .style('stroke-width', 1)
 
     // exit remove any line that arent in new data
     
