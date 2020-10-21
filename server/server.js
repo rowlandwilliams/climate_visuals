@@ -102,7 +102,8 @@ app.get('/', function(req, res){
                     .filter(x => x.year == year)
                     .map(y => ({
                         'date': y.date2,
-                        'ppm': y.ppm
+                        'ppm': y.ppm,
+                        'year': year
 
                     }))
             }))
@@ -111,15 +112,16 @@ app.get('/', function(req, res){
             lineData.forEach(year => {
                     var length = year.values.length;
                     if (length == 1){
-
                         var ppm = year.values[0].ppm;
                         year.values = months.map(month => ({
                             'date': month,
                             'ppm': ppm,
                             'year': year.year // add year for voronoi lg
                         }))
+                    }
+                    
                         
-                    }})
+                    })
 
             // convert flat array to array of arrays nested by century        
             var lineData = allCent.map(cent => 

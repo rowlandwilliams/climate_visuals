@@ -32,8 +32,8 @@ let lineGraphLine = d3.line()
 
 // define voronoi function
 var voronoi = d3.voronoi()
-    .x(function(d) { return lx0(Date.parse(d.date)) })//+ Math.random() -0.5})
-    .y(function(d) { return ly0(d.ppm) })//+ Math.random() -0.5})
+    .x(function(d) { return lx0(Date.parse(d.date)) })
+    .y(function(d) { return ly0(d.ppm) })
     // .extent([0, 0], [lWidth, lHeight]); // work on this
 
 var lsvg = d3.select(".lineGraphContainer").append("svg")
@@ -43,13 +43,7 @@ var lsvg = d3.select(".lineGraphContainer").append("svg")
   
 // plot initial line graph // min ppm 275.3 in1620
 function plotLineGraph() {
-    
-    // var data = data.linegraph
 
-    
-        // .attr('transform', 'translate(' + (lMargin.left) + ',' + (lMargin.top)  + ')')
-
-    
     lsvg.append('g')
         .call(lXAxis)
         .call(g => g.selectAll(".domain, line") // remove axis line and ticks
@@ -61,8 +55,7 @@ function plotLineGraph() {
     
     lsvg.append('g')
         .call(lYAxis)
-        // .attr('class', 'lYAxis')
-        // .call(lYAxis)
+        .attr('class', 'lYAxis')
         .call(g => g.selectAll(".domain, line") // remove axis line and ticks
         .remove())
         .call(g => g.selectAll('text') // move labels right
@@ -70,9 +63,6 @@ function plotLineGraph() {
         .attr('class', 'lg_ytext')
         .attr('stroke', '#F4F1F1')
         
-
-    // var years = lsvg.append('g')
-    //     .attr('class', 'year_lines')
 
     var centuries = lsvg.selectAll('.century')
         .data(global.linegraph)
@@ -86,28 +76,14 @@ function plotLineGraph() {
     .enter()
         .append('path')
         .attr('class', 'year_line')
-        .attr('id', function(d) { console.log(d); return "year_" + d.year})
+        .attr('id', function(d) { return "year_" + d.year })
         .attr('d', function(d) { return lineGraphLine(d.values); })
         .attr('fill', 'none')
         .style('stroke', '#F4F1F1')
         .style('stroke-width', 1)
             
         
-
-    // centuries.selectAll('.century')   
-    //     .data((d,i) => d[i]) 
-    //     .enter() // apply path to each year
-    //     .append('path')
-    //     .attr('class', 'year_line')
-    //     .attr('id', function(d,i) { console.log(d); return "year_" + d.year})
-    //     .attr('d', function(d) { return lineGraphLine(d.values); })
-    //     .attr('fill', 'none')
-    //     .style('stroke', '#F4F1F1')
-    //     .style('stroke-width', 1)
-     
-        
-     
-        
+         
     //add focus to hover over grid
     var focus = lsvg.append("g")
         .attr("class", "focus")
@@ -147,19 +123,19 @@ function plotLineGraph() {
     
     
 
-    // var v = voronoi(d3.merge(global.linegraph.map(x => x.values)))
-    
+    var v = voronoi(d3.merge(d3.merge(global.linegraph.map(x => x.year_values.map(y => y.values)))))
+    //console.log(d3.merge(d3.merge(global.linegraph.map(x => x.year_values.map(y => y.values)))))
 
-    // var voronoiGroup = lsvg.append("g")
-    //   .attr("class", "voronoi");
+    var voronoiGroup = lsvg.append("g")
+      .attr("class", "voronoi");
 
      
-    // voronoiGroup.selectAll('path')
-    //     .data(v.polygons())
-    //     .enter().append('path')
-    //         .attr('d', function(d) { return d ? "M" + d.join("L") + "Z" : null; })
-    //         .on('mouseover', d => mouseover(d.data))
-    //         .on('mouseout', d => mouseout(d.data))
+    voronoiGroup.selectAll('path')
+        .data(v.polygons())
+        .enter().append('path')
+            .attr('d', function(d) { return d ? "M" + d.join("L") + "Z" : null; })
+            .on('mouseover', d => mouseover(d.data))
+            .on('mouseout', d => mouseout(d.data))
             
             //.attr('class', function(d) { return d.data.year })
 
@@ -195,6 +171,7 @@ function plotLineGraph() {
         
         // select line
         var year = d.year
+        console.log(d)
         var fill = d3.select('.tile' + year).style('fill');
 
         d3.selectAll('.year_line')
@@ -242,7 +219,7 @@ function updateLineGraph(century) {
     var newData = global.linegraph.filter(x => x.century == century)
     // console.log(newData)
     var lines = lsvg.select('.year_lines')
-    console.log(lines)
+   
     // lines.selectAll('path')    
     //     .data(newData)
         
