@@ -94,6 +94,8 @@ body {
 }
 
 
-
+.lYAxis path , line {
+  stroke: none;
+}
 
     
