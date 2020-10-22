@@ -77,50 +77,46 @@ function plotTile() {
         // })
         // .style('opacity', 1)
 
-    function bmouseover() {
-        // define initial colour
-        var fill = d3.select(this).style('fill');
+    
 
-        // define linegraph line class and apply respective tile colour
-        var lClass =  d3.select(this).attr('class').substring(4)
-        
-        d3.selectAll('.year_line')
-            .style('opacity', function(d) {
-                return d.year == lClass ? 1 : 0.3  })
-            .style('stroke', function(d) {
-                return d.year == lClass ? fill : '#F4F1F1' })
-            .style('stroke-width', function(d) {
-                return d.year == lClass ? '3px' : '1px' })
-
-        d3.selectAll('.lg_ytext')
-                .style('opacity', 0.3) // fade y ticks
-
-        d3.select('.db_ytext')
-                .text(lClass) // year to dashboard
-        
-        
-        
-    } 
-
-    function bmouseout() {
-        d3.selectAll('.year_line')
-            .style('opacity', 1)
-            .style('stroke', '#F4F1F1')
-            .style('stroke-width', '1px')
-
-        d3.selectAll('.lg_ytext')
-            .style('opacity', 1)
-
-        d3.select('.db_ytext')
-            .text('') // remove text
-    }
+}
 
 
+function bmouseover() {
+    // define initial colour
+    var fill = d3.select(this).style('fill');
 
+    // define linegraph line class and apply respective tile colour
+    var lClass =  d3.select(this).attr('class').substring(4)
+    
+    d3.selectAll('.y-line')
+        .style('opacity', function(d) {
+            return d.year == lClass ? 1 : 0.3  })
+        .style('stroke', function(d) {
+            return d.year == lClass ? fill : '#F4F1F1' })
+        .style('stroke-width', function(d) {
+            return d.year == lClass ? '3px' : '1px' })
 
+    d3.selectAll('.lg_ytext')
+            .style('opacity', 0.3) // fade y ticks
 
+    d3.select('.db_ytext')
+            .text(lClass) // year to dashboard
+    
+    d3.select('.db_ppmtext')
+            .text(d3.select(this).attr('d') + ' PPM (yearly average)')
+    
+} 
 
+function bmouseout() {
+    d3.selectAll('.y-line')
+        .style('opacity', 1)
+        .style('stroke', '#F4F1F1')
+        .style('stroke-width', '1px')
 
+    d3.selectAll('.lg_ytext')
+        .style('opacity', 1)
 
-
+    d3.selectAll('.db_ytext, .db_ppmtext')
+        .text('') // remove text
 }

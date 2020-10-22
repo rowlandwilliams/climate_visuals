@@ -77,7 +77,7 @@ function plotLineGraph() {
         .data(d => d.year_values)
     .enter()
         .append('path')
-        .attr('class', d => 'y-line' + d.year)
+        .attr('class', d => 'y-line ' + d.year)
         .attr('d', function(d) { return lineGraphLine(d.values); })
         .attr('fill', 'none')
         .style('stroke', '#F4F1F1')
@@ -145,61 +145,7 @@ function plotLineGraph() {
 
     
     
-    function mouseover(d) {
-        
-        focus
-            .select('.focus_ring')
-            .style('opacity', 1)
-        focus.attr("transform", "translate(" + lx0(Date.parse(d.date)) + "," + ly0(d.ppm) + ")");
-       
-        d3.select('.db_ytext') // change dashboard text
-             .text(timeParse(Date.parse(d.date))+ ' ' + d.year)
-
-        d3.select('.db_ppmtext') // change dashboard text
-             .text(d.ppm + ' PPM')
-
-        // d3.select('.db_date')
-        //     .text(timeParse(Date.parse(d.date)))
-        // adjust crossHair style
-        crossHair
-                .style('opacity', 1); 
-        crossHair.select("#crossHairX")
-                .attr("transform", "translate(" + lx0(Date.parse(d.date)) + "," + (ly0(ly0.domain()[0]) - 100) + ")")
-        crossHair.select("#crossHairY")
-                .attr("transform", "translate(" + lx0(lx0.domain()[0]) + "," + (ly0(d.ppm)) + ")")
-        
-        // select line
-        var year = d.year
-        var fill = d3.select('.tile' + year).style('fill');
-
-        d3.selectAll('.year_line')
-            .style('opacity', function(d) {
-                return d.year == year ? 1 : 0.3  })
-            .style('stroke', function(d) {
-                return d.year == year ? fill : '#F4F1F1' })
-            .style('stroke-width', function(d) {
-                return d.year == year ? '3px' : '1px' })
-        
-        
-         
-
-    }
-
-    function mouseout(d) {
-        focus
-            .select('.focus_ring') // circle
-            .style('opacity', 0)
-        crossHair
-            .style('opacity', 0);
-
-        d3.selectAll('.year_line')
-            .style('opacity', 1)
-            .style('stroke', '#F4F1F1')
-            .style('stroke-width', '1px')
-        
-
-    }
-
+    
     
     
 }
@@ -228,18 +174,71 @@ function updateLineGraph(century) {
         .data(d => d.year_values)
         .transition().duration(1400).delay(500)
         .attr('d', d => lineGraphLine(d.values));
-
-
-    
-
-
-
-    
-
-    
+   
 }
         
       
 
+function mouseover(d) {
+     lsvg.select('.focus')   
+        .select('.focus_ring')
+        .style('opacity', 1)
+    
+    
+    lsvg.select('.focus')
+        .attr("transform", "translate(" + lx0(Date.parse(d.date)) + "," + ly0(d.ppm) + ")");
+   
+    d3.select('.db_ytext') // change dashboard text
+         .text(timeParse(Date.parse(d.date))+ ' ' + d.year)
+
+    d3.select('.db_ppmtext') // change dashboard text
+         .text(d.ppm + ' PPM')
+
+    // d3.select('.db_date')
+    //     .text(timeParse(Date.parse(d.date)))
+    // adjust crossHair style
+    var crossHair = lsvg.select('.crossHair')
+           
+    crossHair.style('opacity', 1); 
+    crossHair.select("#crossHairX")
+            .attr("transform", "translate(" + lx0(Date.parse(d.date)) + "," + (ly0(ly0.domain()[0]) - 100) + ")")
+    crossHair.select("#crossHairY")
+            .attr("transform", "translate(" + lx0(lx0.domain()[0]) + "," + (ly0(d.ppm)) + ")")
+    
+    // select line
+    var year = d.year
+    
+    var fill = d3.select('.tile' + year).style('fill');
+
+    d3.selectAll('.y-line')
+        .style('opacity', function(d) {
+            return d.year == year ? 1 : 0.3  })
+        .style('stroke', function(d) {
+            return d.year == year ? fill : '#F4F1F1' })
+        .style('stroke-width', function(d) {
+            return d.year == year ? '3px' : '1px' })
+    
+    
+     
+
+}
+
+function mouseout(d) {
+    lsvg.select('.focus')
+        .select('.focus_ring') // circle
+        .style('opacity', 0)
+    
+    lsvg.select('.crossHair')
+        .style('opacity', 0);
+
+    d3.selectAll('.y-line')
+        .style('opacity', 1)
+        .style('stroke', '#F4F1F1')
+        .style('stroke-width', '1px')
+    
+    d3.selectAll('.db_ytext, .db_ppmtext')
+        .text('') // remove text
+
+}
 
 
