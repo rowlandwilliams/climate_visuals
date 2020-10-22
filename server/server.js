@@ -150,34 +150,33 @@ app.get('/', function(req, res){
             // ///// CENTURIES /////
             // // calculate change 
             // // difference between start and end of century
-            // var centuries = bubbleData.map(x => x.century)
-            // var centuries = [... new Set(centuries)]
-            // //var totalChange =      
             
-            // var change = centuries.map(cent => 
-            //         bubbleData // yearly averages
-            //             .filter((x) => x.century == cent))
-            //         .map(y => ({
-            //             'century': y[0].century,
-            //             'change': y[y.length-1].avgppm - y[0].avgppm
-            //         }))
+            //var totalChange =      
+            
+            var change = allCent.map(cent => 
+                    bubbleData // yearly averages
+                        .filter((x) => x.century == cent))
+                    .map(y => ({
+                        'century': y[0].century,
+                        'change': y[y.length-1].avgppm - y[0].avgppm
+                    }))
                     
-            // var changeSum = change.map(x=>x.change).filter(x => x >= 0).reduce((a,b) => a + b, 0) // % of the increase - neg values 0
+            var changeSum = change.map(x=>x.change).filter(x => x >= 0).reduce((a,b) => a + b, 0) // % of the increase - neg values 0
             
-            // //var totalChange = change
-            // for (var i=0; i<change.length; i++) {
-            //     change[i].change = change[i].change < 0 ? 0 : change[i].change;
-            //     change[i].changepc = change[i].change/changeSum * 100
-            // }
+            //var totalChange = change
+            for (var i=0; i<change.length; i++) {
+                change[i].change = change[i].change < 0 ? 0 : change[i].change;
+                change[i].changepc = change[i].change/changeSum * 100
+            }
             
-            // aggregate the change from 1500 - 1700
-            var test_cent = [{'century': 21, 'changepc': 30}, {'century': 20, 'changepc': 30},
-             {'century': 19, 'changepc': 10}, {'century': 18, 'changepc': 10}, {'century': 17, 'changepc': 10},
-             {'century': 16, 'changepc': 10}]
+            // // aggregate the change from 1500 - 1700
+            // var test_cent = [{'century': 21, 'changepc': 30}, {'century': 20, 'changepc': 30},
+            //  {'century': 19, 'changepc': 10}, {'century': 18, 'changepc': 10}, {'century': 17, 'changepc': 10},
+            //  {'century': 16, 'changepc': 10}]
             
             
 
-            fullData['centuries'] = test_cent //change.shift(); // remove 16th    
+            fullData['centuries'] = change //change.shift(); // remove 16th    
     
             //write to file
             fullData = JSON.stringify(fullData)
@@ -188,7 +187,7 @@ app.get('/', function(req, res){
         }
         res.setHeader('Access-Control-Allow-Origin', '*');
         //res.send(originalData);
-        res.send(final)
+        res.send(change)
 
 
     })

@@ -10,8 +10,15 @@ var csvg = d3.select(".centuriesContainer").append("svg")
         .attr('class', 'centSVG')
         .attr('transform', 'translate(' + cMargin.left + ',' + cMargin.top + ')')
 
+
+
 function plotCenturies() {
+    //colour scale 
+    console.log(global.centuries.map(x => x.changepc))
     
+    var colorScale = d3.scaleLinear()
+        .domain([d3.min(global.centuries.map(x => x.changepc)), d3.max(global.centuries.map(x => x.changepc))])
+        .range(['rgba(255, 105, 97, 0.1)', 'rgba(255, 105, 97, 1)'])
     
     var data = {
         'children': global.centuries.reverse()
@@ -38,8 +45,10 @@ function plotCenturies() {
         .attr('y', d=>d.y0)
         .attr("width",  d=>d.x1 - d.x0)
         .attr("height", d=>d.y1 - d.y0)
-        .attr("fill", "#5AB7A9")
-        .attr('stroke', 'black')
+        .attr("fill", function(d) { return colorScale(d.data.changepc) })
+        .attr("rx", 2)
+        .attr("ry", 2)
+        // .attr('stroke', 'black')
         .on('click', d => updateLineGraph(d.data.century))
 
     csvg.selectAll('text')

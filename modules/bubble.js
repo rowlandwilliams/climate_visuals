@@ -35,13 +35,11 @@ function generatePos(index) {
 
 }
 
-// Build color scale
+
 
 
 function plotTile() {
     // append svg
-    console.log(global)
-    //var data = data.bubble;
 
     const bsvg = d3.select('.bubbleContainer').append('svg')
         .attr('class', 'bsvg')

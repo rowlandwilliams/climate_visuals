@@ -39,7 +39,7 @@ body {
     }
 
     .rightColumn {
-      background-color: pink;
+      /* background-color: pink; */
     }
     
 }
@@ -87,11 +87,9 @@ body {
 }
 
 .centDashboard {
-  background-color: green;
+  /* background-color: green; */
 }
-.centSVG {
-  fill: red;
-}
+
 
 
 .lYAxis path , line {
