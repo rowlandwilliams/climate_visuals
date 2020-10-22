@@ -71,9 +71,9 @@ body {
 }
 
 
-.bubbleContainer svg {
+/* .bubbleContainer svg {
     border-radius: 0px 10px 10px 0px;
-}
+} */
 
 
 .voronoi path, .voronoi2 path {

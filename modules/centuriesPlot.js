@@ -40,16 +40,19 @@ function plotCenturies() {
         .data(root.leaves())
             .enter()
         .append('rect')
-        .attr('class', d=> 'cent' + d.data.century)
+        .attr('class', d=> d.data.century)
         .attr('x', d=>d.x0)
         .attr('y', d=>d.y0)
         .attr("width",  d=>d.x1 - d.x0)
         .attr("height", d=>d.y1 - d.y0)
         .attr("fill", function(d) { return colorScale(d.data.changepc) })
-        .attr("rx", 2)
-        .attr("ry", 2)
+        .style('stroke', '#202020')
+        .style('stroke-width', '10')
+        .attr("rx", 5)
+        .attr("ry", 5)
         // .attr('stroke', 'black')
         .on('click', d => updateLineGraph(d.data.century))
+        .on('mouseover', cmouseover)
 
     csvg.selectAll('text')
         .data(root.leaves())
@@ -63,3 +66,8 @@ function plotCenturies() {
 
 }
 
+function cmouseover() {
+    console.log(d3.select(this).attr('class'))
+    var id = d3.select(this).attr('class')
+    d3.select('.century')
+}

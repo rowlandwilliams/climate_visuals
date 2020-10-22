@@ -18,8 +18,8 @@ document.querySelector('.dashboard').setAttribute("style","height:" + TITLE_HEIG
 var BUBBLE_HEIGHT = PAGE_HEIGHT - TITLE_HEIGHT //define initial height for rows
 document.querySelector('.lineGraphContainer').setAttribute('style', 'height:' + BUBBLE_HEIGHT + 'px')
 var LGCONT_HEIGHT = (document.querySelector('.lineGraphContainer').offsetHeight)
-document.querySelector('.centDashboard').setAttribute('style', 'height:' + (PAGE_HEIGHT * 0.4) + 'px')
-document.querySelector('.centuriesContainer').setAttribute('style', 'height:' + (PAGE_HEIGHT * 0.6) + 'px')
+document.querySelector('.centDashboard').setAttribute('style', 'height:' + (PAGE_HEIGHT * 0.3) + 'px')
+document.querySelector('.centuriesContainer').setAttribute('style', 'height:' + (PAGE_HEIGHT * 0.7) + 'px')
 var CENTCONT_HEIGHT = document.querySelector('.centuriesContainer').offsetHeight;
 
 

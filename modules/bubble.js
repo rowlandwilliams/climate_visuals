@@ -63,6 +63,8 @@ function plotTile() {
         .attr('y', function(d, i) { return generatePos(i).y })
         .attr('d', d=> d.avgppm)
         .style('fill', function(d) { return color(d.avgppm) })
+        .style('stroke', '#202020')
+        .style('stroke-width', '10')
         .attr('class', function(d) { return 'tile' + d.year})
         .attr("rx", 2)
         .attr("ry", 2)
@@ -83,7 +85,7 @@ function plotTile() {
 function bmouseover() {
     // define initial colour
     var fill = d3.select(this).style('fill');
-
+    d3.select(this).style('opacity', 0.5)
     // define linegraph line class and apply respective tile colour
     var lClass =  d3.select(this).attr('class').substring(4)
     
@@ -107,6 +109,7 @@ function bmouseover() {
 } 
 
 function bmouseout() {
+    d3.select(this).style('opacity', 1)
     d3.selectAll('.y-line')
         .style('opacity', 1)
         .style('stroke', '#F4F1F1')
