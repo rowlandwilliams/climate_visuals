@@ -18,7 +18,7 @@ let lXAxis = g => g
     .attr("transform", 'translate(0,' + (lHeight - lMargin.bottom) + ')')
     .call(d3.axisBottom(lx0).tickFormat(d3.timeFormat('%b')))
 
-    let  lYAxis = g => g
+let  lYAxis = g => g
     .attr("transform", 'translate(' + lMargin.left +',0)')
     .call(d3.axisLeft(ly0))
 
@@ -35,7 +35,7 @@ let lineGraphLine = d3.line()
 var voronoi = d3.voronoi()
     .x(function(d) { return lx0(Date.parse(d.date)) })
     .y(function(d) { return ly0(d.ppm) })
-    // .extent([0, 0], [lWidth, lHeight]); // work on this
+    .extent([[-lMargin.left, -lMargin.top], [lWidth + lMargin.right, lHeight + lMargin.bottom]]) // clip voronoi
 
 var lsvg = d3.select(".lineGraphContainer").append("svg")
     .attr('width', lWidth) // could add padding here
@@ -125,7 +125,7 @@ function plotLineGraph() {
         
     
     
-
+    
     var v = voronoi(d3.merge(d3.merge(global.linegraph.map(x => x.year_values.map(y => y.values)))))
     
 
@@ -136,18 +136,11 @@ function plotLineGraph() {
     voronoiGroup.selectAll('path')
         .data(v.polygons())
         .enter().append('path')
-            .attr('d', function(d) { return d ? "M" + d.join("L") + "Z" : null; })
+            // .attr('d', d => 'M' + (d.join('L') || '0,0') + 'Z')
+            .attr('d', function(d) { return d ? "M" + d.join('L') + "Z" : null; })
             .on('mouseover', d => mouseover(d.data))
             .on('mouseout', d => mouseout(d.data))
             
-           
-    
-
-    
-    
-    
-    
-    
 }
 
 
@@ -155,7 +148,6 @@ function plotLineGraph() {
 function updateLineGraph(century) {
     var temp = global.linegraph.filter(x => x.century == century)
     var values =  d3.merge(d3.merge(temp.map(x => x.year_values.map(y => y.values.map(z => z.ppm)))))
-    
     
     // redefine y domain
     ly0.domain([(d3.min(values) - 1), (d3.max(values) + 1)]);
@@ -175,6 +167,12 @@ function updateLineGraph(century) {
         .transition().duration(1400).delay(500)
         .attr('d', d => lineGraphLine(d.values));
    
+    
+    // Wait until the transition is done to recalculate and update the voronoi
+    setTimeout(() => updateVoronoi(century), 1400 + 550);
+    
+    
+    
 }
         
       
@@ -188,26 +186,16 @@ function mouseover(d) {
     lsvg.select('.focus')
         .attr("transform", "translate(" + lx0(Date.parse(d.date)) + "," + ly0(d.ppm) + ")");
    
-    d3.select('.db_ytext') // change dashboard text
-         .text(timeParse(Date.parse(d.date))+ ' ' + d.year)
 
-    d3.select('.db_ppmtext') // change dashboard text
-         .text(d.ppm + ' PPM')
-
-    // d3.select('.db_date')
-    //     .text(timeParse(Date.parse(d.date)))
-    // adjust crossHair style
-    var crossHair = lsvg.select('.crossHair')
-           
+    var crossHair = lsvg.select('.crossHair')      
     crossHair.style('opacity', 1); 
     crossHair.select("#crossHairX")
             .attr("transform", "translate(" + lx0(Date.parse(d.date)) + "," + (ly0(ly0.domain()[0]) - 100) + ")")
     crossHair.select("#crossHairY")
             .attr("transform", "translate(" + lx0(lx0.domain()[0]) + "," + (ly0(d.ppm)) + ")")
     
-    // select line
+    // select line and colour with corresponding tile shade
     var year = d.year
-    
     var fill = d3.select('.tile' + year).style('fill');
 
     d3.selectAll('.y-line')
@@ -218,9 +206,11 @@ function mouseover(d) {
         .style('stroke-width', function(d) {
             return d.year == year ? '3px' : '1px' })
     
-    
-     
-
+    d3.select('.db_ytext') // change dashboard text
+        .text(timeParse(Date.parse(d.date))+ ' ' + d.year)
+   
+    d3.select('.db_ppmtext') // change dashboard text
+        .text(d.ppm + ' PPM')
 }
 
 function mouseout(d) {
@@ -241,4 +231,26 @@ function mouseout(d) {
 
 }
 
-
+function updateVoronoi(century) {
+        var temp = global.linegraph.filter(x => x.century == century)
+        var v = voronoi(d3.merge(d3.merge(temp.map(y => y.year_values.map(x => x.values)))))
+        
+        // join century data
+        const voronoiGroup = lsvg.selectAll('.voronoi')
+                                 .selectAll('path')
+                                 .data(v.polygons())
+        // remove any data not in centruy
+        voronoiGroup.exit().remove()
+        
+        // update -> transition between old and new state
+        voronoiGroup
+            .attr('d', function(d) { return d ? "M" + d.join('L') + "Z" : null; })
+    
+        // append new paths
+        voronoiGroup
+            .enter().append('path')
+                .attr('d', function(d) { return d ? "M" + d.join('L') + "Z" : null; })
+                .on('mouseover', d => mouseover(d.data))
+                .on('mouseout', d => mouseout(d.data))
+    
+}

@@ -76,7 +76,7 @@ body {
 }
 
 
-.voronoi path {
+.voronoi path, .voronoi2 path {
       fill: none;
       pointer-events: all;
   }
