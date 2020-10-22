@@ -18,6 +18,9 @@ let lXAxis = g => g
     .attr("transform", 'translate(0,' + (lHeight - lMargin.bottom) + ')')
     .call(d3.axisBottom(lx0).tickFormat(d3.timeFormat('%b')))
 
+    let  lYAxis = g => g
+    .attr("transform", 'translate(' + lMargin.left +',0)')
+    .call(d3.axisLeft(ly0))
 
   
 
@@ -41,9 +44,7 @@ var lsvg = d3.select(".lineGraphContainer").append("svg")
   
 // plot initial line graph // min ppm 275.3 in1620
 function plotLineGraph() {
-    let  lYAxis = g => g
-    .attr("transform", 'translate(' + lMargin.left +',0)')
-    .call(d3.axisLeft(ly0)) 
+    
 
     lsvg.append('g')
         .call(lXAxis)
@@ -65,24 +66,25 @@ function plotLineGraph() {
         .attr('stroke', '#F4F1F1')
         
 
-    var centuries = lsvg.selectAll('.century')
+    var centuries = lsvg.selectAll('.century.c')
         .data(global.linegraph)
         .enter()    
         .append('g')
-        .attr('class', 'century')
-        .attr('id', function(d) { return d.century; })
+        .attr('class', d => 'g century c' + d.century)
+        //.attr('id', function(d) { return d.century; })
         
-    centuries.selectAll('.year_line')
+    centuries.selectAll('.y-line')
         .data(d => d.year_values)
     .enter()
         .append('path')
-        .attr('class', 'year_line')
-        .attr('id', function(d) { return "year_" + d.year })
+        .attr('class', d => 'y-line' + d.year)
         .attr('d', function(d) { return lineGraphLine(d.values); })
         .attr('fill', 'none')
         .style('stroke', '#F4F1F1')
         .style('stroke-width', 1)
-            
+        .attr('opacity', 1)
+        
+
         
          
     //add focus to hover over grid
@@ -125,7 +127,7 @@ function plotLineGraph() {
     
 
     var v = voronoi(d3.merge(d3.merge(global.linegraph.map(x => x.year_values.map(y => y.values)))))
-    //console.log(d3.merge(d3.merge(global.linegraph.map(x => x.year_values.map(y => y.values)))))
+    
 
     var voronoiGroup = lsvg.append("g")
       .attr("class", "voronoi");
@@ -138,12 +140,8 @@ function plotLineGraph() {
             .on('mouseover', d => mouseover(d.data))
             .on('mouseout', d => mouseout(d.data))
             
-            //.attr('class', function(d) { return d.data.year })
-
-    // add tooltip 
-    var site = null;
-    const radius = 100
-
+           
+    
 
     
     
@@ -211,128 +209,30 @@ function plotLineGraph() {
 function updateLineGraph(century) {
     var temp = global.linegraph.filter(x => x.century == century)
     var values =  d3.merge(d3.merge(temp.map(x => x.year_values.map(y => y.values.map(z => z.ppm)))))
-    console.log((d3.min(values) - 1))
+    
     
     // redefine y domain
     ly0.domain([(d3.min(values) - 1), (d3.max(values) + 1)]);
-//     my0.domain([SPECIAL.Mn.boundMin, SPECIAL.Mn.boundMax]);
-    let  lYAxis = g => g
-    .attr("transform", 'translate(' + lMargin.left +',0)')
-    .call(d3.axisLeft(ly0))
 
+    // transition y Axis
     d3.selectAll('.lYAxis')
     .transition().duration(300).delay(500)
     .call(lYAxis)
-    // .call(g => g.selectAll(".domain, line") // remove axis line and ticks
-    // .remove())
-    // .call(g => g.selectAll('text') // move labels right
-    // .attr('dx', 'em'))
-    // // .attr('class', 'lg_ytext')
-    // .attr('stroke', '#F4F1F1')
+    
+    // grab all g century paths
+    const centuries = lsvg.selectAll('.century')
+        .data(global.linegraph)
+
+    // for all the paths plot again for changed domain    
+    centuries.selectAll('path')
+        .data(d => d.year_values)
+        .transition().duration(1400).delay(500)
+        .attr('d', d => lineGraphLine(d.values));
 
 
     
 
 
-//   console.log(W_BEAMS)
-//   wGroup.selectAll('path')
-//       .data(d => d.values)
-//       .transition().duration(500)
-//       .attr('opacity', mFilterOpacity)
-//       // .attr('stroke', mFilterStroke)
-//       // .attr('stroke-width', mFilterStrokeWidth);
-
-//   wGroup.selectAll('path')
-//       .data(d => d.values)
-//       .transition().duration(TRANSITION_TIME).delay(500)
-//       .attr('d', d => mLine(d.MnValues));
-    
-    
-//     var centuries = lsvg.selectAll('.century')
-//         .data(global.linegraph)
-
-//     centuries.selectAll('path')
-//     .data(d => d.year_values)
-//     .enter()    
-//         // .append('g')
-//         // .attr('class', 'century')
-//         // .attr('id', function(d) { return d.century; })
-        
-//     centuries.selectAll('.year_line')
-//         .data(d => d.year_values)
-//     .enter()
-//         .append('path')
-//         .attr('class', 'year_line')
-//         .attr('id', function(d) { return "year_" + d.year })
-//         .attr('d', function(d) { return lineGraphLine(d.values); })
-//         .attr('fill', 'none')
-//         .style('stroke', '#F4F1F1')
-//         .style('stroke-width', 1)
-
-//     centuries.selectAll('.century')
-//         .data(temp)
-//         .exit()
-//         .remove()
-
-//     console.log(centuries)
-    //centuries.selectAll('.century')
-
-//     d3.selectAll(".century")
-//     .data(temp, function(d) { return d.century })
-//     .transition().duration(1000)
-    
-
-//     var centuries = lsvg.selectAll('.century')
-//     console.log(centuries)
-//     //     .data(temp, function(d) { return d.century; })
-//     //     .exit()
-//     //     .remove()
-
-//     var test = lsvg.selectAll('.century')
-//         .data(temp, function(d) { return d.century })
-        
-//     test    
-//         .exit()
-//         .remove();
-
-//     console.log(test)
-//     test.selectAll('.century')
-//         .data(temp, function(d) { return d.century})
-//         .enter()
-//         .append('g')
-
-//     // call this whenever the filter changes
-//   function applyFilter(value) {
-//     // filter the data
-//     var data = tsv.filter(function(d) {return d.group === value;})
-
-//     // update the bars
-//     d3.selectAll(".bar")
-//       .data(data)
-//       .transition().duration(1000)
-//       .attr("x", function(d) { return x(d.letter); })
-//       .attr("y", function(d) { return y(d.frequency); })
-//       .attr("height", function(d) { return height - y(d.frequency); });
-
-//   }
-
-//     console.log(test)
-
-    // test.enter()
-    //     .append()
-
-
-
-    // centuries.selectAll('.year_line')
-    //     .data(d => d.year_values)
-    //     .enter()
-    //     .append('path')
-    //     .attr('class', 'year_line')
-    //     .attr('id', function(d) { return "year_" + d.year })
-    //     .attr('d', function(d) { return lineGraphLine(d.values); })
-    //     .attr('fill', 'none')
-    //     .style('stroke', '#F4F1F1')
-    //     .style('stroke-width', 1)  
 
     
 
