@@ -195,6 +195,18 @@ function plotLineGraph() {
         .style("stroke-dasharray", ("3, 3"))
         .style("stroke", "#F4F1F1")
         .style("fill", "none"); 
+
+    lsvg.append("line")
+        .attr('class', 'currentLine3')
+        .attr("x1", pos.x - LEFT_CHARTS_WIDTH - 65)
+        .attr("x2", pos.x - LEFT_CHARTS_WIDTH - 65)
+        .attr("y1", pos.y + pos.height)
+        .attr("y2", pos.y + pos.height)
+        .style("stroke-width", 1)
+        .style("stroke-dasharray", ("3, 3"))
+        .style("stroke", "#F4F1F1")
+        .style("fill", "none"); 
+    
     
             
 }
@@ -297,7 +309,8 @@ function mouseover(d) {
                 .style('left', pos2.x - 12 + 'px') // position x in line with dashboard text
                 .style('top', end.y - (tH.height / 2) + 'px') // position y realtive to end of line
     
-    
+    d3.select('.currentLine3')
+            .attr('y2', end.y + 'px')
     // crossHair.select('#tt_line')
     //     .attr("transform", "translate(" + lx0(lx0.domain()[1]) + "," + (ly0(d.ppm)) + ")")
                 // .style('left', pos2.x + 'px') // position x in line with dashboard text
@@ -322,6 +335,9 @@ function mouseout(d) {
     d3.selectAll('.db_ytext, .db_ppmtext')
         .text('') // remove text
 
+    var pos = d3.select('.db_current').node().getBoundingClientRect()
+    d3.select('.currentLine3')
+        .attr('y2', pos.y + pos.height)
     
 }
 
