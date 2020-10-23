@@ -305,27 +305,30 @@ function mouseover(d) {
     d3.select('.db_text')
                 .transition()
                 .duration(200)
-                .style('opacity', 1)
                 .style('left', pos2.x - 12 + 'px') // position x in line with dashboard text
-                .style('top', end.y - (tH.height / 2) + 'px') // position y realtive to end of line
+                .style('top', end.y + 'px')//- (tH.height / 2) + 'px') // position y realtive to end of line
     
     d3.select('.currentLine3')
             .attr('y2', end.y + 'px')
-    // crossHair.select('#tt_line')
-    //     .attr("transform", "translate(" + lx0(lx0.domain()[1]) + "," + (ly0(d.ppm)) + ")")
-                // .style('left', pos2.x + 'px') // position x in line with dashboard text
-                // .style('top', end.y - (tH.height - 2) + 'px') // position y realtive to end of line
+
+
+    d3.select('.ppm_diff')
+                .transition()
+                .duration(200)
+                .style('left', pos2.x - 12 + 'px') // position x in line with dashboard text
+                .style('top', end.y / 2 + 'px')
+                .text(Math.round((411.8 - d.ppm)))
         
     
 }
 
 function mouseout(d) {
-    lsvg.select('.focus')
-        .select('.focus_ring') // circle
+    lsvg
+        .selectAll('.focus_ring, .crossHair') // circle
         .style('opacity', 0)
     
-    lsvg.select('.crossHair')
-        .style('opacity', 0);
+    // lsvg.select('.crossHair')
+    //     .style('opacity', 0);
 
     d3.selectAll('.y-line')
         .style('opacity', 1)
@@ -336,8 +339,12 @@ function mouseout(d) {
         .text('') // remove text
 
     var pos = d3.select('.db_current').node().getBoundingClientRect()
+    
     d3.select('.currentLine3')
         .attr('y2', pos.y + pos.height)
+
+    d3.select('.ppm_diff')
+        .text(' ')
     
 }
 

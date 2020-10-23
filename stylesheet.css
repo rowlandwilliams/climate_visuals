@@ -57,7 +57,7 @@ body {
   /* padding: 20px; */
 }
 
-.db_text, .db_century, .tooltip {
+.db_text, .db_century, .tooltip , .ppm_diff {
   padding: 12px;
 }
 
@@ -107,7 +107,7 @@ body {
   position: absolute
 }
   
-.db_text {
+.db_text, .ppm_diff{
   position: absolute;
   font-size: 20px;
   color: white;
