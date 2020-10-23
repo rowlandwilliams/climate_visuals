@@ -113,11 +113,7 @@ function plotLineGraph() {
         .attr("r", 5)
         .style('opacity', 0)
 
-    focus.append("text")
-        .attr('text-anchor', 'middle')
-        .attr("class", "tt_year")
-        .text('SUHUHU')
-        
+
 
     var crossHair = lsvg.append('g')
         .attr("class", "crossHair")
@@ -138,7 +134,11 @@ function plotLineGraph() {
         .attr('width', 3)
         .attr('height', 100)
         
-    
+    crossHair.append('rect')
+        .attr('id', 'tt_line')
+        .attr('fill', red)
+        .attr('width', 100)
+        .attr('height', 3)
     
     
     var v = voronoi(d3.merge(d3.merge(global.linegraph.map(x => x.year_values.map(y => y.values)))))
@@ -155,6 +155,47 @@ function plotLineGraph() {
             .attr('d', function(d) { return d ? "M" + d.join('L') + "Z" : null; })
             .on('mouseover', d => mouseover(d.data))
             .on('mouseout', d => mouseout(d.data))
+
+
+    // add line to current values
+    // define positions
+    console.log(global.linegraph)
+    var lastPoint = global.linegraph[global.linegraph.length - 1].year_values.slice(-1)[0].values.slice(-1)[0]
+    console.log(lastPoint)
+    
+    
+    var pos = d3.select('.db_current').node().getBoundingClientRect()
+    var length = d3.select('#y2020').node().getTotalLength()
+    // var end = d3.select('#y' + year).node().getPointAtLength(length)
+    
+    console.log(pos)
+
+   
+    // var currentLine = lsvg.append('line')
+    //                     .attr("x1", x(0))
+    
+    lsvg.append("line")
+        .attr('class', 'currentLine1')
+        .attr("x1", lx0(Date.parse(lastPoint.date)))
+        .attr("x2", lx0(Date.parse(lastPoint.date)))
+        .attr("y1", ly0(lastPoint.ppm))
+        .attr("y2", pos.y + pos.height)
+        .style("stroke-width", 1)
+        .style("stroke-dasharray", ("3, 3"))
+        .style("stroke", "#F4F1F1")
+        .style("fill", "none"); 
+
+    lsvg.append("line")
+        .attr('class', 'currentLine2')
+        .attr("x1", lx0(Date.parse(lastPoint.date)))
+        .attr("x2", pos.x + 50)
+        .attr("y1", pos.y + pos.height)
+        .attr("y2", pos.y + pos.height)
+        .style("stroke-width", 1)
+        .style("stroke-dasharray", ("3, 3"))
+        .style("stroke", "#F4F1F1")
+        .style("fill", "none"); 
+    
             
 }
 
@@ -222,6 +263,8 @@ function mouseover(d) {
             .attr("transform", "translate(" + lx0(Date.parse(d.date)) + "," + (ly0(ly0.domain()[0]) - 100) + ")")
     crossHair.select("#crossHairY")
             .attr("transform", "translate(" + lx0(lx0.domain()[0]) + "," + (ly0(d.ppm)) + ")")
+
+    
     
     // select line and colour with corresponding tile shade
     var year = d.year
@@ -241,33 +284,24 @@ function mouseover(d) {
     d3.select('.db_ppmtext') // change dashboard text
         .text(d.ppm + ' PPM')
 
-    // add text to end of line
-    var pos = d3.select('#y' + year).node().getBoundingClientRect()
-    var pos2 = d3.select('.db_current').node().getBoundingClientRect()
+    // add text to end of lin
+    var length = d3.select('#y' + year).node().getTotalLength()
+    var end = d3.select('#y' + year).node().getPointAtLength(length) // get point at end of selected line
+    var pos2 = d3.select('.db_current').node().getBoundingClientRect() // align with dashboard current text
+    var tH = d3.select('.db_text').node().getBoundingClientRect() // tooltip height
 
     d3.select('.db_text')
                 .transition()
                 .duration(200)
                 .style('opacity', 1)
-                .style('left', pos2.x + 'px')
-                .style('top', pos.y + 'px')
+                .style('left', pos2.x - 12 + 'px') // position x in line with dashboard text
+                .style('top', end.y - (tH.height / 2) + 'px') // position y realtive to end of line
     
-    // d3.select('.test')
-    //         .text(timeParse(Date.parse(d.date))+ ' ' + d.year)
-                //.text(function(d) { console.log(d); return "<tspan x='0' dy='1.2em'>" + 
-                                            // timeParse(Date.parse(d.date)) + d.year + "</tspan>" +
-                                            // "<tspan x='0' dy='1.2em'>" + "</tspan>"; } )
-                      
-                    
-                    // timeParse(Date.parse(d.date))+ ' ' + d.year)
-                
-
-    // lsvg.select('.focus')   
-    //     .select('.tt_year')
-    //     .attr("transform", "translate(" + lWidth + "," + ly0(d.ppm) + ")");
-    //     //.attr("transform", "translate(" + 100 + "," + 100 + ")")
-    //     // .style('left', pos.x + pos.width + 10 + 'px')
-    //     // .style('top', pos.y + 'px')
+    
+    // crossHair.select('#tt_line')
+    //     .attr("transform", "translate(" + lx0(lx0.domain()[1]) + "," + (ly0(d.ppm)) + ")")
+                // .style('left', pos2.x + 'px') // position x in line with dashboard text
+                // .style('top', end.y - (tH.height - 2) + 'px') // position y realtive to end of line
         
     
 }
@@ -288,8 +322,7 @@ function mouseout(d) {
     d3.selectAll('.db_ytext, .db_ppmtext')
         .text('') // remove text
 
-    d3.select('.tooltip')
-        .text(' ')
+    
 }
 
 function updateVoronoi(century) {

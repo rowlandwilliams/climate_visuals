@@ -103,24 +103,45 @@ function bmouseover() {
     var fill = d3.select(this).style('fill');
     d3.select(this).style('opacity', 0.5)
     // define linegraph line class and apply respective tile colour
-    var lClass =  d3.select(this).attr('class').substring(4)
+    var year =  d3.select(this).attr('class').substring(4)
     
     d3.selectAll('.y-line')
         .style('opacity', function(d) {
-            return d.year == lClass ? 1 : 0.3  })
+            return d.year == year ? 1 : 0.3  })
         .style('stroke', function(d) {
-            return d.year == lClass ? fill : '#F4F1F1' })
+            return d.year == year ? fill : '#F4F1F1' })
         .style('stroke-width', function(d) {
-            return d.year == lClass ? '3px' : '1px' })
+            return d.year == year ? '3px' : '1px' })
 
     d3.selectAll('.lg_ytext')
             .style('opacity', 0.3) // fade y ticks
 
     d3.select('.db_ytext')
-            .text(lClass) // year to dashboard
+            .text(year) // year to dashboard
     
     d3.select('.db_ppmtext')
             .text(d3.select(this).attr('d') + ' PPM (yearly average)')
+
+    // d3.select('.db_ytext') // change dashboard text
+    //         .text(timeParse(Date.parse(d.date))+ ' ' + d.year)
+       
+    // d3.select('.db_ppmtext') // change dashboard text
+    //         .text(d.ppm + ' PPM')
+
+
+    // add text to end of lin
+    var length = d3.select('#y' + year).node().getTotalLength()
+    var end = d3.select('#y' + year).node().getPointAtLength(length) // get point at end of selected line
+    var pos2 = d3.select('.db_current').node().getBoundingClientRect() // align with dashboard current text
+    var tH = d3.select('.db_text').node().getBoundingClientRect() // tooltip height
+
+    d3.select('.db_text')
+                .transition()
+                .duration(200)
+                .style('opacity', 1)
+                .style('left', pos2.x + 'px') // position x in line with dashboard text
+                .style('top', end.y - (tH.height - 2) + 'px') // position y realtive to end of line
+    
     
 } 
 

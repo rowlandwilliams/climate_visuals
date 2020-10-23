@@ -57,10 +57,13 @@ body {
   /* padding: 20px; */
 }
 
-.db_current, .db_text, .db_century, .tooltip {
+.db_text, .db_century, .tooltip {
   padding: 12px;
 }
 
+.db_current {
+  padding: 12px 12px 0px 0px;
+}
 .titleContainer {
     color: white;
     font-size: 28px;
@@ -106,4 +109,13 @@ body {
   
 .db_text {
   position: absolute;
+  font-size: 20px;
+  color: white;
+  opacity: 0.8;
+}
+
+.currentLine {
+  
+    position:absolute; 
+    /* left: 50%;   */
 }
