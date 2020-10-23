@@ -52,6 +52,11 @@ function plotTile() {
         .range(['rgba(255, 105, 97, 0.5)', 'rgba(255, 105, 97, 1)'])
 // red = 'rgba(255, 105, 97, 1)', rgb(58,58,71) black
     // append rect and enter data
+    // bsvg
+    //     .on('mouseenter', bmouseenter)
+    //     .on('mouseout', bmouseout)
+    
+    
     bsvg.selectAll('rect')
         .data(global.bubble)
             .enter()
@@ -64,12 +69,14 @@ function plotTile() {
         .attr('d', d=> d.avgppm)
         .style('fill', function(d) { return color(d.avgppm) })
         .style('stroke', '#202020')
-        .style('stroke-width', '10')
+        .style('stroke-width', '7')
         .attr('class', function(d) { return 'tile' + d.year})
         .attr("rx", 2)
         .attr("ry", 2)
         .on('mouseover', bmouseover)
         .on('mouseout', bmouseout)
+    
+    
         
         // .transition()
         // .delay(function(_, i) {
@@ -81,9 +88,18 @@ function plotTile() {
 
 }
 
+function bmouseenter() {
+    d3.selectAll('.y-line')
+        .style('opacity', 0)
+        // .style('stroke', function(d) {
+        //     return d.year == lClass ? fill : '#F4F1F1' })
+        // .style('stroke-width', function(d) {
+        //     return d.year == lClass ? '3px' : '1px' })
+}
 
 function bmouseover() {
     // define initial colour
+    
     var fill = d3.select(this).style('fill');
     d3.select(this).style('opacity', 0.5)
     // define linegraph line class and apply respective tile colour

@@ -44,11 +44,11 @@ body {
     
 }
 
-.dashboard {
+.centDashboard {
   /* background-color: #F4F1F1; */
   opacity: 0.8;
   border-radius: 5px;
-  color: #202020;
+  
   font-size: 24px;
   color: white;
   /* background-color: blue; */
@@ -57,7 +57,7 @@ body {
   /* padding: 20px; */
 }
 
-.db_text {
+.db_current, .db_text, .db_century, .tooltip {
   padding: 12px;
 }
 
@@ -70,6 +70,9 @@ body {
     
 }
 
+/* .bubbleContainer {
+  pointer-events: none;
+} */
 
 /* .bubbleContainer svg {
     border-radius: 0px 10px 10px 0px;
@@ -88,12 +91,19 @@ body {
 
 .centDashboard {
   /* background-color: green; */
+  /* position: relative; */
 }
 
 
 
-.lYAxis path , line {
+.lYAxis path , line, .cYAxis path, .cXAxis path {
   stroke: none;
 }
 
-    
+.tooltip {
+  position: absolute
+}
+  
+.db_text {
+  position: absolute;
+}

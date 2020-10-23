@@ -1,6 +1,6 @@
 var timeParse = d3.timeFormat('%d %B')
 var red = 'rgba(255, 105, 97, 1)'
-let lMargin = {top: 20, right: 30, bottom:20, left: 30},
+let lMargin = {top: 50, right: 30, bottom:20, left: 30},
 
 lWidth = LGCONT_WIDTH // initially make width / height equal to container width
 lHeight = LGCONT_HEIGHT
@@ -23,8 +23,19 @@ let  lYAxis = g => g
     .call(d3.axisLeft(ly0))
 
   
+var tooltip = d3.select('body').append('div')
+    .attr('class', 'tooltip')
+    .style('opacity', 0)
+    //.text('suh')
+    .style('stroke', 'white')
 
+tooltip.select('test')
+    .append('div')
+    .attr('class', 'test')
 
+tooltip.select('test2')
+    .append('div')
+    .attr('class', 'test2')
 
 // define line funciton
 let lineGraphLine = d3.line()
@@ -51,6 +62,7 @@ function plotLineGraph() {
         .call(g => g.selectAll(".domain, line") // remove axis line and ticks
         .remove())
         .call(g => g.selectAll('text')
+        .attr('class', 'lX_text')
         .attr('dx', '2.8em'))
         .attr('stroke', '#F4F1F1')
         
@@ -78,6 +90,7 @@ function plotLineGraph() {
     .enter()
         .append('path')
         .attr('class', d => 'y-line ' + d.year)
+        .attr('id', d => 'y' + d.year)
         .attr('d', function(d) { return lineGraphLine(d.values); })
         .attr('fill', 'none')
         .style('stroke', '#F4F1F1')
@@ -102,7 +115,9 @@ function plotLineGraph() {
 
     focus.append("text")
         .attr('text-anchor', 'middle')
-        .attr("class", "tt_year");
+        .attr("class", "tt_year")
+        .text('SUHUHU')
+        
 
     var crossHair = lsvg.append('g')
         .attr("class", "crossHair")
@@ -146,16 +161,30 @@ function plotLineGraph() {
 
 
 function updateLineGraph(century) {
-    var temp = global.linegraph.filter(x => x.century == century)
+    if (century == 'all') {
+        var temp = global.linegraph
+    }
+    else {
+        var temp = global.linegraph.filter(x => x.century == century)
+    }
+
+    lsvg.attr('height', lHeight + 50) // expand y axis to bottom
+        .transition().duration(1400).delay(500)
+
+    //var temp = global.linegraph.filter(x => x.century == century)
     var values =  d3.merge(d3.merge(temp.map(x => x.year_values.map(y => y.values.map(z => z.ppm)))))
     
     // redefine y domain
-    ly0.domain([(d3.min(values) - 1), (d3.max(values) + 1)]);
+    ly0.domain([(d3.min(values) - 1), (d3.max(values) + 1)])
+        .range([lHeight, 0]);
 
     // transition y Axis
     d3.selectAll('.lYAxis')
-    .transition().duration(300).delay(500)
+    .transition().duration(1400).delay(500)
     .call(lYAxis)
+
+    d3.selectAll('.lX_text')
+        .style('opacity', 0)
     
     // grab all g century paths
     const centuries = lsvg.selectAll('.century')
@@ -211,6 +240,36 @@ function mouseover(d) {
    
     d3.select('.db_ppmtext') // change dashboard text
         .text(d.ppm + ' PPM')
+
+    // add text to end of line
+    var pos = d3.select('#y' + year).node().getBoundingClientRect()
+    var pos2 = d3.select('.db_current').node().getBoundingClientRect()
+
+    d3.select('.db_text')
+                .transition()
+                .duration(200)
+                .style('opacity', 1)
+                .style('left', pos2.x + 'px')
+                .style('top', pos.y + 'px')
+    
+    // d3.select('.test')
+    //         .text(timeParse(Date.parse(d.date))+ ' ' + d.year)
+                //.text(function(d) { console.log(d); return "<tspan x='0' dy='1.2em'>" + 
+                                            // timeParse(Date.parse(d.date)) + d.year + "</tspan>" +
+                                            // "<tspan x='0' dy='1.2em'>" + "</tspan>"; } )
+                      
+                    
+                    // timeParse(Date.parse(d.date))+ ' ' + d.year)
+                
+
+    // lsvg.select('.focus')   
+    //     .select('.tt_year')
+    //     .attr("transform", "translate(" + lWidth + "," + ly0(d.ppm) + ")");
+    //     //.attr("transform", "translate(" + 100 + "," + 100 + ")")
+    //     // .style('left', pos.x + pos.width + 10 + 'px')
+    //     // .style('top', pos.y + 'px')
+        
+    
 }
 
 function mouseout(d) {
@@ -229,6 +288,8 @@ function mouseout(d) {
     d3.selectAll('.db_ytext, .db_ppmtext')
         .text('') // remove text
 
+    d3.select('.tooltip')
+        .text(' ')
 }
 
 function updateVoronoi(century) {
@@ -254,3 +315,4 @@ function updateVoronoi(century) {
                 .on('mouseout', d => mouseout(d.data))
     
 }
+
