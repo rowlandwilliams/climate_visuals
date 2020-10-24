@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
-    <title>Carbon Explorer</title>
+    <title>CO2 Explorer</title>
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="stylesheet.css">
     
@@ -14,7 +14,7 @@
         <div class='leftColumn'>
             <div class='titleContainer'>
                 <div class='title'>
-                    <div>CARB0N</div>
+                    <div>C0<sub>2</sub></div>
                     <div>EXPL0RER</div>
                 </div>
             </div>    
@@ -31,27 +31,30 @@
         <div class='rightColumn'>
             <div class='centDashboard'>
                 <div class='db_current'>
-                    Current CO2 levels: 
+                    <div>Current C0<sub>2</sub>:</div>
+                    <div><span class='latest_ppm'>411.8</span> PPM</div>
                 </div>
-                <div class='db_current ppm'>
-                    411.8
+                <div class='db_ticker'>
+                    <div>Change:   </div>
+                    <div>&uarr;<span class='ppm_change'>    </span></div>
                 </div>
-                
-                
             </div>
+
+            <div class='db_text'>
+                <div><span class='db_ytext'></span></div>
+                <div class='db_ppmtext'></div> 
+            </div>
+              
             <div class='centuriesContainer'>
             </div>
         </div>
-        
-        <div class='ppm_diff'>
-        </div>
-
-        <div class='db_text'>
-            <div><span class='db_ytext'></span></div>
-            <div class='db_ppmtext'></div>
             
-        </div>
-    <!-- </div> -->
+            
+        
+        
+       
+            
+        
 <script src="https://d3js.org/d3.v5.min.js"></script>
 <script src='frontend.js'></script>
 <script src='./modules/lineGraph.js'></script>

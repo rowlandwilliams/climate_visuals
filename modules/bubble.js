@@ -88,14 +88,6 @@ function plotTile() {
 
 }
 
-function bmouseenter() {
-    d3.selectAll('.y-line')
-        .style('opacity', 0)
-        // .style('stroke', function(d) {
-        //     return d.year == lClass ? fill : '#F4F1F1' })
-        // .style('stroke-width', function(d) {
-        //     return d.year == lClass ? '3px' : '1px' })
-}
 
 function bmouseover() {
     // define initial colour
@@ -135,13 +127,21 @@ function bmouseover() {
     var pos2 = d3.select('.db_current').node().getBoundingClientRect() // align with dashboard current text
     var tH = d3.select('.db_text').node().getBoundingClientRect() // tooltip height
 
+    // d3.select('.db_text')
+    //             .transition()
+    //             .duration(200)
+    //             .style('opacity', 1)
+    //             .style('left', pos2.x + 'px') // position x in line with dashboard text
+    //             .style('top', end.y - (tH.height - 2) + 'px') // position y realtive to end of line
+    
     d3.select('.db_text')
                 .transition()
                 .duration(200)
-                .style('opacity', 1)
-                .style('left', pos2.x + 'px') // position x in line with dashboard text
-                .style('top', end.y - (tH.height - 2) + 'px') // position y realtive to end of line
+                // .style('left', pos2.x - 12 + 'px') // position x in line with dashboard text
+                .style('top', end.y + 'px')//- (tH.height / 2) + 'px') // position y realtive to end of line
     
+    d3.select('.currentLine3')
+            .attr('y2', end.y + 'px')
     
 } 
 

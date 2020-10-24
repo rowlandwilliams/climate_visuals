@@ -1,18 +1,19 @@
 //SET PAGE HEIGHTS
 // HEIGHTS
-var PAGE_HEIGHT = window.innerHeight - 40;
+var PAGE_HEIGHT = window.innerHeight - 20;
 var PAGE_WIDTH = window.innerWidth
 var PADDING = 30;
 // WIDTHS
 var LEFT_CHARTS_WIDTH = document.querySelector('.leftColumn').offsetWidth;
+var CENTCONT_WIDTH = document.querySelector('.rightColumn').offsetWidth
 
 // set width of middle column
-document.querySelector('.middleColumn').setAttribute('style', 'width:' + ((PAGE_WIDTH - LEFT_CHARTS_WIDTH)*0.6) + 'px')
+document.querySelector('.middleColumn').setAttribute('style', 'width:' + (PAGE_WIDTH - LEFT_CHARTS_WIDTH - CENTCONT_WIDTH) + 'px')
 var LGCONT_WIDTH = document.querySelector('.middleColumn').offsetWidth
 
 // right colum
-document.querySelector('.rightColumn').setAttribute('style', 'width:' + ((PAGE_WIDTH - LEFT_CHARTS_WIDTH - LGCONT_WIDTH - 60)) + 'px')
-var CENTCONT_WIDTH = document.querySelector('.rightColumn').offsetWidth
+//document.querySelector('.rightColumn').setAttribute('style', 'width:' + ((PAGE_WIDTH - LEFT_CHARTS_WIDTH - LGCONT_WIDTH - 60)) + 'px')
+//var CENTCONT_WIDTH = document.querySelector('.rightColumn').offsetWidth
 
 // define col 1 heights
 var TITLE_HEIGHT = document.querySelector('.titleContainer').offsetHeight // define initial heights

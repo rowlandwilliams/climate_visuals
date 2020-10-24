@@ -10,13 +10,16 @@ body {
   margin: 0;
   font-family: 'Dosis', sans-serif;   
   background-color: #202020;
+  white-space: nowrap;
 }
-  
-  
   
 
 .leftColumn {
     width: 100%; /* ensure grow on screen change */
+}
+
+.rightColumn {
+  position: relative;
 }
 
 @media (min-width: 800px) {
@@ -35,68 +38,51 @@ body {
     }
     
     .middleColumn {
-        margin-left: 50px; 
-    }
-
-    .rightColumn {
-      /* background-color: pink; */
+        /* margin-left: 50px;  */
     }
     
+    .rightColumn {
+      min-width: min-content;
+
+    }
 }
 
 .centDashboard {
-  /* background-color: #F4F1F1; */
   opacity: 0.8;
   border-radius: 5px;
-  
+  display: flex;
+  flex-direction: row;
   font-size: 24px;
   color: white;
-  /* background-color: blue; */
-  /* padding: 10px; */
-  /* min-height: 100px; */
-  /* padding: 20px; */
+  /* background-color: red; */
+  min-width: auto; 
+  padding: 0px 20px 0px 5px;
 }
 
 .db_text, .db_century, .tooltip , .ppm_diff {
   padding: 12px;
 }
 
-.db_current {
-  padding: 12px 12px 0px 0px;
+.db_current  {
+  padding: 12px;
+}
+
+.db_ticker {
+  padding: 12px 30px 12px 12px;
 }
 .titleContainer {
     color: white;
     font-size: 28px;
     letter-spacing: 7px;
     padding: 10px;
-    /* background-color: blue; */
-    
+    /* background-color: red;
+     */
 }
-
-/* .bubbleContainer {
-  pointer-events: none;
-} */
-
-/* .bubbleContainer svg {
-    border-radius: 0px 10px 10px 0px;
-} */
-
 
 .voronoi path, .voronoi2 path {
       fill: none;
       pointer-events: all;
   }
-
-
-.centuriesContainer {
-
-}
-
-.centDashboard {
-  /* background-color: green; */
-  /* position: relative; */
-}
-
 
 
 .lYAxis path , line, .cYAxis path, .cXAxis path {
@@ -115,7 +101,5 @@ body {
 }
 
 .currentLine {
-  
     position:absolute; 
-    /* left: 50%;   */
 }

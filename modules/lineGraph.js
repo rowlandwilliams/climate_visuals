@@ -1,6 +1,6 @@
 var timeParse = d3.timeFormat('%d %B')
 var red = 'rgba(255, 105, 97, 1)'
-let lMargin = {top: 50, right: 30, bottom:20, left: 30},
+let lMargin = {top: 50, right: 60, bottom:50, left: 80},
 
 lWidth = LGCONT_WIDTH // initially make width / height equal to container width
 lHeight = LGCONT_HEIGHT
@@ -72,7 +72,8 @@ function plotLineGraph() {
         .attr('class', 'lYAxis')
         .call(g => g.selectAll(".domain, line") // remove axis line and ticks
         .remove())
-        .call(g => g.selectAll('text') // move labels right
+        .call(g => g.selectAll('text')
+        .attr('class', 'lX_text') // move labels right
         .attr('dx', 'em'))
         // .attr('class', 'lg_ytext')
         .attr('stroke', '#F4F1F1')
@@ -134,12 +135,6 @@ function plotLineGraph() {
         .attr('width', 3)
         .attr('height', 100)
         
-    crossHair.append('rect')
-        .attr('id', 'tt_line')
-        .attr('fill', red)
-        .attr('width', 100)
-        .attr('height', 3)
-    
     
     var v = voronoi(d3.merge(d3.merge(global.linegraph.map(x => x.year_values.map(y => y.values)))))
     
@@ -159,7 +154,7 @@ function plotLineGraph() {
 
     // add line to current values
     // define positions
-    console.log(global.linegraph)
+    
     var lastPoint = global.linegraph[global.linegraph.length - 1].year_values.slice(-1)[0].values.slice(-1)[0]
     console.log(lastPoint)
     
@@ -171,26 +166,13 @@ function plotLineGraph() {
     console.log(pos)
 
    
-    // var currentLine = lsvg.append('line')
-    //                     .attr("x1", x(0))
-    
-    lsvg.append("line")
-        .attr('class', 'currentLine1')
-        .attr("x1", lx0(Date.parse(lastPoint.date)))
-        .attr("x2", lx0(Date.parse(lastPoint.date)))
-        .attr("y1", ly0(lastPoint.ppm))
-        .attr("y2", pos.y + pos.height)
-        .style("stroke-width", 1)
-        .style("stroke-dasharray", ("3, 3"))
-        .style("stroke", "#F4F1F1")
-        .style("fill", "none"); 
 
     lsvg.append("line")
         .attr('class', 'currentLine2')
         .attr("x1", lx0(Date.parse(lastPoint.date)))
-        .attr("x2", pos.x + 50)
-        .attr("y1", pos.y + pos.height)
-        .attr("y2", pos.y + pos.height)
+        .attr("x2", pos.x)
+        .attr("y1", ly0(lastPoint.ppm))
+        .attr("y2", ly0(lastPoint.ppm))
         .style("stroke-width", 1)
         .style("stroke-dasharray", ("3, 3"))
         .style("stroke", "#F4F1F1")
@@ -198,10 +180,10 @@ function plotLineGraph() {
 
     lsvg.append("line")
         .attr('class', 'currentLine3')
-        .attr("x1", pos.x - LEFT_CHARTS_WIDTH - 65)
-        .attr("x2", pos.x - LEFT_CHARTS_WIDTH - 65)
-        .attr("y1", pos.y + pos.height)
-        .attr("y2", pos.y + pos.height)
+        .attr("x1", pos.x - LEFT_CHARTS_WIDTH - 20)
+        .attr("x2", pos.x - LEFT_CHARTS_WIDTH - 20)
+        .attr("y1", ly0(lastPoint.ppm))
+        .attr("y2", ly0(lastPoint.ppm))
         .style("stroke-width", 1)
         .style("stroke-dasharray", ("3, 3"))
         .style("stroke", "#F4F1F1")
@@ -290,11 +272,8 @@ function mouseover(d) {
         .style('stroke-width', function(d) {
             return d.year == year ? '3px' : '1px' })
     
-    d3.select('.db_ytext') // change dashboard text
-        .text(timeParse(Date.parse(d.date))+ ' ' + d.year)
-   
-    d3.select('.db_ppmtext') // change dashboard text
-        .text(d.ppm + ' PPM')
+    d3.selectAll('.lX_text')
+            .style('opacity', 0.3)
 
     // add text to end of lin
     var length = d3.select('#y' + year).node().getTotalLength()
@@ -302,22 +281,29 @@ function mouseover(d) {
     var pos2 = d3.select('.db_current').node().getBoundingClientRect() // align with dashboard current text
     var tH = d3.select('.db_text').node().getBoundingClientRect() // tooltip height
 
+    d3.select('.db_ytext') // change dashboard text
+        .text(timeParse(Date.parse(d.date))+ ' ' + d.year)
+
+    d3.select('.db_ppmtext') // change dashboard text
+        .text(d.ppm + ' PPM')
+
     d3.select('.db_text')
                 .transition()
                 .duration(200)
-                .style('left', pos2.x - 12 + 'px') // position x in line with dashboard text
+                // .style('left', pos2.x - 12 + 'px') // position x in line with dashboard text
                 .style('top', end.y + 'px')//- (tH.height / 2) + 'px') // position y realtive to end of line
     
     d3.select('.currentLine3')
             .attr('y2', end.y + 'px')
 
-
-    d3.select('.ppm_diff')
-                .transition()
-                .duration(200)
-                .style('left', pos2.x - 12 + 'px') // position x in line with dashboard text
-                .style('top', end.y / 2 + 'px')
-                .text(Math.round((411.8 - d.ppm)))
+    d3.select('.ppm_change')
+            .text( Math.round(d3.select('.latest_ppm').text() - d.ppm) + ' PPM')
+    // d3.select('.ppm_diff')
+    //             .transition()
+    //             .duration(200)
+    //             // .style('left', pos2.x - 12 + 'px') // position x in line with dashboard text
+    //             .style('top',  (end.y / 1.5) + 'px')
+    //             .text(Math.round((411.8 - d.ppm)))
         
     
 }
@@ -343,8 +329,12 @@ function mouseout(d) {
     d3.select('.currentLine3')
         .attr('y2', pos.y + pos.height)
 
-    d3.select('.ppm_diff')
+    d3.select('.ppm_change')
         .text(' ')
+    
+    d3.selectAll('.lX_text')
+        .style('opacity', 1)
+
     
 }
 
