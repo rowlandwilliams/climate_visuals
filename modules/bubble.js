@@ -112,7 +112,13 @@ function bmouseover() {
             .text(year) // year to dashboard
     
     d3.select('.db_ppmtext')
-            .text(d3.select(this).attr('d') + ' PPM (yearly average)')
+            .text(d3.select(this).attr('d') + ' PPM')
+    d3.select('.db_yaverage')
+            .text('(yearly average)')
+
+    d3.select('.ppm_change')
+            .text( Math.round(d3.select('.latest_ppm').text() - d3.select(this).attr('d')) + ' PPM')
+            
 
     // d3.select('.db_ytext') // change dashboard text
     //         .text(timeParse(Date.parse(d.date))+ ' ' + d.year)
@@ -155,6 +161,10 @@ function bmouseout() {
     d3.selectAll('.lg_ytext')
         .style('opacity', 1)
 
-    d3.selectAll('.db_ytext, .db_ppmtext')
+    d3.selectAll('.db_ytext, .db_ppmtext, .db_yaverage')
         .text('') // remove text
+
+    d3.select('.ppm_change')
+        .text(' ')
+
 }
