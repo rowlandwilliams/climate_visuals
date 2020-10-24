@@ -15,13 +15,13 @@ var LGCONT_WIDTH = document.querySelector('.middleColumn').offsetWidth
 var TITLE_HEIGHT = document.querySelector('.titleContainer').offsetHeight // define initial heights
 
 
-var BUBBLE_HEIGHT = PAGE_HEIGHT - TITLE_HEIGHT //define initial height for rows
+var BUBBLE_HEIGHT = PAGE_HEIGHT - TITLE_HEIGHT - 20//define initial height for rows
 document.querySelector('.lineGraphContainer').setAttribute('style', 'height:' + PAGE_HEIGHT + 'px')
 var LGCONT_HEIGHT = document.querySelector('.lineGraphContainer').offsetHeight
 
 document.querySelector('.centDashboard').setAttribute('style', 'height:' + TITLE_HEIGHT + 'px')
 document.querySelector('.centuriesContainer').setAttribute('style', 'height:' + BUBBLE_HEIGHT + 'px')
-var CENTCONT_HEIGHT = document.querySelector('.centuriesContainer').offsetHeight;
+var CENTCONT_HEIGHT = document.querySelector('.centuriesContainer').offsetHeight + 20;
 
 
 // DEFINE GLOBAL DATA

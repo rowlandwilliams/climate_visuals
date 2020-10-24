@@ -1,6 +1,6 @@
 var timeParse = d3.timeFormat('%d %B')
 var red = 'rgba(255, 105, 97, 1)'
-let lMargin = {top: 50, right: 60, bottom:50, left: 80},
+let lMargin = {top: 50, right: 60, bottom:20, left: 80},
 
 lWidth = LGCONT_WIDTH // initially make width / height equal to container width
 lHeight = LGCONT_HEIGHT
@@ -70,7 +70,7 @@ function plotLineGraph() {
         .attr('class', 'lX_text')            
         .attr("transform",
               "translate(" + (lWidth / 2) + " ," + 
-                             (lHeight - 0.5 * lMargin.bottom) + ")")
+                             (lHeight ) + ")")
         .style("text-anchor", "middle")
         .style('stroke', '#F4F1F1')
         .text("Months");

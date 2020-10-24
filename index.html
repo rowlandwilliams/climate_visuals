@@ -23,7 +23,21 @@
             <div class='bubbleContainer' >
             </div>
 
-            <div class='info'>?</div>
+        <div class=bottomBarL>
+            <div class="info">?
+                <span class="infoTooltip">Carbon Dioxide levels continue to rise. <br>
+                                          Explore 500 years of Carbon Dioxide data. <br>
+                                          View yearly averages on the left. <br>
+                                          Percentage increase per century are displayed on the right. <br>
+                                          Click each century to filter the line graph.                                        
+                </span>
+              </div>
+            <div class='dataBar'></div>
+        </div>
+        
+
+        
+            
         </div>
                 
         <div class='middleColumn'>
@@ -53,8 +67,7 @@
             </div>
 
             <div class='bottomBar'>
-                <div class='dataBar'>DATA</div>
-                    <button class='resetButton' onclick="updateLineGraph('all')">RESET</button>    
+                <div onclick="updateLineGraph('all')" class='resetButton'>RESET</div>
             </div>
             
         </div>

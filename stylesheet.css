@@ -57,6 +57,7 @@ body {
   /* background-color: red; */
   min-width: auto; 
   padding: 0px 20px 0px 5px;
+  position: relative;
 }
 
 .db_text, .db_century, .tooltip , .ppm_diff {
@@ -104,25 +105,45 @@ body {
     position:absolute; 
 }
 
-.bottomBar {
+.bottomBarL {
   display: flex;
   flex-direction: row;
   color: white;
-  justify-content: flex-end;
-  margin-right: 20px;
+  justify-content: space-between;
+  
+  /* font-size: 20px; */
+  
 }
 
-.dataBar {
-  padding-right: 20px;
-}
 
 .resetButton {
   border: none;
   background-color: inherit;
-  /* padding: 14px 28px; */
-  /* font-size: 16px; */
   cursor: pointer;
   color: white;
-  font-family: 'Dosis', sans-serif;  
-  /* display: inline-block; */
+  font-family: 'Dosis', sans-serif; 
+  margin-left: 200px; 
 }
+
+
+.info {
+  position: relative;
+  padding-left: 15px;
+  font-size: 20px;
+}
+
+.infoTooltip {
+  position: absolute;
+  top: -110px;
+  left: 0px;
+  opacity: 0;
+  background-color: #202020;
+  padding: 10px;
+  border-radius: 6px;
+
+}
+
+.info:hover .infoTooltip {
+ opacity: 1;
+}
+

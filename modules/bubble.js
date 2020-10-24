@@ -1,6 +1,6 @@
 
-let bMargin = {top: 20, right: 0, bottom:20, left: 0},
-bHeight = BUBBLE_HEIGHT - bMargin.top - bMargin.bottom,
+let bMargin = {top: 0, right: 0, bottom:20, left: 0},
+bHeight = BUBBLE_HEIGHT //- bMargin.top - bMargin.bottom,
 bWidth = LEFT_CHARTS_WIDTH //- bMargin.left - bMargin.right,
 
 
@@ -40,23 +40,16 @@ function generatePos(index) {
 
 function plotTile() {
     // append svg
-
     const bsvg = d3.select('.bubbleContainer').append('svg')
         .attr('class', 'bsvg')
         .attr('width', bWidth  )
-        .attr('height', bHeight + bMargin.top + bMargin.bottom)
+        .attr('height', bHeight)// + bMargin.top + bMargin.bottom)
         .attr('transform', 'translate(' + bMargin.left + ',' + bMargin.top + ')')
 
     var color = d3.scaleLinear()
         .domain([d3.min(global.bubble.map(x => x.avgppm)), d3.max(global.bubble.map(x => x.avgppm))])
         .range(['rgba(255, 105, 97, 0.5)', 'rgba(255, 105, 97, 1)'])
-// red = 'rgba(255, 105, 97, 1)', rgb(58,58,71) black
-    // append rect and enter data
-    // bsvg
-    //     .on('mouseenter', bmouseenter)
-    //     .on('mouseout', bmouseout)
-    
-    
+
     bsvg.selectAll('rect')
         .data(global.bubble)
             .enter()
@@ -118,13 +111,6 @@ function bmouseover() {
 
     d3.select('.ppm_change')
             .text( Math.round(d3.select('.latest_ppm').text() - d3.select(this).attr('d')) + ' PPM')
-            
-
-    // d3.select('.db_ytext') // change dashboard text
-    //         .text(timeParse(Date.parse(d.date))+ ' ' + d.year)
-       
-    // d3.select('.db_ppmtext') // change dashboard text
-    //         .text(d.ppm + ' PPM')
 
     d3.selectAll('.lX_text')
             .style('opacity', 0.3)
@@ -134,13 +120,6 @@ function bmouseover() {
     var end = d3.select('#y' + year).node().getPointAtLength(length) // get point at end of selected line
     var pos2 = d3.select('.db_current').node().getBoundingClientRect() // align with dashboard current text
     var tH = d3.select('.db_text').node().getBoundingClientRect() // tooltip height
-
-    // d3.select('.db_text')
-    //             .transition()
-    //             .duration(200)
-    //             .style('opacity', 1)
-    //             .style('left', pos2.x + 'px') // position x in line with dashboard text
-    //             .style('top', end.y - (tH.height - 2) + 'px') // position y realtive to end of line
     
     d3.select('.db_text')
                 .transition()
