@@ -103,3 +103,26 @@ body {
 .currentLine {
     position:absolute; 
 }
+
+.bottomBar {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  justify-content: flex-end;
+  margin-right: 20px;
+}
+
+.dataBar {
+  padding-right: 20px;
+}
+
+.resetButton {
+  border: none;
+  background-color: inherit;
+  /* padding: 14px 28px; */
+  /* font-size: 16px; */
+  cursor: pointer;
+  color: white;
+  font-family: 'Dosis', sans-serif;  
+  /* display: inline-block; */
+}

@@ -23,19 +23,6 @@ let  lYAxis = g => g
     .call(d3.axisLeft(ly0))
 
   
-var tooltip = d3.select('body').append('div')
-    .attr('class', 'tooltip')
-    .style('opacity', 0)
-    //.text('suh')
-    .style('stroke', 'white')
-
-tooltip.select('test')
-    .append('div')
-    .attr('class', 'test')
-
-tooltip.select('test2')
-    .append('div')
-    .attr('class', 'test2')
 
 // define line funciton
 let lineGraphLine = d3.line()
@@ -59,12 +46,12 @@ function plotLineGraph() {
 
     lsvg.append('g')
         .call(lXAxis)
-        .call(g => g.selectAll(".domain, line") // remove axis line and ticks
+        .call(g => g.selectAll(".domain, line, text") // remove axis line and ticks
         .remove())
-        .call(g => g.selectAll('text')
-        .attr('class', 'lX_text')
-        .attr('dx', '2.8em'))
-        .attr('stroke', '#F4F1F1')
+        // .call(g => g.selectAll('text')
+        // .attr('class', 'lX_text')
+        // .attr('dx', '2.8em'))
+        // .attr('stroke', '#F4F1F1')
         
     
     lsvg.append('g')
@@ -78,6 +65,15 @@ function plotLineGraph() {
         // .attr('class', 'lg_ytext')
         .attr('stroke', '#F4F1F1')
         
+
+    lsvg.append("text") 
+        .attr('class', 'lX_text')            
+        .attr("transform",
+              "translate(" + (lWidth / 2) + " ," + 
+                             (lHeight - 0.5 * lMargin.bottom) + ")")
+        .style("text-anchor", "middle")
+        .style('stroke', '#F4F1F1')
+        .text("Months");
 
     var centuries = lsvg.selectAll('.century.c')
         .data(global.linegraph)
@@ -196,30 +192,52 @@ function plotLineGraph() {
 
 
 function updateLineGraph(century) {
+    d3.selectAll('.lX_text, .currentLine2')
+        .transition().duration(1400).delay(500)
+        .style('opacity', 0)
+
+    // d3.select('.currentLine')
+
+    
     if (century == 'all') {
         var temp = global.linegraph
+        ly0.domain([275, 420])
+            .range([lHeight - lMargin.bottom, lMargin.top]);
+        lsvg.attr('height', lHeight) // expand y axis to bottom
+            .transition().duration(1400).delay(500)
+        d3.selectAll('.lX_text, .currentLine2')
+            .transition().duration(1400).delay(500)
+            .style('opacity', 1)
+            
     }
     else {
         var temp = global.linegraph.filter(x => x.century == century)
+        var values =  d3.merge(d3.merge(temp.map(x => x.year_values.map(y => y.values.map(z => z.ppm)))))
+        ly0.domain([(d3.min(values) - 1), (d3.max(values) + 1)])
+        .range([lHeight, 0]);
+        lsvg.attr('height', lHeight + 50) // expand y axis to bottom
+        .transition().duration(1400).delay(500)
+        
     }
 
-    lsvg.attr('height', lHeight + 50) // expand y axis to bottom
-        .transition().duration(1400).delay(500)
+    // lsvg.attr('height', lHeight + 50) // expand y axis to bottom
+    //     .transition().duration(1400).delay(500)
 
     //var temp = global.linegraph.filter(x => x.century == century)
-    var values =  d3.merge(d3.merge(temp.map(x => x.year_values.map(y => y.values.map(z => z.ppm)))))
+    
     
     // redefine y domain
-    ly0.domain([(d3.min(values) - 1), (d3.max(values) + 1)])
-        .range([lHeight, 0]);
+    // ly0.domain([(d3.min(values) - 1), (d3.max(values) + 1)])
+    //     .range([lHeight, 0]);
 
+    // d3.selectAll('.lX_text')
+    //     .style('opacity', 0)
     // transition y Axis
     d3.selectAll('.lYAxis')
     .transition().duration(1400).delay(500)
     .call(lYAxis)
 
-    d3.selectAll('.lX_text')
-        .style('opacity', 0)
+    
     
     // grab all g century paths
     const centuries = lsvg.selectAll('.century')
@@ -334,7 +352,13 @@ function mouseout(d) {
 }
 
 function updateVoronoi(century) {
-        var temp = global.linegraph.filter(x => x.century == century)
+        if (century == 'all') {
+            var temp = global.linegraph
+        }
+        else {
+            var temp = global.linegraph.filter(x => x.century == century)
+        }
+        
         var v = voronoi(d3.merge(d3.merge(temp.map(y => y.year_values.map(x => x.values)))))
         
         // join century data
