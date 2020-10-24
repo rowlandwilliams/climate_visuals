@@ -298,12 +298,7 @@ function mouseover(d) {
 
     d3.select('.ppm_change')
             .text( Math.round(d3.select('.latest_ppm').text() - d.ppm) + ' PPM')
-    // d3.select('.ppm_diff')
-    //             .transition()
-    //             .duration(200)
-    //             // .style('left', pos2.x - 12 + 'px') // position x in line with dashboard text
-    //             .style('top',  (end.y / 1.5) + 'px')
-    //             .text(Math.round((411.8 - d.ppm)))
+
         
     
 }

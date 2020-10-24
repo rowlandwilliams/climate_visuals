@@ -126,6 +126,8 @@ function bmouseover() {
     // d3.select('.db_ppmtext') // change dashboard text
     //         .text(d.ppm + ' PPM')
 
+    d3.selectAll('.lX_text')
+            .style('opacity', 0.3)
 
     // add text to end of lin
     var length = d3.select('#y' + year).node().getTotalLength()
@@ -166,5 +168,13 @@ function bmouseout() {
 
     d3.select('.ppm_change')
         .text(' ')
+
+    d3.selectAll('.lX_text')
+        .style('opacity', 1)
+
+    var pos = d3.select('.db_current').node().getBoundingClientRect()
+    
+    d3.select('.currentLine3')
+        .attr('y2', pos.y + pos.height)
 
 }
