@@ -154,14 +154,12 @@ function plotLineGraph() {
     // define positions
     
     var lastPoint = global.linegraph[global.linegraph.length - 1].year_values.slice(-1)[0].values.slice(-1)[0]
-    console.log(lastPoint)
+    
     
     
     var pos = d3.select('.db_current').node().getBoundingClientRect()
     var length = d3.select('#y2020').node().getTotalLength()
-    // var end = d3.select('#y' + year).node().getPointAtLength(length)
-    
-    console.log(pos)
+   
 
    
 
@@ -222,24 +220,10 @@ function updateLineGraph(century) {
         
     }
 
-    // lsvg.attr('height', lHeight + 50) // expand y axis to bottom
-    //     .transition().duration(1400).delay(500)
-
-    //var temp = global.linegraph.filter(x => x.century == century)
-    
-    
-    // redefine y domain
-    // ly0.domain([(d3.min(values) - 1), (d3.max(values) + 1)])
-    //     .range([lHeight, 0]);
-
-    // d3.selectAll('.lX_text')
-    //     .style('opacity', 0)
-    // transition y Axis
     d3.selectAll('.lYAxis')
     .transition().duration(1400).delay(500)
     .call(lYAxis)
 
-    
     
     // grab all g century paths
     const centuries = lsvg.selectAll('.century')
@@ -282,7 +266,6 @@ function mouseover(d) {
     
     // select line and colour with corresponding tile shade
     var year = d.year
-    //var fill = d3.select('.tile' + year).style('fill');
 
     d3.selectAll('.y-line')
         .style('opacity', function(d) {
@@ -303,6 +286,9 @@ function mouseover(d) {
 
     d3.select('.db_ytext') // change dashboard text
         .text(timeParse(Date.parse(d.date))+ ' ' + d.year)
+
+    d3.selectAll('.db_ticker')
+            .style('opacity', 1)
 
     d3.select('.db_ppmtext') // change dashboard text
         .text(d.ppm + ' PPM')
@@ -336,6 +322,9 @@ function mouseout(d) {
         .style('stroke', '#202020')
         .style('stroke-width', '1px')
     
+    d3.select('.db_ticker')
+        .style('opacity', 0)
+
     d3.selectAll('.db_ytext, .db_ppmtext')
         .text('') // remove text
 

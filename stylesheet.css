@@ -12,6 +12,22 @@ body {
 }
   
 
+.preloader {
+  align-items: center;
+  background: #909089;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  top: 0;
+  transition: opacity 0.3s linear;
+  width: 100%;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+
 .leftColumn {
     width: 100%; /* ensure grow on screen change */
 }
@@ -68,7 +84,11 @@ body {
 
 .db_ticker {
   padding: 12px 30px 12px 12px;
+  opacity: 0;
 }
+
+
+
 .titleContainer {
     color: #202020;
     font-size: 28px;
