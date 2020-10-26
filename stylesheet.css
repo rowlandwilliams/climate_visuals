@@ -112,10 +112,12 @@ body {
   position: absolute
 }
   
-.db_text, .ppm_diff{
+.db_text {
   position: absolute;
   font-size: 20px;
   color: #202020;
+  /* overflow: auto */
+
   
 }
 

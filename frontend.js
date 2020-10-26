@@ -12,8 +12,6 @@ const fadeEffect = setInterval(() => {
     }
   }, 100);
 
-//window.addEventListener('load', fadeEffect);
-
 
 window.addEventListener("load", () => fadeEffect);
 //SET PAGE HEIGHTS

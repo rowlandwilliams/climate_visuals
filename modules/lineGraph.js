@@ -281,9 +281,17 @@ function mouseover(d) {
     // add text to end of lin
     var length = d3.select('#y' + year).node().getTotalLength()
     var end = d3.select('#y' + year).node().getPointAtLength(length) // get point at end of selected line
-    var pos2 = d3.select('.db_current').node().getBoundingClientRect() // align with dashboard current text
     var tH = d3.select('.db_text').node().getBoundingClientRect() // tooltip height
+    var lowest = d3.select('#y1620').node().getBoundingClientRect() // lowest line 1620
+    // if end of line plus tooltip is furthr than lowest line reposition tooltip to other side of line
+    if (end.y + tH.y > lowest.y) {
+        var textPos = end.y - tH.height
+    }
+    else {
+        var textPos = end.y
+    }
 
+    
     d3.select('.db_ytext') // change dashboard text
         .text(timeParse(Date.parse(d.date))+ ' ' + d.year)
 
@@ -297,7 +305,7 @@ function mouseover(d) {
                 .transition()
                 .duration(200)
                 // .style('left', pos2.x - 12 + 'px') // position x in line with dashboard text
-                .style('top', end.y + 'px')//- (tH.height / 2) + 'px') // position y realtive to end of line
+                .style('top', textPos + 'px')//- (tH.height / 2) + 'px') // position y realtive to end of line
     
     d3.select('.currentLine3')
             .attr('y2', end.y + 'px')
@@ -313,9 +321,6 @@ function mouseout(d) {
     lsvg
         .selectAll('.focus_ring, .crossHair') // circle
         .style('opacity', 0)
-    
-    // lsvg.select('.crossHair')
-    //     .style('opacity', 0);
 
     d3.selectAll('.y-line')
         .style('opacity', 1)
