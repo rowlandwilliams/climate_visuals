@@ -129,7 +129,7 @@ body {
 
 .infoTooltip {
   position: absolute;
-  top: -180px;
+  top: -150px;
   /* left: -0px; */
   visibility: hidden;
   background-color: #202020;
