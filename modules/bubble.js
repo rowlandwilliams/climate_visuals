@@ -48,7 +48,10 @@ function plotTile() {
 
     var color = d3.scaleLinear()
         .domain([d3.min(global.bubble.map(x => x.avgppm)), d3.max(global.bubble.map(x => x.avgppm))])
-        .range(['rgba(255, 105, 97, 0.5)', 'rgba(255, 105, 97, 1)'])
+        .range(['rgba(32, 32, 32, 0.5)', 'rgba(32, 32, 32, 1)'])
+
+        
+        //.range(['rgba(255, 105, 97, 0.5)', 'rgba(255, 105, 97, 1)'])
 
     bsvg.selectAll('rect')
         .data(global.bubble)
@@ -61,7 +64,7 @@ function plotTile() {
         .attr('y', function(d, i) { return generatePos(i).y })
         .attr('d', d=> d.avgppm)
         .style('fill', function(d) { return color(d.avgppm) })
-        .style('stroke', '#202020')
+        .style('stroke', '#909089')
         .style('stroke-width', '7')
         .attr('class', function(d) { return 'tile' + d.year})
         .attr("rx", 2)
@@ -85,8 +88,9 @@ function plotTile() {
 function bmouseover() {
     // define initial colour
     
-    var fill = d3.select(this).style('fill');
-    d3.select(this).style('opacity', 0.5)
+    // var fill = d3.select(this).style('fill');
+    d3.select(this)
+        .style('fill', '#FF6666')
     // define linegraph line class and apply respective tile colour
     var year =  d3.select(this).attr('class').substring(4)
     
@@ -94,7 +98,7 @@ function bmouseover() {
         .style('opacity', function(d) {
             return d.year == year ? 1 : 0.3  })
         .style('stroke', function(d) {
-            return d.year == year ? fill : '#F4F1F1' })
+            return d.year == year ? '#FF6666' : '#202020' })
         .style('stroke-width', function(d) {
             return d.year == year ? '3px' : '1px' })
 
@@ -133,10 +137,17 @@ function bmouseover() {
 } 
 
 function bmouseout() {
-    d3.select(this).style('opacity', 1)
+    var color = d3.scaleLinear()
+        .domain([d3.min(global.bubble.map(x => x.avgppm)), d3.max(global.bubble.map(x => x.avgppm))])
+        .range(['rgba(32, 32, 32, 0.5)', 'rgba(32, 32, 32, 1)'])
+
+    d3.select(this)
+        .style('opacity', 1)
+        .style('fill', function(d) { return color(d.avgppm) })
+    
     d3.selectAll('.y-line')
         .style('opacity', 1)
-        .style('stroke', '#F4F1F1')
+        .style('stroke', '#202020')
         .style('stroke-width', '1px')
 
     d3.selectAll('.lg_ytext')
@@ -149,7 +160,7 @@ function bmouseout() {
         .text(' ')
 
     d3.selectAll('.lX_text')
-        .style('opacity', 1)
+        .style('opacity', 0.8)
 
     var pos = d3.select('.db_current').node().getBoundingClientRect()
     

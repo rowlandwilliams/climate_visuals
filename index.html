@@ -33,13 +33,15 @@
                                           Use the line graph to compare current CO<sub>2</sub> levels with historical data. <br> 
                                           Click each century to zoom the line graph.                                        
                 </span>
-              </div>
-            <div class='dataBar'></div>
-        </div>
-        
-
-        
+            </div>
             
+        
+            <div onclick="updateLineGraph('all')" class='resetButton'>
+                RESET
+            </div>
+            
+            
+        </div>   
         </div>
                 
         <div class='middleColumn'>
@@ -68,9 +70,6 @@
             <div class='centuriesContainer'>
             </div>
 
-            <div class='bottomBar'>
-                <div onclick="updateLineGraph('all')" class='resetButton'>RESET</div>
-            </div>
             
         </div>
 

@@ -2,14 +2,12 @@ html {
   box-sizing: border-box;
 }
 
-/* *, *:before, *:after {
-  box-sizing: inherit;
-} */
+
 
 body {
   margin: 0;
   font-family: 'Dosis', sans-serif;   
-  background-color: #202020;
+  background-color: #909089;
   white-space: nowrap;
 }
   
@@ -48,12 +46,12 @@ body {
 }
 
 .centDashboard {
-  opacity: 0.8;
+  
   border-radius: 5px;
   display: flex;
   flex-direction: row;
   font-size: 24px;
-  color: white;
+  color: #202020;
   /* background-color: red; */
   min-width: auto; 
   padding: 0px 20px 0px 5px;
@@ -72,7 +70,7 @@ body {
   padding: 12px 30px 12px 12px;
 }
 .titleContainer {
-    color: white;
+    color: #202020;
     font-size: 28px;
     letter-spacing: 7px;
     padding: 10px;
@@ -97,8 +95,8 @@ body {
 .db_text, .ppm_diff{
   position: absolute;
   font-size: 20px;
-  color: white;
-  opacity: 0.8;
+  color: #202020;
+  
 }
 
 .currentLine {
@@ -106,44 +104,43 @@ body {
 }
 
 .bottomBarL {
-  display: flex;
-  flex-direction: row;
-  color: white;
-  justify-content: space-between;
-  
-  /* font-size: 20px; */
-  
+  display: inline-flex;
+  font-size: 16px;
+  /* flex-direction: row; */
 }
+  
+  
 
 
 .resetButton {
   border: none;
   background-color: inherit;
   cursor: pointer;
-  color: white;
   font-family: 'Dosis', sans-serif; 
-  margin-left: 200px; 
+  margin-left: 20px;  */
 }
 
 
 .info {
   position: relative;
   padding-left: 15px;
-  font-size: 20px;
+  /* font-size: 20px; */
 }
 
 .infoTooltip {
   position: absolute;
-  top: -150px;
-  /* left: px; */
-  opacity: 0;
+  top: -180px;
+  /* left: -0px; */
+  visibility: hidden;
   background-color: #202020;
   padding: 10px;
   border-radius: 6px;
+  
 
 }
 
 .info:hover .infoTooltip {
- opacity: 0.8;
+ visibility: visible;
+ color: #909089;
 }
 

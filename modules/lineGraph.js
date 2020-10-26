@@ -63,7 +63,8 @@ function plotLineGraph() {
         .attr('class', 'lX_text') // move labels right
         .attr('dx', 'em'))
         // .attr('class', 'lg_ytext')
-        .attr('stroke', '#F4F1F1')
+        .attr('stroke', '#202020')
+        .style('opacity', 0.8)
         
 
     lsvg.append("text") 
@@ -72,7 +73,8 @@ function plotLineGraph() {
               "translate(" + (lWidth / 2) + " ," + 
                              (lHeight ) + ")")
         .style("text-anchor", "middle")
-        .style('stroke', '#F4F1F1')
+        .style('stroke', '#202020')
+        .style('opacity', 0.8)
         .text("Months");
 
     var centuries = lsvg.selectAll('.century.c')
@@ -90,7 +92,7 @@ function plotLineGraph() {
         .attr('id', d => 'y' + d.year)
         .attr('d', function(d) { return lineGraphLine(d.values); })
         .attr('fill', 'none')
-        .style('stroke', '#F4F1F1')
+        .style('stroke', '#202020')
         .style('stroke-width', 1)
         .attr('opacity', 1)
         
@@ -171,7 +173,7 @@ function plotLineGraph() {
         .attr("y2", ly0(lastPoint.ppm))
         .style("stroke-width", 1)
         .style("stroke-dasharray", ("3, 3"))
-        .style("stroke", "#F4F1F1")
+        .style("stroke", "#202020")
         .style("fill", "none"); 
 
     lsvg.append("line")
@@ -182,7 +184,7 @@ function plotLineGraph() {
         .attr("y2", ly0(lastPoint.ppm))
         .style("stroke-width", 1)
         .style("stroke-dasharray", ("3, 3"))
-        .style("stroke", "#F4F1F1")
+        .style("stroke", "#202020")
         .style("fill", "none"); 
     
     
@@ -280,13 +282,13 @@ function mouseover(d) {
     
     // select line and colour with corresponding tile shade
     var year = d.year
-    var fill = d3.select('.tile' + year).style('fill');
+    //var fill = d3.select('.tile' + year).style('fill');
 
     d3.selectAll('.y-line')
         .style('opacity', function(d) {
             return d.year == year ? 1 : 0.3  })
         .style('stroke', function(d) {
-            return d.year == year ? fill : '#F4F1F1' })
+            return d.year == year ? 'rgba(255, 105, 97, 1)' : '#202020' })
         .style('stroke-width', function(d) {
             return d.year == year ? '3px' : '1px' })
     
@@ -331,7 +333,7 @@ function mouseout(d) {
 
     d3.selectAll('.y-line')
         .style('opacity', 1)
-        .style('stroke', '#F4F1F1')
+        .style('stroke', '#202020')
         .style('stroke-width', '1px')
     
     d3.selectAll('.db_ytext, .db_ppmtext')
@@ -346,7 +348,7 @@ function mouseout(d) {
         .text(' ')
     
     d3.selectAll('.lX_text')
-        .style('opacity', 1)
+        .style('opacity', 0.8)
 
     
 }
