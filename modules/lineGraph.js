@@ -48,6 +48,7 @@ function plotLineGraph() {
 
     lsvg.append('g')
         .call(lXAxis)
+        .attr('class', 'lXAxis')
         .call(g => g.selectAll(".domain, line, text") // remove axis line and ticks
         .remove())
         // .call(g => g.selectAll('text')
@@ -198,19 +199,6 @@ function plotLineGraph() {
 }
 
 
-function blink() {
-    
-    d3.select('.currentCircle')
-        .transition()
-        .duration(500)
-        .style('opacity', 0.2)
-        .transition()
-        .duration(500)
-        .style('opacity', 1)
-        .on('end', blink)
-    
-
-}
 
 function updateLineGraph(century) {
     d3.selectAll('.lX_text, .currentLine2')
@@ -279,7 +267,6 @@ function mouseover(d) {
     
     lsvg.select('.focus')
         .attr("transform", "translate(" + lx0(Date.parse(d.date)) + "," + ly0(d.ppm) + ")");
-   
 
     var crossHair = lsvg.select('.crossHair')      
     crossHair.style('opacity', 1); 
@@ -288,8 +275,6 @@ function mouseover(d) {
     crossHair.select("#crossHairY")
             .attr("transform", "translate(" + lx0(lx0.domain()[0]) + "," + (ly0(d.ppm)) + ")")
 
-    
-    
     // select line and colour with corresponding tile shade
     var year = d.year
 
@@ -339,8 +324,7 @@ function mouseover(d) {
     d3.select('.ppm_change')
             .text(Math.round(d3.select('.latest_ppm').text() - d.ppm) + ' PPM')
 
-        
-    
+          
 }
 
 function mouseout(d) {
@@ -369,7 +353,6 @@ function mouseout(d) {
     
     d3.selectAll('.lX_text')
         .style('opacity', 0.8)
-
     
 }
 
@@ -403,3 +386,64 @@ function updateVoronoi(century) {
     
 }
 
+// function resizeLine() {
+//     console.log(LGCONT_WIDTH)
+//     // redefine width
+//     lWidth = document.querySelector('.middleColumn').setAttribute('style', 'width:' + (PAGE_WIDTH - LEFT_CHARTS_WIDTH - CENTCONT_WIDTH) + 'px')//LGCONT_WIDTH 
+//     lHeight = document.querySelector('.lineGraphContainer').offsetHeight
+//     //LGCONT_HEIGHT
+
+//     // update scales
+//     lx0.range([lMargin.left, lWidth - lMargin.right])
+//     ly0.range([lHeight - lMargin.bottom, lMargin.top]);
+
+//     let lXAxis = g => g
+//     .attr("transform", 'translate(0,' + (lHeight - lMargin.bottom) + ')')
+//     .call(d3.axisBottom(lx0).tickFormat(d3.timeFormat('%b')))
+
+//     let  lYAxis = g => g
+//     .attr("transform", 'translate(' + lMargin.left +',0)')
+//     .call(d3.axisLeft(ly0))
+
+//     let lineGraphLine = d3.line()
+//     .x(d => lx0(Date.parse(d.date))) 
+//     .y(d => ly0(d.ppm))
+
+
+//     // lXAxis.scale(lx0);
+//     // lYAxis.scale(ly0);
+
+//     d3.select('.lineGraphContainer svg')
+//     .attr('width', lWidth)
+//     .attr('height', lHeight)
+//     .attr('viewBox', [0, 0, lWidth, lHeight])
+
+//     d3.select('.lXAxis')
+//         .call(lXAxis)
+
+//     d3.select('.lYAxis')
+//         .call(lYAxis)
+
+
+//     const centuries  = lsvg.selectAll('.century')
+//     centuries.selectAll('path')
+//         .data(d => d.year_values)
+//         .attr('d', d => lineGraphLine(d.values))
+// }
+
+
+
+
+function blink() {
+    
+    d3.select('.currentCircle')
+        .transition()
+        .duration(500)
+        .style('opacity', 0.2)
+        .transition()
+        .duration(500)
+        .style('opacity', 1)
+        .on('end', blink)
+    
+
+}

@@ -61,5 +61,36 @@ fetch(link)
 
 
 
+// window.addEventListener('resize', onResize);
 
+// function onResize() {
+// //   clearTimeout(resizeId);
+// //   resizeId = setTimeout(endResize, 300);
+
+//   var PAGE_HEIGHT = window.innerHeight - 20;
+//   var PAGE_WIDTH = window.innerWidth
+//   var PADDING = 30;
+//   // WIDTHS
+//   var LEFT_CHARTS_WIDTH = document.querySelector('.leftColumn').offsetWidth;
+//   var CENTCONT_WIDTH = document.querySelector('.rightColumn').offsetWidth
+  
+//   // set width of middle column
+//   document.querySelector('.middleColumn').setAttribute('style', 'width:' + (PAGE_WIDTH - LEFT_CHARTS_WIDTH - CENTCONT_WIDTH) + 'px')
+//   var LGCONT_WIDTH = document.querySelector('.middleColumn').offsetWidth
+  
+//   // define col 1 heights
+//   var TITLE_HEIGHT = document.querySelector('.titleContainer').offsetHeight // define initial heights
+  
+  
+//   var BUBBLE_HEIGHT = PAGE_HEIGHT - TITLE_HEIGHT - 20//define initial height for rows
+//   document.querySelector('.lineGraphContainer').setAttribute('style', 'height:' + PAGE_HEIGHT + 'px')
+//   var LGCONT_HEIGHT = document.querySelector('.lineGraphContainer').offsetHeight
+  
+//   document.querySelector('.centDashboard').setAttribute('style', 'height:' + TITLE_HEIGHT + 'px')
+//   document.querySelector('.centuriesContainer').setAttribute('style', 'height:' + BUBBLE_HEIGHT + 'px')
+//   var CENTCONT_HEIGHT = document.querySelector('.centuriesContainer').offsetHeight + 20;
+  
+//   console.log(LGCONT_WIDTH)
+//   resizeLine();
+// }
   
