@@ -62,30 +62,37 @@ body {
 }
 
 .centDashboard {
-  
-  border-radius: 5px;
   display: flex;
   flex-direction: row;
   font-size: 24px;
   color: #202020;
-  /* background-color: red; */
   min-width: auto; 
   padding: 0px 20px 0px 5px;
   position: relative;
+  line-height: 1.5;
 }
 
-.db_text, .db_century, .tooltip , .ppm_diff {
-  padding: 12px;
-}
-
-.db_current  {
+.db_current, .db_ticker, .db_text {
   padding: 12px;
 }
 
 .db_ticker {
-  padding: 12px 30px 12px 12px;
   opacity: 0;
 }
+
+.db_current_sub {
+  vertical-align: 0; 
+  position: relative;
+  top: 0.8ex;
+}
+
+.db_text {
+  position: absolute;
+  font-size: 20px;
+  color: #202020;
+
+}
+
 
 
 
@@ -94,8 +101,7 @@ body {
     font-size: 28px;
     letter-spacing: 7px;
     padding: 10px;
-    /* background-color: red;
-     */
+   
 }
 
 .voronoi path, .voronoi2 path {
@@ -108,18 +114,8 @@ body {
   stroke: none;
 }
 
-.tooltip {
-  position: absolute
-}
-  
-.db_text {
-  position: absolute;
-  font-size: 20px;
-  color: #202020;
-  /* overflow: auto */
 
   
-}
 
 .currentLine {
     position:absolute; 

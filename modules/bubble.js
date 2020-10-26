@@ -102,6 +102,8 @@ function bmouseover() {
         .style('stroke-width', function(d) {
             return d.year == year ? '3px' : '1px' })
 
+
+
     d3.selectAll('.lg_ytext')
             .style('opacity', 0.3) // fade y ticks
 
@@ -112,6 +114,9 @@ function bmouseover() {
             .text(d3.select(this).attr('d') + ' PPM')
     d3.select('.db_yaverage')
             .text('(yearly average)')
+
+    d3.selectAll('.db_ticker')
+            .style('opacity', 1)
 
     d3.select('.ppm_change')
             .text( Math.round(d3.select('.latest_ppm').text() - d3.select(this).attr('d')) + ' PPM')
@@ -161,11 +166,15 @@ function bmouseout() {
     d3.selectAll('.lg_ytext')
         .style('opacity', 1)
 
-    d3.selectAll('.db_ytext, .db_ppmtext, .db_yaverage')
+    d3.selectAll('.db_ticker')
+        .style('opacity', 0)  
+
+    d3.selectAll('.db_ytext, .db_ppmtext, .db_yaverage, .ppm_change')
         .text('') // remove text
 
-    d3.select('.ppm_change')
-        .text(' ')
+
+    // d3.select('.ppm_change')
+    //     .text(' ')
 
     d3.selectAll('.lX_text')
         .style('opacity', 0.8)

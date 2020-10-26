@@ -311,7 +311,7 @@ function mouseover(d) {
             .attr('y2', end.y + 'px')
 
     d3.select('.ppm_change')
-            .text( Math.round(d3.select('.latest_ppm').text() - d.ppm) + ' PPM')
+            .text(Math.round(d3.select('.latest_ppm').text() - d.ppm) + ' PPM')
 
         
     
