@@ -303,8 +303,18 @@ function mouseover(d) {
     }
 
     
+    // if year is  below 1958 remove detailed data (only yearly data)
+    if (d.year < 1958) {
+        var text = d.year;
+        d3.select('.db_yaverage')
+            .text('(yearly average)')
+    } 
+    else {
+        var text = timeParse(Date.parse(d.date))+ ' ' + d.year
+    }
+    
     d3.select('.db_ytext') // change dashboard text
-        .text(timeParse(Date.parse(d.date))+ ' ' + d.year)
+        .text(text)
 
     d3.selectAll('.db_ticker')
             .style('opacity', 1)
@@ -315,7 +325,6 @@ function mouseover(d) {
     d3.select('.db_text')
                 .transition()
                 .duration(200)
-                // .style('left', pos2.x - 12 + 'px') // position x in line with dashboard text
                 .style('top', textPos + 'px')//- (tH.height / 2) + 'px') // position y realtive to end of line
     
     d3.select('.currentLine3')
@@ -340,7 +349,7 @@ function mouseout(d) {
     d3.select('.db_ticker')
         .style('opacity', 0)
 
-    d3.selectAll('.db_ytext, .db_ppmtext')
+    d3.selectAll('.db_ytext, .db_ppmtext, .db_yaverage')
         .text('') // remove text
 
     var pos = d3.select('.db_current').node().getBoundingClientRect()

@@ -76,6 +76,7 @@ app.get('/', function(req, res){
             
 
             ///// LINEGRAPH DATA /////
+            // detailed data starts 1958
             // if data is 5 yearly or yearly - need to plot according to svg width
             // if data is weekly or daily, can plot according to y axis date
             // get unique years
