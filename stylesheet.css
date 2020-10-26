@@ -67,7 +67,7 @@ body {
   font-size: 24px;
   color: #202020;
   min-width: auto; 
-  padding: 0px 20px 0px 5px;
+  padding: 0px 20px 0px 0px;
   position: relative;
   line-height: 1.5;
 }

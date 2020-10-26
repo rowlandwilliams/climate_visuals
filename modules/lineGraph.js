@@ -1,3 +1,5 @@
+
+var state = 1;
 var timeParse = d3.timeFormat('%d %B')
 var red = 'rgba(255, 105, 97, 1)'
 let lMargin = {top: 50, right: 60, bottom:20, left: 80},
@@ -154,9 +156,6 @@ function plotLineGraph() {
     // define positions
     
     var lastPoint = global.linegraph[global.linegraph.length - 1].year_values.slice(-1)[0].values.slice(-1)[0]
-    
-    
-    
     var pos = d3.select('.db_current').node().getBoundingClientRect()
     var length = d3.select('#y2020').node().getTotalLength()
    
@@ -176,8 +175,8 @@ function plotLineGraph() {
 
     lsvg.append("line")
         .attr('class', 'currentLine3')
-        .attr("x1", pos.x - LEFT_CHARTS_WIDTH - 20)
-        .attr("x2", pos.x - LEFT_CHARTS_WIDTH - 20)
+        .attr("x1", pos.x - LEFT_CHARTS_WIDTH - 12)
+        .attr("x2", pos.x - LEFT_CHARTS_WIDTH - 12)
         .attr("y1", ly0(lastPoint.ppm))
         .attr("y2", ly0(lastPoint.ppm))
         .style("stroke-width", 1)
@@ -185,20 +184,40 @@ function plotLineGraph() {
         .style("stroke", "#202020")
         .style("fill", "none"); 
     
-    
+    lsvg.append("circle")
+        .attr('class', 'currentCircle')
+        .attr("cx", pos.x - LEFT_CHARTS_WIDTH - 12)
+        .attr("cy", ly0(lastPoint.ppm))
+        .attr('r', 5)
+        .style("stroke-width", 1.5)
+        .style("stroke", "#202020")
+        .style("fill", "none"); 
+
+    blink()
             
 }
 
 
+function blink() {
+    
+    d3.select('.currentCircle')
+        .transition()
+        .duration(500)
+        .style('opacity', 0.2)
+        .transition()
+        .duration(500)
+        .style('opacity', 1)
+        .on('end', blink)
+    
+
+}
 
 function updateLineGraph(century) {
     d3.selectAll('.lX_text, .currentLine2')
         .transition().duration(1400).delay(500)
         .style('opacity', 0)
 
-    // d3.select('.currentLine')
 
-    
     if (century == 'all') {
         var temp = global.linegraph
         ly0.domain([275, 420])
@@ -208,7 +227,11 @@ function updateLineGraph(century) {
         d3.selectAll('.lX_text, .currentLine2')
             .transition().duration(1400).delay(500)
             .style('opacity', 1)
-            
+        d3.select('.currentCircle')
+            // .transition().duration(1400).delay(500)
+            .style('visibility', 'visible') 
+        
+       
     }
     else {
         var temp = global.linegraph.filter(x => x.century == century)
@@ -217,6 +240,9 @@ function updateLineGraph(century) {
         .range([lHeight, 0]);
         lsvg.attr('height', lHeight + 50) // expand y axis to bottom
         .transition().duration(1400).delay(500)
+        d3.select('.currentCircle')
+            // .transition().duration(1400).delay(500)
+            .style('visibility', 'hidden') 
         
     }
 
