@@ -134,8 +134,8 @@ body {
 
 .infoTooltip {
   position: absolute;
-  top: -110px;
-  left: 0px;
+  top: -150px;
+  /* left: px; */
   opacity: 0;
   background-color: #202020;
   padding: 10px;
@@ -144,6 +144,6 @@ body {
 }
 
 .info:hover .infoTooltip {
- opacity: 1;
+ opacity: 0.8;
 }
 
